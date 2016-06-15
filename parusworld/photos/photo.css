@@ -1,0 +1,183 @@
+html{
+	position:relative;
+	min-height:100%;
+}
+
+header{
+    height: auto;
+    width: 100%;
+    text-align: center;
+    background: -webkit-linear-gradient(red,#3b2e30);
+    background: linear-gradient(red,#3b2e30);
+    background-color: #3b2e30;
+}
+
+.logo{
+ 
+    padding: 40px 0 40px 0;
+    display: inline-block;
+}
+
+nav{
+    width:100%;
+    background: #3b2e30;
+    height: 40px;
+}
+
+
+nav ul{
+	display:inline-block;
+    margin:0 auto;
+    list-style: none;
+	padding:0;
+    height: 40px;
+    
+}
+
+nav ul li{
+	
+    float:left;
+    width:120px;
+	padding-left:0;
+    line-height:40px;
+    height: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:white;
+    opacity: 0.7;
+    font-size: 22px;
+    font-family: 'Mate SC';
+    display: inline-block;
+    width:120px;
+    height: 40px;
+	line-height:40px;
+    
+}
+
+nav ul li a:hover{
+    opacity: 1;
+	color:white;
+	text-decoration:none;
+}
+
+nav ul li:nth-child(3) a{opacity:1;}
+
+div img{
+    max-height: 290px;
+    min-height: 290px;
+    width: 100%;
+    margin: 20px auto;
+    box-shadow: 0 0 6px grey;
+}
+
+
+.row{
+    text-align: center;
+}
+
+h2{
+    font-family:'mate sc',georgia;
+    color:lightcoral;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'open sans';
+    margin-bottom: 30px;
+}
+
+a:hover img{
+    box-shadow:0 0 6px lightcoral;
+}
+
+
+hr{
+	margin-bottom:35px;
+}
+
+footer{
+    background: #3b2e30;
+    height:38px;
+	position:absolute;
+	bottom:-38px;
+	width:100%;
+   
+}
+
+footer p{
+	color:white;
+	font-size:13px;
+	font-family: 'open sans';
+	text-align:center;
+    padding: 10px;
+    margin-bottom: 0px;
+}
+
+footer a{
+    color:white;
+}
+
+footer a:hover{
+    color:white;
+}
+
+/* -----------MEDIA-QUERIES-------------- */
+
+
+@media screen and (min-width:410px) and (max-width:500px){
+    div img{
+        width: 75%;
+    }
+}
+
+@media screen and (min-width:501px) and (max-width:767px){
+    div img{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width:559px){
+	
+	nav ul li{
+		width:120px;
+	}
+	nav ul li a{
+		
+		width:120px;
+		font-size: 20px;
+
+	}
+}
+
+@media screen and (max-width:479px){
+	
+    nav{
+        height: 35px;
+    }
+    nav ul li{
+		width:75px;
+        height: 35px;
+        line-height: 35px;
+	}
+	nav ul li a{
+		height: 35px;
+		width:75px;
+		font-size: 17px;
+        line-height: 35px;
+
+	}
+    
+    nav ul li:first-child{
+        width: 70px;
+    }
+}
+
+@media screen and (max-width:372px){
+    h2{
+        font-size:26px;
+    }
+}

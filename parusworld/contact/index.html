@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="contact.css">
+    <link href='https://fonts.googleapis.com/css?family=Mate+SC:400' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="../css/animate.css">
+   
+</head>
+<body>
+
+<header>
+        <img src="../img/logo.png" alt="" class="logo img-responsive">
+  
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../about">About</a></li>
+                <li><a href="../photos">Photos</a></li>
+                <li><a href="index.html">Contact</a></li>
+            </ul>
+        </nav>
+</header>
+
+<div class="greeting">
+	<h2 class="animated bounceIn">Nice To Meet You!</h2>
+	<p class="animated lightSpeedIn"> Have a question? Leave me a message.</p>
+</div>
+ <form class="cf" name="contactform" method="post" action="messagesent.php">
+  <div class="half left cf">
+    <input type="text" id="input-name"  name="name" placeholder="Name" required>
+    <input type="email" id="input-email" name="email" placeholder="Email Address" required>
+    <input type="text" id="input-subject" name="subject" placeholder="Subject" required>
+  </div>
+  <div class="half right cf">
+    <textarea id="input-message" name="message" placeholder="Message" required></textarea>
+  </div>  
+  <input type="submit" value="Submit" id="input-submit">
+</form>
+
+<footer>
+    <p>Copyrights &copy; <a href="http://saicharan.com">www.saicharan.com</a></p>
+</footer>
+
+</body>
+</html>
