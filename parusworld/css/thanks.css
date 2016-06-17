@@ -72,8 +72,8 @@ nav ul li a:hover{
 p{
     font-family: 'open sans';
     font-size: 16px;
-    animation-delay:1.2s;
-    -webkit-animation-delay:1.2s;
+    animation-delay:1.5s;
+    -webkit-animation-delay:1.5s;
 }
 .p2{
 	animation-delay:2.2s;
@@ -85,8 +85,8 @@ h2{
     color:lightcoral;
     font-family: 'mate sc';
     margin-bottom: 20px;
-    animation-delay:0.8s;
-    -webkit-animation-delay:0.8s;
+    animation-delay:1s;
+    -webkit-animation-delay:1s;
 }
 
 
