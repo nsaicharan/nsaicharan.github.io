@@ -32,13 +32,14 @@
  <form class="cf" name="contactform" method="post" action="https://formspree.io/saicharan13@gmail.com">
   <div class="half left cf">
     <input type="text" id="input-name"  name="name" placeholder="Name" required>
-    <input type="email" id="input-email" name="email" placeholder="Email Address" required>
-    <input type="text" id="input-subject" name="subject" placeholder="Subject" required>
+    <input type="email" id="input-email" name="_replyto" placeholder="Email Address" required>
+    <input type="text" id="input-subject" name="_subject" placeholder="Subject" required>
   </div>
   <div class="half right cf">
     <textarea id="input-message" name="message" placeholder="Message" required></textarea>
   </div>  
   <input type="submit" value="Submit" id="input-submit">
+  <input type="hidden" name="_next" value="http://projects.saicharan.com/contact/messagesent.html" />
 </form>
 
 <footer>
