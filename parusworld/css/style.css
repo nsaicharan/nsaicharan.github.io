@@ -113,6 +113,7 @@ p{
     border:none;
     background:-webkit-linear-gradient(lightcoral,red) ;
     background:linear-gradient(lightcoral,red) ;
+    background-color:#FF8E7A;
 }
 .btn:hover{
 	color:white;
