@@ -116,7 +116,7 @@
 			$.ajax({
 			url: "https://formspree.io/saicharan13@gmail.com", 
 			method: "POST",
-			data: {"Following person has downloaded your CV:", Name: name, Email: email },
+			data: {Message: name + " has downloaded your CV" , Name: name, Email: email },
 			dataType: "json"
 			});
 
