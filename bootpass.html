@@ -52,7 +52,7 @@
                     <form class="cvform">
                         <div class="formhide">
                             Name:
-                            <input type="text" class="form-control">
+                            <input type="text" class="form-control" id="name">
                             <br> Email:
                             <input type="email" id="email" class="form-control" required>
                             <br>
@@ -83,6 +83,7 @@
 
 
         var email = $("#email").val();
+        var name = $("#name").val();
 
         function isEmail(email) {
             var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
@@ -115,7 +116,7 @@
 			$.ajax({
 			url: "https://formspree.io/saicharan13@gmail.com", 
 			method: "POST",
-			data: {Message: matter, Name: sender, Email: mail },
+			data: {Message: "Following person has downloaded your CV", Name: name, Email: email },
 			dataType: "json"
 			});
 
