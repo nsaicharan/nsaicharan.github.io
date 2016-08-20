@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/animate.css">
+   <link href='https://fonts.googleapis.com/css?family=Mate+SC:400' rel='stylesheet' type='text/css'>
+
+   
+   <style>
+       
+       body{
+           background-color:#f1f1f1;
+       }
+    
+       .formdiv{
+           background-color:#f1f1f1;
+           width: 100%;
+           padding: 30px 0;
+       }
+       
+       form{
+           
+           max-width: 602px;
+           text-align: center;
+           margin: 20px auto;
+               }
+    
+       input, textarea {
+             border:0; 
+             outline:0;
+             padding: 1em;
+             border-radius:8px;
+             display: block;
+             width: 99%;
+             margin:0 auto;
+             margin-top: 1em;
+             font-family: 'open sans';
+             box-shadow:0 1px 1px rgba(0,0,0, 0.1);
+             resize: none;
+
+        }
+        input:hover,textarea:hover{
+            box-shadow:0px 0px 2px red !important;
+        }
+
+        #input-submit {
+            color: white; 
+            background: -webkit-linear-gradient(lightcoral,red); 
+            background: linear-gradient(lightcoral,red);
+            background:#FF8E7A
+            cursor: pointer;
+            font-family: 'mate sc';
+            font-size: 22px;
+            padding:8px;
+            margin-bottom:30px;
+        }
+
+        #input-submit:hover{
+            box-shadow: 0px 1px 1px 1px rgba(170, 170, 170, 0.6);
+        }
+
+        textarea {
+            min-height: 170px;
+        }
+
+
+
+        .half {
+          float: left;
+          width: 48%;
+          margin-bottom: 1em;
+        }
+
+        .right { width: 50%; }
+
+        .left {
+            margin-right: 2%; 
+        }
+
+               @media (max-width: 480px) {
+          .half {
+             width: 100%; 
+             float: none;
+             margin-bottom: 0; 
+          }
+
+        }
+
+
+        /* Clearfix */
+        .cf:before,
+        .cf:after {
+            content: " "; /* 1 */
+            display: table; /* 2 */
+        }
+
+        .cf:after {
+            clear: both;
+
+        }
+
+        h2{
+            margin-top:40px;
+           text-align: center;
+            font-family: 'mate sc';
+           color: lightcoral;
+            -webkit-animation-delay:.8s;
+                    animation-delay:.8s;
+            
+        }
+
+        .greeting{
+            overflow:hidden;
+        }
+
+
+        p{
+            text-align: center;
+            font-family: 'open sans';
+            -webkit-animation-delay:1.8s;
+                    animation-delay:1.8s;
+
+        }
+    </style>
+   
+</head>
+<body>
+    <iframe src="index.html"  frameborder="0" style="width:90%; height:95vh;  margin:0 auto; display:block;"></iframe>
+    
+    
+    <div class="formdiv">
+           <div class="greeting">
+                <h2 class="wow bounceIn">Nice To Meet You!</h2>
+                <p class="wow lightSpeedIn"> Have a question? Send us a message.</p>
+            </div>
+        
+            <form class="cf" name="contactform" action="">
+          <div class="half left cf">
+            <input type="text" id="input-name"  name="name" placeholder="Name" required>
+            <input type="email" id="input-email" name="_replyto" placeholder="Email Address" required>
+            <input type="text" id="input-subject" name="_subject" placeholder="Subject" required>
+          </div>
+          <div class="half right cf">
+            <textarea id="input-message" name="message" placeholder="Message" required></textarea>
+          </div>  
+          <input type="submit" value="Send" id="input-submit">
+          <input type="hidden" name="_next" value="http://projects.saicharan.com/parusworld/contact/messagesent.html" />
+        </form>
+    </div>
+  
+  <script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+</body>
+</html>
