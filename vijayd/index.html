@@ -88,10 +88,10 @@
             <h1 class="text-lg margin-b-0">Hello! I’m <strong>Vijay Devarakonda</strong></h1>
             <h5 class="text-tertiary margin-b-40 seasoned">Seasoned IT Professional</h5>
             <span data-target="local-scroll"><a href="#resume" class="btn btn-lg btn-primary animated" data-animation="bounceIn"><span>Go to my resume!</span><i class="ti-arrow-down"></i></a></span>
-            <a href="#" class="btn btn-link" data-target="#cvModal" data-toggle="modal"><span>Download my CV</span><i class="ti-file"></i></a>
+            <a href="#" class="btn btn-link" data-target="#cvModal" data-keyboard="true"  data-toggle="modal"><span>Download my CV</span><i class="ti-file"></i></a>
 			</div>
 
-            <div id="cvModal" class="modal fade" role="dialog">
+            <div id="cvModal" class="modal fade"  tabindex="-1" role="dialog">
 		        <div class="modal-dialog">
 		            <!-- Modal content-->
 		            <div class="modal-content cvcontent">
@@ -142,14 +142,14 @@
                         <h4><strong>About</strong> Me</h4>
                         <p class="lead">Results-oriented professional with a credible track record of sixteen years with renowned organizations in India and overseas. </p>
                         <p>Recognised for project delivery excellence with major achievements in successful closure of project on time and budget.Distinction of imparting HCM functional expertise to business requirements. </p>   
-                        <button type="button" class="btn btn-primary btn-xs readmore" data-toggle="modal" data-target="#readModal">Read More</button >
+                        <button type="button" class="btn btn-primary btn-xs readmore" data-toggle="modal" data-target="#readModal" data-keyboard="true">Read More</button >
 
-                        <div id="readModal" class="modal fade modal-blue-dark" role="dialog">
+                        <div id="readModal" class="modal fade" role="dialog" tabindex='-1'>
 							<div class="modal-dialog">
 								<!-- Modal content-->
 								<div class="modal-content cvcontent">
 									<div class="modal-header">
-										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<button type="button" class="close" style="font-size:50px" data-dismiss="modal">&times;</button>
 										<h3 class="modal-title text-center">Vijay Devarakonda</h3>
 									</div>
 									<div class="modal-body">
