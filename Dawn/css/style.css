@@ -29,12 +29,31 @@ body {
   text-align: left;
 }
 
+a{
+    text-decoration: none;
+    color: white;
+    font-family: 'poppins';
+    display: inline-block;
+    text-align: right;
+    padding: 0px 10px;
+    
+    
+}
+a:hover{
+    text-decoration: underline;
+}
+.resume{
+    text-align: right;
+    width: 100%;
+    margin-bottom: 22px;
+}
+
 .steps-timeline {
   outline: 1px dashed rgba(255, 0, 0, 0);
 }
 @media screen and (max-width: 500px) {
   .steps-timeline {
-    border-left: 2px solid #3498DB;
+    border-left: 2px solid #2d3b4a;
     margin-left: 25px;
   }
 }
@@ -174,7 +193,7 @@ body {
 
 .steps-description {
   overflow: hidden;
-    font-size: 13px;
+    font-size: 14px;
 }
 @media screen and (min-width: 500px) {
   .steps-description {
