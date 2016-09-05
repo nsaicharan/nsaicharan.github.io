@@ -37,7 +37,7 @@ $brand-primary: #3498DB; //Zen Blue
   }
   
   @media screen and (min-width: $break-point) {
-    border-top: 2px solid $brand-primary;
+    border-top: 8px solid #2d3b4a;
     padding-top: 20px;
     margin-top: 40px;
     margin-left: 16.65%;
@@ -52,7 +52,9 @@ $brand-primary: #3498DB; //Zen Blue
 }
 .steps-one,
 .steps-two,
-.steps-three {
+.steps-three, {
+.steps-four, {
+.steps-five {
   outline: 1px dashed rgba(green, $outline-width);
   
   @media screen and (max-width: $break-point) {
@@ -91,6 +93,7 @@ $brand-primary: #3498DB; //Zen Blue
 }
 
 .steps-img {
+    background: red;
   display: block;
   margin: auto;
   width: 50px;
