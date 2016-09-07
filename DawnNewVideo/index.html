@@ -68,11 +68,33 @@
 		        </nav>
 		</section>
 		</div>
-		<div id="container-header" style="max-height:396px; overflow:hidden; padding:0; background:none; border-bottom:4px solid #DA7D16;">
+		<div id="container-header" style="height:396px; max-height:396px; overflow:hidden; padding:0; background:none; border-bottom:4px solid #DA7D16; position:relative;">
 		
-		<video autoplay loop src="video.mp4"></video>
+			<header id="masthead" class="wrapper" style="position:absolute; top:0; left:0;">
+				<figure id="maya"> 
+					<div data-picture data-alt="12345 Photo">
+					<div data-src="img/headshot-s.png"></div> 
+					<div data-src="img/headshot-m.png" data-media="(min-width: 45em)"></div>
+					<div data-src="img/headshot-l.png" data-media="(min-width: 60em)"></div>
+					<!-- Fallback content for non-JS browsers. Same img src as the initial, unqualified source element. -->
+					<noscript>
+						<img src="./img/headshot-s.png" alt="Equipco Manufacturing, Inc.">
+					 </noscript>
+				   </div>
+				</figure>
+				
+				<!-- <h1>Headline</h1> -->
+
+				<h2>Hello - I am a creative video, audio, 
+				and photography professional 
+				with 15+ years experience </h2>
+			
+		</header>
+		
+		<video autoplay loop src="video.mp4" style="position:absolute; top:0; left:0; z-index:-1; width:100%; height:100%;"></video>
 			
 		</div>
+		
 		<div id="container-content">
               <article id="content">
 			<section id="products" class="group">
