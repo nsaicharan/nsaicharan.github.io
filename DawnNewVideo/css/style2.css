@@ -3,6 +3,34 @@
     src: url('Poppins-Regular.ttf');
 }
 
+@media screen and (max-width:720px){
+    
+    #container-header{
+        height: 290px !important;
+        border-bottom: none !important;
+    }
+}
+
+@media screen and (max-width:500px){
+    
+    #container-header{
+        height: 220px !important;
+        border-bottom: none !important;
+    }
+}
+
+@media screen and (max-width:300px){
+    
+    #container-header{
+        height: 160px !important;
+        border-bottom: none !important;
+    }
+    
+    h2{
+        font-size: 17px !important;
+    }
+}
+
 /* Skills */
 
 #container-contentBottom{
@@ -126,7 +154,19 @@ figcaption{
     .steps-five{
     margin-left: -25px;
   }
+    
+     h2{
+        font-size: 25px;
+    }
 }
+
+@media screen and (max-width: 380px) {
+  
+     h2{
+        font-size: 20px;
+    }
+}
+
 @media screen and (min-width: 500px) {
   .steps-one,
   .steps-two,
@@ -137,6 +177,8 @@ figcaption{
     width: 20%;
     margin-top: -50px;
   }
+    
+   
 }
 
 @media screen and (max-width: 500px) {

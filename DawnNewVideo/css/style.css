@@ -771,7 +771,7 @@ img {
 		background-size: cover;
 		padding: 10% 0;
 		border-top: #DA7D16 4px solid; /* Dawn added border */
-		 border-bottom: #DA7D16 4px solid; /* Dawn added border */
+		 border-bottom: #DA7D16 4px solid;  /* Dawn added border */
 			}
 			
 	/* Dawn commented out to fix first row of image widths - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - --*/
