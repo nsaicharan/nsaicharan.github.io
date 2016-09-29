@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.adifferentpath.us/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Sep 2016 14:00:56 GMT -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta content="True" name="HandheldFriendly" />
+<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
+<meta name="viewport" content="width=device-width" />
+<title>A Different Path</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+
+<script src="../ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+	$(function() {
+		var pull 		= $('#pull');
+			menu 		= $('nav ul');
+			menuHeight	= menu.height();
+
+		$(pull).on('click', function(e) {
+			e.preventDefault();
+			menu.slideToggle();
+		});
+
+		$(window).resize(function(){
+			var w = $(window).width();
+			if(w > 320 && menu.is(':hidden')) {
+				menu.removeAttr('style');
+			}
+		});
+	});
+</script>
+
+</head>
+
+<body>
+
+	<div id="wrapper" class="home">
+    
+    	<div class="header">
+        	
+            <div class="logo"><a href="index-2.html"><img src="images/logo.png" width="472" height="79" alt="A Different Path" /></a></div>
+            
+            <nav>
+            	<ul>
+                	<li><a href="index-2.html" class="active">Home</a></li>
+                	<li><a href="about.html">About</a></li>
+                	<li><a href="current_path.html" class="path">Current Path</a></li>
+                	<li><a href="change.html" class="spane"><span>A Better</span> <span>Path</span></a></li>
+                	<li><a href="support.html">Support</a></li>
+                </ul>
+                <a href="#" id="pull">Menu</a>
+                <div class="clear"></div>
+            </nav>
+            
+            <div class="clear"></div>
+        </div>
+        
+        <div class="content">
+        	
+            <div class="column_left">
+            	<ul class="left_nav">
+                	<li><a href="petition.html">The Petition</a></li>
+                	<li><a href="book.html">Buy the Book</a></li>
+                	<li><a href="presentation.html" class="the">The Presentation</a></li>
+                </ul>
+            </div>
+            
+            <div class="home_right">
+            	<p>We <a href="petition.html">petition</a> our individual states to call for an <a href="https://en.wikipedia.org/wiki/Convention_to_propose_amendments_to_the_United_States_Constitution">Article V Convention</a> to draft
+a bill of 3 amendments to our Constition that we the people will vote to ratify.</p>
+				<p>The <a href="book.html">book</a> A Different Path provides a detailed roadmap of how it is possible 
+to apply the teachings of Ghandi and Dr. King to the direction of our nation.</p>
+				<p><a href="jeff%40adifferentpath.html">Contact</a> the author Jeff Vileta to present the concepts and the basis for 
+a Different Path.</p>
+            </div>
+            
+            <div class="clear"></div>
+            
+            <div class="home_we">If YOU believe <a href="we.html">WE</a> are ready to change our current path,  
+please display the WE compass and let’s show each
+other that we are ready. </div>
+            
+            <div class="our_path">
+            	<p>Shall we take a look down our 
+current path and at the possibilities
+of a better path.</p>
+				
+                <a href="current_path.html" class="btn_path">Our Current  Path</a>
+					
+                <h2>We the people can
+influence real change.</h2>
+
+				<a href="better_path.html" class="btn_path">A BetterPath</a>
+                
+            </div>
+            
+            <div class="clear"></div>
+        </div>
+        
+    </div>
+
+</body>
+
+<!-- Mirrored from www.adifferentpath.us/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 29 Sep 2016 14:00:56 GMT -->
+</html>
