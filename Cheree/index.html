@@ -52,7 +52,7 @@
 }
         
         .text{
-            width:300px;
+            max-width:298px;
             z-index: 999;
             padding:20px;
             font-size: 20px;
@@ -64,7 +64,7 @@
         
         
         @media only screen and (max-width: 768px){
-            .text {padding:18px;font-size: 18px;}
+            .text {padding:10px; font-size: 18px;}
         }
 	</style>
 
@@ -100,7 +100,7 @@
 
 //Function to the css rule
 function checkSize(){
-    if ($(".text").css("padding") == "18px" ){
+    if ($(".text").css("padding") == "10px" ){
         $(".text").html("This is some sample text with IMAGE as background")
     }else{
         $(".text").html("This is some sample text with VIDEO as background");
