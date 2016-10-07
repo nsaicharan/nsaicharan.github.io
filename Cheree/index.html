@@ -82,7 +82,7 @@
         
         <source src="video.mp4" 
     </video>
-
+	</div>
    
     
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -91,21 +91,21 @@
 	<script>
         
       $(document).ready(function() {
-    // run test on initial page load
-    checkSize();
+    
+		checkSize();
 
-    // run test on resize of the window
-    $(window).resize(checkSize);
-});
+		
+		$(window).resize(checkSize);
+	});
 
-//Function to the css rule
-function checkSize(){
-    if ($(".text").css("padding") == "10px" ){
-        $(".text").html("This is some sample text with IMAGE as background")
-    }else{
-        $(".text").html("This is some sample text with VIDEO as background");
-    }
-}
+
+	function checkSize(){
+		if ($(".text").css("padding") == "10px" ){
+			$(".text").html("This is some sample text with IMAGE as background")
+		}else{
+			$(".text").html("This is some sample text with VIDEO as background");
+		}
+	}
        
 	</script>
 
