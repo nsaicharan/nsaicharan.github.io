@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<title>Cheree Demo</title>
+
+	<style>
+        .fullscreen-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+}
+
+.fullscreen-bg__video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .fullscreen-bg__video {
+    width: 300%;
+    left: -100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .fullscreen-bg {
+    background: url('768.jpg') center center / cover no-repeat;
+  }
+
+  .fullscreen-bg__video {
+    display: none;
+  }
+}
+        
+        .text{
+            width:300px;
+            z-index: 999;
+            padding:20px;
+            font-size: 20px;
+            text-align: center;
+            margin: 180px auto 0;
+            color:white;
+            background: rgba(0,0,0,.4);
+        }
+        
+        
+        @media only screen and (max-width: 768px){
+            .text {padding:18px;}
+        }
+	</style>
+
+</head>
+
+<body>
+    
+     <div class="text">
+        
+        This is some sample text with VIDEO as background
+    </div>
+
+	<div class="fullscreen-bg">
+    <video loop muted autoplay poster="img/videoframe.jpg" class="fullscreen-bg__video">
+        
+        <source src="video.mp4" 
+    </video>
+
+   
+    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<script>
+        
+      $(document).ready(function() {
+    // run test on initial page load
+    checkSize();
+
+    // run test on resize of the window
+    $(window).resize(checkSize);
+});
+
+//Function to the css rule
+function checkSize(){
+    if ($(".text").css("padding") == "18px" ){
+        $(".text").html("This is some sample text with IMAGE as background")
+    }else{
+        $(".text").html("This is some sample text with VIDEO as background");
+    }
+}
+       
+	</script>
+
+</body>
+
+</html>
