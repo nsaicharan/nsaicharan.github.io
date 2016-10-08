@@ -47,16 +47,31 @@
 
 <script>
     
-    if (Modernizr.touch) { 
-  alert('Touch Screen');
-} else { 
-  alert('No Touch Screen');
+   var isMobile = {
+    Android: function() {
+        return navigator.userAgent.match(/Android/i);
+    },
+    BlackBerry: function() {
+        return navigator.userAgent.match(/BlackBerry/i);
+    },
+    iOS: function() {
+        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+    },
+    Opera: function() {
+        return navigator.userAgent.match(/Opera Mini/i);
+    },
+    Windows: function() {
+        return navigator.userAgent.match(/IEMobile/i);
+    },
+    any: function() {
+        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+    }};
 }
 
-if (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)) { 
-
-    $("body").css("background-image","url(http://placehold.it/800/800)");
-  $("video").css("display","none");
+if( isMobile.any() ) {
+    alert("Mobile");
+}else{
+    alert("desktop")
 }
     
 </script>
