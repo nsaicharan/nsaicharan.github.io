@@ -10,7 +10,8 @@
   <link rel="stylesheet" href="css/style.css">
   
   <style>
-  
+ 
+/* 
  @media only screen 
   and (min-device-width: 768px) 
   and (max-device-width: 1024px) 
@@ -23,7 +24,7 @@
     display: none;
   }
 }
-
+*/
   
   </style>
 </head>
@@ -50,6 +51,12 @@
   alert('Touch Screen');
 } else { 
   alert('No Touch Screen');
+}
+
+if (navigator.userAgent.match(/Android|BlackBerry|iPhone|iPad|iPod|Opera Mini|IEMobile/i)) { 
+
+    $("body").css("background-image","url(http://placehold.it/800/800)");
+  $("video").css("display","none");
 }
     
 </script>
