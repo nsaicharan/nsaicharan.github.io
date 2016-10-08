@@ -38,12 +38,34 @@
 
 <video id="my-video" class="video" muted loop>
   <source src="media/video.mp4" type="video/mp4">
+<!--
   <source src="media/video.ogv" type="video/ogg">
   <source src="media/video.webm" type="video/webm">
+-->
 </video><!-- /video -->
 
 
 <script src="modernizr-custom.js"></script>
+
+<script>
+(function() {
+  /**
+   * Video element
+   * @type {HTMLElement}
+   */
+  var video = document.getElementById("my-video");
+
+  /**
+   * Check if video can play, and play it
+   */
+  video.addEventListener( "canplay", function() {
+    video.play();
+  });
+})();
+
+
+
+</script>
 
 <script>
     
@@ -69,13 +91,13 @@
 
 if( isMobile.any() ) {
     alert("Mobile");
-	document.getElementById("bg").style="background:url(image.jpg)";
-	document.getElementById("my-video").style="display:none";
+	
 	
 }else{
     alert("desktop");
 	
 
+	document.getElementById("my-video").style="display:none";
 }
     
 </script>
@@ -83,25 +105,7 @@ if( isMobile.any() ) {
 
 
 
-<script>
-(function() {
-  /**
-   * Video element
-   * @type {HTMLElement}
-   */
-  var video = document.getElementById("my-video");
 
-  /**
-   * Check if video can play, and play it
-   */
-  video.addEventListener( "canplay", function() {
-    video.play();
-  });
-})();
-
-
-
-</script>
 
 
 
