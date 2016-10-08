@@ -106,7 +106,9 @@
   return check;
 };
     
-    alert(window.mobileAndTabletcheck());
+    if(window.mobileAndTabletcheck() == true){
+        document.getElementById("my-video").style="display:none";
+    };
     
 </script>
 
