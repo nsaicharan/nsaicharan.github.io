@@ -9,7 +9,6 @@
 })(this, function($) {
 
   'use strict';
-
   /**
    * Name of the plugin
    * @private
@@ -165,8 +164,7 @@
     };
 
     $('<img src="' + path + '.jpg">').load(onLoad);
-    
-  }
+   }
 
   /**
    * Vide constructor
@@ -259,9 +257,7 @@
           poster = path.mp4;
         } else if (path.webm) {
           poster = path.webm;
-        } else if (path.ogv) {
-          poster = path.ogv;
-        }
+        } 
       }
     }
 
@@ -290,20 +286,14 @@
         sources += '<source src="' + path.webm + '.webm" type="video/webm">';
       }
 
-      if (path.ogv) {
-        sources += '<source src="' + path.ogv + '.ogv" type="video/ogg">';
-      }
-
       $video = vide.$video = $('<video>' + sources + '</video>');
     } else {
       $video = vide.$video = $('<video>' +
         '<source src="' + path + '.mp4" type="video/mp4">' +
         '<source src="' + path + '.webm" type="video/webm">' +
-        '<source src="' + path + '.ogv" type="video/ogg">' +
         '</video>');
     }
 
-    
     try {
       $video
 
@@ -469,13 +459,11 @@
         }
       }
     });
-
-    
+ 
     $window.on('unload.' + PLUGIN_NAME, function() {
       return false;
     });
 
-    
     $(document).find('[data-' + PLUGIN_NAME + '-bg]').each(function(i, element) {
       var $element = $(element);
       var options = $element.data(PLUGIN_NAME + '-options');
