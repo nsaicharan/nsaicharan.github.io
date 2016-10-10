@@ -117,8 +117,8 @@
 
     // Default value is a center
     var args = str.split(/\s+/);
-    var x = '50%';
-    var y = '50%';
+    var x = '0';
+    var y = '0';
     var len;
     var arg;
     var i;
@@ -243,10 +243,10 @@
         bottom: 0,
         right: 0,
         overflow: 'hidden',
-        '-webkit-background-size': '100% 100%',
-        '-moz-background-size': '100% 100%',
-        '-o-background-size': '100% 100%',
-        'background-size': '100% 100%',
+        '-webkit-background-size': 'cover',
+        '-moz-background-size': 'cover',
+        '-o-background-size': 'cover',
+        'background-size': 'cover',
         'background-color': settings.bgColor,
         'background-repeat': 'no-repeat',
         'background-position': position.x + ' ' + position.y
