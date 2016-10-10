@@ -117,8 +117,8 @@
 
     // Default value is a center
     var args = str.split(/\s+/);
-    var x = '0';
-    var y = '0';
+    var x = '100%';
+    var y = '100%';
     var len;
     var arg;
     var i;
