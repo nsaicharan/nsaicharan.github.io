@@ -21,7 +21,6 @@
           max-width: 320px;
           box-sizing: border-box;
           padding:10px;
-          z-index: 999;
           color:white;
           position: absolute;
           top:50%;
@@ -33,22 +32,10 @@
           -webkit-transform: translate(-50%, -50%);
       }
       
-      @media and screen (max-width:768px){
-          body{background: url("video/ocean2.jpg") center 100% 100%;
-          }
+      @media (max-width:768px){
+          body{background-image: url(video/small.jpg);background-position: center; background-size: cover;}
       }
       
-      @media and screen (max-width:540px){
-          body{
-              background: url("video/small.jpg") center 100% 100%;
-          } 
-      }
-      
-      @media and screen (max-width:320px){
-          body{
-              background: url("video/xssmall.jpg") center 100% 100%;
-          }
-      }
   </style>
 </head>
 <body data-vide-bg="video/ocean">
