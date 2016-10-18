@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>Body background example</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+      
+      .text{
+          background: rgba(0,0,0,.4);
+          max-width: 320px;
+          box-sizing: border-box;
+          padding:10px;
+          color:white;
+          position: absolute;
+          top:50%;
+          left: 50%;
+          text-align: center;
+          font-size: 45px;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+      }
+      
+      @media (min-width:1021px){
+          html,body {background-image: url(video/dr.jpg); background-size:100% 100%; background-position:center;}
+      }
+      
+      @media (min-width:768px) and (max-width:1020px){
+         html,body {background-image: url(video/home1136.jpg); background-size:100% 100%; background-position:center;}
+      }
+      
+      @media (min-width:568px) and (max-width:767px){
+         html,body {background-image: url(video/home1280p.jpg)} background-size:100% 100%; background-position:center;
+      }
+      
+      @media (min-width:270px) and (max-width:567px){
+         html,body {background-image: url(video/home640p.jpg); background-size:100% 100%; background-position:center;}
+      }
+      
+  </style>
+</head>
+<body>
+
+<div class="text">
+    
+    Sample Text
+    
+</div>
+</body>
+</html>
