@@ -28,19 +28,23 @@
           -webkit-transform: translate(-50%, -50%);
       }
       
-      @media (min-width:1021px){
+      @media (min-width:1025px){
           body div{background-image: url(video/dr.jpg) !important;}
       }
       
-      @media (min-width:768px) and (max-width:1020px){
+      @media (min-width:768px) and (max-width:1024px){
          body div{background-image: url(video/home1136.jpg) !important;}
       }
       
-      @media (min-width:568px) and (max-width:767px){
+      @media (min-width:668px) and (max-width:767px){
          body div{background-image: url(video/home1280p.jpg) !important;}
       }
       
-      @media (min-width:270px) and (max-width:567px){
+      @media (min-width:415px) and (max-width:667px){
+         body div{background-image: url(video/home667.jpg) !important;}
+      }
+      
+      @media (min-width:270px) and (max-width:414px){
          body div{background-image: url(video/home640p.jpg) !important;}
       }
       
@@ -48,11 +52,11 @@
 </head>
 <body data-vide-bg="video/dr">
 
-<div class="text">
+<span class="text">
     
     Sample Text
     
-</div>
+</span>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
@@ -60,7 +64,7 @@
 
 <script>
  // $(document).ready(function () {
- //   $(document.body).vide('video/ocean'); // Non declarative initialization
+ //   $(document.body).vide('video/dr'); // Non declarative initialization
  //
  //   var instance = $(document.body).data('vide'); // Get the instance
  //   var video = instance.getVideoObject(); // Get the video object
