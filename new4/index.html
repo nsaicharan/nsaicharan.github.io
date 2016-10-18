@@ -29,33 +29,47 @@
       }
       
       @media (min-width:1025px){
-          html,body {background-image: url(video/dr.jpg); background-size:100% 100%; background-position:center;}
+          body div{background-image: url(video/dr.jpg) !important;}
       }
       
       @media (min-width:769px) and (max-width:1024px){
-         html,body {background-image: url(video/home1136.jpg); background-size:100% 100%; background-position:center;}
+         body div{background-image: url(video/home1136.jpg) !important;}
       }
       
       @media (min-width:737px) and (max-width:768px){
-         html,body {background-image: url(video/home1280p.jpg); background-size:100% 100%; background-position:center;}
+         body div{background-image: url(video/home1280p.jpg) !important;}
       }
       
       @media (min-width:415px) and (max-width:736px){
-         html,body {background-image: url(video/home768.jpg); background-size:100% 100%; background-position:center;}
+         body div{background-image: url(video/home768.jpg) !important;}
       }
       
       @media (min-width:270px) and (max-width:414px){
-         html,body {background-image: url(video/home640p.jpg); background-size:100% 100%; background-position:center;}
+         body div{background-image: url(video/home640p.jpg) !important;}
       }
       
   </style>
 </head>
-<body>
+<body data-vide-bg="video/dr">
 
-<div class="text">
+<span class="text">
     
     Sample Text
     
-</div>
+</span>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+<script src="jquery2.js"></script>
+
+<script>
+ // $(document).ready(function () {
+ //   $(document.body).vide('video/dr'); // Non declarative initialization
+ //
+ //   var instance = $(document.body).data('vide'); // Get the instance
+ //   var video = instance.getVideoObject(); // Get the video object
+ //   instance.destroy(); // Destroy instance
+ // });
+</script>
 </body>
 </html>
