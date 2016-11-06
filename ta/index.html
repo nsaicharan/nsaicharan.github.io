@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    } 
+    .text{
+          background: rgba(0,0,0,.4);
+          max-width: 320px;
+          box-sizing: border-box;
+          padding:10px;
+          color:white;
+          position: absolute;
+          top:50%;
+          left: 50%;
+          text-align: center;
+          font-size: 45px;
+          transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          -webkit-transform: translate(-50%, -50%);
+        }
+	  
+    @media (min-width:1025px){
+        body div{background-image: url(video/dr.jpg) !important;}
+		}
+	  
+    @media (min-width:769px) and (max-width:1024px){
+        body div{background-image: url(video/home1920.jpg) !important;}
+		}
+      
+    @media only screen and (min-device-width: 800px) and (max-device-width: 1280px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+        body div{background-image: url(video/home1536p.jpg) !important;}
+		}
+    
+    @media (min-width:739px) and (max-width:768px){
+        body div{background-image: url(video/home1536p.jpg) !important;}
+		}
+		
+	  
+    @media (min-width:481px) and (max-width:738px){
+        body div{background-image: url(video/home1136.jpg) !important;}
+        }
+	  
+	@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+        body div{background-image: url(video/home1536p.jpg) !important;}
+       }
+	
+    @media (min-width:321px) and (max-width:480px){
+        body div{background-image: url(video/home1280p.jpg) !important;}
+       }
+    
+	@media (min-width:270px) and (max-width:320px){
+        body div{background-image: url(video/home640p.jpg) !important;}
+       }
+      
+  </style>
+</head>
+<body data-vide-bg="video/dr">
+
+<span class="text">  
+    Sample Text 
+</span>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="jquery.js"></script>
+</body>
+</html>
