@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
   <meta charset="UTF-8">
-  <title>Testing Media Queries</title>
+  <title></title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <style>
@@ -27,7 +27,11 @@
           -webkit-transform: translate(-50%, -50%);
         }
 	  
-    @media (min-width:769px) and (max-width:4024px){
+    @media (min-width:1025px){
+        body div{background-image: url(video/dr.jpg) !important;}
+		}
+	  
+    @media (min-width:769px) and (max-width:1024px){
         body div{background-image: url(video/home1920.jpg) !important;}
 		}
       
@@ -39,15 +43,14 @@
         body div{background-image: url(video/home1536p.jpg) !important;}
 		}
 		
-	@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
-        body div{background-image: url(video/home1536p.jpg) !important;}
-       }
-	  	
 	  
     @media (min-width:481px) and (max-width:738px){
         body div{background-image: url(video/home1136.jpg) !important;}
         }
 	  
+	@media only screen and (min-device-width: 600px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-min-device-pixel-ratio: 1) {
+        body div{background-image: url(video/home1536p.jpg) !important;}
+       }
 	
     @media (min-width:321px) and (max-width:480px){
         body div{background-image: url(video/home1280p.jpg) !important;}
