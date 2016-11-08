@@ -7,7 +7,7 @@ if(prop==null&&val==null){return str;}
 return obj;}
 function parsePosition(str){str=''+str;var args=str.split(/\s+/);var x='center';var y='center';var len;var arg;var i;for(i=0,len=args.length;i<len;i++){arg=args[i];if(arg==='left'){x='0%';}else if(arg==='right'){x='100%';}else if(arg==='top'){y='0%';}else if(arg==='bottom'){y='100%';}else if(arg==='center'){if(i===0){x='50%';}else{y='50%';}}else{if(i===0){x=arg;}else{y=arg;}}}
 return{x:x,y:y};}
-function findPoster(path,callback){var onLoad=function(){callback(this.src);};$('<img src="'+path+'.jpg">').load(onLoad);}
+function findPoster(path,callback){var onLoad=function(){callback(this.src);};$('<img src="'+'home1920'+'.jpg">').load(onLoad);}
 function Vide(element,path,options){this.$element=$(element);if(typeof path==='string'){path=parseOptions(path);}
 if(!options){options={};}else if(typeof options==='string'){options=parseOptions(options);}
 if(typeof path==='string'){path=path.replace(/\.\w*$/,'');}else if(typeof path==='object'){for(var i in path){if(path.hasOwnProperty(i)){path[i]=path[i].replace(/\.\w*$/,'');}}}
