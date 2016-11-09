@@ -406,7 +406,7 @@ footer {
         display: none;
     }
     .menunav .menu-btn:checked ~ .menu {
-        max-height: 100vh;
+        max-height: 240px;
         background: #3E4D5B;
     }
     .menunav .menu-btn:checked ~ .menu-icon .navicon {
