@@ -1,207 +1,203 @@
-
 <!doctype html>
 <html class="no-js" lang="en-US">
-	<head>
-			<meta charset="utf-8" />
 
-			<!-- Meta Tags -->
-			<title>Naked Grid</title>
-			<meta name="description" content="My Naked Grid website.">
-			<meta name="keywords" content="naked grid">
-			<meta name="author" content="Cheree Dohmann" />
-		    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-			<style>
-			/* HEADER - HERO */
-					header .hero-image {
-						background-attachment: fixed; /*for some reason, my responsive header image is NOT working sometimes in Firefox. I think
+<head>
+    <meta charset="utf-8" />
+    <!-- Meta Tags -->
+    <title>Naked Grid</title>
+    <meta name="description" content="My Naked Grid website.">
+    <meta name="keywords" content="naked grid">
+    <meta name="author" content="Cheree Dohmann" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        /* HEADER - HERO */
+        
+        header .hero-image {
+            background-attachment: fixed;
+            /*for some reason, my responsive header image is NOT working sometimes in Firefox. I think
 						this is because I need the WEBKIT code and other browser specific parameters to put INTO my code - to make it work!!! UGH!*/
-						background-size: cover;
-						width: 100%;
-						height: 610px;
-					  	/*background: no-repeat center center fixed; */
-						overflow: hidden;
-					}
+            background-size: cover;
+            width: 100%;
+            height: 610px;
+            /*background: no-repeat center center fixed; */
+            overflow: hidden;
+        }
+    </style>
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="css/grass.css" />
+    <!-- JavaScript files are in the Foot -->
+</head>
 
-			</style>
+<body>
+    <header>
+        <div class="row">
+            <div class="hero-image">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="images/hero/newpatient1920.jpg 1920w, images/hero/newpatient3840.jpg 3840w">
+                    <source media="(min-width: 768px)" srcset="images/hero/newpatient1536p.jpg 1536w">
+                    <source media="(min-width: 568px)" srcset="images/hero/newpatient1136.jpg 1136w, images/hero/newpatient2272.jpg 2272w"> <img src="images/hero/newpatient640p.jpg 640w" srcset="images/hero/newpatient1280p.jpg 1280w" alt="Request A New Patient Consultation"> </picture>
+            </div>
+        </div>
+    </header>
+    <div class="container">
+        <!--everything on the page-->
+        <div class="row">
+            <div class="row2">
+                <nav>
+                    <div class="three"> 
+                    <a class="logo" href="#">2r - 3c Biz Logo Here</a> </div>
+                    <!--closing column 6-->
+                    
+                    <div class="nine">
+                        <ul class="clearfix">
+                            <li><a href="#">Link 1</a></li>
+                            <li><a href="#">Link 2</a></li>
+                            <li><a href="#">Link 3</a></li>
+                            <li><a href="#">Link 4</a></li>
+                            <li><a href="#">Link 5</a></li>
+                        </ul>
+                    </div>
+                    <!-- closing column 9  -->
+                          
+                    <span class="menunav">
 
-			<!--Styles-->
-			<link rel = "stylesheet" type = "text/css" href="css/grass.css" />
-			<link rel = "stylesheet" type = "text/css" href="css/style.css" />
+                        <input class="menu-btn" type="checkbox" id="menu-btn" />
+                        <label class="menu-icon" for="menu-btn"> <span class="menutext">MENU</span> <span class="navicon"></span>
+                        </label>
 
-			<!-- JavaScript files are in the Foot -->
-			
-	</head>
-	
-<body>		
-		<header>
-			<div class="row">
-			<div class="hero-image">
-				<picture>   
-					<source media="(min-width: 1024px)" srcset="images/hero/newpatient1920.jpg 1920w, images/hero/newpatient3840.jpg 3840w">
-					<source media="(min-width: 768px)" srcset="images/hero/newpatient1536p.jpg 1536w">
-					<source media="(min-width: 568px)" srcset="images/hero/newpatient1136.jpg 1136w, images/hero/newpatient2272.jpg 2272w">
-					<img src="images/hero/newpatient640p.jpg 640w" srcset="images/hero/newpatient1280p.jpg 1280w"  alt="Request A New Patient Consultation">
-      			</picture>
-			</div>
-			</div>
-		</header>
-			
-<div class="container"><!--everything on the page-->
-		
-		<div class="row">
-			<div class="row2">
-				<nav>
-						<div class="three">
-							<a class="logo" href="#">2r - 3c Biz Logo Here</a>
-						</div><!--closing column 6-->
-
-						 <div class="nine">
-						    <ul class="clearfix">
-						        <li><a href="#">Link 1</a></li>
-						        <li><a href="#">Link 2</a></li>
-						        <li><a href="#">Link 3</a></li>
-						        <li><a href="#">Link 4</a></li>
-						        <li><a href="#">Link 5</a></li>
-						    </ul> 
-						</div><!-- closing column 9  -->
-						
-						<span class="menunav">
-
-                          <input class="menu-btn" type="checkbox" id="menu-btn" />
-
-
-                          <label class="menu-icon" for="menu-btn"> <span class="menutext">MENU</span> <span class="navicon"></span></label>
-
-                           <ul class="menu">
+                        <ul class="menu">
                             <li><a href="#">Link 1 </a></li>
                             <li><a href="#">Link 2 </a></li>
                             <li><a href="#">Link 3 </a></li>
                             <li><a href="#">Link 4 </a></li>
                             <li><a href="#">Link 5 </a></li>
-                          </ul>
+                        </ul>
+                    </span>
+                </nav>
+                <!-- /navigation -->
+            </div>
+        </div>
+        <!--closing row 2-->
+        <div class="row">
+            <div class="row3">
+                <div class="six">
+                    <p>ROW 3
+                        <br />6 COLUMNS</p>
+                </div>
+                <!--closing column 6-->
+                <div class="three">
+                    <p>ROW 3
+                        <br />3 COLUMNS</p>
+                </div>
+                <!--closing column 3-->
+                <div class="three">
+                    <p>ROW 3
+                        <br />3 COLUMNS</p>
+                </div>
+                <!--closing column 3-->
+            </div>
+        </div>
+        <!--closing row 3-->
+        <div class="row">
+            <div class="row4">
+                <div class="three">
+                    <p>ROW 4
+                        <br />3 COLUMNS</p>
+                </div>
+                <!--closing column 3-->
+                <div class="six">
+                    <p>ROW 4
+                        <br />6 COLUMNS</p>
+                </div>
+                <!--closing column 6-->
+                <div class="three">
+                    <p>ROW 4
+                        <br />3 COLUMNS</p>
+                </div>
+                <!--closing column 3-->
+            </div>
+        </div>
+        <!--closing row 4-->
+        <div class="row">
+            <div class="row5">
+                <div class="three">
+                    <p>ROW 5
+                        <br />3 COLUMNS</p>
+                </div>
+                <!--closing column 3-->
+                <div class="three">
+                    <p>ROW 5
+                        <br />3 COLUMNS</p>
+                </div>
+                <!--closing column 3-->
+                <div class="three">
+                    <p>ROW 5
+                        <br />3 COLUMNS</p>
+                </div>
+                <!--closing column 3-->
+                <div class="three">
+                    <p>ROW 5
+                        <br />3 COLUMNS</p>
+                </div>
+                <!--closing column 3-->
+            </div>
+        </div>
+        <!--closing row 5-->
+        <div class="row">
+            <div class="row6">
+                <div class="six">
+                    <p>ROW 6
+                        <br />6 COLUMNS</p>
+                </div>
+                <!--closing column 6-->
+                <div class="three">
+                    <p>ROW 6
+                        <br />3 COLUMNS</p>
+                </div>
+                <!--closing column 3-->
+                <div class="three">
+                    <p>ROW 6
+                        <br />3 COLUMNS</p>
+                </div>
+                <!--closing column 3-->
+            </div>
+        </div>
+        <!--closing row 6-->
+        <div class="row">
+            <div class="row7">
+                <div class="six">
+                    <p>ROW 7
+                        <br />6 COLUMNS</p>
+                </div>
+                <!--closing column 6-->
+                <div class="six">
+                    <p>ROW 7
+                        <br />6 COLUMNS</p>
+                </div>
+                <!--closing column 6-->
+            </div>
+        </div>
+        <!--closing row 7-->
+        <div class="row">
+            <footer>
+                <div class="six"> </div>
+                <!--closing column 6-->
+                <div class="three"> </div>
+                <!--closing column 3-->
+                <div class="three"> </div>
+                <!--closing column 3-->
+            </footer>
+        </div>
+        <!--closing row 7-->
+        <div class="row">
+            <div class="last"> </div>
+        </div>
+        <!--closing row 8-->
+    </div>
+    <!--closing container div-->
+    <!-- "Back To Top" button on every web page that runs on JQuery --><a href="#" class="back-to-top">Top</a>
+    <!--Scripts-->
+    <script type="text/javascript" src="js/stickynav/js_Master4.js"></script>
+</body>
 
-                        </span>
-
-				</nav><!-- /navigation -->
-
-			</div>
-		</div><!--closing row 2-->
-						
-
-			<div class="row">
-			<div class="row3">
-				<div class="six">
-					<p>ROW 3 <br />6 COLUMNS</p>
-				</div><!--closing column 6-->
-
-				<div class="three">
-					<p>ROW 3 <br />3 COLUMNS</p>
-				</div><!--closing column 3-->
-
-				<div class="three">
-					<p>ROW 3 <br />3 COLUMNS</p>
-				</div><!--closing column 3-->
-			</div>
-			</div><!--closing row 3-->
-
-
-			<div class="row">
-			<div class="row4">
-
-				<div class="three">
-					<p>ROW 4 <br />3 COLUMNS</p>
-				</div><!--closing column 3-->
-
-				<div class="six">
-					<p>ROW 4 <br />6 COLUMNS</p>
-				</div><!--closing column 6-->
-
-				<div class="three">
-					<p>ROW 4 <br />3 COLUMNS</p>
-				</div><!--closing column 3-->
-			</div>
-			</div><!--closing row 4-->
-
-			<div class="row">
-			<div class="row5">
-				<div class="three">
-					<p>ROW 5 <br />3 COLUMNS</p>
-				</div><!--closing column 3-->
-
-				<div class="three">
-					<p>ROW 5 <br />3 COLUMNS</p>
-				</div><!--closing column 3-->
-
-				<div class="three">
-					<p>ROW 5 <br />3 COLUMNS</p>
-				</div><!--closing column 3-->
-
-				<div class="three">
-					<p>ROW 5 <br />3 COLUMNS</p>
-				</div><!--closing column 3-->
-			</div>
-			</div><!--closing row 5-->
-
-
-			<div class="row">
-			<div class="row6">
-				<div class="six">
-					<p>ROW 6 <br />6 COLUMNS</p>
-				</div><!--closing column 6-->
-
-				<div class="three">
-					<p>ROW 6 <br />3 COLUMNS</p>
-				</div><!--closing column 3-->
-
-				<div class="three">
-					<p>ROW 6 <br />3 COLUMNS</p>
-				</div><!--closing column 3-->
-			</div>
-			</div><!--closing row 6-->
-
-
-			<div class="row">
-			<div class="row7">
-				<div class="six">		
-					<p>ROW 7 <br />6 COLUMNS</p>
-				</div><!--closing column 6-->
-
-				<div class="six">
-					<p>ROW 7 <br />6 COLUMNS</p>
-				</div><!--closing column 6-->
-			
-			</div>
-			</div><!--closing row 7-->
-
-
-			<div class="row">
-			<footer>
-				<div class="six">
-				</div><!--closing column 6-->
-
-				<div class="three">
-				</div><!--closing column 3-->
-
-				<div class="three">
-				</div><!--closing column 3-->
-			</footer>
-			</div><!--closing row 7-->
-
-
-			<div class="row">
-			<div class="last">
-			</div>
-			</div><!--closing row 8-->
-
-	</div><!--closing container div-->
-
-	  <!-- "Back To Top" button on every web page that runs on JQuery -->
-	  <a href="#" class="back-to-top">Top</a>
-
-			<!--Scripts-->
-			<script type="text/javascript" src="js/stickynav/js_Master4.js"></script>
-			
-
-	</body>
 </html>
