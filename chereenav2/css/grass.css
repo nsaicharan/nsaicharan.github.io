@@ -1,0 +1,417 @@
+/* EDGE-to-EDGE layout: This HTML and BODY style code here makes sure that your 12-grid system stretches all the way to the very edge!! NO WHITE MARGINS */
+			html {
+				padding: 0;
+				margin: 0;
+				
+			}
+
+			
+			body {
+				padding:0;
+				margin:0;
+				font-family: Helvetica, sans-serif;
+				font-size: 93%;
+				line-height: 1.5em;
+			}
+
+
+/* Typography */
+			a,
+			a:link,
+			a:visited {
+				color: blue;
+			}
+
+			h1, h2, h3, h4, h5, h6 {margin-top: 0;}
+
+			p {margin: 0 0 1em 0;}
+
+			h1 {
+				background-color: #305782;
+				color: #FFF;
+				padding: 60px 25px;
+				margin: 0;
+			}
+
+			.clearfix:before, .clearfix:after { content: ""; display: table; }
+			.clearfix:after { clear: both; }
+			.clearfix { *zoom: 1; }
+
+/* Navigation */
+
+			.row2 .three, .row2 .nine {
+				height: 60px;
+				background-color: #D1EEEE;
+				text-align:center;
+			}
+
+			nav {
+				z-index: 500;
+				background-color: #e7ecf2;
+			}
+
+			/* This is SUPPOSE to hold the NAV open at 60px in height, for the Sticky Nav to work without jumpy-ness when it reaches the TOP
+			of the web page. This number has to match the height that is given to ROW2 - in the CSS above. But - for some reason, it's not working.
+			Instead, this 60 pixels is being added ONTOP of the NAV div. Not sure why, or how to fix.
+				.nav-placeholder {
+				margin: 0 0 60px 0; 
+				}*/ 
+
+
+			.fixed {
+				position: fixed;
+				top: 0;
+				width: 100%;
+				background-color: transparent;
+			}
+
+			/* DON"T need this code because it shortens the width of the nav to stay in the center of the Container. We want to use FULL 100% width.
+			.fixed .nav-inner {padding: 0 20px;}
+			.fixed .nav-inner-most {max-width: 700px; margin: 0 auto; background-color: #e7ecf2;}*/
+
+			nav ul {
+				margin: 0;
+				padding: 0;
+			}
+
+			nav ul li {
+				list-style: none;
+				float: right;/* This code moves the NAV LINKS all the way to the right.*/
+			}
+
+			nav ul li a:link,
+			nav ul li a:visited {
+				display: block;
+				text-decoration: none;
+				padding: 10px 25px;
+				background-color: #e7ecf2;
+				border-right: 2px solid #d5dce4;
+				color: #33557c;
+				font-size: 90%;
+				font-weight: bold;
+			}
+
+			nav ul li a:hover {
+				background-color: #dbe1e8;
+			}
+
+			nav ul li:last-child a:link,
+			nav ul li:last-child a:visited {
+				border-right: none;
+			}
+
+
+
+/* Setting up our grid - THIS IS FOR DESKTOP VIEW */
+.container {
+	width: 100%; /*Set the width of the entire website here */
+	margin-left: auto;
+	margin-left: auto;  /* Margin-left and right are set to auto to center the container */
+}
+
+	/* GOT THIS FROM THE STICKY NAV DEMO PAGES - NOT SURE IF I NEED THIS YET - OR NOT....
+	.container {
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 0 20px;
+	position: relative;
+	}*/
+
+
+
+.seven:first-child,.eight:first-child, .nine:first-child, .ten:first-child,.eleven:first-child,.five:first-child, .four:first-child, .three:first-child, .two:first-child, .one:first-child, .six:first-child { 
+	margin-left: 0; /* This line of code makes the left-most column align to the left of the screen */
+}
+
+.row {
+	width: 100%;
+	clear: both; /* Clear creates new styles for the next row */
+	padding: 0px;
+	margin: 0px;
+}
+
+
+/* MOBILE FIRST APPROACH */
+
+/* CSS ARRANGED FOR MOBILE FIRST - For mobile phones: */
+	.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven {
+    width: 100%;
+  	float: left;  /*This command is needed to keep the DIV boxes on the SAME line. If you remove this tag, each DIV  will stacked ontop each other, one at a time.*/
+	}
+
+
+/* CSS ARRANGED FOR MOBILE FIRST - ONLY USE MEDIA QUERIES for ALL other devices - for Desktop and Tablets  */
+
+/* this code doesn't work -----
+@media only screen and (min-width: 768px) (max-width: 1023px) {
+    .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven {
+        width: 50%;
+        float: left;
+    }
+}-----*/
+
+@media only screen and (min-width: 1024px) {
+    /* For desktop: */
+    .one {width: 8.33%;}
+    .two {width: 16.66%;}
+    .three {width: 25%;}
+    .four {width: 33.33%;}
+    .five {width: 41.66%;}
+    .six {width: 50%;}
+    .seven {width: 58.33%;}
+    .eight {width: 66.66%;}
+    .nine {width: 75%;}
+    .ten {width: 83.33%;}
+    .eleven {width: 91.66%;}
+}
+
+
+/* Formatting HTML elements on ALL web pages */
+
+
+
+.row3 .six, .row3 .three {
+	height: 333px;
+	background-color: #F89406;
+	text-align:center;
+}
+
+.row4 .six, .row4 .three {
+	height: 333px;
+	background-color: #F9690E;
+	text-align:center;
+}
+.row5 .three {
+	height: 333px;
+	background-color: #FDE3A7;
+	text-align:center;
+}
+
+/* THIS CODE IS NOT WORKING - I TRIED IT. Something is wrong. 
+i don't know how to effectively use Clearfixes in my CSS!!!! Need to watch a YouTube video.
+
+ This should be 4 equal column sizes on the screen need to be fixed for tablets: 
+@media only screen and (min-width: 768px) (max-width: 1023px) {
+     For tablets: 
+
+.row5 .clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+}
+.clearfix {
+    display: block;
+}
+}*/
+
+.row6 .six, .row6 .three {
+	height: 333px;
+	background-color: #F27935;
+	text-align:center;
+}
+
+.row7 .six {
+	height: 333px;
+	background-color: #F27935;
+	text-align:center;
+}
+
+
+.last {
+	height: 73px;
+	background-color: #d13328;
+	text-align:center;
+}
+footer {
+	height: 443px;
+	background-color: #FDE3A7;
+}
+
+/* Back To Top button on every web page via JQuery */
+
+.back-to-top {
+	display:none;
+	position:fixed;
+	bottom:20px;
+	right:20px;
+	background-color:cornflowerblue;
+	padding:20px;
+	color:#fff;
+}
+
+/* Menu Navigation */
+
+
+@media only screen and (max-width: 1024px) {
+
+    .menunav {
+      background-color: #fff;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+      position: fixed;
+      width: 100%;
+      z-index: 3;
+    }
+
+    .menunav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      overflow: hidden;
+      background-color: #3E4D5B;
+    }
+    
+    .menunav li:first-child{
+        margin-top: 65px;
+    }
+
+    .menunav li a {
+      color:#fff;
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 25px;
+    }
+
+    .menunav li a:hover{
+      color: #1bbc9b;
+    }
+
+    .menunav .logo {
+      display: block;
+      float: left;
+      margin: 22px 0 0 20px;
+    }
+
+    .menunav .menu {
+      clear: both;
+      min-height: 0;
+      max-height: 0;
+      transition: all .2s ease-out;
+    }
+
+    .menutext{
+        font-size: 12px;
+        position: absolute;
+        top:0px;
+        left: 9px;
+        color:#fff;
+    }
+
+    .menunav .menu-icon {
+      cursor: pointer;
+      display: inline-block;
+      float: right;
+      padding: 28px 12px 15px;
+      position: relative;
+      -webkit-user-select: none;  
+      -moz-user-select: none;     
+      -ms-user-select: none; 
+      user-select: none;
+      background: #3E4D5B;
+      margin: 12px 15px;
+
+    }
+
+    .menunav .menu-icon .navicon {
+      background: #fff;
+      display: block;
+      height: 2.5px;
+      position: relative;
+      transition: background .2s ease-out;
+      width: 30px;
+    }
+
+    .menunav .menu-icon .navicon:before,
+    .menunav .menu-icon .navicon:after {
+      background: #fff;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+      width: 100%;
+
+    }
+
+    .menunav .menu-icon .navicon:before {
+      top: 7px;
+    }
+
+    .menunav .menu-icon .navicon:after {
+      top: -7px;
+    }
+
+    .menunav .menu-btn {
+      display: none;
+    }
+
+    .menunav .menu-btn:checked ~ .menu {
+      min-height: 100vh;
+      max-height: 100vh;
+      background: #3E4D5B;
+    }
+
+    .menunav .menu-btn:checked ~ .menu-icon .navicon {
+      background: transparent;
+    }
+
+    .menunav .menu-btn:checked ~ .menu-icon .navicon:before {
+      transform: rotate(-45deg);
+    }
+
+    .menunav .menu-btn:checked ~ .menu-icon .navicon:after {
+      transform: rotate(45deg);
+    }
+
+    .menunav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+    .menunav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+      top: 0;
+    }  
+    
+    header .row{
+        position: relative;
+        top: 70px;
+    }
+    
+    .longnav{
+        display: none;
+    }
+    
+    .row3{
+        margin-top: 36px;
+    }
+
+}
+
+@media only screen and (min-width: 1025px) {
+    
+    .menunav{
+        display:none;
+    }
+}
+
+@media only screen and (max-width: 700px) and (orientation : landscape) {
+    .menunav li:first-child{
+        margin-top: 30px;
+    }
+    .menunav li a {
+        padding: 10px 20px;
+        font-size: 22px;
+    }
+}
+
+@media only screen and (max-width: 600px) and (orientation : landscape) {
+    .menunav li:first-child{
+        margin-top: 10px;
+    }
+    .menunav li a {
+        padding: 8px 20px;
+        font-size: 18px;
+    }
+}
