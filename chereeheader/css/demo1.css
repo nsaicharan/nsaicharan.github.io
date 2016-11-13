@@ -400,12 +400,6 @@ footer {
     }
 }
 
-@media only screen (min-width:769px) and (max-width: 1024px) {
-    
-    header .hero-image{
-        max-height: 300px;
-    }
-}
 
 @media only screen and (max-width: 736px) and (orientation : landscape) {
     
@@ -416,18 +410,6 @@ footer {
     .menunav li a {
         padding: 10px 20px;
         font-size: 22px;
-    }
-}
-
-@media only screen and (max-width: 599px) and (orientation : landscape) {
-    
-    .menunav li:first-child{
-        margin-top: 5px;
-    }
-    
-    .menunav li a {
-        padding: 8px 20px;
-        font-size: 18px;
     }
     
     .menunav .menu-icon {
@@ -445,6 +427,19 @@ footer {
      .row3{
         margin-top: 46px;
     }
+}
+
+@media only screen and (max-width: 599px) and (orientation : landscape) {
+    
+    .menunav li:first-child{
+        margin-top: 5px;
+    }
+    
+    .menunav li a {
+        padding: 8px 20px;
+        font-size: 18px;
+    }
+    
 }
 
 
