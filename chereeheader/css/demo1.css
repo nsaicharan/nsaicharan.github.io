@@ -262,7 +262,7 @@ footer {
       padding: 0;
       list-style: none;
       overflow: hidden;
-      background-color: #3E4D5B;
+      background-color: #324252;
     }
     
     .menunav li:first-child{
@@ -313,7 +313,7 @@ footer {
       -moz-user-select: none;     
       -ms-user-select: none; 
       user-select: none;
-      background: #3E4D5B;
+      background: #324252;
       margin: 12px 15px;
 
     }
@@ -354,7 +354,7 @@ footer {
     .menunav .menu-btn:checked ~ .menu {
       min-height: 100vh;
       max-height: 100vh;
-      background: #3E4D5B;
+      background: #324252;
     }
 
     .menunav .menu-btn:checked ~ .menu-icon .navicon {
