@@ -407,10 +407,10 @@ footer {
     }
 }
 
-@media only screen and (max-width: 700px) and (orientation : landscape) {
+@media only screen and (max-width: 736px) and (orientation : landscape) {
     
     .menunav li:first-child{
-        margin-top: 28px;
+        margin-top: 24px;
     }
     
     .menunav li a {
@@ -422,7 +422,7 @@ footer {
 @media only screen and (max-width: 599px) and (orientation : landscape) {
     
     .menunav li:first-child{
-        margin-top: 8px;
+        margin-top: 5px;
     }
     
     .menunav li a {
@@ -440,6 +440,10 @@ footer {
     
     .menunav .logo {
       margin-top: 14px;
+    }
+    
+     .row3{
+        margin-top: 46px;
     }
 }
 
