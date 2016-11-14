@@ -249,6 +249,12 @@ footer {
 
 @media only screen and (max-width: 1024px) {
 
+     .menunav .logo {
+      display: block;
+      float: left;
+      margin: 22px 0 0 20px; /* Margin has to be adjusted depending on size of the actual logo */
+    }
+    
     .menunav {
       background-color: #fff;
       box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
@@ -282,12 +288,6 @@ footer {
       color: #1bbc9b;
     }
 
-    .menunav .logo {
-      display: block;
-      float: left;
-      margin: 22px 0 0 20px;
-    }
-
     .menunav .menu {
       clear: both;
       min-height: 0;
@@ -314,7 +314,7 @@ footer {
       -ms-user-select: none; 
       user-select: none;
       background: #324252;
-      margin: 12px 15px;
+      margin: 12px 15px; 
 
     }
 
@@ -403,6 +403,10 @@ footer {
 
 @media only screen and (max-width: 736px) and (orientation : landscape) {
     
+    .menunav .logo {
+      margin-top: 17px; /* Margin has to be adjusted depending on size of the actual logo */
+    }
+    
     .menunav li:first-child{
         margin-top: 24px;
     }
@@ -413,18 +417,14 @@ footer {
     }
     
     .menunav .menu-icon {
-      margin: 6px 15px;
+      margin: 6px 15px; 
     }
     
     header .row{
         top: 58px;
     }
     
-    .menunav .logo {
-      margin-top: 17px;
-    }
-    
-     .row3{
+    .row3{
         margin-top: 52px;
     }
 }
