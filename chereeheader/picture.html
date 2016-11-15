@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+         
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        
+         .hero-image {
+            width: 100%;
+            overflow: hidden;
+            
+        }
+        
+        .hero-image img{ 
+            width: 100%;
+            max-height: 120vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="hero-image">
+        <picture>
+            <source media="(min-width: 1024px)" srcset="images/hero/bx1920.jpg 1920w, images/hero/bx3840.jpg 3840w">
+            <source media="(min-width: 768px)" srcset="images/hero/bx1536p.jpg 1536w">
+            <source media="(min-width: 568px)" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx2272.jpg 2272w">
+            <img src="images/hero/bx640p.jpg 640w" srcset="images/hero/bx1280p.jpg 1280w" alt="Request More Info"> 
+        </picture>
+    </div>
+</body>
+</html>
