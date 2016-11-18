@@ -285,4 +285,8 @@
     header i.fa-play{
         margin-left: 7px;
     }
+    
+    header{
+        height: 90vh;
+    }
 }
