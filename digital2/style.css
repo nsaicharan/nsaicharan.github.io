@@ -14,7 +14,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            height: 95vh;
         }
         .container h1{
                 font-size: 25px;
