@@ -172,8 +172,8 @@ body.logged-in .YouTubePopUp-Wrap{ /* For WordPress */
 
     .YouTubePopUp-Close{
         bottom:225px;
+        width:20px;
+        height:20px;
     }
-    
-    width:20px;
-    height:20px;
+   
 }
