@@ -1,0 +1,260 @@
+ body{
+            background: url(img/bgactual.png) fixed;
+            background-size: cover;
+            color:white;
+            font-family: 'Jura', sans-serif;
+        }
+        
+        .navbar-wrapper{
+            font-weight: bold;
+            font-family: 'Open Sans Condensed' !important;
+        }
+        
+        header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container h1{
+                font-size: 25px;
+        }
+        
+        .container h2{
+            font-size: 85px;
+            font-weight: bold;
+        }
+        
+        .text{
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            flex-direction: column;
+            height: 500px;
+        }
+        
+        .text a{
+            color:white;
+            text-decoration: none;
+            margin: 0 auto;
+        }
+        
+        .text i { font-size: 70px;}
+        
+        .play .playtext{color:#2B869B;font-family: 'Open Sans Condensed',sans-serif;}
+        
+        .playtext:hover{color:white}
+        
+        .fa-chevron-down:hover{color: peachpuff;}
+        
+        section{
+            text-align: center;
+            margin: 35px auto 0;
+        }
+        
+        h3{
+            font-size: 60px;
+            font-weight: bold;
+            
+        }
+        
+        #acknowledge h3{
+            margin-bottom: 30px;
+        }
+        
+        p{
+            font-size: 20px;
+            text-align: left;
+        }
+        .icon{
+            width: 40px;
+            height: 40px;
+            margin-top: -10px;
+            display: inline-block;
+        }
+        
+        h4{    
+            text-align: left;
+            font-size: 28px;
+            font-weight: bold;
+        }
+        
+        #ditch h4{
+            padding-bottom: 10px;
+            border-bottom: 5px solid grey;
+        }
+        
+        h5{
+            color: #9EEDFE;
+            font-size: 26px;
+            font-weight: bold;
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+        #ditch .notenough{
+            display: table;
+            height: 200px;
+            margin: 0 auto;
+        }
+        
+        #ditch .notenough h5{
+           display: table-cell;
+           vertical-align: middle;
+          
+        }
+        
+        .services{
+            margin: 30px auto;
+        }
+
+.services a{
+    color: white;
+}
+
+.services a:hover{
+    color: peachpuff;
+}
+        
+        #believe img{margin:25px auto;}
+        
+        #believe  .trace{
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        #believe a{
+            color: white;
+        }
+        
+        #believe h3{
+            margin: 30px auto;
+        }
+        
+        #believe .trace div{
+             border-right: 5px solid grey;
+        }
+        
+        #believe .trace div:last-child{
+            border: none;
+        }
+        
+        .map{margin-top:60px;}
+        
+        input,textarea{
+            margin-bottom: 10px;
+             padding: 18px !important;
+            font-size: 20px !important;
+        }
+        
+        #demo p{
+            text-align: center;
+        }
+        
+        #demo h3{
+            color:grey;
+            letter-spacing: 2.2px;
+            font-size: 75px;
+        }
+        
+        #demo button{
+            margin-bottom: 10px;
+            font-size: 20px;
+            background: black;
+            border: 2px solid white;
+            font-weight: bold;
+        }
+        
+        #demo button:hover{
+            color:black;
+            background: white;
+            border:2px solid black;
+        }
+        
+        #demo .fa-paper-plane{
+            margin-right: 5px;
+        }
+        
+        footer{margin: 40px auto 10px;}
+        
+        footer p{
+            text-align: center;
+        }
+        
+        footer .network{
+            font-size: 30px;
+            margin: 10px 5px;
+            color:white;
+        }
+        .fa-linkedin:hover{color:#007bb5}
+        .fa-facebook:hover{color:#3b5998}
+        .fa-twitter:hover{color:#55acee}
+        .fa-google-plus:hover{color:#db4b39}
+        
+        h6{
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center
+        }
+        .copy{
+            text-align: center;
+            margin-top: 30px;
+            font-family: 'Open Sans Condensed', sans-serif;
+        }
+        
+        .modal-title{
+            color: black;
+            text-align: center;
+        }
+
+
+@media (max-width:991px){
+    
+    .container h2{
+        font-size: 65px;
+    }
+    
+    header i{font-size:50px !important }
+    
+    h3{font-size: 35px;}
+    
+    #demo h3{font-size: 40px;letter-spacing: 0;}
+}
+
+@media (max-width:767px){
+    
+   .container h2{
+        font-size: 40px;
+    }
+    
+    header i{font-size:40px !important }
+    
+    h3{font-size: 30px;}
+    
+    #believe .trace div{border: none;}
+}
+
+@media (max-width:450px){
+    
+   .container h2{
+        font-size: 28px;
+    }
+    
+    header i{font-size:35px !important }
+    
+    header i.fa-play{
+        margin-left: 7px;
+    }
+    
+    
+    
+    .icon{
+        height: 25px;
+        width: 25px;
+        margin-top: 5px;
+    }
+    
+    h3{font-size: 24px !important}
+    
+    h4{
+        font-size: 25px;
+    }
+}
