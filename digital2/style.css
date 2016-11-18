@@ -230,6 +230,9 @@
     
     header i{font-size:40px !important }
     
+    header i.fa-play{margin-left: 7px;}
+    
+    
     h3{font-size: 30px;}
     
     #believe .trace div{border: none;}
@@ -249,12 +252,6 @@
     }
     
     header i{font-size:35px !important }
-    
-    header i.fa-play{
-        margin-left: 7px;
-    }
-    
-    
     
     .icon{
         height: 25px;
@@ -287,6 +284,6 @@
     }
     
     header{
-        height: 90vh;
+        height: 85vh;
     }
 }
