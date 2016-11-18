@@ -157,10 +157,10 @@ body.logged-in .YouTubePopUp-Wrap{ /* For WordPress */
 
 @media (max-width:736px) and (orientation:landscape){
     .YouTubePopUp-Content iframe{
-        height:250px !important;
+        height:220px !important;
     }
 
     .YouTubePopUp-Close{
-        bottom:290px;
+        bottom:270px;
     }
 }
