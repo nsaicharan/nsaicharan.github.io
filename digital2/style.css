@@ -236,6 +236,10 @@
     h3{font-size: 30px;}
     
     #believe .trace div{border: none;}
+    
+    #believe h3:first-child{
+        margin-top: 0;
+    }
 }
 
 @media (max-width:450px){
