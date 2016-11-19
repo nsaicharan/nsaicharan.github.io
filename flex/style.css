@@ -10,6 +10,7 @@
          .container{
           max-width:1150px;
           margin:0 auto;
+          padding:2px;
         }
 
         .flex-grid-thirds {
@@ -29,7 +30,7 @@
         .photo img{
             width:50%;
             padding: .5px;
-            max-height: 170px;
+            max-height: 165px;
 
           }
         
