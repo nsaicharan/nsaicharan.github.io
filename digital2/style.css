@@ -46,9 +46,7 @@
         
         .play .playtext{color:#2B869B;font-family: 'Open Sans Condensed',sans-serif;}
         
-        .playtext:hover{color:white}
-        
-        .fa-chevron-down:hover{color: peachpuff;}
+         .fa-play:hover, .fa-chevron-down:hover{color: papayawhip}
         
         section{
             text-align: center;

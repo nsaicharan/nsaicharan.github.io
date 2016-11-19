@@ -1,0 +1,125 @@
+*{
+          box-sizing: border-box;
+        }
+        
+        body {
+          padding: 0;
+          margin: 0;
+          background: black;
+        }
+         .container{
+          max-width:1150px;
+          margin:0 auto;
+        }
+
+        .flex-grid-thirds {
+          display: flex;
+          justify-content: space-between;
+          padding: 1px;
+          margin: 20px auto;
+        }
+        .flex-grid-thirds .col {
+          width: 24%;
+        }
+        
+        .photo{
+          display:flex;
+        }
+        
+        .photo img{
+            width:50%;
+            padding: .5px;
+            max-height: 170px;
+
+          }
+        
+        .description{
+            background: #333;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+        }
+        
+        .description span{
+            margin: 3px 0;
+            display: block;
+        }
+
+        .description span:first-child{
+            font-weight: bold;
+        }
+        
+        @media (max-width: 1023px){
+          .flex-grid-thirds {
+            flex-wrap:wrap;
+          }
+          .flex-grid-thirds .description{
+              width:100%;
+              margin:0 0 15px;
+            }
+
+           .photo{
+              width: 32%;
+              margin: 0 auto;
+            }
+            
+            .photo img{
+                max-height: 150px;
+                
+            }
+        }
+
+        @media (max-width: 800px) {
+          .flex-grid-thirds {
+            display: block;
+          }
+           .flex-grid-thirds .col.photo {
+              width: 60%;
+              margin: 10px auto 10px;
+            }
+            
+            .photo img{
+                padding:0 30px;
+                max-height: 170px;
+            }
+        }
+        
+        @media (max-width: 667px) {
+           .flex-grid-thirds .col.photo {
+              width: 70%;
+            }
+            
+            .photo img{
+                padding:0 35px;
+            }
+        }
+        
+         @media (max-width: 600px) {
+           .flex-grid-thirds .col.photo {
+              width: 80%;
+            }
+            
+            .photo img{
+                padding:0 30px;
+            }
+        }
+
+          @media (max-width: 480px) {
+           .flex-grid-thirds .col.photo {
+              width: 100%;
+            }
+            
+            .photo img{
+                padding:0 25px;
+            }
+        }
+
+        @media (max-width: 375px) {
+            
+            .photo img{
+                padding:0 15px;
+            }
+        }
