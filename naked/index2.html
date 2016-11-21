@@ -27,6 +27,18 @@
             padding: 5px;
         }
         
+        .selector-row{padding: 25px}
+        
+        .selector-row h2{float: left; color: white;}
+        
+        .selector-row .selector{float: right; margin-top: -10px; }
+        
+        .selector-row a{margin:0 10px 20px; display: inline-block; width: 48px; height: 40px;}
+        
+        .selector a:hover{background: red;}
+
+        .selector .active{background: red;}
+        
         .row7 .six{
             background: #000;
             height: auto;
@@ -131,6 +143,19 @@
 
 <body>
     <div class="container">
+       
+       <div class="selector-row">
+       
+            <h2>HEADER</h2>
+
+            <div class="selector">
+
+                <a href="index.html"><img src="grid.png" alt=""></a>
+                <a href="index2.html"><img src="list.png" class="active" alt=""></a>
+
+            </div>
+        
+        </div>
        
        <div class="row">
             <div class="row7">

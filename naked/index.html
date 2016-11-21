@@ -26,9 +26,17 @@
             margin: 0 auto;
         }
         
-        .row5{
-            
-        }
+        .selector-row{padding: 25px}
+        
+        .selector-row h2{float: left; color: white;}
+        
+        .selector-row .selector{float: right; margin-top: -10px; }
+        
+        .selector-row a{margin:0 10px 20px; display: inline-block; width: 48px; height: 40px;}
+        
+        .selector a:hover{background: red;}
+
+        .selector .active{background: red;}
         
         .row5 .three{
            padding: 0px;
@@ -81,7 +89,7 @@
             }
         }
         
-        @media (min-width:801px) and (max-width:1023px){
+        @media (min-width:768px) and (max-width:1023px){
             
            .row5 .three:nth-child(2),.row5 .three:nth-child(3),.row5 .three:nth-child(4){
                 width: 33.3333% !important;
@@ -97,7 +105,7 @@
             }
         }
         
-        @media (max-width:800px){
+        @media (max-width:767px){
             .description{
                 height: auto;
                 margin: 10px auto 8px;
@@ -122,8 +130,10 @@
             padding-top: 20px;
         }
         
+		footer .six{padding:0 10px;}
+		
         footer .headertext{
-            max-width: 500px;
+            max-width: 600px;
             margin: 0 auto;
         }
         
@@ -138,7 +148,6 @@
             height: 260px;
             display:block;
             margin: 0 auto 5px;
-            text-align: center;
         }
       
         .last{
@@ -166,6 +175,20 @@
 
 <body>
     <div class="container">
+       
+       <div class="selector-row">
+       
+            <h2>HEADER</h2>
+
+            <div class="selector">
+
+                <a href="index.html"><img src="grid.png" class="active"alt=""></a>
+                <a href="index2.html"><img src="list.png" alt=""></a>
+
+            </div>
+        
+        </div>   
+       
         <div class="row">
             <div class="row5">
                

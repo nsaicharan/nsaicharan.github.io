@@ -2,18 +2,25 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>2 Columns Flex</title>
+    <title>Flex Grid - 2 Col</title>
     <link rel="stylesheet" href="style.css">
     <style>
         @media (min-width:769px) and (max-width:1023px){
             
-            .photo{
-                width: 50% !important;
+            .flex-grid{margin: 0 auto;}
+            
+            .flex-grid .description{
+                width: 50%;  
+                height: 165px;
             }
+            
+            .flex-grid .col.photo{
+                width: 35%;
+                margin-bottom: 10px;
+            }
+
             .photo img{
-                padding: 0 30px !important;
-                max-height: 170px;
-                margin-bottom: 20px;
+                max-height: 165px;
             }
         }
     </style>
@@ -21,7 +28,21 @@
 <body>
     
 <div class="container">
-    <div class="flex-grid-thirds">
+    
+    <div class="selector-row">
+       
+        <h2>HEADER</h2>
+        
+        <div class="selector">
+           
+            <a href="index.html"><img src="grid.png" alt=""></a>
+            <a href="index2.html"><img src="list.png" class="active" alt=""></a>
+
+        </div>
+        
+    </div>   
+   
+    <div class="flex-grid">
      
           <div class="col description">
               <div class="description-text">
@@ -31,7 +52,7 @@
               </div>
           </div>
           
-          <div class="col img photo">
+          <div class="col photo">
               <img src="eh1.jpg" alt="" />
               <img src="eh2.jpg" alt="" />
           </div>
@@ -44,14 +65,14 @@
               </div>
           </div>
           
-          <div class="col img photo">
+          <div class="col photo">
               <img src="je1.jpg" alt="" />
               <img src="je2.jpg" alt="" />
           </div>
       
     </div>
     
-    <div class="flex-grid-thirds">
+    <div class="flex-grid">
      
           <div class="col description">
               <div class="description-text">
@@ -61,7 +82,7 @@
               </div>
           </div>
           
-          <div class="col img photo">
+          <div class="col photo">
               <img src="js1.jpg" alt="" />
               <img src="js2.jpg" alt="" />
           </div>
@@ -74,12 +95,65 @@
               </div>
           </div>
           
-          <div class="col img photo">
+          <div class="col photo">
               <img src="rc1.jpg" alt="" />
               <img src="rc2.jpg" alt="" />
           </div>
-      
-    </div>
+          
+    </div> 
+     
+    <footer>
+        <div class="flex-grid-foot">
+          <div class="col half">
+
+                <h2>HEADER</h2>
+
+                <img src="dr.jpg" class="dr" alt="">
+
+                <div class="headertext">
+                    <p>Lorem ipsum dolor sit amet, qui in inani luptatum, sed eu copiosae complectitur. Vim alii natum concludaturque ea, ius oblique omittantur id, inani quidam sit ei. Ex sale legere prodesset nec, eu verear dolorem partiendo nam. An luptatum lobortis partiendo mel. His suas dicit pericula at, vidisse luptatum duo in. Ex nec wisi blandit platonem, nec ut illum periculis vituperata, eum ei eius tritani.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="col quarter">
+
+                <h2>ABOUT</h2>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>  
+            </div>
+            
+            <div class="col quarter">
+              <h2>CONTACT</h2>
+                <p> (111) 111-1111 (phone)</p>
+                <p> (111) 111-1111 (fax)</p>
+                <p> ICONS HERE</p>
+                <div class="main">
+                   <p><strong>Title Main Office</strong></p>
+                   <p>1111 Main Street, Suite #111</p>
+                   <p>Your City, Your State 11111</p>
+                   <p><a href="#">Driving Directions </a></p>
+                </div>
+                <div class="second">
+                   <p><strong>Title Second Office</strong></p>
+                   <p>1111 Main Street, Suite #111</p>
+                   <p>Your City, Your State 11111</p>
+                   <p><a href="#">Driving Directions </a></p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="last"> 
+            <p>Copyright 2016 | Design &amp; Marketing by <a href="#">CYD</a> | All Rights Reserved.</p>
+        </div>
+        
+    </footer>
     
 </div>
 </body>
