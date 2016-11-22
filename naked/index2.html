@@ -39,7 +39,15 @@
 
         .selector .active{background: red;}
         
-        .row7 .six:hover{border: 1px solid red; padding-top: 6px;}
+        .six{padding: 1px 1px 1px 15px;}
+
+        .row7 .six:hover{border: 1px solid red; padding: 0 0 0 14px;}
+        
+/*
+        .six{padding: 1px;}
+
+        .row7 .six:hover{border: 1px solid red; padding: 0;}
+*/
         
         .row7 .six{
             background: #000;
@@ -66,8 +74,9 @@
         
         .row7 .three{
             width: 50%;
-            margin: 3px auto;
+            margin: 0 auto;
             height: auto;
+            padding-top: 6px;
         }
         
         .photo img{
@@ -110,6 +119,17 @@
         }
         
         /* MEDIA QUERIES */
+        
+        @media(max-width:1100px){
+            .six{padding: 1px 1px 1px 9px;}
+
+            .row7 .six:hover{border: 1px solid red; padding: 0 0 0 8px;}
+        }
+        
+         @media(max-width:1040px){
+            .six{padding: 1px 1px 1px 4px;}
+            .row7 .six:hover{border: 1px solid red; padding: 0 0 0 3px;}
+        }
         
         @media (max-width:1023px){
             
@@ -161,9 +181,9 @@
        
        <div class="row">
             <div class="row7">
-                <a href="#" class="sectionlink">
+                
                     <div class="six">
-
+                    <a href="#" class="sectionlink">
                         <div class="three">
                             <div class="description">
                                <div class="description-text">
@@ -180,12 +200,13 @@
                                 <img src="eh2.jpg" alt="">
                             </div>
                         </div><!--closing column 3-->
-
+                     </a> 
                     </div><!--closing column 6-->
-                </a> 
+               
                 
-                <a href="#" class="sectionlink">  
+                
                     <div class="six">
+                       <a href="#" class="sectionlink">  
                         <div class="three">
                             <div class="description">
                                <div class="description-text">
@@ -202,17 +223,18 @@
                                 <img src="je2.jpg" alt="">
                             </div>
                         </div><!--closing column 3-->
+                        </a> 
                     </div><!--closing column 6-->
-                </a> 
+                
             </div><!--closing row 7-->
         </div>
     
         <div class="row">
             <div class="row7">
                
-               <a href="#" class="sectionlink"> 
+               
                     <div class="six">
-
+                        <a href="#" class="sectionlink"> 
                         <div class="three">
                             <div class="description">
                                <div class="description-text">
@@ -229,12 +251,13 @@
                                 <img src="js2.jpg" alt="">
                             </div>
                         </div><!--closing column 3-->
-
+                        </a>
                     </div><!--closing column 6-->
-                </a>
                 
-                <a href="#" class="sectionlink"> 
+                
+                
                     <div class="six">
+                       <a href="#" class="sectionlink"> 
                         <div class="three">
                             <div class="description">
                                <div class="description-text">
@@ -251,8 +274,9 @@
                                 <img src="rc2.jpg" alt="">
                             </div>
                         </div><!--closing column 3-->
+                        </a>
                     </div><!--closing column 6-->
-                </a>
+                
             </div><!--closing row 7-->
         </div>
         

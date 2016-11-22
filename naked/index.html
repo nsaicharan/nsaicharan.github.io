@@ -13,13 +13,9 @@
     <link rel="stylesheet" type="text/css" href="demo1.css" />
     <style>
         
-        *{
-            box-sizing: border-box !important;
-        }
+        *{box-sizing: border-box !important;}
         
-        body{
-            background: black;
-        }
+        body{background: black;}
         
         .container{
             max-width: 1150px;
@@ -38,13 +34,25 @@
 
         .selector .active{background: red;}
         
-        .section:hover{border:1px solid red; height: 185px; padding-top: 7px; margin-bottom: 5px;}
+        .row5{
+            padding: 6px 1px 1px 6px;
+            height: 183px;
+        }
         
+        .row5:hover{
+            border: 1px solid red;
+            padding: 5px 0 0 5px;
+        }
+
         .row5 .three{
            padding: 0px;
            background: black;
             height: auto;
             margin: 0 auto;
+        }
+        
+        .row5 .three:first-child{
+            margin: 0;
         }
         
         .description{
@@ -54,7 +62,7 @@
             display: table;
             width: 97%;
             padding: 10px;
-            margin: 0 auto;
+            margin: 0 0; /*    changed from auto*/
         }
         
         .description-text{
@@ -71,14 +79,15 @@
        .photo img{
             max-height: 170px;
             display: inline-block;
-            width: 138px;
+            width: 135px;
             
         }
         
-        @media (max-width:1024px){
-            .row5 .three{
-               padding: 3px;
-            }
+        @media (max-width:1130px){
+            
+            .row5{padding: 6px 1px 1px 12px; height: 173px;}
+        
+            .row5:hover{padding: 5px 0 0 11px;}
             
             .description{
                 height: 160px;
@@ -91,31 +100,38 @@
             }
         }
         
+        @media (max-width:1060px){
+            
+            .row5{padding: 6px 1px 1px 7px;}
+        
+            .row5:hover{padding: 5px 0 0 6px;}
+            
+        }
+        
         @media (min-width:768px) and (max-width:1023px){
+            
+            .row5{height: 293px;}
             
            .row5 .three:nth-child(2),.row5 .three:nth-child(3),.row5 .three:nth-child(4){
                 width: 33.3333% !important;
                 margin: 20px auto; 
               
             }
-            .description{
-                height: auto;
-            }
+            .description{height: auto;}
             
-            span{
-                text-align: center;
-            }
+            span{text-align: center;}
         }
         
         @media (max-width:767px){
+            
+            .row5{height: 650px;}
+            
             .description{
                 height: auto;
                 margin: 10px auto 8px;
             }
             
-            span{
-                text-align: center;
-            }
+            span{text-align: center;}
             
             .row5 .three:nth-child(2),.row5 .three:nth-child(3),.row5 .three:nth-child(4){
                 margin: 3px auto; 
@@ -160,19 +176,15 @@
         
         @media (max-width:1023px){
     
-            footer{
-                text-align: center;
-            }
+            footer{ text-align: center;}
             
             footer h2{
                 border:none;
                 padding-left: 0;
             }
-            
         }
         
     </style>
-    <!-- JavaScript files are in the Foot -->
 </head>
 
 <body>
