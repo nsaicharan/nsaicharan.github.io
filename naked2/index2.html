@@ -121,11 +121,25 @@
         
         @media (max-width:1023px){
             
+            .row7 .six{
+                margin: 0 auto; 
+                float: none; 
+                height: 220px; 
+                width: 95%;
+            }
+            
             .row7 .three{
                 width: 50%;
                 margin: 0 auto;
             }
             
+            .description{
+                height:  207px;
+            }
+         
+            .photo img{
+                max-width:155px;
+            }
             
             
             footer{text-align: center;}
@@ -134,18 +148,73 @@
                 border:none;
                 padding-left: 0;
             }
-            
         }
         
-        @media (max-width:567px){
+        @media(min-width:768px) and (max-width:800px){
             
             .description{
-                width: 248px;
+                margin-left: 13px;
+            }
+        }
+        
+        
+        @media (max-width:767px){
+            .description{
+                margin-left: 6px;
+            }
+        }
+        
+        @media (max-width:735px){
+            .row7 .six{
+                width: 97%;
+                height: 214px;
+            }
+            
+            .description{
+                height: 200px;
+            }
+            .photo img{
+                max-width:150px;
+            }
+        }
+        
+        @media (max-width:666px){
+            
+            .description{
+                width: 335px;
                 margin: 10px auto;
                 height: 100px;
             }
+            
+            .photo img{
+                max-width: 165px;
+            }
+            
+            .row7 .six{
+                width: 80%; margin: 0 auto; padding: 1px; float: none; height: 375px;
+            }
+            
+            .row7 .six:hover{padding: 0;}
+            
             .row7 .three{ width: 100%;}
         }
+        
+        @media (min-width:414px) and (max-width:665px){
+            
+            .row7 .six{width: 88%}
+        }
+        
+        @media (max-width:413px){
+            
+            .description{width:275px; float: none;}
+            
+            .row7 .six{width: 95%; height: 335px;}
+            
+            .photo img{
+                width: 136px;
+            }
+        }
+        
     </style>
 </head>
 

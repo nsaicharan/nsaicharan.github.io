@@ -115,24 +115,30 @@
     
         @media (min-width:768px) and (max-width:1023px){
             
-            .row5{height: 293px;}
+            .row5{height: 279px; width: 99%; margin: 0 auto;}
             
            .row5 .three:nth-child(2),.row5 .three:nth-child(3),.row5 .three:nth-child(4){
                 width: 33.3333% !important;
                 margin: 20px auto; 
-              
             }
-            .description{height: auto; max-width: 905px;}
+            
+            .description{height: auto; width: 740px;}
             
             span{text-align: center;}
         }
         
         @media (max-width:767px){
             
-            .row5{height: 650px;}
+            .row5{height: 780px; width: 56%; margin: 0 auto;}
+            
+            .photo img{
+                width: 165px;
+                max-height: 210px;
+                margin: 0 15px;
+            }
             
             .description{
-                width: 248px;
+                width: 365px;
                 height: auto;
                 margin: 10px auto 8px;
             }
@@ -143,6 +149,38 @@
                 margin: 3px auto; 
             }
       
+        }
+        
+        @media (max-width:735px){
+            
+            .row5{ width: 65%;}
+        }
+        
+        @media (max-width:666px){
+            
+            .row5{width: 95%;}
+            
+            .photo img{
+                margin: 0 10px;
+            }
+            
+            .description{
+                width: 355px;
+            }
+        }
+        
+        @media (max-width:413px){
+            
+            .row5{width: 97%; height: 690px;}
+            
+            .photo img{
+                width: 135px;
+                margin: 0 3px;
+            }
+            
+            .description{
+                width: 280px;
+            }
         }
         
         /*  =========  FOOTER ============= */
@@ -209,11 +247,11 @@
         
         </div>   
        
-        <a href="#"> 
+        
         <div class="row section">
             
                 <div class="row5">
-                    
+                    <a href="#"> 
                     <div class="three">
                         <div class="description">
                            <div class="description-text">
@@ -244,12 +282,12 @@
                             <img src="eh5.jpg" alt="">
                         </div>
                     </div><!--closing column 3-->
-        
+                </a>
                 </div><!--closing row 5-->
            
             
         </div><!--closing row -->
-     </a>
+     
         <div class="row section">
             
             <a href="#"> 
