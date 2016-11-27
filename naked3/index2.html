@@ -1,0 +1,417 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- Meta Tags -->
+    <title>Naked Grid</title>
+    <meta name="description" content="My Naked Grid website.">
+    <meta name="keywords" content="naked grid">
+    <meta name="author" content="Cheree Dohmann" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="demo1.css" />
+    <style>
+        
+        *{box-sizing: border-box;}
+        
+        body{background: black;}
+        
+        .container{
+            margin: 0 auto;
+            max-width: 1150px;
+            padding: 5px;
+        }
+        
+        .selector-row{padding: 25px}
+        
+        .selector-row h2{float: left; color: white;}
+        
+        .selector-row .selector{float: right; margin-top: -10px; }
+        
+        .selector-row a{margin:0 10px 20px; display: inline-block; width: 48px; height: 40px;}
+        
+        .selector a:hover{background: red;}
+
+        .selector .active{background: red;}
+
+        .row7 .six:hover{border: 1px solid red; padding: 0 0 0 14px;}
+        
+        .row7 .six{
+            background: #000;
+            height: auto;
+            padding: 1px 1px 1px 15px;
+        }
+        
+        .description{
+            background: #333;
+            height: 160px;
+            display: table;
+            padding: 20px;
+            width: 100%;
+        }
+        
+        .description-text{
+            display: table-cell;
+            vertical-align: middle;
+            color: white;
+        }
+        
+        .description span{
+            display: block;
+        }
+        
+        .row7 .three{
+            width: 50%;
+            margin: 0 auto;
+            height: auto;
+            padding-top: 6px;
+        }
+        
+        .photo img{
+            max-width: 120px;
+            display: inline-block;
+        }
+        
+        /* FOOTER */
+        
+        footer{
+            height: auto;
+            color: white;
+            background: #000;
+            padding-top: 20px;
+        }
+        
+        footer .headertext{
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        footer h2{
+            margin:20px 0;
+            border-left: 4px solid grey;
+            padding-left: 10px;
+        }
+        
+        .dr{
+            width: 200px;
+            height: 260px;
+            display:block;
+            margin: 0 auto 5px;
+            text-align: center;
+        }
+      
+        .last{
+            background: #000;
+            height: auto;
+            color:white;
+        }
+        
+        /* MEDIA QUERIES */
+        
+        @media(max-width:1100px){
+            .row7 .six{padding: 1px 1px 1px 9px;}
+            .row7 .six:hover{border: 1px solid red; padding: 0 0 0 8px;}
+        }
+        
+         @media(max-width:1040px){
+            .row7 .six{padding: 1px 1px 1px 2.5px;}
+            .row7 .six:hover{border: 1px solid red; padding: 0 0 0 1.5px;}
+        }
+        
+        @media (max-width:1023px){
+            
+            .row7 .six{
+                margin: 0 auto; 
+                float: none; 
+                height: 220px; 
+                width: 95%;
+            }
+            
+            .row7 .three{
+                width: 50%;
+                margin: 0 auto;
+            }
+            
+            .description{
+                height:  207px;
+            }
+         
+            .photo img{
+                max-width:155px;
+            }
+            
+            
+            footer{text-align: center;}
+            
+            footer h2{
+                border:none;
+                padding-left: 0;
+            }
+        }
+        
+        @media(min-width:768px) and (max-width:800px){
+            
+            .description{
+                margin-left: 13px;
+            }
+        }
+        
+        
+        @media (max-width:767px){
+            .description{
+                margin-left: 6px;
+            }
+        }
+        
+        @media (max-width:735px){
+            .row7 .six{
+                width: 97%;
+                height: 214px;
+            }
+            
+            .description{
+                height: 200px;
+                margin-left: 0px;
+            }
+            .photo img{
+                max-width:150px;
+            }
+        }
+        
+        @media (max-width:666px){
+            
+            .description{
+                width: 385px;
+                margin: 0 auto 8px;
+                height: 100px;
+            }
+            
+            .photo img{
+                max-width: 190.2px;
+            }
+            
+            .row7 .six{
+                width: 80%; margin: 0 auto; padding: 1px; float: none; height: 388px;
+            }
+            
+            .row7 .six:hover{padding: 0;}
+            
+            .row7 .three{ width: 100%;}
+        }
+        
+        @media (max-width:567px){
+            
+            .row7 .six{width: 100%}
+        }
+        
+        @media (max-width:413px){
+            
+            .description{width:344px;}
+            
+            .row7 .six{height: 363px; width: 100%}
+            
+            .photo img{
+                width: 170px;
+            }
+        }
+        
+        @media (max-width:374px){
+            
+            .description{width:289px;}
+            
+            .row7 .six{height: 325px;}
+            
+            .photo img{
+                width: 142px;
+            }
+        }
+        
+         @media (max-width:319px){
+            .row7 .six {width: 98%; height: 670px;}
+            
+            .description{
+                width: 98%;
+            }
+            
+            .photo img{
+                width: 100%;
+            }    margin: 0 0.3px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+       
+       <div class="selector-row">
+       
+            <h2>HEADER</h2>
+
+            <div class="selector">
+
+                <a href="index.html"><img src="grid2.png" alt=""></a>
+                <a href="index2.html"><img src="list.png" class="active" alt=""></a>
+
+            </div>
+        
+        </div>
+       
+       <div class="row">
+            <div class="row7">
+                
+                    <div class="six">
+                    <a href="#" class="sectionlink">
+                        <div class="three">
+                            <div class="description">
+                               <div class="description-text">
+                                    <span>Patient Case Number</span>
+                                    <span>Time Between Photos : 6 mths</span>
+                                    <span>Age of Patient : 24</span>
+                               </div>
+                            </div>
+                        </div><!--closing column 3-->
+
+                        <div class="three">
+                            <div class="photo">
+                                <img src="eh1.jpg" alt="">
+                                <img src="eh2.jpg" alt="">
+                            </div>
+                        </div><!--closing column 3-->
+                     </a> 
+                    </div><!--closing column 6-->
+               
+                
+                
+                    <div class="six">
+                       <a href="#" class="sectionlink">  
+                        <div class="three">
+                            <div class="description">
+                               <div class="description-text">
+                                    <span>Patient Case Number</span>
+                                    <span>Time Between Photos : 6 mths</span>
+                                    <span>Age of Patient : 24</span>
+                               </div>
+                            </div>
+                        </div><!--closing column 3-->
+
+                        <div class="three">
+                            <div class="photo">
+                                <img src="je1.jpg" alt="">
+                                <img src="je2.jpg" alt="">
+                            </div>
+                        </div><!--closing column 3-->
+                        </a> 
+                    </div><!--closing column 6-->
+                
+            </div><!--closing row 7-->
+        </div>
+    
+        <div class="row">
+            <div class="row7">
+               
+               
+                    <div class="six">
+                        <a href="#" class="sectionlink"> 
+                        <div class="three">
+                            <div class="description">
+                               <div class="description-text">
+                                    <span>Patient Case Number</span>
+                                    <span>Time Between Photos : 6 mths</span>
+                                    <span>Age of Patient : 24</span>
+                               </div>
+                            </div>
+                        </div><!--closing column 3-->
+
+                        <div class="three">
+                            <div class="photo">
+                                <img src="js1.jpg" alt="">
+                                <img src="js2.jpg" alt="">
+                            </div>
+                        </div><!--closing column 3-->
+                        </a>
+                    </div><!--closing column 6-->
+                
+                
+                
+                    <div class="six">
+                       <a href="#" class="sectionlink"> 
+                        <div class="three">
+                            <div class="description">
+                               <div class="description-text">
+                                    <span>Patient Case Number</span>
+                                    <span>Time Between Photos : 6 mths</span>
+                                    <span>Age of Patient : 24</span>
+                               </div>
+                            </div>
+                        </div><!--closing column 3-->
+
+                        <div class="three">
+                            <div class="photo">
+                                <img src="rc1.jpg" alt="">
+                                <img src="rc2.jpg" alt="">
+                            </div>
+                        </div><!--closing column 3-->
+                        </a>
+                    </div><!--closing column 6-->
+                
+            </div><!--closing row 7-->
+        </div>
+        
+        <div class="row">   
+            <footer>
+                <div class="six"> 
+                    <h2>HEADER</h2>
+                    <img src="dr.jpg" class="dr" alt="">
+                    <div class="headertext">
+                        <p>Lorem ipsum dolor sit amet, qui in inani luptatum, sed eu copiosae complectitur. Vim alii natum concludaturque ea, ius oblique omittantur id, inani quidam sit ei. Ex sale legere prodesset nec, eu verear dolorem partiendo nam. An luptatum lobortis partiendo mel. His suas dicit pericula at, vidisse luptatum duo in. Ex nec wisi blandit platonem, nec ut illum periculis vituperata, eum ei eius tritani.
+                        </p>
+                    </div>
+                    
+                </div><!--closing column 6-->
+                
+                <div class="three"> 
+                   
+                    <h2>ABOUT</h2>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <p>Lorem ipsum dolor sit amet</p>
+                    <p>Lorem ipsum dolor sit amet</p>  
+                    
+                </div> <!--closing column 3-->
+                
+                <div class="three"> 
+                    <h2>CONTACT</h2>
+                    <p> (111) 111-1111 (phone)</p>
+                    <p> (111) 111-1111 (fax)</p>
+                    <p> ICONS HERE</p>
+                    <div class="main">
+                       <p><strong>Title Main Office</strong></p>
+                       <p>1111 Main Street, Suite #111</p>
+                       <p>Your City, Your State 11111</p>
+                       <p><a href="#">Driving Directions </a></p>
+                    </div>
+                    <div class="second">
+                       <p><strong>Title Second Office</strong></p>
+                       <p>1111 Main Street, Suite #111</p>
+                       <p>Your City, Your State 11111</p>
+                       <p><a href="#">Driving Directions </a></p>
+                    </div>
+                </div> <!--closing column 3-->
+            </footer>
+        </div>
+            
+        <div class="row">
+            <div class="last"> 
+                <p>Copyright 2016 | Design &amp; Marketing by <a href="#">CYD</a> | All Rights Reserved.</p>
+            </div>
+        </div>
+        
+    </div><!--closing container div-->
+</body>
+
+</html>
