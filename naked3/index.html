@@ -26,7 +26,7 @@
             margin: 0 auto;
         }
 
-        .selector-row{padding: 30px 25px}
+        .selector-row{padding: 30px 25px;}
 
         .selector-row h2{float: left; color: white;}
 
@@ -38,8 +38,7 @@
 
         .selector .active{background: red;}
         
-        p {color:white; margin-top: 5px;}
-        p:hover { background: lime; }
+        p.clicktext{color:white; text-align: center;  margin:25px 0 0 0; clear: both;}
 
         .row5{
             padding: 6px 1px 1px 3px;
@@ -292,11 +291,11 @@
 
         </div>
         
-        <p>Click on photos</p>
+        <p class="clicktext">(Click on any photo set to see more info)</p>
 
-        <div class="row section">
-
-            <a href="#" class="link">
+        <div class="row">
+ 
+            <a href="#">
                     <div class="row5">
                     
                     <div class="three">
@@ -336,9 +335,9 @@
 
         </div><!--closing row -->
 
-        <div class="row section">
+        <div class="row">
 
-            <a href="#" class="link">
+            <a href="#">
                 <div class="row5">
 
                     <div class="three">
@@ -376,9 +375,9 @@
             </a>
         </div><!--closing row-->
 
-        <div class="row section">
+        <div class="row">
 
-            <a href="#" class="link">
+            <a href="#">
                 <div class="row5">
 
                     <div class="three">
@@ -418,7 +417,7 @@
 
 
 
-        <div class="row section">
+        <div class="row">
 
            <a href="#">
                 <div class="row5">
@@ -531,17 +530,7 @@
             }
         });
     </script>
-        
-    
-<!--
-    <script>
-        var imageset = document.querySelector(".row5");
-        
-        imageset.addEventListener("click", function(){
-            this.classList.add("border");
-        })
-    </script>
--->
+
 </body>
 
 </html>
