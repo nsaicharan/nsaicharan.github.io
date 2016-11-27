@@ -45,16 +45,14 @@
             margin: 0 auto;
         }
 
-/*
-        .row5:hover, .row5:active{
+        .row5:hover, .row5.hover_effect{
             border: 1px solid red;
             padding: 5px 0 0 2px;
         }
-*/
         
         .hover{
-            border: 2px solid red;
-            padding: 5px 0 0 2px;
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;  
         }
 
         .row5 .three{
@@ -512,20 +510,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     
     <script>
-        $('.row5').on('touchstart mouseenter', '.link', function (e) {
-            $(this).addClass('hover');
+      $(document).ready(function() {
+        $('.hover').bind('touchstart touchend', function(e) {
+            e.preventDefault();
+            $(this).toggleClass('hover_effect');
         });
-
-        $('.row5').on('mouseleave touchmove click', '.link', function (e) {
-            $(this).removeClass('hover');
-
-            // As it's the chain's last event we only prevent it from making HTTP request
-            if (e.type == 'click') {
-                e.preventDefault ? e.preventDefault() : e.returnValue = false;
-
-                // Ajax behavior here!
-            }
-        });
+    });
     </script>
     
 <!--
