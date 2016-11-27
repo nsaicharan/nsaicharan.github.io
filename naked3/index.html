@@ -45,7 +45,7 @@
             margin: 0 auto;
         }
 
-        .row5:hover, .row5.hover_effect{
+        .row5:hover, .hover{
             border: 1px solid red;
             padding: 5px 0 0 2px;
         }
@@ -511,9 +511,9 @@
     
     <script>
       $(document).ready(function() {
-        $('.hover').bind('touchstart touchend', function(e) {
+        $('.row5').bind('touchstart touchend', function(e) {
             e.preventDefault();
-            $(this).toggleClass('hover_effect');
+            $(this).toggleClass('hover');
         });
     });
     </script>
