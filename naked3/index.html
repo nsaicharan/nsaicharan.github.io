@@ -510,11 +510,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     
     <script>
-      $(document).ready(function() {
-        $('.row5').bind('touchstart touchend', function(e) {
-            e.preventDefault();
-            $(this).toggleClass('hover');
-        });
+      $('.row5').on('touchstart mouseenter', '.link', function (e) {
+        $(this).addClass('hover);
+    });
+
+    $('.row5').on('mouseleave touchmove click', '.link', function (e) {
+        $(this).removeClass('hover');
+
+        // As it's the chain's last event we only prevent it from making HTTP request
+        if (e.type == 'click') {
+            e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+            // Ajax behavior here!
+        }
     });
     </script>
     
