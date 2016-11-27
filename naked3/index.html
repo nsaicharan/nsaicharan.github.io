@@ -519,10 +519,19 @@
     <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
        
     <script>
-        $(document).on("pagecreate",function(){
-          $(".row5").on("tap",function(){
-            $(this).addClass("hover");
-          });                       
+        $('.row5').on('touchstart mouseenter', function (e) {
+            $(this).addClass('hover');
+        });
+
+        $('.row5').on('mouseleave touchmove click', function (e) {
+            $(this).removeClass('hover');
+
+            // As it's the chain's last event we only prevent it from making HTTP request
+            if (e.type == 'click') {
+                e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+                // Ajax behavior here!
+            }
         });
     </script>
         
