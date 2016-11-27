@@ -37,6 +37,8 @@
         .selector a:hover{background: red;}
 
         .selector .active{background: red;}
+        
+        p:hover { background: lime; }
 
         .row5{
             padding: 6px 1px 1px 3px;
@@ -288,7 +290,8 @@
             </div>
 
         </div>
-
+        
+        <p>Click on photos</p>
 
         <div class="row section">
 
@@ -513,13 +516,11 @@
     
     <script>
         
-        var p = document.querySelector(".row5") ;
-        
+        var p = document.getElementsByTagName('p')[0];
         p.onclick = function() {
          // Trigger the `onhover` event on the paragraph
          p.onhover.call(p);
         };
-
 
     </script>
     
