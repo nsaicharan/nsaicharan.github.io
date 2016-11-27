@@ -284,8 +284,8 @@
 
             <div class="selector">
 
-                <a href="index.html"><img src="grid2.png" class="active" alt=""></a>
-                <a href="index2.html"><img src="list.png" alt=""></a>
+                <a href="index.html"><img src="img/grid2.png" class="active" alt=""></a>
+                <a href="index2.html"><img src="img/list.png" alt=""></a>
 
             </div>
 
@@ -310,22 +310,22 @@
 
                     <div class="three">
                         <div class="photo">
-                            <img src="eh1.jpg" alt="">
-                            <img src="eh2.jpg" alt="">
+                            <img src="img/eh1.jpg" alt="">
+                            <img src="img/eh2.jpg" alt="">
                         </div>
                     </div> <!--closing column 3-->
 
                     <div class="three">
                         <div class="photo">
-                            <img src="eh3.jpg" alt="">
-                            <img src="eh4.jpg" alt="">
+                            <img src="img/eh3.jpg" alt="">
+                            <img src="img/eh4.jpg" alt="">
                         </div>
                     </div><!--closing column 3-->
 
                     <div class="three">
                         <div class="photo">
-                            <img src="eh5.jpg" alt="">
-                            <img src="eh6.jpg" alt="">
+                            <img src="img/eh5.jpg" alt="">
+                            <img src="img/eh6.jpg" alt="">
                         </div>
                     </div><!--closing column 3-->
                 
@@ -352,22 +352,22 @@
 
                     <div class="three">
                         <div class="photo">
-                            <img src="je1.jpg" alt="">
-                            <img src="je2.jpg" alt="">
+                            <img src="img/je1.jpg" alt="">
+                            <img src="img/je2.jpg" alt="">
                         </div>
                     </div><!--closing column 3-->
 
                     <div class="three">
                         <div class="photo">
-                            <img src="je3.jpg" alt="">
-                            <img src="je4.jpg" alt="">
+                            <img src="img/je3.jpg" alt="">
+                            <img src="img/je4.jpg" alt="">
                         </div>
                     </div><!--closing column 3-->
 
                     <div class="three">
                         <div class="photo">
-                            <img src="je5.jpg" alt="">
-                            <img src="je6.jpg" alt="">
+                            <img src="img/je5.jpg" alt="">
+                            <img src="img/je6.jpg" alt="">
                         </div>
                     </div><!--closing column 3-->
 
@@ -392,22 +392,22 @@
 
                     <div class="three">
                         <div class="photo">
-                            <img src="js1.jpg" alt="">
-                            <img src="js2.jpg" alt="">
+                            <img src="img/js1.jpg" alt="">
+                            <img src="img/js2.jpg" alt="">
                         </div>
                     </div> <!--closing column 3-->
 
                     <div class="three">
                         <div class="photo">
-                            <img src="js3.jpg" alt="">
-                            <img src="js4.jpg" alt="">
+                            <img src="img/js3.jpg" alt="">
+                            <img src="img/js4.jpg" alt="">
                         </div>
                     </div> <!--closing column 3-->
 
                     <div class="three">
                         <div class="photo">
-                            <img src="js5.jpg" alt="">
-                            <img src="js6.jpg" alt="">
+                            <img src="img/js5.jpg" alt="">
+                            <img src="img/js6.jpg" alt="">
                         </div>
                     </div> <!--closing column 3-->
 
@@ -434,22 +434,22 @@
 
                     <div class="three">
                         <div class="photo">
-                            <img src="rc1.jpg" alt="">
-                            <img src="rc2.jpg" alt="">
+                            <img src="img/rc1.jpg" alt="">
+                            <img src="img/rc2.jpg" alt="">
                         </div>
                     </div><!--closing column 3-->
 
                     <div class="three">
                         <div class="photo">
-                            <img src="rc3.jpg" alt="">
-                            <img src="rc4.jpg" alt="">
+                            <img src="img/rc3.jpg" alt="">
+                            <img src="img/rc4.jpg" alt="">
                         </div>
                     </div><!--closing column 3-->
 
                     <div class="three">
                         <div class="photo">
-                            <img src="rc5.jpg" alt="">
-                            <img src="rc6.jpg" alt="">
+                            <img src="img/rc5.jpg" alt="">
+                            <img src="img/rc6.jpg" alt="">
                         </div>
                     </div><!--closing column 3-->
 
@@ -461,7 +461,7 @@
             <footer>
                 <div class="six">
                     <h2>HEADER</h2>
-                    <img src="dr.jpg" class="dr" alt="">
+                    <img src="img/dr.jpg" class="dr" alt="">
                     <div class="headertext">
                         <p>Lorem ipsum dolor sit amet, qui in inani luptatum, sed eu copiosae complectitur. Vim alii natum concludaturque ea, ius oblique omittantur id, inani quidam sit ei. Ex sale legere prodesset nec, eu verear dolorem partiendo nam. An luptatum lobortis partiendo mel. His suas dicit pericula at, vidisse luptatum duo in. Ex nec wisi blandit platonem, nec ut illum periculis vituperata, eum ei eius tritani.
                         </p>
@@ -487,13 +487,13 @@
                     <p> (111) 111-1111 (phone)</p>
                     <p> (111) 111-1111 (fax)</p>
                     <p> ICONS HERE</p>
-                    <div class="main">
+                    <div>
                        <p><strong>Title Main Office</strong></p>
                        <p>1111 Main Street, Suite #111</p>
                        <p>Your City, Your State 11111</p>
                        <p><a href="#">Driving Directions </a></p>
                     </div>
-                    <div class="second">
+                    <div>
                        <p><strong>Title Second Office</strong></p>
                        <p>1111 Main Street, Suite #111</p>
                        <p>Your City, Your State 11111</p>
@@ -515,20 +515,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <script>
-        $('.row5').on('touchstart mouseenter', function (e) {
-            $(this).addClass('hover');
-        });
-
-        $('.row5').on('mouseleave touchmove click', function (e) {
-            $(this).removeClass('hover');
-
-            // As it's the chain's last event we only prevent it from making HTTP request
-            if (e.type == 'click') {
-                e.preventDefault ? e.preventDefault() : e.returnValue = false;
-
-                // Ajax behavior here!
-            }
-        });
+    $(".row5").on("touchstart mouseenter",function(e){$(this).addClass("hover")}),$(".row5").on("mouseleave touchmove click",function(e){$(this).removeClass("hover"),"click"==e.type&&(e.preventDefault?e.preventDefault():e.returnValue
     </script>
 
 </body>

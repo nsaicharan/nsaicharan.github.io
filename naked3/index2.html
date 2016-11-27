@@ -34,13 +34,23 @@
         .selector a:hover{background: red;}
 
         .selector .active{background: red;}
-
-        .row7 .six:hover{border: 1px solid red; padding: 0 0 0 14px;}
+        
+        p.clicktext{color:white; text-align: center;  margin:25px 0 0 0; clear: both;}
         
         .row7 .six{
             background: #000;
             height: auto;
             padding: 1px 1px 1px 15px;
+        }
+        
+        .row7 .six:hover, .hover{
+            border: 1px solid red; 
+            padding: 0 0 0 14px;
+        }
+        
+        .hover{
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;  
         }
         
         .description{
@@ -262,7 +272,7 @@
             <div class="row7">
                 
                     <div class="six">
-                    <a href="#" class="sectionlink">
+                    <a href="#">
                         <div class="three">
                             <div class="description">
                                <div class="description-text">
@@ -285,7 +295,7 @@
                 
                 
                     <div class="six">
-                       <a href="#" class="sectionlink">  
+                       <a href="#">  
                         <div class="three">
                             <div class="description">
                                <div class="description-text">
@@ -313,7 +323,7 @@
                
                
                     <div class="six">
-                        <a href="#" class="sectionlink"> 
+                        <a href="#"> 
                         <div class="three">
                             <div class="description">
                                <div class="description-text">
@@ -336,7 +346,7 @@
                 
                 
                     <div class="six">
-                       <a href="#" class="sectionlink"> 
+                       <a href="#"> 
                         <div class="three">
                             <div class="description">
                                <div class="description-text">
@@ -389,13 +399,13 @@
                     <p> (111) 111-1111 (phone)</p>
                     <p> (111) 111-1111 (fax)</p>
                     <p> ICONS HERE</p>
-                    <div class="main">
+                    <div>
                        <p><strong>Title Main Office</strong></p>
                        <p>1111 Main Street, Suite #111</p>
                        <p>Your City, Your State 11111</p>
                        <p><a href="#">Driving Directions </a></p>
                     </div>
-                    <div class="second">
+                    <div>
                        <p><strong>Title Second Office</strong></p>
                        <p>1111 Main Street, Suite #111</p>
                        <p>Your City, Your State 11111</p>
@@ -412,6 +422,12 @@
         </div>
         
     </div><!--closing container div-->
-</body>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
+    <script>
+    $(".six").on("touchstart mouseenter",function(e){$(this).addClass("hover")}),$(".six").on("mouseleave touchmove click",function(e){$(this).removeClass("hover"),"click"==e.type&&(e.preventDefault?e.preventDefault():e.returnValue
+    </script>
+    
+</body>
 </html>
