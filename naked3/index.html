@@ -515,7 +515,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
     <script>
-    $(".row5").on("touchstart mouseenter",function(e){$(this).addClass("hover")}),$(".row5").on("mouseleave touchmove click",function(e){$(this).removeClass("hover"),"click"==e.type&&(e.preventDefault?e.preventDefault():e.returnValue
+        $('.row5').on('touchstart mouseenter', function (e) {
+            $(this).addClass('hover');
+        });
+
+        $('.row5').on('mouseleave touchmove click', function (e) {
+            $(this).removeClass('hover');
+
+            // As it's the chain's last event we only prevent it from making HTTP request
+            if (e.type == 'click') {
+                e.preventDefault ? e.preventDefault() : e.returnValue = false;
+
+                // Ajax behavior here!
+            }
+        });
     </script>
 
 </body>
