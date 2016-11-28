@@ -14,7 +14,7 @@ $(document).ready(function(){var a=$(".back-to-top");a.on("click",function(a){$(
 
 $(".row5").on("touchstart mouseenter",function(e){$(this).addClass("hover")}),$(".row5").on("mouseleave touchmove click",function(e){$(this).removeClass("hover"),"click"==e.type&&(e.preventDefault?e.preventDefault():e.returnValue=!1)});
 
-$(".row7 .six").on("touchstart mouseenter",function(e){$(this).addClass("hover")}),$(".row7 .six").on("mouseleave touchmove click",function(e){$(this).removeClass("hover"),"click"==e.type&&(e.preventDefault?e.preventDefault():e.returnValue=!1)});
+$(".set").on("touchstart mouseenter",function(e){$(this).addClass("hover")}),$(".set").on("mouseleave touchmove click",function(e){$(this).removeClass("hover"),"click"==e.type&&(e.preventDefault?e.preventDefault():e.returnValue=!1)});
 
 
 
