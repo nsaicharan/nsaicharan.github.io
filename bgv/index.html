@@ -2,6 +2,7 @@
 <html class="bg">
 <head lang="en">
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Body background example</title>
   <style>
     html, body {
@@ -31,15 +32,18 @@
 	    background-size: 100% 100%;
 	}
 	.content {
-	  position: relative;
+	  position:absolute;
 	  top: 50%; 
 	  left: 50%;
+	  -webkit-transform: translate(-50%, -50%);
+	  -ms-transform: translate(-50%, -50%);
 	  transform: translate(-50%, -50%);
 	  z-index: 3;
 	  max-width:300px;
+	  padding:10px;
 	  text-align: center;
-	  background:rgba(0,0,0,.5);
-	  font-size:3em;
+	  background:rgba(0,0,0,.4);
+	  font-size:2.5em;
 	  color:white
 	}
     @media (min-width:769px) and (max-width:1920px){
