@@ -25,17 +25,33 @@
         
         .selector-row{padding: 25px}
         
-        .selector-row h2{float: left; color: white;}
+        .selector-row h2{
+            float: left; 
+            color: white;
+        }
         
-        .selector-row .selector{float: right; margin-top: -10px; }
+        .selector-row .selector{
+            float: right; 
+            margin-top: -10px; 
+        }
         
-        .selector-row a{margin:0 10px 20px; display: inline-block; width: 48px; height: 40px;}
+        .selector-row a{
+            margin:0 10px 20px; 
+            display: inline-block; 
+            width: 48px; 
+            height: 40px;
+        }
         
-        .selector a:hover{background: red;}
+        .selector a:hover{background:red;}
 
-        .selector .active{background: red;}
+        .selector .active{background:red;}
         
-        p.clicktext{color:white; text-align: center;  margin:25px 0 0 0; clear: both;}
+        p.clicktext{
+            color:white; 
+            text-align: center;  
+            margin:25px 0 0 0; 
+            clear: both;
+        }
         
         .row7 .six{
             background: #000;
@@ -51,6 +67,12 @@
         .hover{
             -webkit-user-select: none;
             -webkit-touch-callout: none;  
+        }
+        
+        .row7 .six:after{
+            clear: both;
+            content: '';
+            display: table;
         }
         
         .description{
@@ -83,7 +105,7 @@
             display: inline-block;
         }
         
-        /* FOOTER */
+        /* ======= FOOTER ======= */
         
         footer{
             height: auto;
@@ -143,16 +165,11 @@
                 margin: 0 auto;
             }
             
-            .description{
-                height:  207px;
-            }
+            .description{height:207px;}
          
-            .photo img{
-                max-width:155px;
-            }
-            
-            
-            footer{text-align: center;}
+            .photo img{max-width:155px;}
+    
+            footer{text-align:center;}
             
             footer h2{
                 border:none;
@@ -160,20 +177,9 @@
             }
         }
         
-        @media(min-width:768px) and (max-width:800px){
-            
-            .description{
-                margin-left: 13px;
-            }
-        }
+        @media(min-width:768px) and (max-width:800px){ .description{margin-left: 13px;} }
         
-        
-        @media (max-width:767px){
-
-            .description{
-                margin-left: 8px;
-            }
-        }
+        @media (max-width:767px){ .description{margin-left: 8px;} }
         
         @media (max-width:735px){
             .row7 .six{
@@ -185,25 +191,26 @@
                 height: 200px;
                 margin-left: 0px;
             }
-            .photo img{
-                max-width:150px;
-            }
+            
+            .photo img{max-width:150px;}
         }
         
         @media (max-width:666px){
             
             .description{
-                width: 385px;
+                width:99%;
                 margin: 0 auto 8px;
                 height: 100px;
             }
             
-            .photo img{
-                max-width: 190.2px;
-            }
+            .photo img{max-width: 49%;} 
             
             .row7 .six{
-                width: 80%; margin: 0 auto; padding: 1px; float: none; height: 388px;
+                width: 70%; 
+                margin: 0 auto; 
+                padding: 1px; 
+                float: none; 
+                height: 100%;
             }
             
             .row7 .six:hover{padding: 0;}
@@ -211,46 +218,7 @@
             .row7 .three{ width: 100%;}
         }
         
-        @media (max-width:567px){
-            
-            .row7 .six{width: 100%}
-        }
-        
-        @media (max-width:413px){
-            
-            .description{width:344px;}
-            
-            .row7 .six{height: 363px; width: 100%}
-            
-            .photo img{
-                width: 170px;
-            }
-        }
-        
-        @media (max-width:374px){
-            
-            .description{width:289px;}
-            
-            .row7 .six{height: 325px;}
-            
-            .photo img{
-                width: 142px;
-            }
-        }
-        
-         @media (max-width:319px){
-            .row7 .six {width: 83%; height: 640px;}
-            
-            .description{
-                width: 191px;
-                font-size: 90%;
-                padding: 5px;
-            }
-            
-            .photo img{
-                width: 190px;
-            }    margin: 0 0.3px;
-        }
+        @media (max-width:480px){ .row7 .six{width: 100%} }
         
     </style>
 </head>
