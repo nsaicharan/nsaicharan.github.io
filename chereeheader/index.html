@@ -17,6 +17,23 @@
             width: 100%;
             overflow: hidden;
         }
+        
+        .herotext{
+            position: absolute;
+            z-index: 2;
+            color: white;
+            font-size: 2.5em;
+            line-height: 1.2em;
+            max-width: 100%;
+            width: 600px;
+            text-align: center;
+            padding: 10px;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+        }
+        
+      
     </style>
     <!--Styles-->
     <link rel="stylesheet" type="text/css" href="css/demo1.css" />
@@ -46,6 +63,9 @@
         </span>
        
         <div class="row">
+            
+            <div class="herotext"><p>Sample Text</p></div>
+            
             <div class="hero-image">
                 <picture>
                     <source media="(min-width: 1024px)" srcset="images/hero/bx1920.jpg 1920w, images/hero/bx3840.jpg 3840w">
