@@ -468,14 +468,14 @@ picture img{
 
 .parallax {
     position: relative;
-    height: 350px;
+    height: 390px;
     overflow: hidden;
 }
 
 .parallax img{
     position: fixed;
     z-index: -1;
-    top: 0;
+    top:0;
     left: 0;
     width: 100%;
 }
@@ -509,5 +509,20 @@ picture img{
 @media (max-width:736px){
     .overlay-text{
         font-size: 20px;
+    }
+}
+
+@media (max-width:414px){
+    .parallax{
+        height: 300px;
+    }
+     .parallax img{
+        top:69px;
+    }
+}
+
+@media (max-width:385px){
+    .parallax img{
+        height: 89%;
     }
 }
