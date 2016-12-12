@@ -523,6 +523,6 @@ picture img{
 
 @media (max-width:385px){
     .parallax img{
-        height: 90%;
+        height: 100%;
     }
 }
