@@ -237,6 +237,14 @@ footer {
 	position:fixed;
 	bottom:20px;
 	right:20px;
+    background: rgba(0,0,0,.4);
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+}
+
+.back-to-top img{
+   margin: 5px 0px 5px 3.4px;
 }
 
 /* ==== Menu Navigation ==== */
