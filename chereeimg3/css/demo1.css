@@ -234,13 +234,9 @@ footer {
 /* Back To Top button on every web page via JQuery */
 
 .back-to-top {
-	display:none;
 	position:fixed;
 	bottom:20px;
 	right:20px;
-	background-color:cornflowerblue;
-	padding:20px;
-	color:#fff;
 }
 
 /* ==== Menu Navigation ==== */
@@ -439,7 +435,7 @@ footer {
     
 }
 
-/* ==== Hero ==== */
+/* ===== Hero ===== */
 
 header .hero-image {
     width: 100%;
@@ -452,7 +448,7 @@ picture img{
     z-index: -1;
 }
 
-/* ==== Misc. ====*/
+/* ====== Misc. ======*/
 
 .row5 .three{
     height: auto;
@@ -467,10 +463,17 @@ picture img{
 }
 
 .parallax {
-    position:relative; 
-    background: url('https://unsplash.it/1024') center no-repeat fixed;
-    background-size: cover;
+    position: relative;
     height: 390px;
+    overflow: hidden;
+}
+
+.parallax img{
+    position: fixed;
+    z-index: -1;
+    top:0;
+    left: 0;
+    width: 100%;
 }
 
 .layer {
@@ -505,8 +508,40 @@ picture img{
     }
 }
 
-@media (max-width:414px){
+/* Start - Disable Parallax < 1025px */
+
+@media (max-width:1024px){
+    .parallax{
+        height: auto;
+    }
+    
+    .parallax img{
+        position: static;
+    }
+}
+
+/* End - Disable Parallax < 1025px */
+
+
+/* 
+
+Code to enable parallax 
+
+@media (max-width:480px){
     .parallax{
         height: 300px;
     }
+     .parallax img{
+        top:69px;
+    }
 }
+
+@media (max-width:385px){
+    .parallax img{
+        height: 100vh;
+    }
+} 
+
+If you wish to enable parallax, you should either remove '<source srcset="images/hero/bx1136.jpg" media="(max-width: 1024px)">' from picture element or replace it with some portrait image.
+
+*/
