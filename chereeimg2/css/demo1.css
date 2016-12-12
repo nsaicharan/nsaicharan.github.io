@@ -517,6 +517,10 @@ picture img{
         height: 300px;
     }
      .parallax img{
+        position: -webkit-sticky;
+        position: -moz-sticky;
+        position: -ms-sticky;
+        position: -o-sticky;
         position: sticky;
         top:69px;
         
