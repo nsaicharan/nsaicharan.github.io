@@ -517,15 +517,14 @@ picture img{
         height: 300px;
     }
      .parallax img{
+        position: sticky;
         top:69px;
+        
     }
 }
 
 @media (max-width:385px){
     .parallax img{
-        
         height: 100vh;
-        overflow: hidden;
-        
     }
 }
