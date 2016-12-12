@@ -542,6 +542,6 @@ Code to enable parallax
     }
 } 
 
-If you wish to enable parallax, you should either remove '<source srcset="images/hero/bx1136.jpg" media="(max-width: 1024px)">' from picture element or replace it with some portrait image.
+If you've enabled parallax, you should either remove '<source srcset="images/hero/bx1136.jpg" media="(max-width: 1024px)">' from picture element or replace it with some portrait image.
 
 */
