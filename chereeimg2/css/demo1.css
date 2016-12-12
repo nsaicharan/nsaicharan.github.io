@@ -512,14 +512,12 @@ picture img{
     }
 }
 
-@media (max-width:414px){
+@media (max-width:480px){
     .parallax{
         height: 300px;
     }
      .parallax img{
-        
         top:69px;
-        
     }
 }
 
