@@ -468,10 +468,8 @@ picture img{
 
 .parallax {
     position:relative; 
-/*
     background: url('https://unsplash.it/1024') center no-repeat fixed;
     background-size: cover;
-*/
     height: 390px;
 }
 
