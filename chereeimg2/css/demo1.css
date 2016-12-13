@@ -520,6 +520,7 @@ picture img{
     }
      .parallax img{
         top:auto;
+        width: auto;
         bottom:0;
     }
 }
