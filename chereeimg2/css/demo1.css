@@ -517,12 +517,13 @@ picture img{
         height: 300px;
     }
      .parallax img{
-        top:69px;
+        top:auto;
+        bottom:0;
     }
 }
 
 @media (max-width:385px){
     .parallax img{
-        height: 100vh;
+        height: 89vh;
     }
 }
