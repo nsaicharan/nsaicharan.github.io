@@ -528,5 +528,7 @@ picture img{
 @media (max-width:385px){
     .parallax img{
         height: 100vh;
+        -webkit-overflow-scrolling: touch;
+        overflow-scrolling: touch;
     }
 }
