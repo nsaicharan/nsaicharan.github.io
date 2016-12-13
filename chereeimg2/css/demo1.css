@@ -470,6 +470,7 @@ picture img{
     position: relative;
     height: 390px;
     overflow: hidden;
+    
 }
 
 .parallax img{
@@ -478,8 +479,8 @@ picture img{
     top:0;
     left: 0;
     width: 100%;
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
 }
 
 .layer {
@@ -520,7 +521,6 @@ picture img{
     }
      .parallax img{
         top:auto;
-        width: auto;
         bottom:0;
     }
 }
