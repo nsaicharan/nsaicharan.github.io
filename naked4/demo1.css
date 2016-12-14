@@ -329,6 +329,10 @@ footer {
       float: left;
       margin: 22px 0 0 20px;
     }
+    
+    .menunav .logo:hover{
+        color:black;
+    }
 
     .menunav .menu {
       clear: both;
