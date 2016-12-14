@@ -328,10 +328,11 @@ footer {
       display: block;
       float: left;
       margin: 22px 0 0 20px;
+      color: black;
     }
     
     .menunav .logo:hover{
-        color:black;
+        color:#ffba49;
     }
 
     .menunav .menu {
