@@ -321,7 +321,7 @@ footer {
     }
 
     .menunav li a:hover{
-      color: #1bbc9b;
+      color: #ffba49;
     }
 
     .menunav .logo {
@@ -359,7 +359,7 @@ footer {
       -moz-user-select: none;     
       -ms-user-select: none; 
       user-select: none;
-      background: #3E4D5B;
+      background: #253d5b;
       margin: 12px 15px;
 
     }
@@ -400,7 +400,7 @@ footer {
     .menunav .menu-btn:checked ~ .menu {
       min-height: 100vh;
       max-height: 100vh;
-      background: #3E4D5B;
+      background: #253d5b;
     }
 
     .menunav .menu-btn:checked ~ .menu-icon .navicon {
