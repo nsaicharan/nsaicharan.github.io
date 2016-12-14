@@ -1,0 +1,501 @@
+<!doctype html>
+<html class="no-js" lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <!-- Meta Tags -->
+    <title>Naked Grid - 2 Col Photos</title>
+    <meta name="description" content="My Naked Grid website.">
+    <meta name="keywords" content="naked grid">
+    <meta name="author" content="Cheree Dohmann" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--Styles-->
+    <link rel="stylesheet" type="text/css" href="css/demo1.css" />
+    <link rel="stylesheet" type="text/css" href="css/iconmoon.css" />
+    <link rel="stylesheet" type="text/css" href="css/roboto.css" />
+    
+    <style>
+        
+        *{box-sizing: border-box;}
+        
+        body{background: #253d5b;}
+        
+        .clearfix:after{
+            clear: both;
+            content: '';
+            display: table;
+        }
+        
+        .container{
+            margin: 0 auto;
+            max-width: 1150px;
+            padding: 5px;
+        }
+        
+        .selector-row{
+            padding: 35px 25px;
+            position: relative;
+            top:70px;
+        }
+        
+        .selector-row h2{
+            float: left; 
+            color: white;
+        }
+        
+        .selector-row .selector{
+            float: right; 
+            margin-top: -10px; 
+        }
+        
+        .selector-row a{
+            margin:0 10px 20px; 
+            display: inline-block; 
+            width: 48px; 
+            height: 40px;
+        }
+        
+        .selector a:hover{background:#ffba49;}
+
+        .selector .active{background:#ffba49;}
+        
+        p.clicktext{
+            color:white; 
+            text-align: center;  
+            margin:30px 0 0 0; 
+        }
+        
+        /* ===== PHOTOS 2col ===== */
+        
+        .row7 .six{
+            background: none;
+            height: auto;
+            padding: 1px 1px 1px 15px;
+        }
+        
+        .row7 .six:hover, .hover{
+            border: 1px solid #ffba49; 
+            padding: 0 0 0 14px;
+        }
+        
+        .hover{
+            -webkit-user-select: none;
+            -webkit-touch-callout: none;  
+        }
+        
+        .description{
+            background: #94aac6;
+            height: 160px;
+            display: table;
+            padding: 20px;
+            width: 99%;
+        }
+        
+        .description-text{
+            display: table-cell;
+            vertical-align: middle;
+            color: white;
+        }
+        
+        .description span{
+            display: block;
+        }
+        
+        .row7 .three{
+            width: 50%;
+            margin: 0 auto;
+            height: auto;
+            padding-top: 6px;
+        }
+        
+        .photo img{
+            max-width: 120px;
+            display: inline-block;
+        }
+        
+        /* MEDIA QUERIES FOR PHOTOS 2col */
+        
+        @media(max-width:1100px){
+            .row7 .six{padding: 1px 1px 1px 9px;}
+            .row7 .six:hover{padding: 0 0 0 8px;}
+        }
+        
+         @media(max-width:1040px){
+            .row7 .six{padding: 1px 1px 1px 2.5px;}
+            .row7 .six:hover{padding: 0 0 0 1.5px;}
+        }
+        
+        @media (max-width:1023px){
+            
+            .row7 .six{
+                margin: 0 auto; 
+                float: none; 
+                height: 220px; 
+                width: 95%;
+            }
+            
+            .row7 .three{
+                width: 50%;
+                margin: 0 auto;
+            }
+            
+            .description{height:207px;}
+         
+            .photo img{max-width:155px;}
+    
+        }
+        
+        @media(min-width:768px) and (max-width:800px){ .description{margin-left: 13px;} }
+        
+        @media (max-width:767px){ .description{margin-left: 8px;} }
+        
+        @media (max-width:735px){
+            .row7 .six{
+                width: 97%;
+                height: 214px;
+            }
+            
+            .description{
+                height: 200px;
+                margin-left: 0px;
+            }
+            
+            .photo img{max-width:150px;}
+        }
+        
+        @media (max-width:666px){
+            
+            .description{
+                width:99%;
+                margin: 0 auto 8px;
+                height: 100px;
+            }
+            
+            .photo img{max-width: 49%;} 
+            
+            .row7 .six{
+                width: 70%; 
+                margin: 0 auto; 
+                padding: 1px; 
+                float: none; 
+                height: 100%;
+            }
+            
+            .row7 .six:hover{padding: 0;}
+            
+            .row7 .three{ width: 100%;}
+        }
+        
+        @media (max-width:480px){ .row7 .six{width: 100%} }
+        
+        /*  =========  FOOTER ========= */
+
+        footer{
+            height: auto;
+            color: white;
+            background: #5883ba;
+            padding-top: 20px;
+            margin-top: 6px;
+        }
+
+		footer .four{
+            padding:0 10px;
+        }
+        
+        footer span[class^="icon"]{
+            display: inline-block; 
+            vertical-align: middle;
+            padding-right: 10px; 
+            font-size: 25px;
+            margin: 3px 0;
+        }
+        
+        footer .about-list{
+            list-style: none;
+            padding-left: 30px;
+        }
+        
+        footer .about-list li{
+            border-bottom: 1px solid white;
+            position: relative;
+            padding: 3px 0;
+            text-align: left;
+        }
+        
+        footer .about-list li:last-child{
+            border:none;
+        }
+        
+        footer .about-list > li [class*="icon-"],
+        footer .about-list > li [class^="icon-"] {
+          left: -1.75em;
+          position: absolute;
+          text-align: center;
+          top: 3px;
+          width: 16px;
+          font-size: 0.9rem;
+        }
+
+        footer h2{
+            margin:20px 0;
+            border-left: 5px solid grey;
+            padding-left: 10px;
+        }
+        
+        
+        .dr-image{
+            width: 200px;
+            height: 260px;
+            display:block;
+            margin: 30px auto 10px auto;
+        }
+
+        .last{
+            background: none;
+            height: auto;
+            margin-top: 15px;
+            color:white;
+        }
+        
+        @media (max-width:1023px){
+            footer .four{
+                float: none;
+                max-width: 650px;
+                margin: 0 auto !important;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+   
+    <div class="horizontal-nav clearfix">
+        <div class="container">
+            <a href="#" class="hlogo">WHITE TEXT LOGO HERE</a>
+
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">MEET</a></li>
+                <li><a href="#">GALLERY</a></li>
+                <li><a href="#">PLANNING</a></li>
+            </ul>
+        </div>
+    </div>
+   
+    <span class="menunav">
+
+      <a class="logo" href="#">Biz Logo Here</a>
+
+      <input class="menu-btn" type="checkbox" id="menu-btn" />
+
+        <label class="menu-icon" for="menu-btn">
+          <span class="menutext">MENU</span> 
+          <span class="navicon"></span> 
+        </label>
+
+        <ul class="menu">
+            <li><a href="#">Link 1 </a></li>
+            <li><a href="#">Link 2 </a></li>
+            <li><a href="#">Link 3 </a></li>
+            <li><a href="#">Link 4 </a></li>
+            <li><a href="#">Link 5 </a></li>
+        </ul>
+
+    </span>
+   
+    <div class="container">
+       
+        <div class="selector-row clearfix">
+       
+            <h2>HEADER</h2>
+
+            <div class="selector">
+
+                <a href="index.html"><img src="img/grid2.png" alt=""></a>
+                <a href="index2.html"><img src="img/list.png" class="active" alt=""></a>
+
+            </div>
+        
+        </div>
+       
+        <p class="clicktext">(Click on any photo set to see more info)</p>
+
+        <div class="row">
+            <div class="row7">
+                
+                    <div class="six set clearfix">
+                    <a href="#">
+                        <div class="three">
+                            <div class="description">
+                               <div class="description-text">
+                                    <span>Patient Case Number</span>
+                                    <span>Time Between Photos : 6 mths</span>
+                                    <span>Age of Patient : 24</span>
+                               </div>
+                            </div>
+                        </div><!--closing column 3-->
+
+                        <div class="three">
+                            <div class="photo">
+                                <img src="img/eh1.jpg" alt="">
+                                <img src="img/eh2.jpg" alt="">
+                            </div>
+                        </div><!--closing column 3-->
+                     </a> 
+                    </div><!--closing column 6-->
+               
+                
+                
+                    <div class="six set clearfix">
+                       <a href="#">  
+                        <div class="three">
+                            <div class="description">
+                               <div class="description-text">
+                                    <span>Patient Case Number</span>
+                                    <span>Time Between Photos : 6 mths</span>
+                                    <span>Age of Patient : 26</span>
+                               </div>
+                            </div>
+                        </div><!--closing column 3-->
+
+                        <div class="three">
+                            <div class="photo">
+                                <img src="img/je1.jpg" alt="">
+                                <img src="img/je2.jpg" alt="">
+                            </div>
+                        </div><!--closing column 3-->
+                        </a> 
+                    </div><!--closing column 6-->
+                
+            </div><!--closing row 7-->
+        </div><!--closing row-->
+    
+        <div class="row">
+            <div class="row7">
+               
+               
+                    <div class="six set clearfix">
+                        <a href="#"> 
+                        <div class="three">
+                            <div class="description">
+                               <div class="description-text">
+                                    <span>Patient Case Number</span>
+                                    <span>Time Between Photos : 6 mths</span>
+                                    <span>Age of Patient : 20</span>
+                               </div>
+                            </div>
+                        </div><!--closing column 3-->
+
+                        <div class="three">
+                            <div class="photo">
+                                <img src="img/js1.jpg" alt="">
+                                <img src="img/js2.jpg" alt="">
+                            </div>
+                        </div><!--closing column 3-->
+                        </a>
+                    </div><!--closing column 6-->
+                
+                
+                
+                    <div class="six set clearfix">
+                       <a href="#"> 
+                        <div class="three">
+                            <div class="description">
+                               <div class="description-text">
+                                    <span>Patient Case Number</span>
+                                    <span>Time Between Photos : 6 mths</span>
+                                    <span>Age of Patient : 60</span>
+                               </div>
+                            </div>
+                        </div><!--closing column 3-->
+
+                        <div class="three">
+                            <div class="photo">
+                                <img src="img/rc1.jpg" alt="">
+                                <img src="img/rc2.jpg" alt="">
+                            </div>
+                        </div><!--closing column 3-->
+                        </a>
+                    </div><!--closing column 6-->
+                
+            </div><!--closing row 7-->
+        </div><!--closing row-->
+        
+    </div><!--closing container-->
+       
+    <div class="row clearfix">   
+        <footer class="clearfix">
+
+            <div class="container">
+                <div class="four">
+
+                    <h2>HEADER</h2>
+                    <img src="img/dr.jpg" class="dr-image" alt="">
+                    <div class="headertext">
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five.
+                        </p>
+                    </div>
+
+                </div><!--closing column 4-->
+
+                <div class="four">
+
+                    <h2>ABOUT</h2>
+                    <ul class="about-list">
+                        <li><span class="icon-angle-right"></span> Lorem ipsum dolor sit amet</li>
+                        <li><span class="icon-angle-right"></span> Lorem ipsum dolor sit amet</li>
+                        <li><span class="icon-angle-right"></span> Lorem ipsum dolor sit amet</li>
+                        <li><span class="icon-angle-right"></span> Lorem ipsum dolor sit amet</li>
+                        <li><span class="icon-angle-right"></span> Lorem ipsum dolor sit amet</li>
+                        <li><span class="icon-angle-right"></span> Lorem ipsum dolor sit amet</li>
+                        <li><span class="icon-angle-right"></span> Lorem ipsum dolor sit amet</li>
+                    </ul>
+                </div> <!--closing column 4-->
+
+                <div class="four">
+
+                    <h2>CONTACT</h2>
+
+                    <p> 
+                        <a href="tel:(111) 111-1111"><span class="icon-phone2"></span> (111) 111-1111 (phone)</a> <br>
+
+                        <span class="icon-minimize"></span>(111) 111-1111 (fax) <br>
+
+                        <a href="mailto:example@example.com"><span class="icon-mail2"></span>example@example.com</a>
+                    </p>
+                    <p> 
+                        <a target="blank" href="#"><span class="icon-facebook"></span></a>
+                        <a target="blank" href="#"><span class="icon-google-plus"></span></a> 
+                    </p>
+
+                    <p>
+                        <strong>Title Main Office</strong> <br>
+                        1111 Main Street, Suite #111 <br>
+                        Your City, Your State 11111 <br>
+                        <a href="#">Driving Directions </a>
+                    </p>
+
+                    <p>
+                        <strong>Title Second Office</strong> <br>
+                        1111 Main Street, Suite #111 <br>
+                        Your City, Your State 11111 <br>
+                        <a href="#">Driving Directions </a>
+                    </p>
+
+                </div> <!--closing column 4-->
+            </div><!--closing container-->
+
+        </footer>
+    </div> <!--closing row-->
+
+    <div class="row">
+        <div class="last"> 
+            <p>Copyright 2016 | Design &amp; Marketing by <a href="#">CYD</a> | All Rights Reserved.</p>
+        </div>
+    </div> 
+    
+    <script src="js_Master4.js"></script>
+</body>
+</html>
