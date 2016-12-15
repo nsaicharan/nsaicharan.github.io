@@ -9,73 +9,30 @@
     <meta name="keywords" content="naked grid">
     <meta name="author" content="Cheree Dohmann" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
     <!--Styles-->
-    <link rel="stylesheet" type="text/css" href="css/demo1.css" />
     <link rel="stylesheet" type="text/css" href="css/iconmoon.css" />
     <link rel="stylesheet" type="text/css" href="css/roboto.css" />
+    <link rel="stylesheet" type="text/css" href="css/demo1.css" />
     
     <style>
         
         *{box-sizing: border-box;}
-        
-        body{background: #253d5b;}
-        
-        .clearfix:after{
-            clear: both;
-            content: '';
-            display: table;
-        }
-        
-        .container{
-            margin: 0 auto;
-            max-width: 1150px;
-            padding: 5px;
-        }
-        
-        .selector-row{
-            padding: 35px 25px;
-            position: relative;
-            top:70px;
-        }
-        
-        .selector-row h2{
-            float: left; 
-            color: white;
-        }
-        
-        .selector-row .selector{
-            float: right; 
-            margin-top: -10px; 
-        }
-        
-        .selector-row a{
-            margin:0 10px 20px; 
-            display: inline-block; 
-            width: 48px; 
-            height: 40px;
-        }
-        
-        .selector a:hover{background:#ffba49;}
-
-        .selector .active{background:#ffba49;}
-        
-        p.clicktext{
-            color:white; 
-            text-align: center;  
-            margin:30px 0 0 0; 
-        }
-        
+ 
         /* ===== PHOTOS 2col ===== */
+        
+        .container{padding: 4px;}
         
         .row7 .six{
             background: none;
             height: auto;
-            padding: 1px 1px 1px 15px;
+            padding: 1px 1px 1px 5px;
+            margin-bottom: 15px;
         }
         
         .row7 .six:hover, .hover{
             border: 1px solid #ffba49; 
-            padding: 0 0 0 14px;
+            padding: 0 0 0 4px;
         }
         
         .hover{
@@ -85,16 +42,17 @@
         
         .description{
             background: #94aac6;
-            height: 91px;
+            height: 101.5px;
             display: table;
-            padding: 10px;
-            width: 99%;
+            padding: 10px 20px;
+            width: 100%;
         }
         
         .description-text{
             display: table-cell;
             vertical-align: middle;
             color: white;
+            text-align: left;
         }
         
         .description span{
@@ -109,20 +67,26 @@
         }
         
         .photo img{
-            max-width: 120px;
+            max-width: 135px;
             display: inline-block;
         }
         
         /* MEDIA QUERIES FOR PHOTOS 2col */
         
-        @media(max-width:1100px){
+        @media(max-width:1119px){
             .row7 .six{padding: 1px 1px 1px 9px;}
             .row7 .six:hover{padding: 0 0 0 8px;}
+            
+            .photo img{ max-width: 120px;}
+            
+            .description{height: 91px;}
         }
         
-         @media(max-width:1040px){
+        @media(max-width:1040px){
             .row7 .six{padding: 1px 1px 1px 2.5px;}
             .row7 .six:hover{padding: 0 0 0 1.5px;}
+        
+            .description{width: 99%;}
         }
         
         @media (max-width:1023px){
@@ -140,6 +104,8 @@
             }
             
             .description{height:118px;}
+            
+            .description-text{text-align: center;}
          
             .photo img{max-width:155px;}
     
@@ -187,83 +153,6 @@
         }
         
         @media (max-width:480px){ .row7 .six{width: 100%} }
-        
-        /*  =========  FOOTER ========= */
-
-        footer{
-            height: auto;
-            color: white;
-            background: #5883ba;
-            padding-top: 20px;
-            margin-top: 6px;
-        }
-
-		footer .four{
-            padding:0 10px;
-        }
-        
-        footer span[class^="icon"]{
-            display: inline-block; 
-            vertical-align: middle;
-            padding-right: 10px; 
-            font-size: 25px;
-            margin: 3px 0;
-        }
-        
-        footer .about-list{
-            list-style: none;
-            padding-left: 30px;
-        }
-        
-        footer .about-list li{
-            border-bottom: 1px solid white;
-            position: relative;
-            padding: 3px 0;
-            text-align: left;
-        }
-        
-        footer .about-list li:last-child{
-            border:none;
-        }
-        
-        footer .about-list > li [class*="icon-"],
-        footer .about-list > li [class^="icon-"] {
-          left: -1.75em;
-          position: absolute;
-          text-align: center;
-          top: 3px;
-          width: 16px;
-          font-size: 0.9rem;
-        }
-
-        footer h2{
-            margin:20px 0;
-            border-left: 5px solid grey;
-            padding-left: 10px;
-        }
-        
-        
-        .dr-image{
-            width: 200px;
-            height: 260px;
-            display:block;
-            margin: 30px auto 10px auto;
-        }
-
-        .last{
-            background: none;
-            height: auto;
-            margin-top: 15px;
-            color:white;
-        }
-        
-        @media (max-width:1023px){
-            footer .four{
-                float: none;
-                max-width: 650px;
-                margin: 0 auto !important;
-            }
-        }
         
     </style>
 </head>
@@ -372,51 +261,48 @@
             </div><!--closing row 7-->
         </div><!--closing row-->
     
-        <div class="row">
+        <div class="row clearfix">
             <div class="row7">
-               
                
                     <div class="six set clearfix">
                         <a href="#"> 
-                        <div class="three">
-                            <div class="description">
-                               <div class="description-text">
-                                    <span>Patient Case Number</span>
-                                    <span>Time Between Photos : 6 mths</span>
-                                    <span>Age of Patient : 20</span>
-                               </div>
-                            </div>
-                        </div><!--closing column 3-->
+                            <div class="three">
+                                <div class="description">
+                                   <div class="description-text">
+                                        <span>Patient Case Number</span>
+                                        <span>Time Between Photos : 6 mths</span>
+                                        <span>Age of Patient : 20</span>
+                                   </div>
+                                </div>
+                            </div><!--closing column 3-->
 
-                        <div class="three">
-                            <div class="photo">
-                                <img src="img/BP73_1ant_th.jpg" alt="">
-                                <img src="img/BP73_2ant_th.jpg" alt="">
-                            </div>
-                        </div><!--closing column 3-->
+                            <div class="three">
+                                <div class="photo">
+                                    <img src="img/BP73_1ant_th.jpg" alt="">
+                                    <img src="img/BP73_2ant_th.jpg" alt="">
+                                </div>
+                            </div><!--closing column 3-->
                         </a>
                     </div><!--closing column 6-->
                 
-                
-                
                     <div class="six set clearfix">
                        <a href="#"> 
-                        <div class="three">
-                            <div class="description">
-                               <div class="description-text">
-                                    <span>Patient Case Number</span>
-                                    <span>Time Between Photos : 6 mths</span>
-                                    <span>Age of Patient : 60</span>
-                               </div>
-                            </div>
-                        </div><!--closing column 3-->
+                            <div class="three">
+                                <div class="description">
+                                   <div class="description-text">
+                                        <span>Patient Case Number</span>
+                                        <span>Time Between Photos : 6 mths</span>
+                                        <span>Age of Patient : 60</span>
+                                   </div>
+                                </div>
+                            </div><!--closing column 3-->
 
-                        <div class="three">
-                            <div class="photo">
-                                <img src="img/BP73_1lat_th.jpg" alt="">
-                                <img src="img/BP73_2lat_th.jpg" alt="">
-                            </div>
-                        </div><!--closing column 3-->
+                            <div class="three">
+                                <div class="photo">
+                                    <img src="img/BP73_1lat_th.jpg" alt="">
+                                    <img src="img/BP73_2lat_th.jpg" alt="">
+                                </div>
+                            </div><!--closing column 3-->
                         </a>
                     </div><!--closing column 6-->
                 
@@ -425,10 +311,10 @@
         
     </div><!--closing container-->
        
-    <div class="row clearfix">   
-        <footer class="clearfix">
+    <div class="row footer-row clearfix">   
+        <footer>
 
-            <div class="container">
+            <div class="container clearfix">
                 <div class="four">
 
                     <h2>HEADER</h2>
