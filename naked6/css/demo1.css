@@ -622,5 +622,6 @@ footer .about-list > li [class^="icon-"] {
         float: none;
         max-width: 650px;
         margin: 0 auto !important;
+        padding: 10px;
     }
 }
