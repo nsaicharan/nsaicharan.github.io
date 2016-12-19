@@ -40,13 +40,12 @@
 
 			.row2 .three, .row2 .nine {
 				height: 60px;
-				background-color: #D1EEEE;
-				text-align:center;
 			}
 
 			nav {
 				z-index: 500;
-				background-color: #e7ecf2;
+                background-color: #253d5b;
+                width: 100%;
 			}
 
 			/* This is SUPPOSE to hold the NAV open at 60px in height, for the Sticky Nav to work without jumpy-ness when it reaches the TOP
@@ -61,7 +60,6 @@
 				position: fixed;
 				top: 0;
 				width: 100%;
-				background-color: transparent;
 			}
 
 			/* DON"T need this code because it shortens the width of the nav to stay in the center of the Container. We want to use FULL 100% width.
@@ -69,35 +67,45 @@
 			.fixed .nav-inner-most {max-width: 700px; margin: 0 auto; background-color: #e7ecf2;}*/
 
 			nav ul {
-				margin: 0;
+				margin: 0 15px 0 0;
 				padding: 0;
+                float:right; /* This code moves the NAV LINKS all the way to the right.*/
 			}
 
 			nav ul li {
 				list-style: none;
-				float: right;/* This code moves the NAV LINKS all the way to the right.*/
+				float: left;
+                line-height: 60px;
+                font-size: 18px;
 			}
 
-			nav ul li a:link,
+			nav .three a, 
+            nav ul li a:link,
 			nav ul li a:visited {
 				display: block;
 				text-decoration: none;
-				padding: 10px 25px;
-				background-color: #e7ecf2;
-				border-right: 2px solid #d5dce4;
-				color: #33557c;
-				font-size: 90%;
-				font-weight: bold;
-			}
+				padding: 0 20px;
+                transition:  all .4s ease;
+                font-weight: bold;
+				color: #fff; 
+            }
 
 			nav ul li a:hover {
-				background-color: #dbe1e8;
-			}
+				background-color: #ffb45c;
+            }
 
-			nav ul li:last-child a:link,
-			nav ul li:last-child a:visited {
-				border-right: none;
-			}
+            nav .three a{
+                line-height: 60px;
+                padding: 0;
+                margin-left: 15px;
+                display: inline-block;
+                font-size: 150%;
+            }
+
+            nav .three a:hover{
+                color: #ffba49;
+                cursor: pointer;
+            }
 
 
 
@@ -240,6 +248,7 @@ footer {
     background: rgba(0,0,0,.3);
     width: 40px;
     height: 40px;
+    display: none;
 }
 
 /*
@@ -260,16 +269,22 @@ footer {
 
 /* ==== Menu Navigation ==== */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
 
-     .menunav .logo {
+    .menunav .logo {
       display: block;
+      font-size: 120%;
+      line-height: 70px;
+      color: white;
+      text-decoration: none;
       float: left;
-      margin: 22px 0 0 20px; /* Margin has to be adjusted depending on size of the actual logo */
+      margin-left: 20px;
     }
     
+    .menunav .logo:hover{color: #ffba49;}
+    
     .menunav {
-      background-color: #fff;
+      background-color: #253d5b;
       box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
       position: fixed;
       width: 100%;
@@ -281,7 +296,7 @@ footer {
       padding: 0;
       list-style: none;
       overflow: hidden;
-      background-color: #324252;
+      background-color: #253d5b;
     }
     
     .menunav li:first-child{
@@ -297,9 +312,7 @@ footer {
       font-size: 25px;
     }
 
-    .menunav li a:hover{
-      color: #1bbc9b;
-    }
+    .menunav li a:hover{ color: #ffba49;}
 
     .menunav .menu {
       clear: both;
@@ -313,7 +326,7 @@ footer {
         position: absolute;
         top:0px;
         left: 9px;
-        color:#fff;
+        color:#253d5b;
     }
 
     .menunav .menu-icon {
@@ -326,13 +339,13 @@ footer {
       -moz-user-select: none;     
       -ms-user-select: none; 
       user-select: none;
-      background: #324252;
+      background: #fff;
       margin: 12px 15px; 
 
     }
 
     .menunav .menu-icon .navicon {
-      background: #fff;
+      background: #253d5b;
       display: block;
       height: 2.5px;
       position: relative;
@@ -342,7 +355,7 @@ footer {
 
     .menunav .menu-icon .navicon:before,
     .menunav .menu-icon .navicon:after {
-      background: #fff;
+      background: #253d5b;
       content: '';
       display: block;
       height: 100%;
@@ -367,7 +380,7 @@ footer {
     .menunav .menu-btn:checked ~ .menu {
       min-height: 100vh;
       max-height: 100vh;
-      background: #324252;
+      background: #253d5b;
     }
 
     .menunav .menu-btn:checked ~ .menu-icon .navicon {
@@ -402,7 +415,7 @@ footer {
 
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 769px) {
     
     .menunav{
         display:none;
@@ -564,3 +577,13 @@ Code to enable parallax
 If you've enabled parallax, you should either remove '<source srcset="images/hero/bx1136.jpg" media="(max-width: 1024px)">' from picture element or replace it with some portrait image.
 
 */
+
+.clearfix:after{
+    display: table;
+    content: '';
+    clear: both;
+}
+.nav-wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+}
