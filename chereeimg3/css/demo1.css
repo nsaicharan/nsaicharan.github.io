@@ -269,7 +269,7 @@ footer {
 
 /* ==== Menu Navigation ==== */
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
 
     .menunav .logo {
       display: block;
@@ -415,7 +415,7 @@ footer {
 
 }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 1025px) {
     
     .menunav{
         display:none;
@@ -429,7 +429,7 @@ footer {
 @media only screen and (max-width: 736px) and (orientation : landscape) {
     
     .menunav .logo {
-      margin-top: 17px; /* Margin has to be adjusted depending on size of the actual logo */
+        line-height: 58.5px;
     }
     
     .menunav li:first-child{
@@ -442,7 +442,7 @@ footer {
     }
     
     .menunav .menu-icon {
-      margin: 6px 15px; 
+      margin: 6px 15px 7px; 
     }
     
     header .row{
