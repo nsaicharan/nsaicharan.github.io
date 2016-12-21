@@ -658,7 +658,7 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
 @keyframes fadeInDown {
   from {
     opacity: 0;
-    transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -400%, 0);
   }
 
   to {
@@ -668,8 +668,14 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
 }
 
 .fadeInDown {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
-  animation-delay: 1s;
+
 }
 .btn {
     background: #ffb45c;
@@ -681,6 +687,15 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     margin-right: 3%;
     float: left;
     letter-spacing: 3px;
+    opacity: 0;
+}
+
+.btn:nth-child(2){
+    animation-delay: .2s !important;
+}
+
+.btn:nth-child(3){
+    animation-delay: .4s !important;
 }
 
 .btn:hover{
