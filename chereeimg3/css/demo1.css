@@ -23,7 +23,7 @@
 
 			h1, h2, h3, h4, h5, h6 {margin-top: 0;}
 
-			p {margin: 0 0 1em 0;}
+			p {margin: 0 0 1em 0; color: white; padding:0 5px;}
 
 			h1 {
 				background-color: #305782;
@@ -31,6 +31,14 @@
 				padding: 60px 25px;
 				margin: 0;
 			}
+
+            
+            h2{
+                text-align: left;
+                padding: 30px;
+                font-size: 20px;
+                color:white;
+            }
 
 			.clearfix:before, .clearfix:after { content: ""; display: table; }
 			.clearfix:after { clear: both; }
@@ -60,7 +68,9 @@
 				position: fixed;
 				top: 0;
 				width: 100%;
+                background-color: rgba(37,61,91,.6);
 			}
+
 
 			/* DON"T need this code because it shortens the width of the nav to stay in the center of the Container. We want to use FULL 100% width.
 			.fixed .nav-inner {padding: 0 20px;}
