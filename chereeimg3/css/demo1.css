@@ -511,7 +511,7 @@ picture img{
 
 .parallax {
     position: relative;
-    height: 390px;
+    height: 400px;
     overflow: hidden;
 }
 
@@ -597,7 +597,7 @@ picture img{
 
 /* Start - Disable Parallax < 1025px */
 
-@media (max-width:1024px){
+@media (max-width:1023px){
     .parallax{
         height: auto;
     }
@@ -687,7 +687,7 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     margin-right: 3%;
     float: left;
     letter-spacing: 3px;
-    opacity: 0;
+    opacity: 1;
 }
 
 .btn:nth-child(2){
@@ -708,4 +708,46 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
 
 .btn span{
     display: block;
+}
+
+@media (max-width:1023px){
+    .btn {
+        float: none;
+        margin: 0 auto 15px;
+        width: 50%;
+    }
+    
+    .btn:nth-child(3){
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:567px){
+    .btn {
+        float: none;
+        margin: 0 auto 10px;
+        padding: 5px 10px;
+        width: 70%;
+        font-size: 20px;
+        line-height: 1.1em;
+    }
+    
+    .btn:nth-child(3){
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:360px){
+    .btn {
+        float: none;
+        margin: 0 auto 8px;
+        padding: 5px;
+        width: 75%;
+        font-size: 16px;
+        line-height: 1.1em;
+    }
+    
+    .btn:nth-child(3){
+        margin: 0 auto;
+    }
 }
