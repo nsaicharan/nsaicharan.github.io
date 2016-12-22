@@ -572,7 +572,8 @@ picture img{
     text-align: left;
     position: absolute;
     left: 50%;
-    transform: translate(-50%,0);
+    top:50%;
+    transform: translate(-50%,-50%);
     padding: 5px 0;
 }
 
