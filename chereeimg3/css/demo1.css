@@ -655,6 +655,22 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     background: #F27935;
 }
 
+
+@keyframes pulse {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -687,7 +703,7 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     margin-right: 3%;
     float: left;
     letter-spacing: 3px;
-    opacity: 1;
+    opacity: 0;
 }
 
 .btn:nth-child(2){
@@ -750,4 +766,12 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     .btn:nth-child(3){
         margin: 0 auto;
     }
+}
+
+@media (max-width:1023px){
+    
+    .six, .three, four{
+        height: auto !important;
+    }
+    
 }
