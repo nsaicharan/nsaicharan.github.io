@@ -770,7 +770,7 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
 
 @media (max-width:1023px){
     
-    .six, .three, four{
+    .six, .three, .four{
         height: auto !important;
     }
     
