@@ -533,6 +533,7 @@ picture img{
     height: 100%;
 }
 
+
 .overlay-text{
     color: white;
     font-size: 26px;
@@ -579,18 +580,27 @@ picture img{
     text-align: center !important;
     font-size: 30px;
     display: inline-block;
-    width: 175px ;
+    width: auto;
+    padding: 0 0 0 0;
 }
 
 .overlay-text4 a, 
 .overlay-text4 a:visited{
     
-    padding-left:15px;
     color: #ffb45c;
     text-decoration: none;
     font-size: 25px;
     font-weight: bold;
-    line-height: 2em;
+    line-height: 1.5em;
+}
+
+@media (min-width:1281px){
+    .overlay-text4 a, 
+    .overlay-text4 a:visited{
+
+        font-size: 22px;
+        line-height: 1.2em;
+    }
 }
 
 .overlay-text4 a:hover{
@@ -789,12 +799,26 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
 
 .overlay-text4 {
     color: white;
-    width: auto;
+    width: 100%;
     max-width: 96%;
     text-align: center;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    padding: 5px 0;
+    padding: 5px;
+}
+
+
+.color {
+    position: absolute;
+    top:0;
+    bottom:0;
+    height: 100%;
+    width: 100%;
+    background: rgba(19, 49, 103, 0.4);
+}
+
+.color:hover{
+   background: rgba(19, 49, 103,1)
 }
