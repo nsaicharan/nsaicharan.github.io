@@ -566,13 +566,21 @@ picture img{
 
 .overlay-text2{
     color: white;
-    width: 620px;
+    width: auto;
     max-width: 96%;
-    text-align: left;
+    text-align: center;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%);
+    top: 50%;
+    transform: translate(-50%,-50%);
     padding: 5px 0;
+}
+
+.overlay-text2 h2{
+    text-align: center !important;
+    font-size: 30px;
+    display: inline-block;
+    width: 158px ;
 }
 
 .overlay-text2 a, 
@@ -581,6 +589,7 @@ picture img{
     padding-left:15px;
     color: #ffb45c;
     text-decoration: none;
+    font-size: 25px;
     font-weight: bold;
     line-height: 2em;
 }
@@ -741,11 +750,11 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
 @media (max-width:567px){
     .btn {
         float: none;
-        margin: 0 auto 10px;
-        padding: 5px 10px;
+        margin: 0 auto 30px;
+        padding: 10px;
         width: 70%;
         font-size: 20px;
-        line-height: 1.1em;
+        line-height: 1.2em;
     }
     
     .btn:nth-child(3){
@@ -753,14 +762,10 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     }
 }
 
-@media (max-width:360px){
+@media (max-width:350px){
     .btn {
-        float: none;
-        margin: 0 auto 8px;
-        padding: 5px;
-        width: 75%;
-        font-size: 16px;
-        line-height: 1.1em;
+        margin: 0 auto 20px;
+        font-size: 18px;
     }
     
     .btn:nth-child(3){
@@ -774,4 +779,11 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
         height: auto !important;
     }
     
+}
+.overlay-inner {
+    width: auto !important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
 }
