@@ -805,7 +805,6 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     margin-right: 6%;
     float: left;
     letter-spacing: 3px;
-    opacity: 0;
 }
 
 .btn:nth-child(2){
