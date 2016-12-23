@@ -839,7 +839,7 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     }
 }
 
-@media (max-width:567px){
+@media (max-width:666px){
     .btn {
         float: none;
         margin: 0 auto 30px;
