@@ -574,8 +574,106 @@ picture img{
     left: 50%;
     top:50%;
     transform: translate(-50%,-50%);
-    padding: 5px 0;
 }
+
+.overlay-text2 p{
+    font-size: 16px;
+}
+
+@media (max-width:1400px) and (min-width:1024px){
+    .overlay-text2 p{
+        font-size: 19px;
+    }
+    
+    .overlay-text2 h2{
+        font-size: 25px;
+    }
+}
+
+@media (max-width:735px){
+   
+    .overlay-text2 h2{
+        font-size: 18px;
+        padding-top: 5px;
+    }
+    .overlay-text2 p{
+        font-size: 15.5px;
+        margin: 0 0 0.6em 0;
+        line-height: 1.2em;
+    }
+}
+
+@media (max-width:599px){
+    
+     .overlay-text2 h2{
+        padding-top: 2px;
+        margin-bottom: 2px;
+    }
+    
+    .overlay-text2 p{
+        font-size: 15px;
+        margin: 0 0 0.5em 0;
+        line-height: 1.1em;
+    }
+    
+}
+
+@media (max-width:480px){
+    
+    .overlay-text2 h2{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .overlay-text2 p{
+        font-size: 16px;
+        margin: 0 0 0.5em 0;
+        line-height: 1.2em;
+    }
+    
+}
+
+@media (max-width:374px){
+    
+    .overlay-text2 h2{
+        font-size: 18px;
+        margin-bottom: 5px;
+    }
+    
+    .overlay-text2 p{
+        font-size: 16px;
+        margin: 0 0 0.6em 0;
+        line-height: 1.11em;
+    }
+    
+}
+
+@media (max-width:350px){
+    
+    .overlay-text2 h2{
+        margin-bottom: 2px;
+    }
+    
+    .overlay-text2 p{
+        font-size: 14.4px;
+    }
+    
+}
+
+@media (max-width:319px){
+    
+    .overlay-text2 h2{
+        font-size: 14px
+        margin-bottom: 1px;
+    }
+    
+    .overlay-text2 p{
+        font-size: 12px;
+    }
+    
+}
+
+
 
 .overlay-text4 h2{
     text-align: center !important;
@@ -616,7 +714,7 @@ picture img{
 
 /* Start - Disable Parallax < 1025px */
 
-@media (max-width:1023px){
+@media (max-width:1024px){
     .parallax{
         height: auto;
     }
@@ -672,21 +770,6 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
 
 .rowc {
     background: #F27935;
-}
-
-
-@keyframes pulse {
-  from {
-    transform: scale3d(1, 1, 1);
-  }
-
-  50% {
-    transform: scale3d(1.05, 1.05, 1.05);
-  }
-
-  to {
-    transform: scale3d(1, 1, 1);
-  }
 }
 
 
