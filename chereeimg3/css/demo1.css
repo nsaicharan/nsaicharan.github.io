@@ -636,7 +636,7 @@ picture img{
 @media (max-width:374px){
     
     .overlay-text2 h2{
-        font-size: 18px;
+        font-size: 20px;
         margin-bottom: 5px;
     }
     
@@ -832,7 +832,7 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
         float: none;
         margin: 0 auto 15px;
         width: 35%;
-        font-size: 22px;
+        font-size: 21px;
     }
     
     .btn:nth-child(3){
@@ -840,14 +840,20 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     }
 }
 
-@media (max-width:640px){
+@media (max-width:736px){
     .btn {
-        float: none;
-        margin: 0 auto 30px;
-        padding: 10px;
-        width: 45%;
+        width: 33%;
         font-size: 20px;
-        line-height: 1.2em;
+        padding: 5px 10px;
+    }
+    
+}
+
+@media (max-width:666px){
+    .btn {
+        padding: 5px 10px;
+        width: 40%;
+        font-size: 20px;
     }
     
 }
@@ -855,6 +861,7 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
 @media (max-width:567px){
     .btn {
         margin: 0 auto 20px;
+        padding: 8px 10px;
         font-size: 18px;
         width: 55%;
     }  
@@ -862,7 +869,8 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
 
 @media (max-width:374px){
     .btn {
-        margin: 0 auto 20px;
+        margin: 0 auto 15px;
+        padding: 5px 10px;
         font-size: 16px;
         width: 65%;
     }
