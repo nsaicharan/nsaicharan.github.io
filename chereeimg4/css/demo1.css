@@ -1,0 +1,909 @@
+/* EDGE-to-EDGE layout: This HTML and BODY style code here makes sure that your 12-grid system stretches all the way to the very edge!! NO WHITE MARGINS */
+			html {
+				padding: 0;
+				margin: 0;
+				
+			}
+			
+			body {
+				padding:0;
+				margin:0;
+				font-family: 'Roboto', 'Helvetica', sans-serif;
+				font-size: 93%;
+				line-height: 1.5em;
+			}
+
+
+/* Typography */
+			a,
+			a:link,
+			a:visited {
+				color: blue;
+			}
+
+			h1, h2, h3, h4, h5, h6 {margin-top: 0;}
+
+			p {margin: 0 0 1em 0; color: white; padding:0 15px; text-align: left;}
+
+			h1 {
+				background-color: #305782;
+				color: #FFF;
+				padding: 60px 25px;
+				margin: 0;
+			}
+
+            
+            h2{
+                text-align: left;
+                padding: 25px 15px 5px;
+                font-size: 20px;
+                color:white;
+            }
+
+			.clearfix:before, .clearfix:after { content: ""; display: table; }
+			.clearfix:after { clear: both; }
+			.clearfix { *zoom: 1; }
+
+/* Navigation */
+
+			.row2 .three, .row2 .nine {
+				height: 60px;
+			}
+
+			nav {
+				z-index: 500;
+                background-color: #253d5b;
+                width: 100%;
+			}
+
+			/* This is SUPPOSE to hold the NAV open at 60px in height, for the Sticky Nav to work without jumpy-ness when it reaches the TOP
+			of the web page. This number has to match the height that is given to ROW2 - in the CSS above. But - for some reason, it's not working.
+			Instead, this 60 pixels is being added ONTOP of the NAV div. Not sure why, or how to fix.
+				.nav-placeholder {
+				margin: 0 0 60px 0; 
+				}*/ 
+
+
+			.fixed {
+				position: fixed;
+				top: 0;
+				width: 100%;
+                background-color: rgba(37,61,91,.6);
+			}
+
+
+			/* DON"T need this code because it shortens the width of the nav to stay in the center of the Container. We want to use FULL 100% width.
+			.fixed .nav-inner {padding: 0 20px;}
+			.fixed .nav-inner-most {max-width: 700px; margin: 0 auto; background-color: #e7ecf2;}*/
+
+			nav ul {
+				margin: 0 15px 0 0;
+				padding: 0;
+                float:right; /* This code moves the NAV LINKS all the way to the right.*/
+			}
+
+			nav ul li {
+				list-style: none;
+				float: left;
+                line-height: 60px;
+                font-size: 18px;
+			}
+
+			nav .three a, 
+            nav ul li a:link,
+			nav ul li a:visited {
+				display: block;
+				text-decoration: none;
+				padding: 0 20px;
+                transition:  all .4s ease;
+                font-weight: bold;
+				color: #fff; 
+            }
+
+			nav ul li a:hover {
+				background-color: #ffb45c;
+            }
+
+            nav .three a{
+                line-height: 60px;
+                padding: 0;
+                margin-left: 15px;
+                display: inline-block;
+                font-size: 150%;
+            }
+
+            nav .three a:hover{
+                color: #ffba49;
+                cursor: pointer;
+            }
+
+
+
+/* Setting up our grid - THIS IS FOR DESKTOP VIEW */
+.container {
+	width: 100%; /*Set the width of the entire website here */
+	margin-left: auto;
+	margin-left: auto;  /* Margin-left and right are set to auto to center the container */
+}
+
+	/* GOT THIS FROM THE STICKY NAV DEMO PAGES - NOT SURE IF I NEED THIS YET - OR NOT....
+	.container {
+	max-width: 700px;
+	margin: 0 auto;
+	padding: 0 20px;
+	position: relative;
+	}*/
+
+
+
+.seven:first-child,.eight:first-child, .nine:first-child, .ten:first-child,.eleven:first-child,.five:first-child, .four:first-child, .three:first-child, .two:first-child, .one:first-child, .six:first-child { 
+	margin-left: 0; /* This line of code makes the left-most column align to the left of the screen */
+}
+
+.row {
+	width: 100%;
+	clear: both; /* Clear creates new styles for the next row */
+	padding: 0px;
+	margin: 0px;
+}
+
+
+/* MOBILE FIRST APPROACH */
+
+/* CSS ARRANGED FOR MOBILE FIRST - For mobile phones: */
+	.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven {
+    width: 100%;
+  	float: left;  /*This command is needed to keep the DIV boxes on the SAME line. If you remove this tag, each DIV  will stacked ontop each other, one at a time.*/
+	}
+
+
+/* CSS ARRANGED FOR MOBILE FIRST - ONLY USE MEDIA QUERIES for ALL other devices - for Desktop and Tablets  */
+
+/* this code doesn't work -----
+@media only screen and (min-width: 768px) (max-width: 1023px) {
+    .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven {
+        width: 50%;
+        float: left;
+    }
+}-----*/
+
+@media only screen and (min-width: 1024px) {
+    /* For desktop: */
+    .one {width: 8.33%;}
+    .two {width: 16.66%;}
+    .three {width: 25%;}
+    .four {width: 33.33%;}
+    .five {width: 41.66%;}
+    .six {width: 50%;}
+    .seven {width: 58.33%;}
+    .eight {width: 66.66%;}
+    .nine {width: 75%;}
+    .ten {width: 83.33%;}
+    .eleven {width: 91.66%;}
+}
+
+
+/* Formatting HTML elements on ALL web pages */
+
+
+
+.row3 .six, .row3 .three {
+	height: 300px;
+	background-color: #fff;
+	text-align:center;
+}
+
+.row3 h2, .row3 p {
+    color:black !important;
+}
+
+.row4 .six, .row4 .three {
+	height: 500px;
+	background-color: #F9690E;
+	text-align:center;
+}
+.row5 .three {
+	height: 333px;
+	background-color: #FDE3A7;
+	text-align:center;
+}
+
+/* THIS CODE IS NOT WORKING - I TRIED IT. Something is wrong. 
+i don't know how to effectively use Clearfixes in my CSS!!!! Need to watch a YouTube video.
+
+ This should be 4 equal column sizes on the screen need to be fixed for tablets: 
+@media only screen and (min-width: 768px) (max-width: 1023px) {
+     For tablets: 
+
+.row5 .clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {
+    display: inline-block;
+}
+.clearfix {
+    display: block;
+}
+}*/
+
+.row6 .six, .row6 .three {
+	height: 333px;
+	background-color: #F27935;
+	text-align:center;
+}
+
+.row7 .six {
+	height: 333px;
+	background-color: #F27935;
+	text-align:center;
+}
+
+
+.last {
+	height: 73px;
+	background-color: #d13328;
+	text-align:center;
+}
+footer {
+	height: 443px;
+	background-color: #FDE3A7;
+}
+
+/* Back To Top button on every web page via JQuery */
+
+.back-to-top {
+	position:fixed;
+	bottom:20px;
+	right:20px;
+    background: rgba(0,0,0,.3);
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+
+/*
+.back-to-top2 {
+	position:fixed;
+	bottom:20px;
+	right:80px;
+    background: rgba(0,0,0,.3);
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+}
+*/
+
+.back-to-top img,.back-to-top2 img{
+   margin: 5.5px 0 0 3.45px;
+}
+
+/* ==== Menu Navigation ==== */
+
+@media only screen and (max-width: 1024px) {
+
+    .menunav .logo {
+      display: block;
+      font-size: 120%;
+      line-height: 70px;
+      color: white;
+      text-decoration: none;
+      float: left;
+      margin-left: 20px;
+    }
+    
+    .menunav .logo:hover{color: #ffba49;}
+    
+    .menunav {
+      background-color: #253d5b;
+      box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.25);
+      position: fixed;
+      width: 100%;
+      z-index: 3;
+    }
+
+    .menunav ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      overflow: hidden;
+      background-color: #253d5b;
+    }
+    
+    .menunav li:first-child{
+        margin-top: 62px;
+    }
+
+    .menunav li a {
+      color:#fff;
+      display: block;
+      padding: 10px 20px;
+      text-decoration: none;
+      text-align: center;
+      font-size: 25px;
+    }
+
+    .menunav li a:hover{ color: #ffba49;}
+
+    .menunav .menu {
+      clear: both;
+      min-height: 0;
+      max-height: 0;
+      transition: all .2s ease-out;
+    }
+
+    .menutext{
+        font-size: 12px;
+        position: absolute;
+        top:0px;
+        left: 9px;
+        color:#253d5b;
+    }
+
+    .menunav .menu-icon {
+      cursor: pointer;
+      display: inline-block;
+      float: right;
+      padding: 28px 12px 15px;
+      position: relative;
+      -webkit-user-select: none;  
+      -moz-user-select: none;     
+      -ms-user-select: none; 
+      user-select: none;
+      background: #fff;
+      margin: 12px 15px; 
+
+    }
+
+    .menunav .menu-icon .navicon {
+      background: #253d5b;
+      display: block;
+      height: 2.5px;
+      position: relative;
+      transition: background .2s ease-out;
+      width: 30px;
+    }
+
+    .menunav .menu-icon .navicon:before,
+    .menunav .menu-icon .navicon:after {
+      background: #253d5b;
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      transition: all .2s ease-out;
+      width: 100%;
+
+    }
+
+    .menunav .menu-icon .navicon:before {
+      top: 7px;
+    }
+
+    .menunav .menu-icon .navicon:after {
+      top: -7px;
+    }
+
+    .menunav .menu-btn {
+      display: none;
+    }
+
+    .menunav .menu-btn:checked ~ .menu {
+      min-height: 100vh;
+      max-height: 100vh;
+      background: #253d5b;
+    }
+
+    .menunav .menu-btn:checked ~ .menu-icon .navicon {
+      background: transparent;
+    }
+
+    .menunav .menu-btn:checked ~ .menu-icon .navicon:before {
+      transform: rotate(-45deg);
+    }
+
+    .menunav .menu-btn:checked ~ .menu-icon .navicon:after {
+      transform: rotate(45deg);
+    }
+
+    .menunav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
+    .menunav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
+      top: 0;
+    }  
+    
+    header .row{
+        position: relative;
+        top: 70px;
+    }
+    
+    .longnav{
+        display: none;
+    }
+    
+    .row3{
+        margin-top: 69px;
+    }
+
+}
+
+@media only screen and (min-width: 1025px) {
+    
+    .menunav{
+        display:none;
+    }
+     header .row{
+        position: relative;
+    }
+
+}
+
+@media only screen and (max-width: 736px) and (orientation : landscape) {
+    
+    .menunav .logo {
+        line-height: 58.5px;
+    }
+    
+    .menunav li:first-child{
+        margin-top: 24px;
+    }
+    
+    .menunav li a {
+        padding: 10px 20px;
+        font-size: 22px;
+    }
+    
+    .menunav .menu-icon {
+      margin: 6px 15px 7px; 
+    }
+    
+    header .row{
+        top: 58px;
+    }
+    
+    .row3{
+        margin-top: 58px;
+    }
+}
+
+@media only screen and (max-width: 599px) and (orientation : landscape) {
+    
+    .menunav li:first-child{
+        margin-top: 5px;
+    }
+    
+    .menunav li a {
+        padding: 8px 20px;
+        font-size: 18px;
+    }
+    
+}
+
+/* ===== Hero ===== */
+
+header .hero-image {
+    width: 100%;
+    overflow: hidden;
+}
+
+picture img{
+    max-width: 100%;
+    vertical-align: middle;
+    z-index: -1;
+}
+
+/* ====== Misc. ======*/
+
+.row5 .three{
+    height: auto;
+    background-color: transparent;
+    position: relative;
+}
+
+.row7 .six {
+    height: auto;
+    position: relative;
+    background-color: transparent;
+    overflow: hidden;
+}
+
+.parallax {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.parallax img{
+    position: fixed;
+    z-index: -1;
+    top:0;
+    left: 0;
+    width: 100%;
+}
+
+.layer {
+    background: rgb(19, 49, 103);
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.overlay-text{
+    color: white;
+    font-size: 26px;
+    width: 620px;
+    line-height: 1.2em;
+    max-width: 96%;
+    text-align: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+}
+
+.overlay-text3{
+    font-size: 24px;
+    width: 950px;
+    line-height: 1.2em;
+    max-width: 96%;
+    text-align: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+}
+
+.overlay-text2{
+    color: white;
+    width: 620px;
+    max-width: 96%;
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%,-50%);
+}
+
+.overlay-text2 p{
+    font-size: 16px;
+}
+
+
+@media (max-width:735px){
+   
+    .overlay-text2 h2{
+        font-size: 18px;
+        padding-top: 5px;
+    }
+    .overlay-text2 p{
+        font-size: 15.5px;
+        margin: 0 0 0.6em 0;
+        line-height: 1.2em;
+    }
+}
+
+@media (max-width:599px){
+    
+     .overlay-text2 h2{
+        padding-top: 2px;
+        margin-bottom: 2px;
+    }
+    
+    .overlay-text2 p{
+        font-size: 15px;
+        margin: 0 0 0.5em 0;
+        line-height: 1.1em;
+    }
+    
+}
+
+@media (max-width:480px){
+    
+    .overlay-text2 h2{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .overlay-text2 p{
+        font-size: 16px;
+        margin: 0 0 0.5em 0;
+        line-height: 1.2em;
+    }
+    
+}
+
+@media (max-width:374px){
+    
+    .overlay-text2 h2{
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    
+    .overlay-text2 p{
+        font-size: 16px;
+        margin: 0 0 0.6em 0;
+        line-height: 1.11em;
+    }
+    
+}
+
+@media (max-width:350px){
+    
+    .overlay-text2 h2{
+        margin-bottom: 2px;
+    }
+    
+    .overlay-text2 p{
+        font-size: 14.4px;
+    }
+    
+}
+
+@media (max-width:319px){
+    
+    .overlay-text2 h2{
+        font-size: 14px
+        margin-bottom: 1px;
+    }
+    
+    .overlay-text2 p{
+        font-size: 12px;
+    }
+    
+}
+
+
+
+.overlay-text4 h2{
+    text-align: center !important;
+    font-size: 26px;
+    display: inline-block;
+    width: auto;
+    padding: 0 0 0 0;
+}
+
+.overlay-text4 a, 
+.overlay-text4 a:visited{
+    
+    color: #ffb45c;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+@media (min-width:1301px){
+    .overlay-text4 a, 
+    .overlay-text4 a:visited{
+
+        font-size: 22px;
+        line-height: 1.2em;
+    }
+}
+
+.overlay-text4 a:hover{
+    color: white;
+}
+
+@media (max-width:736px){
+    .overlay-text{
+        font-size: 20px;
+    }
+}
+
+/* Start - Disable Parallax < 1025px */
+
+@media (max-width:1024px){
+    .parallax{
+        height: auto;
+    }
+    
+    .parallax img{
+        position: static;
+    }
+}
+
+/* End - Disable Parallax < 1025px */
+
+
+/* 
+
+Code to enable parallax 
+
+@media (max-width:480px){
+    .parallax{
+        height: 300px;
+    }
+     .parallax img{
+        top:69px;
+    }
+}
+
+@media (max-width:385px){
+    .parallax img{
+        height: 100vh;
+    }
+} 
+
+If you've enabled parallax, you should either remove '<source srcset="images/hero/bx1136.jpg" media="(max-width: 1024px)">' from picture element or replace it with some portrait image.
+
+*/
+
+.clearfix:after{
+    display: table;
+    content: '';
+    clear: both;
+}
+.nav-wrapper {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+.rowa{
+    background: white;
+}
+
+.rowb {
+    background: #F9690E;
+}
+
+.rowc {
+    background: #F27935;
+}
+
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -400%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.fadeInDown {
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+
+}
+.btn {
+    background: #ffb45c;
+    padding: 10px;
+    color:black !important;
+    text-decoration: none;
+    display: block;
+    width: 27%;
+    margin-right: 6%;
+    float: left;
+    letter-spacing: 3px;
+}
+
+.btn:nth-child(2){
+    animation-delay: .2s !important;
+}
+
+.btn:nth-child(3){
+    animation-delay: .4s !important;
+}
+
+.btn:hover{
+    color: white !important;
+}
+
+.btn:nth-child(3){
+    margin: 0;
+}
+
+.btn span{
+    display: block;
+}
+
+@media (max-width:1023px){
+    .btn {
+        float: none;
+        margin: 0 auto 15px;
+        width: 35%;
+        font-size: 21px;
+    }
+    
+    .btn:nth-child(3){
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:736px){
+    .btn {
+        width: 33%;
+        font-size: 20px;
+        padding: 5px 10px;
+    }
+    
+}
+
+@media (max-width:666px){
+    .btn {
+        padding: 5px 10px;
+        width: 40%;
+        font-size: 20px;
+    }
+    
+}
+
+@media (max-width:567px){
+    .btn {
+        margin: 0 auto 20px;
+        padding: 8px 10px;
+        font-size: 18px;
+        width: 55%;
+    }  
+}
+
+@media (max-width:374px){
+    .btn {
+        margin: 0 auto 15px;
+        padding: 5px 10px;
+        font-size: 16px;
+        width: 65%;
+    }
+}
+
+@media (max-width:1023px){
+    
+    .six, .three, .four{
+        height: auto !important;
+    }
+    
+}
+.overlay-inner {
+    width: auto !important;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.overlay-text4 {
+    color: white;
+    width: 100%;
+    max-width: 96%;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 5px;
+}
+
+
+.color {
+    position: absolute;
+    top:0;
+    bottom:0;
+    height: 100%;
+    width: 100%;
+    background: rgba(19, 49, 103, 0.4);
+}
+
+.color:hover{
+   background: rgba(19, 49, 103,1)
+}
