@@ -684,7 +684,7 @@ picture img{
     line-height: 1.5em;
 }
 
-@media (min-width:1301px){
+@media (min-width:1401px){
     .overlay-text4 a, 
     .overlay-text4 a:visited{
 
