@@ -867,6 +867,14 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     }
 }
 
+@media (max-width:1095px){
+    
+    .row4 .six, .row4 .three {
+        height: 550px;
+    }
+    
+}
+
 @media (max-width:1023px){
     
     .six, .three, .four{
