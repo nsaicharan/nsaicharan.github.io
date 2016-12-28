@@ -283,7 +283,7 @@ footer {
 
 /* ==== Menu Navigation ==== */
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1023px) {
 
     .menunav .logo {
       display: block;
@@ -429,7 +429,7 @@ footer {
 
 }
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1024px) {
     
     .menunav{
         display:none;
