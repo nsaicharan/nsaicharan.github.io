@@ -915,3 +915,11 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
 .color:hover{
    background: rgba(19, 49, 103,1)
 }
+
+
+    
+    .row5 .three{
+        width: 50%;
+    }
+    
+}
