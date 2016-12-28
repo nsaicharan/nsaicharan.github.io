@@ -917,10 +917,27 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
 }
 
 
+@media (min-width:1024px){
+    
+    .row5 .three{
+        width: 25%;
+    }
+    
+}
+
+
 @media (min-width:481px) and (max-width:1023px){
     
     .row5 .three{
         width: 50%;
+    }
+    
+}
+
+@media (max-width:480px){
+    
+    .row5 .three{
+        width: 100%;
     }
     
 }
