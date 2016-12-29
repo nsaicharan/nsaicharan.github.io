@@ -941,3 +941,47 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     }
     
 }
+
+.rowd{
+    background: #F27935;
+    height: 340px;
+}
+
+.rowd .six{
+    display: table;
+}
+.rowd .six div{
+    display: table-cell;
+    vertical-align: middle;
+    
+    padding: 0 15px;
+}
+
+.rowd .six div .content-wrap{
+    max-width: 650px;
+    margin: 0 auto;
+    display: block;
+}
+
+.rowd .six p, .rowd .six h2{
+    text-align: center;
+}
+
+.rowd .six:nth-child(2) img{ 
+    max-width:100%;
+}
+
+
+.rowd .six:nth-child(2) a{
+    background: #253d5b;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: inline-block;
+}
+
+.rowd .six:nth-child(2) a:hover{
+    background: #F27935;
+    border: 1px solid #253d5b;
+}
