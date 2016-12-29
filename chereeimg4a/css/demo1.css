@@ -953,12 +953,11 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
 .rowd .six div{
     display: table-cell;
     vertical-align: middle;
-    
-    padding: 0 15px;
+    padding: 0 5px;
 }
 
 .rowd .six div .content-wrap{
-    max-width: 650px;
+    max-width: 680px;
     margin: 0 auto;
     display: block;
 }
@@ -984,4 +983,10 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
 .rowd .six:nth-child(2) a:hover{
     background: #F27935;
     border: 1px solid #253d5b;
+}
+
+@media (max-width:1023px){
+    .rowd{
+        height:auto;
+    }
 }
