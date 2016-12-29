@@ -980,6 +980,7 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     box-sizing: border-box;
     margin: 0 auto;
     width: 333px;
+    max-width: 100%;
 }
 
 .rowd .six:nth-child(2) a:hover{
@@ -991,7 +992,7 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
         height:auto;
     }
 }
-@media (max-width:400px){
+@media (max-width:380px){
     .rowd .six:nth-child(2) a{
         width:auto;
     }
