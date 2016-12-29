@@ -970,19 +970,21 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     max-width:100%;
 }
 
-
 .rowd .six:nth-child(2) a{
     background: #253d5b;
     padding: 10px 20px;
     text-decoration: none;
     color: white;
     font-size: 16px;
-    display: inline-block;
+    display: block;
+    box-sizing: border-box;
+    width: 333px;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .rowd .six:nth-child(2) a:hover{
-    background: #F27935;
-    border: 1px solid #253d5b;
+    color: #ffb45c;
 }
 
 @media (max-width:1023px){

@@ -444,33 +444,6 @@
     <!--Scripts-->
     <script type="text/javascript" src="js/stickynav/js_Master4.js"></script>
     
-    <script>
-
-        $(document).ready(function(){
-
-            $(window).scroll(function(){
-
-                var y = $(this).scrollTop();
-
-                var parallax_pos = $('.parallax').position();
-
-                var parallax_height = $('.parallax').height();
-
-
-                if(y >= (parallax_pos.top - parallax_height - 100)){
-
-                    $(".btn").addClass("fadeInDown");
-
-                }else {
-                    $(".btn").removeClass("fadeInDown");
-                }
-
-            })
-
-        })
-
-    </script>
-    
 </body>
 
 </html>
