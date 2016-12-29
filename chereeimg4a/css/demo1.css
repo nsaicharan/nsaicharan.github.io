@@ -14,12 +14,8 @@
 			}
 
 
-/* Typography */
-			a,
-			a:link,
-			a:visited {
-				color: blue;
-			}
+        /* Typography */
+			
 
 			h1, h2, h3, h4, h5, h6 {margin-top: 0;}
 
@@ -40,11 +36,8 @@
                 color:white;
             }
 
-			.clearfix:before, .clearfix:after { content: ""; display: table; }
-			.clearfix:after { clear: both; }
-			.clearfix { *zoom: 1; }
 
-/* Navigation */
+        /* Navigation */
 
 			.row2 .three, .row2 .nine {
 				height: 60px;
@@ -202,6 +195,13 @@
 	background-color: #F9690E;
 	text-align:center;
 }
+
+@media (max-width: 1095px){
+    .row4 .six, .row4 .three {
+        height: 550px !important;
+    } 
+}
+
 .row5 .three {
 	height: 333px;
 	background-color: #FDE3A7;
@@ -265,7 +265,15 @@ footer {
     display: none;
 }
 
-/*
+
+.back-to-top img{
+   margin: 5.5px 0 0 3.45px;
+}
+
+/* 
+
+Circle background
+
 .back-to-top2 {
 	position:fixed;
 	bottom:20px;
@@ -275,11 +283,13 @@ footer {
     height: 40px;
     border-radius:50%;
 }
-*/
 
-.back-to-top img,.back-to-top2 img{
+.back-to-top2 img{
    margin: 5.5px 0 0 3.45px;
 }
+
+*/
+
 
 /* ==== Menu Navigation ==== */
 
@@ -533,6 +543,21 @@ picture img{
     height: 100%;
 }
 
+.overlay-text3{
+    font-size: 24px;
+    width: 950px;
+    line-height: 1.2em;
+    max-width: 96%;
+    text-align: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    
+}
+
 
 .overlay-text{
     color: white;
@@ -550,20 +575,7 @@ picture img{
     
 }
 
-.overlay-text3{
-    font-size: 24px;
-    width: 950px;
-    line-height: 1.2em;
-    max-width: 96%;
-    text-align: center;
-    position: absolute;
-    top:50%;
-    left:50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    
-}
+
 
 .overlay-text2{
     color: white;
@@ -764,6 +776,8 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
 }
 
 
+/* ==== Start Animated CTA Buttons ==== */
+
 @keyframes fadeInDown {
   from {
     opacity: 0;
@@ -867,13 +881,7 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     }
 }
 
-@media (max-width:1095px){
-    
-    .row4 .six, .row4 .three {
-        height: 550px;
-    }
-    
-}
+/* ==== End Animated CTA Buttons ==== */
 
 @media (max-width:1023px){
     
