@@ -51,7 +51,7 @@ h2{
 
 /* Setting up our grid - THIS IS FOR DESKTOP VIEW */
 
-.three:first-child, .four:first-child, .six:first-child { 
+.three:first-child, .four:first-child, .six:first-child, .nine:first-child { 
 	margin-left: 0; /* This line of code makes the left-most column align to the left of the screen */
 }
 
@@ -65,7 +65,7 @@ h2{
 /* MOBILE FIRST APPROACH */
 
 /* CSS ARRANGED FOR MOBILE FIRST - For mobile phones: */
-	.three, .four, .six {
+	.three, .four, .six, .nine {
     width: 100%;
   	float: left;  /*This command is needed to keep the DIV boxes on the SAME line. If you remove this tag, each DIV  will stacked ontop each other, one at a time.*/
 	}
