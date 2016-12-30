@@ -13,4 +13,3 @@ $(document).ready(function(){var a=$(".back-to-top");a.on("click",function(a){$(
 
 /*! jQuery Code #4 - Animation For CTA Buttons. This code MUST go AFTER the JQuery Library Code - or the button WILL NOT WORK!!!!  */
 $(document).ready(function(){$(window).scroll(function(){var y=$(this).scrollTop();var parallax_pos=$('.parallax').position();var parallax_height=$('.parallax').height();if(y>=(parallax_pos.top-parallax_height-100)){$(".btn").addClass("fadeInDown");}else{$(".btn").removeClass("fadeInDown");}})});
-

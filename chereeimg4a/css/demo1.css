@@ -1,132 +1,56 @@
 /* EDGE-to-EDGE layout: This HTML and BODY style code here makes sure that your 12-grid system stretches all the way to the very edge!! NO WHITE MARGINS */
-			html {
-				padding: 0;
-				margin: 0;
-				
-			}
-			
-			body {
-				padding:0;
-				margin:0;
-				font-family: 'Roboto', 'Helvetica', sans-serif;
-				font-size: 93%;
-				line-height: 1.5em;
-			}
+
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    padding:0;
+    margin:0;
+    font-family: 'Roboto', 'Helvetica', sans-serif;
+    font-size: 93%;
+    line-height: 1.5em;
+}
+
+.clearfix:after{
+    display: table;
+    content: '';
+    clear: both;
+}
+.container {
+    max-width: 1150px;
+    margin: 0 auto;
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 {margin-top: 0;}
+
+p {
+    margin: 0 0 1em 0; 
+    color: white; 
+    padding:0 15px; 
+    text-align: left;
+}
+
+h1 {
+    background-color: #305782;
+    color: #FFF;
+    padding: 60px 25px;
+    margin: 0;
+}
 
 
-        /* Typography */
-			
-
-			h1, h2, h3, h4, h5, h6 {margin-top: 0;}
-
-			p {margin: 0 0 1em 0; color: white; padding:0 15px; text-align: left;}
-
-			h1 {
-				background-color: #305782;
-				color: #FFF;
-				padding: 60px 25px;
-				margin: 0;
-			}
-
-            
-            h2{
-                text-align: left;
-                padding: 25px 15px 5px;
-                font-size: 20px;
-                color:white;
-            }
-
-
-        /* Navigation */
-
-			.row2 .three, .row2 .nine {
-				height: 60px;
-			}
-
-			nav {
-				z-index: 500;
-                background-color: #253d5b;
-                width: 100%;
-			}
-
-			/* This is SUPPOSE to hold the NAV open at 60px in height, for the Sticky Nav to work without jumpy-ness when it reaches the TOP
-			of the web page. This number has to match the height that is given to ROW2 - in the CSS above. But - for some reason, it's not working.
-			Instead, this 60 pixels is being added ONTOP of the NAV div. Not sure why, or how to fix.
-				.nav-placeholder {
-				margin: 0 0 60px 0; 
-				}*/ 
-
-
-			.fixed {
-				position: fixed;
-				top: 0;
-				width: 100%;
-                background-color: rgba(37,61,91,.6);
-			}
-
-
-			/* DON"T need this code because it shortens the width of the nav to stay in the center of the Container. We want to use FULL 100% width.
-			.fixed .nav-inner {padding: 0 20px;}
-			.fixed .nav-inner-most {max-width: 700px; margin: 0 auto; background-color: #e7ecf2;}*/
-
-			nav ul {
-				margin: 0 15px 0 0;
-				padding: 0;
-                float:right; /* This code moves the NAV LINKS all the way to the right.*/
-			}
-
-			nav ul li {
-				list-style: none;
-				float: left;
-                line-height: 60px;
-                font-size: 18px;
-			}
-
-			nav .three a, 
-            nav ul li a:link,
-			nav ul li a:visited {
-				display: block;
-				text-decoration: none;
-				padding: 0 20px;
-                transition:  all .4s ease;
-                font-weight: bold;
-				color: #fff; 
-            }
-
-			nav ul li a:hover {
-				background-color: #ffb45c;
-            }
-
-            nav .three a{
-                line-height: 60px;
-                padding: 0;
-                margin-left: 15px;
-                display: inline-block;
-                font-size: 150%;
-            }
-
-            nav .three a:hover{
-                color: #ffba49;
-                cursor: pointer;
-            }
-
+h2{
+    text-align: left;
+    padding: 25px 15px 5px;
+    font-size: 20px;
+    color:white;
+}
 
 
 /* Setting up our grid - THIS IS FOR DESKTOP VIEW */
-.container {
-	width: 100%; /*Set the width of the entire website here */
-	margin-left: auto;
-	margin-left: auto;  /* Margin-left and right are set to auto to center the container */
-}
-
-	/* GOT THIS FROM THE STICKY NAV DEMO PAGES - NOT SURE IF I NEED THIS YET - OR NOT....
-	.container {
-	max-width: 700px;
-	margin: 0 auto;
-	padding: 0 20px;
-	position: relative;
-	}*/
-
 
 
 .seven:first-child,.eight:first-child, .nine:first-child, .ten:first-child,.eleven:first-child,.five:first-child, .four:first-child, .three:first-child, .two:first-child, .one:first-child, .six:first-child { 
@@ -149,16 +73,16 @@
   	float: left;  /*This command is needed to keep the DIV boxes on the SAME line. If you remove this tag, each DIV  will stacked ontop each other, one at a time.*/
 	}
 
+@media (max-width:1023px){
+    
+    .six, .three, .four{
+        height: auto !important;
+    }
+    
+}
 
 /* CSS ARRANGED FOR MOBILE FIRST - ONLY USE MEDIA QUERIES for ALL other devices - for Desktop and Tablets  */
 
-/* this code doesn't work -----
-@media only screen and (min-width: 768px) (max-width: 1023px) {
-    .one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven {
-        width: 50%;
-        float: left;
-    }
-}-----*/
 
 @media only screen and (min-width: 1024px) {
     /* For desktop: */
@@ -179,119 +103,51 @@
 /* Formatting HTML elements on ALL web pages */
 
 
+/* ===== Start Hero ===== */
 
-.row3 .six, .row3 .three {
-	height: 300px;
-	background-color: #fff;
-	text-align:center;
+header .hero-image {
+    width: 100%;
+    overflow: hidden;
 }
 
-.row3 h2, .row3 p {
-    color:black !important;
+picture img{
+    max-width: 100%;
+    vertical-align: middle;
+    z-index: -1;
 }
 
-.row4 .six, .row4 .three {
-	height: 500px;
-	background-color: #F9690E;
-	text-align:center;
+.layer {
+    background: rgb(19, 49, 103);
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }
 
-@media (max-width: 1095px){
-    .row4 .six, .row4 .three {
-        height: 550px !important;
-    } 
+.overlay-text{
+    color: white;
+    font-size: 26px;
+    width: 620px;
+    line-height: 1.2em;
+    max-width: 96%;
+    text-align: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%); 
 }
 
-.row5 .three {
-	height: 333px;
-	background-color: #FDE3A7;
-	text-align:center;
+@media (max-width:736px){
+    .overlay-text{font-size: 20px;}
 }
 
-/* THIS CODE IS NOT WORKING - I TRIED IT. Something is wrong. 
-i don't know how to effectively use Clearfixes in my CSS!!!! Need to watch a YouTube video.
+/* ===== End Hero ===== */
 
- This should be 4 equal column sizes on the screen need to be fixed for tablets: 
-@media only screen and (min-width: 768px) (max-width: 1023px) {
-     For tablets: 
-
-.row5 .clearfix:after {
-    clear: both;
-    content: ".";
-    display: block;
-    height: 0;
-    visibility: hidden;
-}
-.clearfix {
-    display: inline-block;
-}
-.clearfix {
-    display: block;
-}
-}*/
-
-.row6 .six, .row6 .three {
-	height: 333px;
-	background-color: #F27935;
-	text-align:center;
-}
-
-.row7 .six {
-	height: 333px;
-	background-color: #F27935;
-	text-align:center;
-}
-
-
-.last {
-	height: 73px;
-	background-color: #d13328;
-	text-align:center;
-}
-footer {
-	height: 443px;
-	background-color: #FDE3A7;
-}
-
-/* Back To Top button on every web page via JQuery */
-
-.back-to-top {
-	position:fixed;
-	bottom:20px;
-	right:20px;
-    background: rgba(0,0,0,.3);
-    width: 40px;
-    height: 40px;
-    display: none;
-}
-
-
-.back-to-top img{
-   margin: 5.5px 0 0 3.45px;
-}
-
-/* 
-
-Circle background
-
-.back-to-top2 {
-	position:fixed;
-	bottom:20px;
-	right:80px;
-    background: rgba(0,0,0,.3);
-    width: 40px;
-    height: 40px;
-    border-radius:50%;
-}
-
-.back-to-top2 img{
-   margin: 5.5px 0 0 3.45px;
-}
-
-*/
-
-
-/* ==== Menu Navigation ==== */
+/* Start MENU Navigation */
 
 @media only screen and (max-width: 1023px) {
 
@@ -491,26 +347,181 @@ Circle background
     
 }
 
-/* ===== Hero ===== */
+/* End MENU Navigation */
 
-header .hero-image {
+
+/* Start Horizontal Navigation */
+
+.row2 .three, .row2 .nine {
+    height: 60px;
+}
+
+nav {
+    z-index: 500;
+    background-color: #253d5b;
     width: 100%;
-    overflow: hidden;
 }
 
-picture img{
-    max-width: 100%;
-    vertical-align: middle;
-    z-index: -1;
+.fixed {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: rgba(37,61,91,.6);
 }
 
-/* ====== Misc. ======*/
+nav ul {
+    margin: 0 15px 0 0;
+    padding: 0;
+    float:right; /* This code moves the NAV LINKS all the way to the right.*/
+}
+
+nav ul li {
+    list-style: none;
+    float: left;
+    line-height: 60px;
+    font-size: 18px;
+}
+
+nav .three a, 
+nav ul li a:link,
+nav ul li a:visited {
+    display: block;
+    text-decoration: none;
+    padding: 0 20px;
+    transition:  all .4s ease;
+    font-weight: bold;
+    color: #fff; 
+}
+
+nav ul li a:hover {
+    background-color: #ffb45c;
+}
+
+nav .three a{
+    line-height: 60px;
+    padding: 0;
+    margin-left: 15px;
+    display: inline-block;
+    font-size: 150%;
+}
+
+nav .three a:hover{
+    color: #ffba49;
+    cursor: pointer;
+}
+
+/* End Horizontal Navigation */
+
+/* === Start Row3 === */
+
+.row3{background: white;} 
+
+.row3 .six, .row3 .three {
+	height: 300px;
+}
+
+.row3 h2, .row3 p {
+    color:black;
+}
+
+/* === End Row3 === */
+
+/* === Start Row4 === */
+
+.row4 {background: #F9690E;}
+
+.row4 .six, .row4 .three {
+	height: 500px;
+}
+
+@media (max-width: 1095px){
+    .row4 .six, .row4 .three {
+        height: 550px;
+    } 
+}
+
+/* === End Row4 === */
+
+/* === Start Row5 === */
 
 .row5 .three{
     height: auto;
     background-color: transparent;
     position: relative;
 }
+
+@media (min-width:1024px){
+    
+    .row5 .three{ width: 25%;}
+    
+}
+
+@media (min-width:481px) and (max-width:1023px){
+    
+    .row5 .three{ width: 50%;}
+    
+}
+
+@media (max-width:480px){
+    
+    .row5 .three{ width: 100%;}
+    
+}
+
+.overlay-text4 {
+    color: white;
+    width: 100%;
+    max-width: 96%;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 5px;
+}
+
+.overlay-text4 h2{
+    text-align: center;
+    font-size: 26px;
+    display: inline-block;
+    width: auto;
+    padding: 0 0 0 0;
+}
+
+.overlay-text4 a, 
+.overlay-text4 a:visited{
+    color: #ffb45c;
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.5em;
+}
+
+.overlay-text4 a:hover{
+    color: white;
+}
+
+@media (min-width:1401px){
+    .overlay-text4 a, 
+    .overlay-text4 a:visited{
+        font-size: 22px;
+        line-height: 1.3em;
+    }
+}
+
+/* === End Row5 === */
+
+/* === Start Row6 === */
+
+.row6 {background: #F27935;} 
+
+.row6 .six, .row6 .three {
+	height: 333px;
+}
+
+/* === End Row6 === */
+
+/* === Start Row7 === */
 
 .row7 .six {
     height: auto;
@@ -519,63 +530,24 @@ picture img{
     overflow: hidden;
 }
 
-.parallax {
+/* === End Row7 === */
+
+/* === Start Row8 === */
+
+.row8 .six{
     position: relative;
-    height: 400px;
-    overflow: hidden;
 }
 
-.parallax img{
-    position: fixed;
-    z-index: -1;
+.color{
+    position: absolute;
     top:0;
-    left: 0;
-    width: 100%;
-}
-
-.layer {
-    background: rgb(19, 49, 103);
-    opacity: 0.4;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+    bottom:0;
     height: 100%;
+    width: 100%;
+    background: rgba(19, 49, 103, 0.4);
 }
 
-.overlay-text3{
-    font-size: 24px;
-    width: 950px;
-    line-height: 1.2em;
-    max-width: 96%;
-    text-align: center;
-    position: absolute;
-    top:50%;
-    left:50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    
-}
-
-
-.overlay-text{
-    color: white;
-    font-size: 26px;
-    width: 620px;
-    line-height: 1.2em;
-    max-width: 96%;
-    text-align: center;
-    position: absolute;
-    top:50%;
-    left:50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    
-}
-
-
+.color:hover{ background: rgba(19, 49, 103, 1); }
 
 .overlay-text2{
     color: white;
@@ -588,9 +560,7 @@ picture img{
     transform: translate(-50%,-50%);
 }
 
-.overlay-text2 p{
-    font-size: 16px;
-}
+.overlay-text2 p{ font-size: 16px; }
 
 
 @media (max-width:735px){
@@ -653,69 +623,43 @@ picture img{
 
 @media (max-width:350px){
     
-    .overlay-text2 h2{
-        margin-bottom: 2px;
-    }
+    .overlay-text2 h2{ margin-bottom: 2px; }
     
-    .overlay-text2 p{
-        font-size: 14.4px;
-    }
+    .overlay-text2 p{ font-size: 14.4px; }
     
 }
 
 @media (max-width:319px){
     
     .overlay-text2 h2{
-        font-size: 14px
+        font-size: 14px;
         margin-bottom: 1px;
     }
     
-    .overlay-text2 p{
-        font-size: 12px;
-    }
+    .overlay-text2 p{ font-size: 12px; }
     
 }
 
+/* End Row8 */
 
 
-.overlay-text4 h2{
-    text-align: center !important;
-    font-size: 26px;
-    display: inline-block;
-    width: auto;
-    padding: 0 0 0 0;
+/* Start ParallaxRow (Row9) */
+
+.parallax {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
 }
 
-.overlay-text4 a, 
-.overlay-text4 a:visited{
-    
-    color: #ffb45c;
-    text-decoration: none;
-    font-size: 22px;
-    font-weight: bold;
-    line-height: 1.5em;
+.parallax img{
+    position: fixed;
+    z-index: -1;
+    top:0;
+    left: 0;
+    width: 100%;
 }
 
-@media (min-width:1401px){
-    .overlay-text4 a, 
-    .overlay-text4 a:visited{
-
-        font-size: 22px;
-        line-height: 1.3em;
-    }
-}
-
-.overlay-text4 a:hover{
-    color: white;
-}
-
-@media (max-width:736px){
-    .overlay-text{
-        font-size: 20px;
-    }
-}
-
-/* Start - Disable Parallax < 1025px */
+/* Disable Parallax < 1025px */
 
 @media (max-width:1024px){
     .parallax{
@@ -727,12 +671,8 @@ picture img{
     }
 }
 
-/* End - Disable Parallax < 1025px */
 
-
-/* 
-
-Code to enable parallax 
+/* Code to enable parallax < 1025px
 
 @media (max-width:480px){
     .parallax{
@@ -753,30 +693,21 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
 
 */
 
-.clearfix:after{
-    display: table;
-    content: '';
-    clear: both;
-}
-.nav-wrapper {
-    max-width: 1150px;
-    margin: 0 auto;
-}
+/* Start Animated CTA Buttons */
 
-.rowa{
-    background: white;
+.overlay-text3{
+    font-size: 24px;
+    width: 950px;
+    line-height: 1.2em;
+    max-width: 96%;
+    text-align: center;
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
-
-.rowb {
-    background: #F9690E;
-}
-
-.rowc {
-    background: #F27935;
-}
-
-
-/* ==== Start Animated CTA Buttons ==== */
 
 @keyframes fadeInDown {
   from {
@@ -795,15 +726,14 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
   animation-duration: 2s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
-
   -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
-
 }
+
 .btn {
     background: #ffb45c;
     padding: 10px;
-    color:black !important;
+    color:black;
     text-decoration: none;
     display: block;
     width: 27%;
@@ -812,24 +742,17 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     letter-spacing: 3px;
 }
 
-.btn:nth-child(2){
-    animation-delay: .2s !important;
-}
-
-.btn:nth-child(3){
-    animation-delay: .4s !important;
-}
-
 .btn:hover{
-    color: white !important;
+    color: white;
+}
+
+.btn:nth-child(2){
+    animation-delay: .2s;
 }
 
 .btn:nth-child(3){
+    animation-delay: .4s;
     margin: 0;
-}
-
-.btn span{
-    display: block;
 }
 
 @media (max-width:1023px){
@@ -881,104 +804,40 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     }
 }
 
-/* ==== End Animated CTA Buttons ==== */
+/* End Animated CTA Buttons */
+/* End ParallaxRow (Row9) */
 
-@media (max-width:1023px){
-    
-    .six, .three, .four{
-        height: auto !important;
-    }
-    
-}
-.overlay-inner {
-    width: auto !important;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-}
+/* === Start Row10 ==== */
 
-.overlay-text4 {
-    color: white;
-    width: 100%;
-    max-width: 96%;
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
-    padding: 5px;
-}
-
-
-.color {
-    position: absolute;
-    top:0;
-    bottom:0;
-    height: 100%;
-    width: 100%;
-    background: rgba(19, 49, 103, 0.4);
-}
-
-.color:hover{
-   background: rgba(19, 49, 103,1)
-}
-
-
-@media (min-width:1024px){
-    
-    .row5 .three{
-        width: 25%;
-    }
-    
-}
-
-
-@media (min-width:481px) and (max-width:1023px){
-    
-    .row5 .three{
-        width: 50%;
-    }
-    
-}
-
-@media (max-width:480px){
-    
-    .row5 .three{
-        width: 100%;
-    }
-    
-}
-
-.rowd{
+.row10{
     background: #F27935;
     height: 340px;
 }
 
-.rowd .six{
+.row10 .six{
     display: table;
 }
-.rowd .six div{
+.row10 .six div{
     display: table-cell;
     vertical-align: middle;
     padding: 0 5px;
 }
 
-.rowd .six div .content-wrap{
+.row10 .six div .content-wrap{
     max-width: 680px;
     margin: 0 auto;
     display: block;
 }
 
-.rowd .six p, .rowd .six h2{
+.row10 .six p, .row10 .six h2{
     text-align: center;
 }
 
-.rowd .six:nth-child(2) img{ 
+.row10 .six:nth-child(2) img{ 
     max-width:100%;
 }
 
-.rowd .six:nth-child(2) a{
+.row10 .six:nth-child(2) a{
     background: #253d5b;
     padding: 10px;
     text-decoration: none;
@@ -991,17 +850,86 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     max-width: 100%;
 }
 
-.rowd .six:nth-child(2) a:hover{
+.row10 .six:nth-child(2) a:hover{
     color: #ffb45c;
 }
 
 @media (max-width:1023px){
-    .rowd{
+    .row10{
         height:auto;
     }
 }
+
 @media (max-width:380px){
-    .rowd .six:nth-child(2) a{
+    .row10 .six:nth-child(2) a{
         width:auto;
     }
 }
+
+/* === End Row10=== */
+
+
+/* Start Footer/Last Row */
+
+
+footer {
+	height: 443px;
+	background-color: #FDE3A7;
+}
+
+.last {
+	height: 73px;
+	background-color: #d13328;
+	text-align:center;
+}
+
+/* End Footer/Last Row */
+
+
+/* Back To Top button on every web page via JQuery  */
+
+.back-to-top {
+	position:fixed;
+	bottom:20px;
+	right:20px;
+    background: rgba(0,0,0,.3);
+    width: 40px;
+    height: 40px;
+    display: none;
+}
+
+
+.back-to-top img{
+   margin: 5.5px 0 0 3.45px;
+}
+
+/* 
+
+Circle background for back-to-top image
+
+.back-to-top2 {
+	position:fixed;
+	bottom:20px;
+	right:80px;
+    background: rgba(0,0,0,.3);
+    width: 40px;
+    height: 40px;
+    border-radius:50%;
+}
+
+.back-to-top2 img{
+   margin: 5.5px 0 0 3.45px;
+}
+
+*/
+
+/* End Back To Top */
+
+
+
+
+
+
+
+
+
