@@ -817,7 +817,7 @@ If you've enabled parallax, you should either remove '<source srcset="images/her
     display: block;
 }
 
-.row10 .six p, .row10 .six h2{
+.row10 .six:nth-child(2) p, .row10 .six:nth-child(2) h2{
     text-align: center;
 }
 
