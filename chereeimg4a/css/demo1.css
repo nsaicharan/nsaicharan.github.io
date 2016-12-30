@@ -357,6 +357,13 @@ nav {
     background-color: rgba(37,61,91,.6);
 }
 
+/* This is SUPPOSE to hold the NAV open at 60px in height, for the Sticky Nav to work without jumpy-ness when it reaches the TOP
+			of the web page. This number has to match the height that is given to ROW2 - in the CSS above. But - for some reason, it's not working.
+			Instead, this 60 pixels is being added ONTOP of the NAV div. Not sure why, or how to fix.
+				.nav-placeholder {
+				margin: 0 0 60px 0; 
+				}*/ 
+
 nav ul {
     margin: 0 15px 0 0;
     padding: 0;
