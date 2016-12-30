@@ -345,20 +345,17 @@ picture img{
 }
 
 nav {
-    z-index: 500;
     background-color: #253d5b;
     width: 100%;
 }
 
 .fixed {
     position: fixed;
-    top: 0;
     width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 100;
     background-color: rgba(37,61,91,.6);
-}
-
-.nav-placeholder {
-    margin: 0 0 60px 0; 
 }
 
 nav ul {
