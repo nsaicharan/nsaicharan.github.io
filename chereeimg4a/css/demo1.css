@@ -49,11 +49,9 @@ h2{
     color:white;
 }
 
-
 /* Setting up our grid - THIS IS FOR DESKTOP VIEW */
 
-
-.seven:first-child,.eight:first-child, .nine:first-child, .ten:first-child,.eleven:first-child,.five:first-child, .four:first-child, .three:first-child, .two:first-child, .one:first-child, .six:first-child { 
+.three:first-child, .four:first-child, .six:first-child { 
 	margin-left: 0; /* This line of code makes the left-most column align to the left of the screen */
 }
 
@@ -64,18 +62,17 @@ h2{
 	margin: 0px;
 }
 
-
 /* MOBILE FIRST APPROACH */
 
 /* CSS ARRANGED FOR MOBILE FIRST - For mobile phones: */
-	.one, .two, .three, .four, .five, .six, .seven, .eight, .nine, .ten, .eleven {
+	.three, .four, .six {
     width: 100%;
   	float: left;  /*This command is needed to keep the DIV boxes on the SAME line. If you remove this tag, each DIV  will stacked ontop each other, one at a time.*/
 	}
 
 @media (max-width:1023px){
     
-    .six, .three, .four{
+    .three, .four, .six{
         height: auto !important;
     }
     
@@ -83,24 +80,15 @@ h2{
 
 /* CSS ARRANGED FOR MOBILE FIRST - ONLY USE MEDIA QUERIES for ALL other devices - for Desktop and Tablets  */
 
-
 @media only screen and (min-width: 1024px) {
+    
     /* For desktop: */
-    .one {width: 8.33%;}
-    .two {width: 16.66%;}
+    
     .three {width: 25%;}
     .four {width: 33.33%;}
-    .five {width: 41.66%;}
     .six {width: 50%;}
-    .seven {width: 58.33%;}
-    .eight {width: 66.66%;}
     .nine {width: 75%;}
-    .ten {width: 83.33%;}
-    .eleven {width: 91.66%;}
 }
-
-
-/* Formatting HTML elements on ALL web pages */
 
 
 /* ===== Start Hero ===== */
@@ -922,14 +910,4 @@ Circle background for back-to-top image
 }
 
 */
-
-/* End Back To Top */
-
-
-
-
-
-
-
-
 
