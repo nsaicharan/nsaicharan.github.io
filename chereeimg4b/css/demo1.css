@@ -656,7 +656,7 @@ nav .three a:hover{
 
 @media (max-width:480px){
     .parallax{
-        height: 300px;
+        height: 320px;
     }
      .parallax img{
         top:69px;
