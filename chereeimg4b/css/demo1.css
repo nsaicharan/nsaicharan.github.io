@@ -654,21 +654,6 @@ nav .three a:hover{
     width: 100%;
 }
 
-/* Disable Parallax < 1025px */
-
-@media (max-width:1024px){
-    .parallax{
-        height: auto;
-    }
-    
-    .parallax img{
-        position: static;
-    }
-}
-
-
-/* Code to enable parallax < 1025px
-
 @media (max-width:480px){
     .parallax{
         height: 300px;
@@ -678,15 +663,12 @@ nav .three a:hover{
     }
 }
 
-@media (max-width:385px){
+/* @media (max-width:385px){
     .parallax img{
         height: 100vh;
     }
 } 
-
-If you've enabled parallax for mobiles, you should replace <source srcset="images/hero/bx1136.jpg" media="(min-width: 481px)"> with portrait image.
-
-*/
+ */
 
 /* Start Animated CTA Buttons */
 
