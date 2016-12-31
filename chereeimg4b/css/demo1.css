@@ -654,21 +654,17 @@ nav .three a:hover{
     width: 100%;
 }
 
-@media (max-width:480px){
+@media (max-width:736px){
     .parallax{
         height: 320px;
     }
+}
+
+@media (max-width:480px){
      .parallax img{
         top:69px;
     }
 }
-
-/* @media (max-width:385px){
-    .parallax img{
-        height: 100vh;
-    }
-} 
- */
 
 /* Start Animated CTA Buttons */
 
