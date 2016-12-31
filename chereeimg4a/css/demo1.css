@@ -666,28 +666,6 @@ nav .three a:hover{
     }
 }
 
-
-/* Code to enable parallax < 1025px
-
-@media (max-width:480px){
-    .parallax{
-        height: 300px;
-    }
-     .parallax img{
-        top:69px;
-    }
-}
-
-@media (max-width:385px){
-    .parallax img{
-        height: 100vh;
-    }
-} 
-
-If you've enabled parallax for mobiles, you should replace <source srcset="images/hero/bx1136.jpg" media="(min-width: 481px)"> with portrait image.
-
-*/
-
 /* Start Animated CTA Buttons */
 
 .overlay-text3{
