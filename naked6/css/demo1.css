@@ -42,7 +42,7 @@ p {margin: 0 0 1em 0;}
 
 /* Setting up our grid - THIS IS FOR DESKTOP VIEW */
 
-.four:first-child, .three:first-child, .six:first-child { 
+.three:first-child, .six:first-child { 
 	margin-left: 0;  
 }
 
