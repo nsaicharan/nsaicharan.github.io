@@ -440,7 +440,6 @@ nav .three a:hover{
 
 .row5 .three{
     height: auto;
-    background-color: transparent;
     position: relative;
 }
 
@@ -450,13 +449,13 @@ nav .three a:hover{
     
 }
 
-@media (min-width:481px) and (max-width:1023px){
+@media (min-width:480px) and (max-width:1023px){
     
     .row5 .three{ width: 50%;}
     
 }
 
-@media (max-width:480px){
+@media (max-width:479px){
     
     .row5 .three{ width: 100%;}
     
