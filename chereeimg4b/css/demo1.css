@@ -713,6 +713,8 @@ nav .three a:hover{
     margin-right: 6%;
     float: left;
     letter-spacing: 3px;
+    transform: translate3d(0, -400%, 0);
+    opacity: 0;
 }
 
 .btn:hover{
