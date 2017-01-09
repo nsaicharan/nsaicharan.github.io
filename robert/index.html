@@ -363,9 +363,17 @@
             if(this.value == "yes"){
                 $("#numPets").show();
                 $("#petDescContainer").show();
+                
             }else{
                 $("#numPets").hide();
                 $("#petDescContainer").hide();
+               
+            }
+            
+            if((this.value == "yes") && ($("#petNum").val() >= 1)){
+                $("#executor").show();
+                
+            }else{
                 $("#executor").hide();
             }
 
@@ -373,7 +381,7 @@
 
          $('#petNum').on('change keyup', function() {
 
-            if(this.value >= 1){
+            if((this.value >= 1) && ($("#pets").val() == "yes") ){
                 $("#executor").show();
             }else{
                 $("#executor").hide();
