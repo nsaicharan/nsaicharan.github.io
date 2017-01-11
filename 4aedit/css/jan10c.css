@@ -432,7 +432,7 @@ nav .three a:hover{
 }
 
 
-.row3 .four div{
+.related-wrapper{
     width: 330px; /* This has to be changed if the actual size of image is less than 330px. For instance, if width of image is 200px this should also be 200px */
     margin: 0 auto;
 }
