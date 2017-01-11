@@ -490,10 +490,14 @@ nav .three a:hover{
     
 }
 
-@media (max-width: 1095px){
+@media (max-width: 1023px){
     .row4 {
-        height: 500px;
+        height: auto;
+        padding: 0;
     } 
+    .row4 h2{
+        padding-top:8px;
+    }  
 }
 
 /* === End Row4 === */
