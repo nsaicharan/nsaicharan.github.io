@@ -476,17 +476,23 @@ nav .three a:hover{
 
 /* === Start Row4 === */
 
-.row4 {background: #F9690E;}
+.row4 {
+    background: #F9690E;
+    padding:30px 0 0 0;
+}
 
 .row4 .eight,
 .row4 .two {
 	height: 500px;
 }
 
+@media(min-width:1024px){
+    
+}
+
 @media (max-width: 1095px){
-    .row4 .eight,
-    .row4 .two {
-        height: 550px;
+    .row4 {
+        height: 500px;
     } 
 }
 
@@ -878,6 +884,7 @@ nav .three a:hover{
 .row10{
     background: #FFF;
     height: 340px;
+    padding: 28px 0 40px 0;
 }
 
 .row10 h2,
@@ -930,7 +937,7 @@ nav .three a:hover{
     .row10{
         height:auto;
         position: relative;
-        padding: 20px 0 30px; /* Row10 padding on tablet/mobile viewports */
+        padding: 20px 0 35px; /* Row10 padding on tablet/mobile viewports */
     }
 }
 
