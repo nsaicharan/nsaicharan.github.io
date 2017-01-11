@@ -427,6 +427,11 @@ nav .three a:hover{
     position: relative;
 }
 
+.related-wrapper{
+    position: relative;
+    
+}
+
 .row3 a{
     position: relative;
     display: inline-block;
@@ -451,7 +456,7 @@ nav .three a:hover{
     }
     
     .related-wrapper {
-        text-align: center;
+       text-align: center;
     }
     
     h2{
