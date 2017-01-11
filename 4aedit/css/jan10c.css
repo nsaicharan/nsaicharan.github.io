@@ -408,7 +408,7 @@ nav .three a:hover{
 
 .row3{
     background: white;
-    padding: 18px 0 32px 0;  /* Padding for Row3. Top - 18px , Bottom - 32px */
+    padding: 28px 0 60px 0;  /* Padding for Row3. Top - 18px , Bottom - 32px */
 } 
 
 .row3 .six,
@@ -427,14 +427,17 @@ nav .three a:hover{
     position: relative;
 }
 
-.related-wrapper{
-    position: relative;
-    
-}
 
+.row3 .four div{
+    width: 330px; /* This has to be changed if the actual size of image is less than 330px. For instance, if width of image is 200px this should also be 200px */
+    margin: 0 auto;
+}
 .row3 a{
     position: relative;
     display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .row3 a h2{
@@ -453,6 +456,7 @@ nav .three a:hover{
 @media (max-width:1023px){
     .related-img{
         margin: 0 auto; 
+        text-align: center;
     }
     
     .related-wrapper {
