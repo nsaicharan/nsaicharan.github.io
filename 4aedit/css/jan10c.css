@@ -286,10 +286,6 @@ picture img{
         display: none;
     }
     
-    .row3{
-        margin-top: 69px;
-    }
-
 }
 
 @media only screen and (min-width: 1024px) {
@@ -326,9 +322,6 @@ picture img{
         top: 58px;
     }
     
-    .row3{
-        margin-top: 58px;
-    }
 }
 
 @media only screen and (max-width: 599px) and (orientation : landscape) {
@@ -413,7 +406,10 @@ nav .three a:hover{
 
 /* === Start Row3 === */
 
-.row3{background: white;} 
+.row3{
+    background: white;
+    padding: 18px 0 32px 0;  /* Padding for Row3. Top - 18px , Bottom - 32px */
+} 
 
 .row3 .six,
 .row3 .three {
@@ -425,13 +421,25 @@ nav .three a:hover{
     color:black;
 }
 
+.related-img {
+    display: block;
+    max-width: 100%;
+}
+
+
+/* This code is required to center-align images and h2 */
+
 @media (max-width:1023px){
-    .row3{
-        margin-top: 0;
+    .related-img{
+        margin: 0 auto 10px; /* 10px bottom margin for images */
+    }
+    
+    h2{
+        text-align: center;
     }
 }
 
-/* === End Row3 === */
+/* === End Row3 === 
 
 /* === Start Row4 === */
 
@@ -537,6 +545,20 @@ nav .three a:hover{
 .row6 .six,
 .row6 .three {
 	height: 333px;
+}
+
+/* Tab Landscape and Desktop Padding */
+@media (min-width:1024px){
+    .row6{
+        padding-top: 20px;
+    }
+}
+
+/* Tab Portrait and Mobiles */
+@media (max-width:1023px){
+    .row6{
+        padding: 15px 0 25px;
+    }
 }
 
 /* === End Row6 === */
@@ -875,6 +897,7 @@ nav .three a:hover{
     .row10{
         height:auto;
         position: relative;
+        padding: 20px 0 30px; /* Row10 padding on tablet/mobile viewports */
     }
 }
 
@@ -943,27 +966,6 @@ Circle background for back-to-top image
 
 /* End Back To Top */
 
-/*Misc*/
 
-@media (min-width:1024px){
-    
-    .row3,
-    .row6,
-    .row4,
-    .row10{
-        
-        padding: 12px 0 16px;
-    }
-}
 
-.related-img {
-    display: block;
-    max-width: 100%;
-}
-
-@media (max-width:1023px){
-    .related-img{
-        margin: 0 auto 10px;
-    }
-}
 
