@@ -424,14 +424,34 @@ nav .three a:hover{
 .related-img {
     display: block;
     max-width: 100%;
+    position: relative;
 }
+
+.row3 a{
+    position: relative;
+    display: inline-block;
+}
+
+.row3 a h2{
+    color:white;
+    padding: 0;
+}
+
+.row3 a:hover .layer, 
+.row3 a:hover h2{
+    opacity: 0;
+} 
 
 
 /* This code is required to center-align images and h2 */
 
 @media (max-width:1023px){
     .related-img{
-        margin: 0 auto 10px; /* 10px bottom margin for images */
+        margin: 0 auto; 
+    }
+    
+    .related-wrapper {
+        text-align: center;
     }
     
     h2{
