@@ -416,6 +416,10 @@ nav .three a:hover{
 	height: 300px;
 }
 
+.row3 h2{
+    padding: 25px 15px 5px 25px;
+}
+
 .row3 h2,
 .row3 p {
     color:black;
