@@ -46,6 +46,10 @@
             transform: translate(-50%, -50%); 
         }
         
+        .hero-row{
+            overflow-x: hidden;
+        }
+        
         .hero-list{
             padding: 0;
             list-style: none;
@@ -105,8 +109,19 @@
 
         </div>
        
-        <div class="row">
+        <div class="row hero-row">
            
+            <div class="hero-image">
+                <picture>
+                    <source media="(min-width: 1024px)" srcset="images/hero/bx1920.jpg 1920w, images/hero/bx3840.jpg 3840w">
+					<source media="(min-width: 800px) and (orientation: landscape)" srcset="images/hero/bx1920.jpg">
+                    <source media="(min-width: 768px)" srcset="images/hero/bx1080s.jpg">
+                    <source media="(max-width: 480px) and (orientation:landscape)" srcset="images/hero/bx1136.jpg">
+					<source media="(max-width: 480px) and (orientation:portrait)" srcset="images/hero/bx1280p.jpg">
+                    <img src="images/hero/bx1136.jpg" alt="Request More Info">
+                </picture>
+            </div>
+            
             <div class="layer"></div>
             
             <div class="overlay-text-a">
@@ -144,17 +159,6 @@
                    
                 </ul>
             
-            </div>
-            
-            <div class="hero-image">
-                <picture>
-                    <source media="(min-width: 1024px)" srcset="images/hero/bx1920.jpg 1920w, images/hero/bx3840.jpg 3840w">
-					<source media="(min-width: 800px) and (orientation: landscape)" srcset="images/hero/bx1920.jpg">
-                    <source media="(min-width: 768px)" srcset="images/hero/bx1080s.jpg">
-                    <source media="(max-width: 480px) and (orientation:landscape)" srcset="images/hero/bx1136.jpg">
-					<source media="(max-width: 480px) and (orientation:portrait)" srcset="images/hero/bx1280p.jpg">
-                    <img src="images/hero/bx1136.jpg" alt="Request More Info">
-                </picture>
             </div>
             
         </div>
