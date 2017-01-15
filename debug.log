@@ -4,3 +4,5 @@
 [0105/105516:ERROR:process_reader_win.cc(233)] ReadMemory at 0x6cf05d80 of 12 bytes failed: Only part of a ReadProcessMemory or WriteProcessMemory request was completed. (0x12B)
 [0105/105516:WARNING:process_snapshot_win.cc(68)] ReadMemory ExceptionInformation failed
 [0105/105516:WARNING:crash_report_exception_handler.cc(61)] ProcessSnapshotWin::Initialize failed
+[0115/092426:ERROR:exception_snapshot_win.cc(87)] thread ID 2936 not found in process
+[0115/092426:WARNING:crash_report_exception_handler.cc(61)] ProcessSnapshotWin::Initialize failed
