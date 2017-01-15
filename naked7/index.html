@@ -67,7 +67,7 @@
             height: 400px;
             display: block;
             margin: 0 auto;
-            padding: 0;
+            padding: 0 5px;
         }
         
         
@@ -113,7 +113,7 @@
         .arrows{
             text-align: center;
             font-size: 24px;
-            margin:40px 0 25px;
+            margin:35px 0 25px;
             position:relative;
         }
         
@@ -135,7 +135,6 @@
             .description{
                 height: auto;
                 padding: 20px 10px;
-                margin: 2px auto;
             }
             
             .arrows a.procedure{
@@ -144,6 +143,12 @@
                 margin: 10px 0 20px;
             }
         
+        }
+        
+        @media (max-width:405px){
+            .description{
+                width:97%;
+            }
         }
  
     </style>
