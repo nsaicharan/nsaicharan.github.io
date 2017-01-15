@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <!-- Meta Tags -->
-    <title>Naked Grid - 1 Col Photos</title>
+    <title>Naked Grid - Patient </title>
     <meta name="description" content="My Naked Grid website.">
     <meta name="keywords" content="naked grid">
     <meta name="author" content="Cheree Dohmann" />
@@ -18,7 +18,7 @@
         
         *{box-sizing: border-box;}
 
-        body{background: #253d5b; color:white;}
+        body{color:white;}
         
         .clearfix:after{
             clear: both;
@@ -31,22 +31,20 @@
             margin: 0 auto;
         }
         
-        .middle{
+        .patient-container{
             padding: 20px 0 0 0;
             position: relative;
             top:70px;
         }
         
-        /* ========= PHOTOS 1col ========= */
         
         .description{
             background: #94aac6;
             color:white;
-            height: 400px;
-            display: table;
+            height: 381px;
             width: 300px;
             padding: 10px;
-            margin: 0 auto;
+            margin: 28px auto 10px;
         }
 
 
@@ -57,26 +55,21 @@
             padding: 10px 5px;
         }
 
-
-        .footer-row{
-            margin-top: 100px;
-        }
-    
         
-        .row1 .patient{
+        
+        .patient{
             height: 400px;
             display: block;
             margin: 0 auto;
             padding: 0 5px;
         }
         
-        
-        .middle h2{
+        .patient-container h2{
             text-align: center;
             margin-top: 30px;
         }
         
-        .before-after{
+        .before-after-text{
             margin: 0;
         }
         
@@ -86,7 +79,7 @@
             font-size: 20px
         }
         
-        .photo{
+        .six{
             width: 50%;
             float: left;
         }
@@ -97,21 +90,21 @@
             background: white;
         }
         
-        .photo img{
+        .six img{
             max-width: 100%;
             display: block;
             margin: 0 auto;
             padding: 10px 5px;
         }
         
-        .arrows a.procedure{
+        .arrow-row a.procedure{
             position:absolute; 
             left:5px; 
             top: 12px;
             font-size: 30px;
         }
         
-        .arrows{
+        .arrow-row{
             text-align: center;
             font-size: 30px;
             margin:35px 0 25px;
@@ -119,22 +112,26 @@
         }
         
         
-        .arrows a{
+        .arrow-row a{
             display: inline-block;
             vertical-align: middle;
             margin: 0 5px 5px 5px;
             font-size: 45px;
         }
         
+        .footer-row{
+            margin-top: 100px;
+        }
+        
         @media (max-width:1024px){
-            .arrows a.procedure{
+            .arrow-row a.procedure{
                 font-size:25px;
             }
         }
         
         @media (max-width:767px){
             
-             .photo{
+             .six{
                 float:none;
                 width: 100%;
             }
@@ -144,7 +141,7 @@
                 padding: 20px 10px;
             }
             
-            .arrows a.procedure{
+            .arrow-row a.procedure{
                 position:static; 
                 display: block;
                 margin: 10px 0 20px;
@@ -152,7 +149,7 @@
         
         }
         
-        @media (max-width:405px){
+        @media (max-width:480px){
             .description{
                 width:97%;
             }
@@ -202,21 +199,21 @@
 
     </div>
    
-    <div class="container middle">
+    <div class="container patient-container">
         
-        <div class="arrows">
-           <a href="#" class="procedure">Breast Reconstruction</a>
+        <div class="arrow-row">
+            <a href="#" class="procedure">Breast Reconstruction</a>
             <a href="profile.php?id&amp;cat_id=5&amp;patient_id=3" class="icon-arrow-circle-o-left"></a><span>5 of 8 </span><a href="profile.php?id&amp;cat_id=5&amp;patient_id=5" class="icon-arrow-circle-o-right"></a>
         </div>
 
         <div class="row1 clearfix">
          
-           <div class="photo">
+           <div class="six">
                <h2>SLIDESHOW VIEW</h2>
                <img class="patient" src="img/rc3.jpg" alt="">
            </div>
            
-           <div class="photo">
+           <div class="six">
                <h2>PATIENT F1892</h2>
                <div class="description">
                    <div class="description-text">
@@ -227,7 +224,7 @@
                </div>
            </div>
            
-        </div><!--closing row -->
+        </div><!--closing row1 -->
         
         <h3 style="margin-bottom: 45px">[SEE ENLARGED PHOTOS BELOW]</h3>  
         
@@ -235,52 +232,52 @@
         
         <h3>SIDE-BY-SIDE VIEW</h3>  
 
-        <div class="row clearfix">
+        <div class="row2 clearfix">
 
             
-            <div class="photo">
-                <h2 class="before-after">BEFORE</h2>
+            <div class="six">
+                <h2 class="before-after-text">BEFORE</h2>
                 <img src="img/rc1.jpg" alt="">
             </div>
               
-            <div class="photo">
-                <h2 class="before-after">AFTER</h2>
-                <img src="img/rc1.jpg" alt="">
+            <div class="six">
+                <h2 class="before-after-text">AFTER</h2>
+                <img src="img/rc2.jpg" alt="">
             </div>
         
-        </div><!--closing row-->
+        </div><!--closing row2-->
 
-        <div class="row clearfix">
+        <div class="row3 clearfix">
             
-            <div class="photo">
-                <h2 class="before-after">BEFORE</h2>
+            <div class="six">
+                <h2 class="before-after-text">BEFORE</h2>
                 <img src="img/rc1.jpg" alt="">
             </div>
               
-            <div class="photo">
-                <h2 class="before-after">AFTER</h2>
-                <img src="img/rc1.jpg" alt="">
+            <div class="six">
+                <h2 class="before-after-text">AFTER</h2>
+                <img src="img/rc2.jpg" alt="">
             </div>
            
-        </div> <!--closing row-->
+        </div> <!--closing row3-->
 
 
 
-        <div class="row clearfix">
+        <div class="row4 clearfix">
             
-            <div class="photo">
-                <h2 class="before-after">BEFORE</h2>
+            <div class="six">
+                <h2 class="before-after-text">BEFORE</h2>
                 <img src="img/rc1.jpg" alt="">
             </div>
               
-            <div class="photo">
-                <h2 class="before-after">AFTER</h2>
-                <img src="img/rc1.jpg" alt="">
+            <div class="six">
+                <h2 class="before-after-text">AFTER</h2>
+                <img src="img/rc2.jpg" alt="">
             </div>
           
-        </div><!--closing row-->
+        </div><!--closing row4-->
         
-        <div class="arrows">
+        <div class="arrow-row">
             <a href="profile.php?id&amp;cat_id=5&amp;patient_id=3" class="icon-arrow-circle-o-left"></a><span>5 of 8 </span><a href="profile.php?id&amp;cat_id=5&amp;patient_id=5" class="icon-arrow-circle-o-right"></a>
         </div>
         
