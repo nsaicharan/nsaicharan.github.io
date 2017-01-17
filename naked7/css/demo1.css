@@ -77,6 +77,7 @@ p {margin: 0 0 1em 0;}
     height: 60px;
     position: fixed;
     width: 100%;
+    z-index: 3;
 }
 
 .horizontal-nav a{

@@ -20,23 +20,11 @@
 
         body{color:white;}
         
-        .clearfix:after{
-            clear: both;
-            content: '';
-            display: table;
-        }
-        
-        .container{
-            max-width: 1150px;
-            margin: 0 auto;
-        }
-        
         .patient-container{
             padding: 20px 0 0 0;
             position: relative;
             top:70px;
         }
-        
         
         .description{
             background: #94aac6;
@@ -47,7 +35,6 @@
             margin: 28px auto 10px;
         }
 
-
         .description-text span{
             display: block;
             text-align: left;
@@ -55,8 +42,6 @@
             padding: 10px 5px;
         }
 
-        
-        
         .patient{
             height: 400px;
             display: block;
@@ -96,23 +81,22 @@
             margin: 0 auto;
             padding: 10px 5px;
         }
+       
+        .arrow-row{
+            text-align: center;
+            font-size: 30px; /* Text between arrows */
+            margin:35px 0 25px;
+            position:relative;
+        }
         
-        .arrow-row a.procedure{
+        .arrow-row .procedure{
             position:absolute; 
             left:5px; 
             top: 12px;
             font-size: 30px;
         }
         
-        .arrow-row{
-            text-align: center;
-            font-size: 30px;
-            margin:35px 0 25px;
-            position:relative;
-        }
-        
-        
-        .arrow-row a{
+        .arrow-row [class^="icon-arrow"]{
             display: inline-block;
             vertical-align: middle;
             margin: 0 5px 5px 5px;
@@ -124,7 +108,7 @@
         }
         
         @media (max-width:1024px){
-            .arrow-row a.procedure{
+            .arrow-row .procedure{
                 font-size:25px;
             }
         }
@@ -138,10 +122,11 @@
             
             .description{
                 height: auto;
+                width: 80%;
                 padding: 20px 10px;
             }
             
-            .arrow-row a.procedure{
+            .arrow-row .procedure{
                 position:static; 
                 display: block;
                 margin: 10px 0 20px;
@@ -149,7 +134,7 @@
         
         }
         
-        @media (max-width:480px){
+        @media (max-width:600px){
             .description{
                 width:97%;
             }
@@ -202,8 +187,11 @@
     <div class="container patient-container">
         
         <div class="arrow-row">
+           
             <a href="#" class="procedure">Breast Reconstruction</a>
+            
             <a href="profile.php?id&amp;cat_id=5&amp;patient_id=3" class="icon-arrow-circle-o-left"></a><span>5 of 8 </span><a href="profile.php?id&amp;cat_id=5&amp;patient_id=5" class="icon-arrow-circle-o-right"></a>
+            
         </div>
 
         <div class="row1 clearfix">
@@ -281,7 +269,7 @@
             <a href="profile.php?id&amp;cat_id=5&amp;patient_id=3" class="icon-arrow-circle-o-left"></a><span>5 of 8 </span><a href="profile.php?id&amp;cat_id=5&amp;patient_id=5" class="icon-arrow-circle-o-right"></a>
         </div>
         
-    </div><!--closing container div--> 
+    </div><!--closing container/patient-container div--> 
       
     <div class="row footer-row clearfix">
 
