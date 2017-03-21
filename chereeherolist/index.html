@@ -83,6 +83,44 @@
             margin: 0 auto;
         }
         
+        /* ========== Flexbox Rows ========= */
+        
+        .row11{
+            background: #333;
+        }
+        
+        .row12{
+            background: #555;
+        }
+        
+        .flex-row{
+            display: flex;
+            color: white;    
+        }
+        
+        .flex-col-3{
+            padding: 50px 35px;
+            width: 33.33333%;  
+        }
+        
+        .flex-col-2{
+            padding: 50px 35px;
+            width: 50%;  
+        }
+        
+        @media (max-width:1023px){
+            
+            .flex-row{
+                display: block;
+            }
+            
+            .flex-col-2,
+            .flex-col-3{
+                width: auto;
+            }
+        }
+        
+        
     </style>
     
     
@@ -555,6 +593,74 @@
             </div><!--closing container-->
         </div><!--closing row 4-->
     </div><!--closing row-->
+    
+    
+    
+    <div class="row11">
+        <div class="container">
+            
+            <div class="flex-row">
+
+                <div class="flex-col-3">
+
+                    <h4>Flexbox Column</h4>
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque blanditiis, dolorem reprehenderit error ratione a magnam harum, totam tenetur, debitis id itaque voluptas illo! Tenetur ratione in sint quisquam, fuga.
+
+                </div>
+
+                <div class="flex-col-3">
+
+                    <h4>Flexbox Column</h4>
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque blanditiis, dolorem reprehenderit error ratione a magnam harum, totam tenetur, debitis id itaque voluptas illo! Tenetur ratione in sint quisquam, fuga.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque blanditiis, dolorem reprehenderit error ratione a magnam harum, totam tenetur, debitis id itaque voluptas illo! Tenetur ratione in sint quisquam, fuga.
+
+                </div>
+
+                <div class="flex-col-3">
+
+                    <h4>Flexbox Column</h4>
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque blanditiis, dolorem reprehenderit error ratione a magnam harum, totam tenetur, debitis id itaque voluptas illo! Tenetur ratione in sint quisquam, fuga.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque blanditiis, dolorem reprehenderit error ratione a magnam harum, totam tenetur, debitis id itaque voluptas illo! Tenetur ratione in sint quisquam, fuga.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque blanditiis, dolorem reprehenderit error ratione a magnam harum, totam tenetur, debitis id itaque voluptas illo! Tenetur ratione in sint quisquam, fuga.
+
+                </div>
+            
+            
+            </div> <!-- Closing flex row -->
+            
+        </div> <!-- Closing container -->
+   </div> <!-- Closing row -->
+   
+   <div class="row12">
+        <div class="container">
+            
+            <div class="flex-row">
+
+                <div class="flex-col-2">
+
+                    <h4>Flexbox Column</h4>
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque blanditiis, dolorem reprehenderit error ratione a magnam harum, totam tenetur, debitis id itaque voluptas illo! Tenetur ratione in sint quisquam, fuga.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque blanditiis, dolorem reprehenderit error ratione a magnam harum, totam tenetur, debitis id itaque voluptas illo! Tenetur ratione in sint quisquam, fuga.
+
+                </div>
+
+                <div class="flex-col-2">
+
+                    <h4>Flexbox Column</h4>
+
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque blanditiis, dolorem reprehenderit error ratione a magnam harum, totam tenetur, debitis id itaque voluptas illo! Tenetur ratione in sint quisquam, fuga.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque blanditiis, dolorem reprehenderit error ratione a magnam harum, totam tenetur, debitis id itaque voluptas illo! Tenetur ratione in sint quisquam, fuga.
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque blanditiis, dolorem reprehenderit error ratione a magnam harum, totam tenetur, debitis id itaque voluptas illo! Tenetur ratione in sint quisquam, fuga.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque blanditiis, dolorem reprehenderit error ratione a magnam harum, totam tenetur, debitis id itaque voluptas illo! Tenetur ratione in sint quisquam, fuga.
+
+                </div>
+                
+            </div> <!-- Closing flex row -->
+            
+        </div> <!-- Closing container -->
+    </div> <!-- Closing row -->
+    
+    
+    
    
     <div class="row">
         <footer>
