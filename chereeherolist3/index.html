@@ -1,95 +1,31 @@
-
 <!doctype html>
 <html lang="zxx">
 
 <head>
     <meta charset="utf-8" />
-    <!-- Meta Tags -->
-    <title>Naked Grid</title>
     <meta name="description" content="My Naked Grid website.">
     <meta name="keywords" content="naked grid">
     <meta name="author" content="Cheree Dohmann" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     
-    <!--Styles-->
+    <title>Naked Grid</title>
+    
     <link rel="stylesheet" href="css/roboto.css">
     <link rel="stylesheet" type="text/css" href="css/demo1.css" />
     
     <style>
         
-        .overlay-text-a{
-            color: white;
-            font-size: 26px;
-            line-height: 1.2em;
-            text-align: center;
-            position: absolute;
-            top:50%;
-            left:25%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); 
-        }
-        
-        .overlay-text-b{
-            color: white;
-            font-size: 26px;
-            line-height: 1.2em; 
-            text-align: center;
-            position: absolute;
-            top:50%;
-            left:75%;
-            -webkit-transform: translate(-50%, -50%);
-            -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%); 
-        }
-    
-        .hero-list{
-            padding: 0;
-            list-style: none;
-        }
-        
-        .hero-list li{
-            line-height: .9em;
-        }
-        
-        .hero-list li:first-child{
-            line-height: 1.5em;
-        }
-        
-        .hero-list a{
-            font-size:20px;
-            text-decoration: none;
-            color:white;
-            
-        }
-        
-        .hero-list a:hover{
-           
-            color:#ffba49;            
-        }
-        
-        .hero-list li:first-child a{
-            color:#ffba49;
-            font-size: 22px;
-            font-weight: bold;
-            padding-bottom: 5px;
-        }
-        
-        /* ========== ROW 4 Container ========= */
-        
-        .row4-container{
-            max-width: 750px;
-            padding: 30px 10px 40px;
-            margin: 0 auto;
-        }
-        
         /* ========== Flexbox Rows ========= */
         
-        .row11{
+        .row12{
             background: #333;
         }
         
-        .row12{
+        .row13{
+            background: #444;
+        }
+        
+        .row14{
             background: #555;
         }
         
@@ -100,8 +36,12 @@
         
         .flex-col{
             padding: 50px 35px;
-            flex:1; 
+            flex:1; /* 1X Width */
         }
+        
+        .flex-col-2x{
+            padding: 50px 35px;
+            flex:2; /* 2X Width - Useful for creating 3-6-3 style columns */ 
         
         @media (max-width:1023px){
             
@@ -112,9 +52,7 @@
         }
         
     </style>
-    
-    
-    <!-- JavaScript files are in the Foot -->
+  
 </head>
 
 <body>
@@ -194,103 +132,97 @@
         
     </header>
     
-    <div class="row longnav">
-        <div class="row2">
-            <nav>
-                <div class="container clearfix">
-
-                    <div class="three">
-                        <a href="#">Biz Logo Here</a>
-                    </div><!--closing column 3-->
-
-                    <div class="nine">
-                        <ul>
-                            <li><a href="#">Link 1</a></li>
-                            <li><a href="#">Link 2</a></li>
-                            <li><a href="#">Link 3</a></li>
-                            <li><a href="#">Link 4</a></li>
-                            <li><a href="#">Link 5</a></li>
-                        </ul>
-                    </div> <!--closing column 9-->
-
-                </div><!-- container -->
-            </nav><!-- nav -->
-        </div><!--closing row 2-->
-    </div><!--closing row-->
-        
-    <div class="row">
-        <div class="row3 clearfix">
-            <div class="container">
-
-                <div class="six">
-
-                    <h2>H2 Heading</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum ducimus necessitatibus labore, ipsa molestias facere, error, perferendis aspernatur obcaecati consequuntur eum, blanditiis quam incidunt reiciendis. Quam quae adipisci cumque repellendus.</p>
-                    <p>Lorem ipsum dolor sit amet.</p>
-
-                </div> <!--closing column 6-->
-
-                <div class="three">
-
-                    <h2>H2 Heading</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-
-                </div> <!--closing column 3-->
-
-                <div class="three">
-
-                    <h2>H2 Heading</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-
-                </div><!--closing column 3-->
-
-            </div><!--closing container-->
-        </div><!--closing row 3-->
-    </div><!--closing row-->
-        
-    <div class="row">
-        <div class="row4 clearfix">
+    <div class="row row2 longnav">
+        <nav>
             <div class="container">
 
                 <div class="three">
-
-                    <h2>H2 Heading</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, sequi, architecto! Ab at dignissimos expedita eveniet, dicta quisquam iste deserunt excepturi harum ducimus quia quis enim neque adipisci tenetur, enim neque adipisci ipsam?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, sequi, architecto! Ab at dignissimos expedita eveniet, dicta quisquam iste deserunt dicta quisquam iste deserunt.</p>
-
+                    <a href="#">Biz Logo Here</a>
                 </div><!--closing column 3-->
 
-                <div class="six">
-
-                    <h2>H2 Heading</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem omnis suscipit doloribus ipsam repellat laborum, doloremque labore nihil possimus qui. Tenetur nostrum provident, aliquam iure soluta sed nobis asperiores ab.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem omnis suscipit doloribus ipsam repellat laborum, doloremque labore nihil possimus qui. Tenetur nostrum provident, aliquam iure soluta sed nobis asperiores ab.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem omnis suscipit doloribus ipsam repellat laborum, doloremque labore nihil possimus qui. Tenetur nostrum provident, aliquam iure soluta sed nobis asperiores ab.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem omnis suscipit doloribus ipsam repellat laborum, doloremque labore nihil.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam corrupti, alias? Fugiat doloribus cupiditate itaque</p>
-
-                </div><!--closing column 6-->
-
-                <div class="three">
-
-                    <h2>H2 Heading</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam corrupti, alias? Fugiat doloribus cupiditate itaque incidunt consequuntur reiciendis neque delectus accusantium perspiciatis facere magni debitis, impedit odio nesciunt! Quidem, mollitia.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam corrupti, alias? Fugiat doloribus cupiditate itaque .Lorem ipsum dolor sit amet.</p>
-
-                </div><!--closing column 3-->
+                <div class="nine">
+                    <ul>
+                        <li><a href="#">Link 1</a></li>
+                        <li><a href="#">Link 2</a></li>
+                        <li><a href="#">Link 3</a></li>
+                        <li><a href="#">Link 4</a></li>
+                        <li><a href="#">Link 5</a></li>
+                    </ul>
+                </div> <!--closing column 9-->
 
             </div><!--closing container-->
-        </div><!--closing row 4-->
-    </div><!--closing row-->
+        </nav><!--closing nav-->
+    </div><!--closing row 2-->
+        
+    <div class="row row3">
+        <div class="container">
+
+            <div class="six">
+
+                <h2>H2 Heading</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum ducimus necessitatibus labore, ipsa molestias facere, error, perferendis aspernatur obcaecati consequuntur eum, blanditiis quam incidunt reiciendis. Quam quae adipisci cumque repellendus.</p>
+                <p>Lorem ipsum dolor sit amet.</p>
+
+            </div> <!--closing column 6-->
+
+            <div class="three">
+
+                <h2>H2 Heading</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+            </div> <!--closing column 3-->
+
+            <div class="three">
+
+                <h2>H2 Heading</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+
+            </div><!--closing column 3-->
+
+        </div><!--closing container-->
+    </div><!--closing row 3-->
+        
+    <div class="row row4">
+        <div class="container">
+
+            <div class="three">
+
+                <h2>H2 Heading</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, sequi, architecto! Ab at dignissimos expedita eveniet, dicta quisquam iste deserunt excepturi harum ducimus quia quis enim neque adipisci tenetur, enim neque adipisci ipsam?</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum, sequi, architecto! Ab at dignissimos expedita eveniet, dicta quisquam iste deserunt dicta quisquam iste deserunt.</p>
+
+            </div><!--closing column 3-->
+
+            <div class="six">
+
+                <h2>H2 Heading</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem omnis suscipit doloribus ipsam repellat laborum, doloremque labore nihil possimus qui. Tenetur nostrum provident, aliquam iure soluta sed nobis asperiores ab.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem omnis suscipit doloribus ipsam repellat laborum, doloremque labore nihil possimus qui. Tenetur nostrum provident, aliquam iure soluta sed nobis asperiores ab.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem omnis suscipit doloribus ipsam repellat laborum, doloremque labore nihil possimus qui. Tenetur nostrum provident, aliquam iure soluta sed nobis asperiores ab.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem omnis suscipit doloribus ipsam repellat laborum, doloremque labore nihil.Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam corrupti, alias? Fugiat doloribus cupiditate itaque</p>
+
+            </div><!--closing column 6-->
+
+            <div class="three">
+
+                <h2>H2 Heading</h2>
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam corrupti, alias? Fugiat doloribus cupiditate itaque incidunt consequuntur reiciendis neque delectus accusantium perspiciatis facere magni debitis, impedit odio nesciunt! Quidem, mollitia.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magnam corrupti, alias? Fugiat doloribus cupiditate itaque .Lorem ipsum dolor sit amet.</p>
+
+            </div><!--closing column 3-->
+
+        </div><!--closing container-->
+    </div><!--closing row 4-->
         
         
-    <div class="row">
-        <div class="row5">
+    <div class="row row5">
+        
             <div class="three">
 
                <div class="layer"> </div>
@@ -387,130 +319,129 @@
                 </picture>
 
             </div><!--closing column 3-->
-        </div><!--closing row 5-->
-    </div><!--closing row-->
         
-    <div class="row">
-        <div class="row6 clearfix">
-           <div class="container">
-
-                <div class="six">
-
-
-                    <h2>H2 Heading</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique cupiditate deserunt obcaecati sed voluptates minima placeat in asperiores dolore expedita ullam enim autem minus dolores, nesciunt perspiciatis voluptatem deleniti neque!</p>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique cupiditate deserunt obcaecati sed voluptates minima placeat in asperiores dolore expedita!</p>
-
-                </div><!--closing column 6-->
-
-                <div class="three">
-
-                    <h2>H2 Heading</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero reprehenderit dolore quod, ducimus.</p>
-
-                </div><!--closing column 3-->
-
-                <div class="three">
-
-                    <h2>H2 Heading</h2>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero reprehenderit dolore quod, ducimus.</p>
-
-                </div><!--closing column 3-->
-
-            </div> <!--closing container -->
-        </div><!--closing row 6-->
-    </div><!--closing row-->
-
-    <div class="row">
-        <div class="row7">
+    </div><!--closing row 5-->
+        
+    <div class="row row6">
+       <div class="container">
 
             <div class="six">
-               
-                <div class="layer"> </div>
-                <div class="overlay-text">Sample Text</div>
 
-                <picture>
-                    <source sizes="50vw" srcset="images/hero/bx1920.jpg 1920w, images/hero/bx3840.jpg 3840w" media="(min-width: 1024px)">
-                    <img src="images/hero/bx1136.jpg" sizes="100vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w" alt="">
-                </picture>
+                <h2>H2 Heading</h2>
                 
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique cupiditate deserunt obcaecati sed voluptates minima placeat in asperiores dolore expedita ullam enim autem minus dolores, nesciunt perspiciatis voluptatem deleniti neque!</p>
+
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique cupiditate deserunt obcaecati sed voluptates minima placeat in asperiores dolore expedita!</p>
+
             </div><!--closing column 6-->
 
-            <div class="six">
-               
-                <div class="layer"> </div>
-                <div class="overlay-text">Sample Text</div>
+            <div class="three">
 
-                <picture>
-                    <source sizes="50vw" srcset="images/hero/bx1920.jpg 1920w, images/hero/bx3840.jpg 3840w" media="(min-width: 1024px)">
-                    <img src="images/hero/bx1136.jpg" sizes="100vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w" alt="">
-                </picture>
+                <h2>H2 Heading</h2>
                 
-            </div><!--closing column 6-->
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero reprehenderit dolore quod, ducimus.</p>
 
-        </div><!--closing row 7-->
-    </div><!--closing row-->
+            </div><!--closing column 3-->
 
-    <div class="row">
-        <div class="row8">
-            <div class="six">
+            <div class="three">
 
-                <div class="color">
-                    
-                    <div class="overlay-text2">
+                <h2>H2 Heading</h2>
+                
+                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
+                
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero reprehenderit dolore quod, ducimus.</p>
 
-                        <h2>H2 Heading</h2>
+            </div><!--closing column 3-->
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae expedita aspernatur porro minus, odit consectetur voluptatem ut architecto excepturi, incidunt et corporis velit quod hic, doloremque ducimus ea quae!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae expedita aspernatur porro minus, odit consectetur voluptatem ut architecto excepturi, incidunt et corporis velit quod hic, doloremque ducimus ea quae!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae expedita aspernatur porro minus, odit consectetur voluptatem ut architecto excepturi, incidunt et corporis velit quod hic, doloremque ducimus ea quae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae expedita aspernatur porro minus, odit consectetur voluptatem ut architecto excepturi, incidunt et corporis velit quod hic, doloremque ducimus ea quae!  doloremque ducimus ea quae!</p>
+        </div> <!--closing container -->
+    </div><!--closing row 6-->
 
-                    </div>
-                    
+    <div class="row row7">
+
+        <div class="six">
+
+            <div class="layer"> </div>
+            <div class="overlay-text">Sample Text</div>
+
+            <picture>
+                <source sizes="50vw" srcset="images/hero/bx1920.jpg 1920w, images/hero/bx3840.jpg 3840w" media="(min-width: 1024px)">
+                <img src="images/hero/bx1136.jpg" sizes="100vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w" alt="">
+            </picture>
+
+        </div><!--closing column 6-->
+
+        <div class="six">
+
+            <div class="layer"> </div>
+            <div class="overlay-text">Sample Text</div>
+
+            <picture>
+                <source sizes="50vw" srcset="images/hero/bx1920.jpg 1920w, images/hero/bx3840.jpg 3840w" media="(min-width: 1024px)">
+                <img src="images/hero/bx1136.jpg" sizes="100vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w" alt="">
+            </picture>
+
+        </div><!--closing column 6-->
+
+    </div><!--closing row 7-->
+
+    <div class="row row8">
+        
+        <div class="six">
+
+            <div class="color">
+
+                <div class="overlay-text2">
+
+                    <h2>H2 Heading</h2>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae expedita aspernatur porro minus, odit consectetur voluptatem ut architecto excepturi, incidunt et corporis velit quod hic, doloremque ducimus ea quae!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae expedita aspernatur porro minus, odit consectetur voluptatem ut architecto excepturi, incidunt et corporis velit quod hic, doloremque ducimus ea quae!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae expedita aspernatur porro minus, odit consectetur voluptatem ut architecto excepturi, incidunt et corporis velit quod hic, doloremque ducimus ea quae! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae expedita aspernatur porro minus, odit consectetur voluptatem ut architecto excepturi, incidunt et corporis velit quod hic, doloremque ducimus ea quae!  doloremque ducimus ea quae!</p>
+
                 </div>
 
-                <picture>
-                    <source sizes="50vw" srcset="images/hero/bx1920.jpg 1920w, images/hero/bx3840.jpg 3840w" media="(min-width: 1451px)">
-                    <source sizes="50vw" srcset="images/hero/bx1390.jpg 1390w" media="(min-width: 1160px)">
-                    <source sizes="50vw" srcset="images/hero/bx1080s.jpg 1080w" media="(min-width: 1024px)">
-                    <source sizes="100vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w" media="(min-width: 551px)">
-                    <img src="images/hero/bx1280p.jpg" sizes="100vw" srcset="images/hero/bx1280p.jpg 1280w, images/hero/bx1536p.jpg 1536w"  alt="">
-                </picture>
-                
-            </div><!--closing column 6-->
+            </div>
 
-            <div class="six">
-               
-                <div class="color">
-                   
-                    <div class="overlay-text2">
+            <picture>
+                <source sizes="50vw" srcset="images/hero/bx1920.jpg 1920w, images/hero/bx3840.jpg 3840w" media="(min-width: 1451px)">
+                <source sizes="50vw" srcset="images/hero/bx1390.jpg 1390w" media="(min-width: 1160px)">
+                <source sizes="50vw" srcset="images/hero/bx1080s.jpg 1080w" media="(min-width: 1024px)">
+                <source sizes="100vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w" media="(min-width: 551px)">
+                <img src="images/hero/bx1280p.jpg" sizes="100vw" srcset="images/hero/bx1280p.jpg 1280w, images/hero/bx1536p.jpg 1536w"  alt="">
+            </picture>
 
-                        <h2>H2 Heading</h2>
+        </div><!--closing column 6-->
 
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae expedita aspernatur porro minus, odit consectetur voluptatem ut architecto excepturi, incidunt et corporis velit quod hic, doloremque ducimus ea quae!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae expedita aspernatur porro minus, odit consectetur voluptatem ut architecto excepturi, incidunt et corporis velit quod hic, doloremque ducimus ea quae!</p>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae expedita aspernatur porro minus, odit consectetur voluptatem ut architecto excepturi, incidunt et corporis velit quod hic, doloremque ducimus ea quae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae expedita aspernatur porro minus, odit consectetur voluptatem ut architecto excepturi, incidunt et corporis velit quod hic, doloremque ducimus ea quae!  doloremque ducimus ea quae!</p>
+        <div class="six">
 
-                    </div>
-                    
+            <div class="color">
+
+                <div class="overlay-text2">
+
+                    <h2>H2 Heading</h2>
+
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae expedita aspernatur porro minus, odit consectetur voluptatem ut architecto excepturi, incidunt et corporis velit quod hic, doloremque ducimus ea quae!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae expedita aspernatur porro minus, odit consectetur voluptatem ut architecto excepturi, incidunt et corporis velit quod hic, doloremque ducimus ea quae!</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae expedita aspernatur porro minus, odit consectetur voluptatem ut architecto excepturi, incidunt et corporis velit quod hic, doloremque ducimus ea quae!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur molestiae expedita aspernatur porro minus, odit consectetur voluptatem ut architecto excepturi, incidunt et corporis velit quod hic, doloremque ducimus ea quae!  doloremque ducimus ea quae!</p>
+
                 </div>
 
-                <picture>
-                    <source sizes="50vw" srcset="images/hero/bx1920.jpg 1920w, images/hero/bx3840.jpg 3840w" media="(min-width: 1451px)">
-                    <source sizes="50vw" srcset="images/hero/bx1390.jpg 1390w" media="(min-width: 1160px)">
-                    <source sizes="50vw" srcset="images/hero/bx1080s.jpg 1080w" media="(min-width: 1024px)">
-                    <source sizes="100vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w" media="(min-width: 551px)">
-                    <img src="images/hero/bx1280p.jpg" sizes="100vw" srcset="images/hero/bx1280p.jpg 1280w, images/hero/bx1536p.jpg 1536w"  alt="">
-                </picture>
-                
-            </div> <!--closing column 6-->
-        </div> <!--closing row 8-->
-    </div><!--closing row-->
+            </div>
+
+            <picture>
+                <source sizes="50vw" srcset="images/hero/bx1920.jpg 1920w, images/hero/bx3840.jpg 3840w" media="(min-width: 1451px)">
+                <source sizes="50vw" srcset="images/hero/bx1390.jpg 1390w" media="(min-width: 1160px)">
+                <source sizes="50vw" srcset="images/hero/bx1080s.jpg 1080w" media="(min-width: 1024px)">
+                <source sizes="100vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w" media="(min-width: 551px)">
+                <img src="images/hero/bx1280p.jpg" sizes="100vw" srcset="images/hero/bx1280p.jpg 1280w, images/hero/bx1536p.jpg 1536w"  alt="">
+            </picture>
+
+        </div> <!--closing column 6-->
+    </div><!--closing row 8-->
 
     <div class="row parallax">
 
@@ -532,9 +463,8 @@
 
     </div> <!--closing parallax(row 9)-->
 
-    <div class="row">
-        <div class="row10 clearfix">
-            <div class="container">
+    <div class="row row10">
+        <div class="container">
                 
                 <div class="six">
                     <div>
@@ -567,11 +497,10 @@
                 
             </div><!-- container -->
         </div><!--closing row 10-->
-    </div><!--closing row -->
 
-   <div class="row">
-        <div class="row4 clearfix">
-            <div class="row4-container">
+    <div class="row row11">
+        
+            <div class="row11-container">
 
 
                 <h2>Meet Dr. Raghu Elluru</h2>
@@ -581,12 +510,10 @@
                 </p>
 
             </div><!--closing container-->
-        </div><!--closing row 4-->
-    </div><!--closing row-->
+        
+    </div><!--closing row 11-->
     
-    
-    
-    <div class="row11">
+    <div class="row12">
         <div class="container">
             
             <div class="flex-row">
@@ -618,13 +545,13 @@
             </div> <!-- Closing flex row -->
             
         </div> <!-- Closing container -->
-   </div> <!-- Closing row11 -->
-   
-   <div class="row12">
+    </div> <!-- Closing row12 -->
+    
+    <div class="row13">
         <div class="container">
             
             <div class="flex-row">
-
+                
                 <div class="flex-col">
                    
                     <h4>Flex Column</h4>
@@ -644,10 +571,41 @@
             </div> <!-- Closing flex row -->
             
         </div> <!-- Closing container -->
-    </div> <!-- Closing row12 -->
+    </div> <!-- Closing row13 -->
     
-    
-    
+    <div class="row14">
+        <div class="container">
+            
+            <div class="flex-row">
+
+                <div class="flex-col">
+                   
+                    <h4>Flex Column</h4>
+                   
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere in delectus est a voluptatum blanditiis, eos explicabo veritatis, error alias ratione, placeat harum distinctio dicta sit sunt expedita eligendi non!
+                    
+                </div>
+                
+                <div class="flex-col-2x">
+                   
+                    <h4>Flex Column</h4>   
+                   
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!
+                    
+                    
+                </div>
+            
+                <div class="flex-col">
+                   
+                    <h4>Flex Column</h4>   
+                   
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!
+                </div>
+            
+            </div> <!-- Closing flex row -->
+            
+        </div> <!-- Closing container -->
+    </div> <!-- Closing row14 -->
    
     <div class="row">
         <footer>

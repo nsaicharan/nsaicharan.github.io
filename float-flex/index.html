@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Float vs Flex Demo</title>
+    
+    <style>
+        
+        * { box-sizing: border-box; }
+    
+        body{
+            margin: 0;
+            padding: 0;
+            color: white;
+        }
+        
+        .six,
+        .three, 
+        .flex-col-1,
+        .flex-col-2{
+            padding: 25px;;
+        }
+
+        .green{
+            background: yellowgreen;
+        }
+
+        .tomato{
+           background: tomato;
+        }
+
+        .coral{
+            background: lightcoral;
+        }
+
+        
+        @media (min-width: 1024px){
+            
+            .row{
+                overflow: hidden;
+            }
+
+            .three{
+                width: 25%;
+                float: left;
+            }
+
+            .six{
+                width: 50%;
+                float: left;
+            }
+
+            .flex-row{
+                display: flex;
+            }
+
+            .flex-col-1{
+                flex:1; /* 1x width */
+            }
+
+            .flex-col-2{
+                flex:2; /* 2x width */ 
+            }
+
+        }
+        
+    
+    </style>
+    
+</head>
+<body>
+   
+    <div class="row coral">
+       
+        <div class="three">
+           
+           <h2>Column</h2>
+            
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci hic suscipit dolore, explicabo consequatur ducimus maxime esse ut sit dicta quo debitis aut tenetur neque a eos optio consectetur dolor?
+        </div>
+        
+        <div class="six">
+           
+            <h2>Column</h2>
+ 
+           
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis nobis veniam quo omnis accusamus, commodi placeat saepe culpa minus laudantium maiores assumenda impedit aperiam! Quis aliquid esse dolor, incidunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?
+        </div>
+        
+        <div class="three">
+           
+            <h2>Column</h2>
+
+           
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam inventore odit, fugiat. Eaque alias ab, mollitia error obcaecati laborum officia quod fugiat. Nihil, quas expedita eos illo nesciunt assumenda, odio!Eaque alias ab, mollitia error obcaecati laborum officia quod fugiat. Nihil, quas expedita eos illo nesciunt assumenda, odio!
+        </div>
+        
+    </div>
+    
+    <div class="row">
+       
+        <div class="three green">
+          
+            <h2>Column</h2>
+
+          
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci hic suscipit dolore, explicabo consequatur ducimus maxime esse ut sit dicta quo debitis aut tenetur neque a eos optio consectetur dolor?
+        </div>
+        
+        <div class="six tomato">
+           
+            <h2>Column</h2>
+   
+        
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis nobis veniam quo omnis accusamus, commodi placeat saepe culpa minus laudantium maiores assumenda impedit aperiam! Quis aliquid esse dolor, incidunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?
+        </div>
+        
+        <div class="three green">
+           
+            <h2>Column</h2>
+
+           
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam inventore odit, fugiat. Eaque alias ab, mollitia error obcaecati laborum officia quod fugiat. Nihil, quas expedita eos illo nesciunt assumenda, odio!Eaque alias ab, mollitia error obcaecati laborum officia quod fugiat. Nihil, quas expedita eos illo nesciunt assumenda, odio!
+        </div>
+        
+    </div>
+       
+    <div class="flex-row coral">
+        
+        <div class="flex-col-1">
+           
+            <h2>Flex Column</h2>
+           
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae eaque facilis, officia ea pariatur mollitia, placeat. Eaque nihil ad placeat, esse aliquid! Ducimus libero illum, temporibus quo illo fugiat quae.
+        </div>
+        
+        <div class="flex-col-2">
+           
+            <h2>Flex Column</h2>
+           
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis nobis veniam quo omnis accusamus, commodi placeat saepe culpa minus laudantium maiores assumenda impedit aperiam! Quis aliquid esse dolor, incidunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?
+        </div>
+        
+        <div class="flex-col-1">
+           
+            <h2>Flex Column</h2>
+           
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa sit totam blanditiis repellat iste? Suscipit ipsa, necessitatibus error rerum unde, vel possimus optio et tenetur, explicabo aspernatur assumenda incidunt eaque.Eaque alias ab, mollitia error obcaecati laborum officia quod fugiat. Nihil, quas expedita eos illo nesciunt assumenda, odio!
+        </div>
+        
+    </div>
+    
+    <div class="flex-row">
+        
+        <div class="flex-col-1 green">
+           
+            <h2>Flex Column</h2>
+           
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae eaque facilis, officia ea pariatur mollitia, placeat. Eaque nihil ad placeat, esse aliquid! Ducimus libero illum, temporibus quo illo fugiat quae.
+        </div>
+        
+        <div class="flex-col-2 tomato">
+           
+            <h2>Flex Column</h2>
+           
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi corporis nobis veniam quo omnis accusamus, commodi placeat saepe culpa minus laudantium maiores assumenda impedit aperiam! Quis aliquid esse dolor, incidunt. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quam cum accusantium tenetur rerum est a iusto ea ex eaque officia laboriosam molestiae, dignissimos fuga necessitatibus vitae, magnam dolores. Accusantium, fugiat?
+        </div>
+        
+        <div class="flex-col-1 green">
+           
+            <h2>Flex Column</h2>
+            
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa sit totam blanditiis repellat iste? Suscipit ipsa, necessitatibus error rerum unde, vel possimus optio et tenetur, explicabo aspernatur assumenda incidunt eaque.Eaque alias ab, mollitia error obcaecati laborum officia quod fugiat. Nihil, quas expedita eos illo nesciunt assumenda, odio!
+        </div>
+        
+    </div>
+
+</body>
+</html>
