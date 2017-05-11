@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    
+    <style>
+    
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .hero-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+        }
+    
+    </style>    
+    
+</head>
+<body>
+    <div class="hero-image">
+    <picture>
+        
+        <source media="(min-width: 800px) and (orientation: landscape)" sizes="100vw" srcset="assets/home1920.jpg 1920w, assets/home3840.jpg 3840w">
+        
+        <source media="(min-width: 768px) and (orientation:portrait)" sizes="100vw" srcset="assets/home1280p.jpg 1280w, assets/home1536p.jpg 1536w">
+        
+        <source media="(max-width: 480px) and (orientation:portrait)" sizes="100vw" srcset="assets/home1536p.jpg 1536w, assets/home1280p.jpg 1280w">
+        
+        <img src="assets/home1136.jpg" sizes="100vw" srcset="assets/home1136.jpg 1136w, assets/home1920.jpg 1920w" alt="Doctor"> 
+        
+    </picture>
+</div>
+</body>
+</html>
