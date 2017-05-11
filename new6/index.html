@@ -47,15 +47,15 @@
             width: 90%;
         }
         
-        .text-box p {
+        .text {
             display: inline-block;
             border-radius: 10px;
             background: rgba(0, 0, 0, .4);
             color: white;
-            text-align: left;
+            text-align: center;
             font-size: 25px;
             line-height: 1.3em;
-            padding: 12px;
+            padding: 15px 12px;
         }
         
     </style>
@@ -91,16 +91,7 @@
 
 
 <script>
-    function downloadJSAtOnload() {
-    var element = document.createElement("script");
-    element.src = "main.js";
-    document.body.appendChild(element);
-    }
-    if (window.addEventListener)
-    window.addEventListener("load", downloadJSAtOnload, false);
-    else if (window.attachEvent)
-    window.attachEvent("onload", downloadJSAtOnload);
-    else window.onload = downloadJSAtOnload;
+    function downloadJSAtOnload(){var a=document.createElement("script");a.src="main.js",document.body.appendChild(a)}window.addEventListener?window.addEventListener("load",downloadJSAtOnload,!1):window.attachEvent?window.attachEvent("onload",downloadJSAtOnload):window.onload=downloadJSAtOnload;
 </script>
 
 </body>
