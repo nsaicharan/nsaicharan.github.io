@@ -457,7 +457,7 @@ nav .three a:hover{
 
 .row3 {
     background: white;
-    padding: 30px;
+    padding: 30px 30px 40px;
 } 
 
 .row3 h2,
@@ -471,7 +471,7 @@ nav .three a:hover{
 
 .row4 {
     background: #F9690E;
-    padding: 30px;
+    padding: 30px 30px 40px;
 }
 
 /* === End Row4 === */
@@ -479,7 +479,6 @@ nav .three a:hover{
 /* === Start Row5 === */
 
 .row5 .three{
-    height: auto;
     position: relative;
 }
 
@@ -554,7 +553,7 @@ nav .three a:hover{
 
 .row6 {
     background: #F27935;
-    padding: 30px;
+    padding: 30px 30px 40px;
 } 
 
 /* === End Row6 === */
@@ -780,7 +779,7 @@ nav .three a:hover{
 
 @media (max-width:736px){
     .btn {
-        width: 33%;
+        width: 36%;
         font-size: 20px;
         padding: 5px 10px;
     }
@@ -790,7 +789,7 @@ nav .three a:hover{
 @media (max-width:666px){
     .btn {
         padding: 5px 10px;
-        width: 40%;
+        width: 44%;
         font-size: 20px;
     }
     
@@ -801,7 +800,7 @@ nav .three a:hover{
         margin: 0 auto 20px;
         padding: 8px 10px;
         font-size: 18px;
-        width: 55%;
+        width: 61%;
     }  
 }
 
@@ -821,7 +820,7 @@ nav .three a:hover{
 
 .row10{
     background: #F27935;
-    padding: 20px;
+    padding: 30px 30px 45px;
 }
 
 .row10 .six{
@@ -887,8 +886,8 @@ nav .three a:hover{
     }
 
     .row11-container{
-        max-width: 750px;
-        padding: 30px 10px 40px;
+        max-width: 760px;
+        padding: 30px 30px 40px;
         margin: 0 auto;
     }
 
