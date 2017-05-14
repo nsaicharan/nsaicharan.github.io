@@ -457,7 +457,7 @@ nav .three a:hover{
 
 .row3 {
     background: white;
-    padding: 30px 30px 40px;
+    padding: 30px 25px 40px;
 } 
 
 .row3 h2,
@@ -471,7 +471,7 @@ nav .three a:hover{
 
 .row4 {
     background: #F9690E;
-    padding: 30px 30px 40px;
+    padding: 30px 25px 40px;
 }
 
 /* === End Row4 === */
@@ -820,7 +820,7 @@ nav .three a:hover{
 
 .row10{
     background: #F27935;
-    padding: 30px 30px 45px;
+    padding: 30px 25px 45px;
 }
 
 .row10 .six{
@@ -880,12 +880,12 @@ nav .three a:hover{
 /* === Start ROW 11 === */
    
     .row11{
-        background: #ffba49;
+        background: #FF8F00;
     }
 
     .row11-container{
         max-width: 760px;
-        padding: 30px 30px 40px;
+        padding: 30px 25px 40px;
         margin: 0 auto;
     }
 
@@ -922,7 +922,7 @@ footer {
 }
 
 .back-to-top:hover{
-    background: rgba(0,0,0,.7);
+    background: #ffba49;
 }
 
 .back-to-top img{
