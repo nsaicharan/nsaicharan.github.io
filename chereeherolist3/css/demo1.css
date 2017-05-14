@@ -167,6 +167,7 @@ picture img{
         
         .hero-list li:first-child{
             line-height: 1.5em;
+            letter-spacing: 2px;
         }
         
         .hero-list a{
@@ -203,7 +204,7 @@ picture img{
         margin-left: 20px;
     }
     
-    .menunav .logo:hover{color: #ffba49;}
+    .menunav .logo:hover {color: #ffba49;}
     
     .menunav {
         background-color: #253d5b;
@@ -234,7 +235,7 @@ picture img{
         font-size: 25px;
     }
 
-    .menunav li a:hover{ color: #ffba49;}
+    .menunav li a:hover {color: #ffba49;}
 
     .menunav .menu {
         clear: both;
@@ -587,7 +588,7 @@ nav .three a:hover{
 .overlay-text2{
     color: white;
     width: 620px;
-    max-width: 96%;
+    max-width: 90%;
     text-align: left;
     position: absolute;
     left: 50%;
@@ -661,17 +662,6 @@ nav .three a:hover{
     .overlay-text2 h2{ margin-bottom: 2px; }
     
     .overlay-text2 p{ font-size: 14.4px; }
-    
-}
-
-@media (max-width:319px){
-    
-    .overlay-text2 h2{
-        font-size: 14px;
-        margin-bottom: 1px;
-    }
-    
-    .overlay-text2 p{ font-size: 12px; }
     
 }
 
@@ -820,7 +810,7 @@ nav .three a:hover{
 
 .row10{
     background: #F27935;
-    padding: 30px 25px 45px;
+    padding: 30px 20px 45px;
 }
 
 .row10 .six{
@@ -863,12 +853,6 @@ nav .three a:hover{
     color: #ffb45c;
 }
 
-@media (max-width:1023px){
-    .row10{
-        height:auto;
-    }
-}
-
 @media (max-width:380px){
     .row10 .six:nth-child(2) a{
         width:auto;
@@ -895,14 +879,15 @@ nav .three a:hover{
 
 
 footer {
-	height: 443px;
-	background-color: #FDE3A7;
+	background: #F27935;
+    padding: 30px 25px 40px;
 }
 
 .last {
-	height: 73px;
-	background-color: #d13328;
-	text-align:center;
+	background: #253d5b;
+	text-align: center;
+    color: white;
+    padding: 20px 10px;
 }
 
 /* End Footer/Last Row */
