@@ -524,10 +524,10 @@ nav .three a:hover{
 
 .overlay-text4 h2{
     text-align: center;
-    font-size: 26px;
+    font-size: 25px;
     display: inline-block;
     width: auto;
-    padding: 0 0 0 0;
+    padding: 0;
 }
 
 .overlay-text4 a, 
@@ -544,9 +544,7 @@ nav .three a:hover{
 }
 
 @media (min-width:1401px){
-    .overlay-text4 a, 
-    .overlay-text4 a:visited{
-        font-size: 22px;
+    .overlay-text4 a{
         line-height: 1.3em;
     }
 }
