@@ -20,10 +20,6 @@ body {
     box-sizing: border-box;
 }
 
-img {
-    max-width: 100%;
-}
-
 .container {
     max-width: 1150px;
     margin: 0 auto;
@@ -833,6 +829,10 @@ nav .three a:hover{
     max-width: 680px;
     margin: 0 auto;
     display: block;
+}
+
+img {
+    max-width: 100%;
 }
 
 .row10 .six:nth-child(2) p, .row10 .six:nth-child(2) h2{
