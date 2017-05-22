@@ -904,6 +904,7 @@ footer {
     width: 40px;
     height: 40px;
     display: none;
+    transition: .2s ease-in;
     border-radius: 2px;
 }
 
@@ -926,6 +927,8 @@ Circle background for back-to-top image
     background: rgba(0,0,0,.3);
     width: 45px;
     height: 45px;
+    display: none;
+    transition: .2s ease-in;
     border-radius:50%;
 }
 
