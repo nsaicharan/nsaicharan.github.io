@@ -522,7 +522,7 @@ nav .three a:hover{
     padding: 5px;
 }
 
-.overlay-text4 h2{
+.overlay-text4 h2 {
     text-align: center;
     font-size: 25px;
     display: inline-block;
@@ -531,7 +531,7 @@ nav .three a:hover{
 }
 
 .overlay-text4 a, 
-.overlay-text4 a:visited{
+.overlay-text4 a:visited {
     text-decoration: none;
     color: #ffb45c;
     font-size: 22px;
@@ -539,7 +539,7 @@ nav .three a:hover{
     line-height: 1.5em;
 }
 
-.overlay-text4 a:hover{
+.overlay-text4 a:hover {
     color: white;
 }
 
