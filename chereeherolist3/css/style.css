@@ -532,7 +532,6 @@ nav .three a:hover{
 
 .overlay-text4 a, 
 .overlay-text4 a:visited{
-    transition: .2s ease-in;
     text-decoration: none;
     color: #ffb45c;
     font-size: 22px;
