@@ -13,59 +13,48 @@
 
 	<style>
         body{
-             background: url(img1a.jpg) no-repeat center center fixed; 
-              -webkit-background-size: cover;
-              -moz-background-size: cover;
-              -o-background-size: cover;
-              background-size: cover;
-            color: #4d3c03;
+            background: url(img2272a.jpg) no-repeat center center fixed; 
+            background-size: cover;
+            color: #111;
             text-align: center;
-            font-family: 'Yanone Kaffeesatz'; 
-            font-weight: 300;
-            
+            font-family: roboto;
         }
         
-        @font-face{
-            font-family: settle;
-            src: url(settle.woff2);
-        }
-        
-        .layer{
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            background: rgba(255,105,180, .2);
-            
-        }
-        
-        .container{
+        .container1{
             position: absolute;
             top: 50%;
-            left: 75%;
+            left: 70%;
             transform: translate(-50%, -50%);
-            width: 500px;
-            
+            max-width: 500px;
             background: rgba(255,255,255, .4);
-            padding: 30px;
+            padding: 10px 30px 30px;
             border-radius: 15px;
+            z-index: 2;
             
         }
         
-        input[type="text"] {
-            background: transparent;
+        input[type="text"], textarea {
+            background: rgba(255,255,255,.3) !important;
             outline: none;
             box-shadow: 0;
-            border: 1px solid white;
+            border: 1px solid white !important;
+            padding: 20px 15px !important;
+            font-size: 18px !important;
         }
         
-        input[type="text"]:focus{
-            background: #fff;
+        input[type="text"]:focus,
+        textarea:focus{
+            background: rgba(255,255,255,.9) !important;
+            border-color: rgba(240, 21, 131, 0.8) !important;
+            box-shadow: none;
+            outline: 0 none !important;
         }
         
         .lead1{
             color: #24170b;
             text-align: center;
             font-size: 20px;
+            margin-bottom: 15px;
         }
         
         h1{
@@ -77,48 +66,200 @@
         
         h2{
             color: #9b4b03;
-
+            font-family: 'Yanone Kaffeesatz';
         }
         
         span{
             display: block;
         }
-        ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-            color: #333 !important;
+        
+        .container1{
+           left: 50%;
         }
-        :-ms-input-placeholder { /* IE 10+ */
-          color: red;
+
+        #name_2::-webkit-input-placeholder,
+        #textarea_2::-webkit-input-placeholder
+        {
+          color:    #111;
         }
-        ::-moz-placeholder { /* Firefox 19+ */
-          color: red;
-          opacity: 1;
+
+        #name_2:-moz-placeholder,
+        #textarea_2:-moz-placeholder 
+        {
+          color:    #FF0000;
         }
-        :-moz-placeholder { /* Firefox 4 - 18 */
-          color: red;
-          opacity: 1;
+
+        #name_2::-moz-placeholder,
+        #textarea_2::-moz-placeholder 
+        {
+          color:    #FF0000;
         }
-            </style>
+
+        #name_2:-ms-input-placeholder,
+        #textarea_2:-ms-input-placeholder 
+        {
+          color:    #FF0000;
+        }
+
+
+        #btn {
+            background: #f01583;
+            color: white;
+            border: none;
+            font-size: 18px;
+            border-radius: 8px;
+            padding: 8px 25px;
+        }
+        
+        #btn:hover {
+            background: #ff198d;
+            transition: .2s ease-in;
+        }
+        
+        
+        @media (max-width:1023px){
+            h1 {
+                font-size: 35px;
+            }
+            
+            h2 {
+                font-size: 25px;
+            }
+            
+            .lead1{
+                font-size: 18px
+            }
+            
+            input[type="text"], textarea {
+           
+                font-size: 16px !important;
+            }
+            
+            #btn {
+                font-size: 16px;
+                
+            }
+        }
+        
+        @media (max-width:767px){
+            
+            .container1{
+                top:70%;
+                padding: 10px 13px;
+                background: rgba(255,255,255, .5);
+                margin-bottom: 10px;
+            }
+            h1 {
+                font-size: 35px;
+            }
+            
+            h2 {
+                font-size: 25px;
+            }
+            
+            .lead1{
+                font-size: 16px
+            }
+            
+            input[type="text"], textarea {
+           
+                font-size: 16px !important;
+            }
+            
+            input[type="text"]:focus,
+            textarea:focus{
+                background: white !important;
+            }
+            
+            #btn {
+                font-size: 16px;
+                
+            }
+        }
+        
+        @media (max-width:639px){
+            
+            .container1{
+                top:76%;
+               
+            }
+            h1 {
+                font-size: 25px;
+            }
+            
+            h2 {
+                font-size: 22px;
+            }
+            
+            .lead1{
+                font-size: 14px
+            }
+            
+            input[type="text"], textarea {
+           
+                font-size: 14px !important;
+            }
+            
+            
+            #btn {
+                font-size: 14px;
+                
+            }
+        }
+        
+        @media (max-width:480px) and (orientation:portrait){
+            
+            .container1{
+                top:50%;
+                left: 40%;
+               
+            }
+            h1 {
+                font-size: 25px;
+            }
+            
+            h2 {
+                font-size: 22px;
+            }
+            
+            .lead1{
+                font-size: 14px
+            }
+            
+            input[type="text"], textarea {
+           
+                font-size: 14px !important;
+            }
+            
+            
+            #btn {
+                font-size: 14px;
+                
+            }
+        }
+
+        </style>
 
 </head>
 
 <body>
-    
-	<div class="container">
-      
-       <h1>Sayma's Photography</h1>
-       
-       <h2>Website Coming Soon!</h2> 
-       
-       <p class="lead1">Have any questions? Shoot me an e-mail! </p>
+   
+        <div class="container1">
 
-       
-        <form action="">
-            <input class="form-control" placeholder="Name" type="text"> <br>
-            <input class="form-control" placeholder="Email" type="text"> <br>
-            <input class="form-control" placeholder="Message"type="text">
-        </form>
-	</div>
+           <h1>Sayma's Photography</h1>
 
+           <h2>Website Coming Soon!</h2> 
+
+           <p class="lead1">Have any questions? Shoot me an e-mail! </p>
+
+
+            <form action="">
+                <input class="form-control" id="name_2" placeholder="Name" type="text"> <br>
+                <input class="form-control" id="name_2" placeholder="Email Address" type="text"> <br>
+                <textarea class="form-control" id="textarea_2" placeholder="Message"  rows="3"></textarea> <br>
+                <input type="submit" value="SEND" id="btn">
+            </form>
+        </div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
