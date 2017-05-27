@@ -1,0 +1,160 @@
+body {
+  font-family: 'Cabin', sans-serif;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  background: url("../images/avion_bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+h1 {
+  color: papayawhip;
+  font-weight: bold;
+  font-size: 60px;
+  font-family: 'Dancing Script'
+}
+
+h3 {
+  color: #ffffff;
+  font-style: italic;
+  font-size: 25px;
+}
+
+/* 
+Loading section
+*/
+.se-pre-con {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background: url("../images/loading.gif") center no-repeat #032b44;
+}
+
+.no-js #loader {
+  display: none;
+}
+
+.js #loader {
+  position: absolute;
+  left: 100px;
+  top: 0;
+  display: block;
+}
+
+/*
+Header Section
+*/
+.header-logo-wrapper {
+  margin: 70px 0px 70px 0px;
+}
+
+/*
+ Social media section
+ */
+.social-media-wrapper {
+    text-align: center;
+  background: rgba(0,0,0,.3);
+  border-radius: 20px;
+    padding: 20px;
+  margin:30px auto 80px;
+  max-width: 400px;
+  font-size: 25px;
+}
+
+.social-media-wrapper a {
+  
+  font-size: 20px;
+  color: #ffffff;
+}
+.fa-phone{
+    font-size: 21px  !important;
+}
+.fa-envelope{
+    font-size: 16px !important;
+}
+.social-media-wrapper a:last-child {
+  margin-right: 0px;
+}
+
+ .number{
+    margin-left: 9px;    
+}
+.email{
+     margin-left: 10px;
+}
+
+h4{
+    font-size: 25px;
+}
+
+@media(max-width:400px){
+    h1{
+        font-size: 50px;
+    }
+    .social-media-wrapper{
+        padding: 5px;
+    }
+    
+     h2{
+        font-size: 20px;
+    }
+    
+    h3{
+        font-size:16px !important;
+    }
+    
+}
+
+@media(max-width:496px){
+    
+    h2{
+        font-size: 23px;
+    }
+    
+    h3{
+        font-size:17px;
+    }
+    
+    h4{
+        
+        font-size: 18px;
+    }
+    
+}
+
+/*--- FORMS ---*/
+/*
+This is the bit you need.
+*/
+.subscribe-form-wrapper label{
+  position:absolute;
+  left:-9999px;
+}
+.subscribe-form-wrapper input,
+.subscribe-form-wrapper textarea{
+  font:inherit;
+  resize:none;
+height: 38px;
+width: 234px !important;
+}
+
+
+
+
+
+/*--- THE MAGIC ---*/
+/*
+This is the best bit!
+*/
+[placeholder]{
+  cursor:pointer;
+}
+[placeholder]:active,
+[placeholder]:focus{
+  cursor:text;
+}
