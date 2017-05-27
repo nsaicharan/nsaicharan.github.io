@@ -186,6 +186,10 @@
 		.container {
 			width: 100% !important;
 		}
+        
+        p i{
+            display: block !important;; 
+        }
 
 	}
 
@@ -238,7 +242,7 @@
 		.container {
 			width: 100% !important;
 		}
-
+    
 	}
 
 /* Grid */
