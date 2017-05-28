@@ -5,7 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Roboto|Satisfy|Yanone+Kaffeesatz" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Roboto|Satisfy|Yanone+Kaffeesatz|Playball" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Minimum Bootstrap HTML Skeleton</title>
 
@@ -13,7 +13,7 @@
 
 	<style>
         body{
-            background: url(img2272a.jpg) no-repeat center center fixed; 
+            background: url('img2272a.jpg') no-repeat center center fixed; 
             background-size: cover;
             color: #111;
             text-align: center;
@@ -25,13 +25,14 @@
             top: 50%;
             left: 70%;
             transform: translate(-50%, -50%);
-            max-width: 500px;
+            width: 500px;
             background: rgba(255,255,255, .4);
-            padding: 10px 30px 30px;
+            padding: 10px 25px 30px;
             border-radius: 15px;
-            z-index: 2;
             
         }
+        
+        
         
         input[type="text"], textarea {
             background: rgba(255,255,255,.3) !important;
@@ -58,7 +59,7 @@
         }
         
         h1{
-            font-family: 'Dancing Script';
+            font-family: 'Playball', 'Dancing Script';
             font-weight: bold;
             font-size: 55px;
             color: #f01583;
@@ -73,9 +74,6 @@
             display: block;
         }
         
-        .container1{
-           left: 50%;
-        }
 
         #name_2::-webkit-input-placeholder,
         #textarea_2::-webkit-input-placeholder
@@ -116,8 +114,14 @@
             transition: .2s ease-in;
         }
         
-        
         @media (max-width:1023px){
+            
+            
+            .container1 {
+                left: 50%;
+            
+            }
+            
             h1 {
                 font-size: 35px;
             }
@@ -126,7 +130,7 @@
                 font-size: 25px;
             }
             
-            .lead1{
+            .lead1 {
                 font-size: 18px
             }
             
@@ -144,8 +148,9 @@
         @media (max-width:767px){
             
             .container1{
-                top:70%;
-                padding: 10px 13px;
+               transform: none;
+                position: static;
+                margin: 10px auto;
                 background: rgba(255,255,255, .5);
                 margin-bottom: 10px;
             }
@@ -179,10 +184,7 @@
         
         @media (max-width:639px){
             
-            .container1{
-                top:76%;
-               
-            }
+            
             h1 {
                 font-size: 25px;
             }
@@ -209,11 +211,7 @@
         
         @media (max-width:480px) and (orientation:portrait){
             
-            .container1{
-                top:50%;
-                left: 40%;
-               
-            }
+            
             h1 {
                 font-size: 25px;
             }
@@ -237,6 +235,7 @@
                 
             }
         }
+        
 
         </style>
 
