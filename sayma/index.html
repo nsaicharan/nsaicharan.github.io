@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" media="screen" href="bootstrap.css">
 	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Open+Sans|Mate+SC|Source+Serif+Pro" rel="stylesheet">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Sayma's Front Page Demo</title>
@@ -40,9 +40,10 @@
             outline: 0 none  !important;
             box-shadow: none ;
             border: 1px solid white;
-            padding: 20px 15px !important;
+            padding: 10px;
             font-size: 18px !important;
             font-weight: bold;
+            height: auto;
         }
         
         input[type="text"]:focus,
@@ -79,33 +80,18 @@
             display: block;
         }
         
-
-        #name_2::-webkit-input-placeholder,
-        #textarea_2::-webkit-input-placeholder
-        {
-          color:    #342b1a !important;
+        .form-control::-webkit-input-placeholder {
+          color: #342b1a !important;
         }
 
-        #name_2:-moz-placeholder,
-        #textarea_2:-moz-placeholder 
-        {
-          color:    #342b1a !important;
-        }
 
-        #name_2::-moz-placeholder,
-        #textarea_2::-moz-placeholder 
-        {
-          color:    #342b1a !important;
-        }
-
-        #name_2:-ms-input-placeholder,
-        #textarea_2:-ms-input-placeholder 
-        {
-          color:    #342b1a !important;
+        .form-control:-ms-input-placeholder{
+          color: #342b1a !important;
         }
 
         .form-control::-moz-placeholder{
-            color:    #342b1a;
+            color: #342b1a !important;
+            opacity: 1;
         }
 
         #btn {
