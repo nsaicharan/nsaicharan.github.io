@@ -12,7 +12,7 @@ header{
 }
 
 .logo{
-    padding: 40px 0 40px 0;
+    padding: 40px 8px;
     display: inline-block;
 }
 
@@ -352,6 +352,10 @@ footer a:hover{
   .paru1div p{
   		font-size:16px;
   }
+    
+    .paru2{
+        height: auto;
+    }    
 }
 
 @media screen and (max-width:320px){

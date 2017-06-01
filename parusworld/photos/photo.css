@@ -14,7 +14,7 @@ header{
 
 .logo{
  
-    padding: 40px 0 40px 0;
+    padding: 40px 8px;
     display: inline-block;
 }
 
@@ -131,6 +131,13 @@ footer a:hover{
 @media screen and (min-width:410px) and (max-width:500px){
     div img{
         width: 75%;
+    }
+}
+
+@media (max-width:767px){
+    div img{
+        max-height: auto;
+        min-height: auto;
     }
 }
 
