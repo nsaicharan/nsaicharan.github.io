@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" media="screen" href="bootstrap.css">
+	<link href="https://fonts.googleapis.com/css?family=Dancing+Script|Open+Sans|Mate+SC|Source+Serif+Pro" rel="stylesheet">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Sayma's Front Page Demo</title>
+
+	<!--  -->
+
+	<style>
+        body{
+            background: url('img2272a.jpg') no-repeat center top fixed; 
+            background-size: cover;
+            color: white;
+            text-align: center;
+            font-family:  'Open Sans', sans-serif;
+        }
+        
+        .container1{
+            position: absolute;
+            top: 50%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            width: 500px;
+            background: rgba(255, 228, 225, .3);
+            padding: 5px 25px 15px;
+            border-radius: 15px;
+            
+        }
+        
+        
+        
+        input[type="text"], 
+        textarea {
+            background: rgba(255, 228, 225, .3)  !important;
+            outline: 0 none  !important;
+            box-shadow: none ;
+            border: 1px solid white !important;
+            padding: 10px;
+            font-size: 18px !important;
+            font-weight: bold;
+            height: auto;
+        }
+        
+        input[type="text"]:focus,
+        textarea:focus{
+            background: rgba(255,255,255,.9) !important;
+            border-color: rgba(255, 0, 128, 0.8) !important;
+            box-shadow: none;
+            outline: 0 none !important;
+        }
+        
+        .lead1{
+            color: #000;
+            text-align: center;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        h1{
+            font-family: 'Dancing Script';
+            font-weight: bold;
+            font-size: 55px;
+            color: #ff0080;
+        }
+        
+        h2{
+            
+            font-size: 35px;
+            font-weight: bold;
+            font-family: 'Mate SC';
+            color: #815454;
+        }
+        
+        span{
+            display: block;
+        }
+        
+        .form-control::-webkit-input-placeholder {
+          color: #342b1a !important;
+        }
+
+
+        .form-control:-ms-input-placeholder{
+          color: #342b1a !important;
+        }
+
+        .form-control::-moz-placeholder{
+            color: #342b1a !important;
+            opacity: 1;
+        }
+
+        #btn {
+            background: #ff146e;
+            color: white;
+            border: none;
+            font-size: 20px;
+            border-radius: 8px;
+            padding: 8px 35px;
+            width:100%;
+            box-shadow: none;
+            outline-color: aliceblue;
+            letter-spacing: 1px;
+            font-family: 'Mate SC'
+        }
+        
+        #btn:hover {
+            background:  #ff0080;
+            transition: .2s ease-in;
+        }
+        
+    
+        .social-icons.icon-rotate .fa:hover, .social-icons.icon-rotate .fa:active { 
+            -webkit-transform: scale(1.1) rotate(360deg);
+            -moz-transform: scale(1.1) rotate(360deg);
+            -ms-transform: scale(1.1) rotate(360deg);
+            -o-transform: scale(1.1) rotate(360deg);
+            transform: scale(1.1) rotate(360deg);
+        }
+        
+        .social-icons .fa {
+            width: 45px;
+            height: 45px;
+            line-height: 45px;
+            text-align: center;
+            color: #FFF;
+            color: rgba(255, 255, 255, 0.8);
+            -webkit-transition: all 0.3s ease-in-out;
+            -moz-transition: all 0.3s ease-in-out;
+            -ms-transition: all 0.3s ease-in-out;
+            -o-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            border-radius: 50%;
+            margin-top:23px;
+            font-size: 20px;
+            
+        }
+        
+        .social-icons .fa:hover, .social-icons .fa:active {
+            color: #FFF;
+        }
+        
+        .social-icons .fa-facebook,.social-icons .fa-facebook-square{background-color:#3C599F;}  
+        .social-icons .fa-instagram{background-color:#405de6;}
+        .social-icons .fa-twitter,.social-icons .fa-twitter-square{background-color:#32CCFE;} 
+        
+        @media (max-width:1023px){
+            
+            body{
+                background-position: left center;
+            }
+            
+            .container1 {
+                left:50%;
+                transform: translateY(-50%), translateX(none);
+                margin: 0 auto;
+                width: 90%;
+                background: rgba(255, 228, 225, 0.5)
+            
+            }
+            
+            
+        }
+        
+        @media (max-width:767px){
+            
+            
+            body{
+                background-position: center center;
+            }
+            
+            .container1{
+                position: static;
+                transform: none;
+                margin: 40px auto 20px;
+                
+            }
+            
+            h1 {
+                font-size: 35px;
+            }
+            
+            h2 {
+                font-size: 25px;
+            }
+            
+            .lead1{
+                font-size: 16px
+            }
+            
+            input[type="text"], textarea {
+           
+                font-size: 16px !important;
+            }
+            
+            input[type="text"]:focus,
+            textarea:focus{
+                background: white !important;
+            }
+            
+            #btn {
+                font-size: 16px;
+                
+            }
+        }
+       
+        
+        @media (max-width:480px) and (orientation:portrait){
+            
+            body{
+                background-position: left center;
+                display: flex;
+                height: 100vh;
+                align-items: center;
+            }
+            
+            .container1{
+                margin: auto; 
+                padding: 3px 20px 10px;
+            }
+            
+            h1 {
+                font-size: 42px;
+            }
+            
+            h2 {
+                font-size: 27px;
+            }
+            
+            .lead1{
+                font-size: 20px
+            }
+            
+            input[type="text"], textarea {
+           
+                font-size: 20 !important;
+            }
+            
+            
+            #btn {
+                font-size: 20;
+                
+            }
+        }
+        
+         
+        @media (max-width:359px){
+            
+            
+            h1 {
+                font-size: 30px;
+            }
+            
+            h2 {
+                font-size: 22px;
+            }
+            
+            .lead1{
+                font-size: 14px
+            }
+            
+            input[type="text"], textarea {
+           
+                font-size: 14px !important;
+            }
+            
+            
+            #btn {
+                font-size: 14px;
+                
+            }
+        }
+        
+
+        </style>
+
+</head>
+
+<body>
+   
+        <div class="container1">
+
+           <h1>Sayma's Photography</h1>
+
+           <h2>Website Coming Soon!</h2> 
+
+           <p class="lead1">Have any questions? Shoot me an e-mail! </p>
+
+
+            <form action="">
+                <input class="form-control" id="name_2" placeholder="Name" type="text"> <br>
+                <input class="form-control" id="name_2" placeholder="Email Address" type="text"> <br>
+                <textarea class="form-control" id="textarea_2" placeholder="Message"  rows="3"></textarea> <br>
+                <input type="submit" id="btn" value="SUBMIT">
+               
+            </form>
+            
+            <ul class="social-icons icon-circle icon-rotate list-unstyled list-inline"> 
+              <li><a href="#"><i class="fa fa-twitter"></i></a> </li> 
+              <li><a href="#"><i class="fa fa-instagram"></i></a> 
+              </li>   
+              <li> <a href="#"><i class="fa fa-facebook"></i></a>
+              </li>
+                
+            </ul>
+        </div>
+        
+	<script fa-stack-1xsrc="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+	<script>
+	</script>
+
+</body>
+
+</html>

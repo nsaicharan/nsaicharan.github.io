@@ -1,0 +1,12 @@
+Hello Luff. I read your requirements and created a sample website to show you. Here's the link : https://projects.saicharan.com/luff/
+
+You may have noticed that position & size of background video looks similar to Roma Capital's video. But there's also another thing which is similar to Roma Capital's website: if you visit the site on a mobile you'll notice a background IMAGE instead of video background. (You can also check this on your computer by resizing your browser window)
+
+The reason why they used background image instead of background video is - usually file size of videos will be large, so in order to avoid wasting users bandwidth (mobile-data), it's a common practice to replace background video with an image. Also, in some mobile devices, autoplay feature is disabled by default.
+
+I hope that sample website would help you in deciding whether or not to hire me :) 
+
+In case if you're interested, message me the details of your existing website. I'll replace the slider with a video and show you my work.
+
+Thanks for your time,
+Sai

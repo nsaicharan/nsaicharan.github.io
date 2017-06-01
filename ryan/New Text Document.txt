@@ -1,0 +1,42 @@
+
+select{
+    width: 268px;
+    padding: 5px;
+    font-size: 16px;
+    line-height: 1;
+    border: 0;
+    border-radius: 5px;
+    height: 34px;
+    background: url(http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png) no-repeat right #fff;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-position-x: 244px;
+}
+
+<select>
+    <option value="1">Option 1</option>
+    <option value="2">Option 2</option>           
+</select>  
+
+
+==========
+
+<select class='select'>
+  <option value="foo">foo</option>
+    <option value="bar">bar</option>    
+</select>
+
+body {
+  margin: 20px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 2px 30px 2px 2px;
+    border: none;
+    background: #eee url("http://cdn1.iconfinder.com/data/icons/cc_mono_icon_set/blacks/16x16/br_down.png") no-repeat right center;
+  background-position: right 5px center;
+}
+       
