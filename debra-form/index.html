@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Bootstrap 101 Template</title>
+
+	<!-- Bootstrap -->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    
+    <style>
+		.results{
+			display: none;
+		}
+	</style>
+  </head>
+  <body>
+   
+   
+    <div class="container">
+        <h1 class="text-center">Form Sample</h1> <br><br>
+        
+        <div class="row">
+            <div class="col-sm-6">
+                <form id="find">
+                    <label for="state" class="h5">Enter your state <small>(Right now it only works for Alabama, California, Florida)</small> : </label>
+                    
+                    <input type="text" class="form-control" id="state" placeholder="Eg. Alabama" list="states">
+                    
+                    <datalist id="states">
+					  <option value="Florida">
+					  <option value="Alabama">
+					  <option value="California">
+					</datalist>
+                </form>
+            </div>
+            <div class="col-sm-6" style="padding-top:27px">
+                <a href="#" class="btn btn-primary btn-block btn-lg find-btn"> Find legislators in your state</a>
+            </div>
+        </div>
+        
+        <br><br>
+        
+        <div class="results">
+           	
+            <table class="table table-bordered">
+                <thead>
+                    <tr> 
+                        <th>Picture</th>
+                        <th>Name</th>
+                        <th>Phone No.</th>
+                    </tr>
+                </thead>
+                <tbody>
+                   
+                </tbody>
+            </table>
+        </div> <!--row-->
+     
+        <br><br>
+        
+        
+    </div> <!--Container-->
+    
+      
+      
+      
+<script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>      
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ 
+ <script src="main.js"></script>
+  </body>
+</html>
