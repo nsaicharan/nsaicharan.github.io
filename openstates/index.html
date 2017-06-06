@@ -3,26 +3,85 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Document</title>
+	<link rel="stylesheet" href="http://bootswatch.com/united/bootstrap.min.css">
+	<style>
+		table{
+			display: none;
+		}
+	</style>
 </head>
 <body>
-	<input type="text" />
-	<button>Click</button>
+	
 
+	<div class="container">
+	    <br><br><br><br>
+	    
+        <form class="form-inline text-center">
+        	<input type="text" class="form-control" /> 
+			<button class="btn btn-primary">Click</button>
 
+        </form>
+		
+		<br><br>
+		<table class="table">
+			<thead>
+				<tr><th>Photo</th> <th>Name</th> <th>Party</th></tr>
+			</thead>
+			<tbody>
+				
+			</tbody>
+		</table>
+	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script>
-		$("button").click(function(){
+		$("button").click(function(e){
   
+  		  e.preventDefault();
+
 		  var address = $("input").val();
 		  
 		  $.ajax({
-		    url: "https://crossorigin.me/https://openstates.org/api/v1/legislators/"+address,
-		    data: {apikey: "600a8b83-e6ac-421d-b03e-687f0edcee19"},
-		    success: function(data){
-		      console.log(data);
-		    }
+
+		  	url: "http://maps.googleapis.com/maps/api/geocode/json?address="+address,
+		  	success: function(data){
+		  		
+		  		var lat = data.results[0].geometry.location.lat;
+				var long = data.results[0].geometry.location.lng;
+
+				$.ajax({
+				    url: "https://crossorigin.me/https://openstates.org/api/v1/legislators/geo/",
+				    data: {apikey: "600a8b83-e6ac-421d-b03e-687f0edcee19",
+				    		lat: lat,
+				    		long: long	
+				    	},
+				    success: function(data){
+				      console.log(data);
+
+				      $("table").css({"display":"block"})
+
+				      $("tbody").html("");
+				      
+				      for(i=0; i<data.length; i++){
+				      	$("tbody").append(`
+						
+							<tr>
+								<td><img src="${data[i].photo_url}" class="img-responsive"></td>
+								<td>${data[i].full_name}</td>
+								<td>${data[i].party}
+							</tr>
+				      	`)
+				      }
+				      
+
+				    }
+				  })
+
+		  	}
+
 		  })
+
+		  
 		  
 		})
 	</script>
