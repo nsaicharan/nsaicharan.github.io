@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" />
+	<button>Click</button>
+
+
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		$("button").click(function(){
+  
+		  var address = $("input").val();
+		  
+		  $.ajax({
+		    url: "https://openstates.org/api/v1/METHOD/",
+		    data: {apikey: "600a8b83-e6ac-421d-b03e-687f0edcee19"},
+		    success: function(data){
+		      console.log(data);
+		    }
+		  })
+		  
+		})
+	</script>
+</body>
+</html>
