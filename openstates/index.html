@@ -17,7 +17,7 @@
 		  var address = $("input").val();
 		  
 		  $.ajax({
-		    url: "https://crossorigin.me/https://openstates.org/api/v1/METHOD/",
+		    url: "https://crossorigin.me/https://openstates.org/api/v1/legislators/"+address,
 		    data: {apikey: "600a8b83-e6ac-421d-b03e-687f0edcee19"},
 		    success: function(data){
 		      console.log(data);
