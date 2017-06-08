@@ -1,0 +1,13 @@
+Hi Pixel! I see you're looking for developer who can redirect users who visit your new URL to another website.
+
+There are few limitations, but still it's possible to display your new URL after redirecting it other website.
+
+Check this link: https://projects.saicharan.com/pixel
+
+You'll notice that when you visit the above URL in COMPUTER, it redirects to https://sarahdrasnerdesign.com/, but you'll still see https://projects.saicharan.com/pixel as a URL. 
+
+When you visit the the same URL in MOBILES, it redirects to https://labnol.org.
+
+Is that how you wanted it to be? Let me know if you have any questions.
+
+- Charan

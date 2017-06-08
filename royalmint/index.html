@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Royal Mint Calculator Demo</title>
+	
+
+	<script
+	  src="https://code.jquery.com/jquery-2.2.4.min.js"
+	  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+	  crossorigin="anonymous"></script>
+
+	<script>
+
+		$.ajax({
+			
+			url: 'https://crossorigin.me/https://www.royalmintbullion.com/Refresh-Live-Prices',
+			success: function(data){
+
+				console.log(data);
+				
+				$(".price").html(data.Data.BidGold);
+
+			}
+		})
+
+	</script>
+
+	<style>
+		
+		body{
+			height: 100vh;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+			margin:0;
+			font-size: 1.3em;
+		}
+		
+		h1{
+			margin-top: 0;
+		}
+
+		span{
+			font-weight: bold;
+		}
+
+	</style>
+
+</head>
+<body>
+	
+	<div class="container">
+		<h1>Calculate Price</h1>
+		<p>Current Gold Price(buy): £<span class="price"></span> per troy ounce</p>
+
+		<form action="">
+			
+			<label for="weight">Weight:</label>
+			<input type="text" id="weight">
+			<select name="" id="unit">
+				<option value="1">Troy Ounce</option>
+				<option value="31.1035">Gram</option>
+			</select>
+			<button type="submit">Calculate</button>
+		</form>
+		
+		<div class="content">
+		    
+		</div>
+
+	</div>
+
+	<script>
+			
+	$(document).ready(function(){
+
+
+			$("button").click(function(e){
+
+			e.preventDefault();
+
+
+			if ($("#weight").val() == ""){
+
+				$(".content").html("<br> <span style='color:red'>Please enter weight<span>");
+
+				return false;
+			}
+
+
+			if ($(".price").text() !== ""){
+
+				var bp = $(".price").text();
+
+				var weight = $("#weight").val();
+				var unit = $("#unit").val();
+
+				var result = .96 * bp * weight * unit;
+
+				$(".content").html("<p>Current Valuation: £<span>" + result + 
+									"</span> [ 96% of ("+ weight + "*" + unit + "*" + bp +
+									 ") ]</p><small>Disclaimer: The above price will change regularly." );
+				
+				
+			} else {
+
+				$(".content").html("<br> The API is being loaded. Please try again afer few seconds.");
+			}
+
+		})
+
+	})
+		
+	</script>
+</body>
+</html>
