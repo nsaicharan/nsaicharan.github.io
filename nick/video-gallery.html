@@ -31,7 +31,8 @@
 			border: 2px solid #333;
 		}
 		
-		.btn:hover{
+		.btn:hover,
+		.btn:active{
 			color: #333;
 			background: white;
 		}
@@ -72,7 +73,8 @@
 			font-size: 60px;
 		}
 		
-		.fa:hover {
+		.fa:hover,
+		.fa:active{
 			color: #ffb45c;
 			transition: .2s ease;
 		}
@@ -103,25 +105,25 @@
 
 		<div class="photo-container">
 			<div class="col">
-				<a href="http://vimeo.com/29193046" class="swipebox" title="Video ONE">
+				<a href="https://www.youtube.com/watch?v=pRpeEdMmmQ0&autoplay=1" class="swipebox" title="Video ONE">
 					<i class="fa fa-play" title="Play"></i>
 				</a>
 			</div>
 
 			<div class="col">
-				<a href="http://vimeo.com/29193046" class="swipebox" title="Video TWO">
+				<a href="https://www.youtube.com/watch?v=pRpeEdMmmQ0&autoplay=1" class="swipebox" title="Video TWO">
 					<i class="fa fa-play" title="Play"></i>
 				</a>
 			</div>
 			
 			<div class="col">
-				<a href="http://vimeo.com/29193046" class="swipebox" title="Video THREE">
+				<a href="https://www.youtube.com/watch?v=pRpeEdMmmQ0&autoplay=1" class="swipebox" title="Video THREE">
 					<i class="fa fa-play" title="Play"></i>
 				</a>
 			</div>
 			
 			<div class="col">
-				<a href="http://vimeo.com/29193046" class="swipebox" title="Video FOUR">
+				<a href="https://www.youtube.com/watch?v=pRpeEdMmmQ0&autoplay=1" class="swipebox" title="Video FOUR">
 					<i class="fa fa-play" title="Play"></i>
 				</a>
 			</div>
@@ -132,7 +134,7 @@
 	<script src="jquery-2.1.0.min.js"></script>
 	<script src="jquery.swipebox.min.js"></script>
 	<script>
-		$( '.swipebox' ).swipebox();
+		$( '.swipebox' ).swipebox({autoplayVideos: true});
 	</script>
 	
 </body>
