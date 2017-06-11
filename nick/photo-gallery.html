@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Photo Gallery</title>
+	<link rel="stylesheet" href="swipebox.min.css">
+	
+	<style>
+		
+		html,
+		body{
+			margin: 0;
+			padding: 0;
+	
+		}
+		
+		.text-container{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		
+		.btn{
+			padding: 10px 20px;
+			border-radius: 5px;
+			display: inline-block;
+			background: #333;
+			color: white;
+			text-decoration: none;
+			border: 2px solid #333;
+		}
+		
+		.btn:hover{
+			color: #333;
+			background: white;
+		}
+		
+		.container{
+			max-width: 95%;
+			width: 1150px;
+			margin: 40px auto;
+		}
+		
+		.photo-container{
+			display: flex;
+			flex-wrap: wrap;
+			text-align: center;
+			clear: both;
+		}
+
+		*{
+			box-sizing: border-box;
+		}
+		.col{
+			width: 50%;
+			padding: 10px;
+		}
+
+		img{
+			max-width: 100%;
+			
+		}
+		
+		@media (max-width: 800px){
+			.col {
+				width: 100%;
+			}
+		}
+	
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		
+		<div class="text-container">
+			<h1>Photo Gallery</h1>
+		
+			<a href="index.html" class="btn">Main Menu</a>
+		</div>
+
+		<div class="photo-container">
+			<div class="col">
+				<a href="assets/NYC-Traffic.jpg" class="swipebox" title="Image ONE">
+					<img src="assets/NYC-Traffic.jpg" alt="image">
+				</a>
+			</div>
+
+			<div class="col">
+				<a href="assets/NYC-Traffic.jpg" class="swipebox" title="Image TWO">
+					<img src="assets/NYC-Traffic.jpg" alt="image">
+				</a>
+			</div>
+
+			<div class="col">
+				<a href="assets/NYC-Traffic.jpg" class="swipebox" title="Image THREE">
+					<img src="assets/NYC-Traffic.jpg" alt="image">
+				</a>
+			</div>
+
+			<div class="col">
+				<a href="assets/NYC-Traffic.jpg" class="swipebox" title="Image FOUR">
+					<img src="assets/NYC-Traffic.jpg" alt="image">
+				</a>
+			</div>
+		</div>
+	
+	</div> <!--Container-->
+	
+	<script src="jquery-2.1.0.min.js"></script>
+	<script src="jquery.swipebox.min.js"></script>
+	<script>
+		$( '.swipebox' ).swipebox();
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Photo Gallery</title>
+	<link rel="stylesheet" href="swipebox.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<style>
+		
+		html,
+		body{
+			margin: 0;
+			padding: 0;
+	
+		}
+		
+		.text-container{
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+		}
+		
+		.btn{
+			padding: 10px 20px;
+			border-radius: 5px;
+			display: inline-block;
+			background: #333;
+			color: white;
+			text-decoration: none;
+			border: 2px solid #333;
+		}
+		
+		.btn:hover{
+			color: #333;
+			background: white;
+		}
+		
+		.container{
+			max-width: 95%;
+			width: 1150px;
+			margin: 40px auto;
+		}
+		
+		.photo-container{
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		*{
+			box-sizing: border-box;
+		}
+		.col{
+			width: 49%;
+			padding: 150px 0;
+			background: url(assets/NYC-Traffic.jpg) no-repeat center center;
+			background-size: cover;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-direction: column;
+			margin: .5%;
+		}
+
+		img{
+			width: 100%;
+			
+		}
+		
+		.fa {
+			color: white;
+			font-size: 60px;
+		}
+		
+		.fa:hover {
+			color: papayawhip;
+			transition: .2s ease;
+		}
+		
+		@media (max-width: 800px){
+			.col {
+				width: 100%;
+			}
+		}
+		
+		@media (max-width: 480px){
+			.col {
+				padding: 100px 0;
+			}
+		}
+	
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		
+		<div class="text-container">
+			<h1>Video Gallery</h1>
+		
+			<a href="index.html" class="btn">Main Menu</a>
+		</div>
+
+		<div class="photo-container">
+			<div class="col">
+				<a href="http://vimeo.com/29193046" class="swipebox" title="Video ONE">
+					<i class="fa fa-play" title="Play"></i>
+				</a>
+			</div>
+
+			<div class="col">
+				<a href="http://vimeo.com/29193046" class="swipebox" title="Video TWO">
+					<i class="fa fa-play" title="Play"></i>
+				</a>
+			</div>
+			
+			<div class="col">
+				<a href="http://vimeo.com/29193046" class="swipebox" title="Video THREE">
+					<i class="fa fa-play" title="Play"></i>
+				</a>
+			</div>
+			
+			<div class="col">
+				<a href="http://vimeo.com/29193046" class="swipebox" title="Video FOUR">
+					<i class="fa fa-play" title="Play"></i>
+				</a>
+			</div>
+		</div>
+	
+	</div> <!--Container-->
+	
+	<script src="jquery-2.1.0.min.js"></script>
+	<script src="jquery.swipebox.min.js"></script>
+	<script>
+		$( '.swipebox' ).swipebox();
+	</script>
+	
+</body>
+</html>

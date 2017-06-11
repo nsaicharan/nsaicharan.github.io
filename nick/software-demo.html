@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hero Video</title>
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        #hero-video {
+            position: fixed;
+            top: 50%; 
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            transform: translate(-50%, -50%);
+        }
+
+        .text-container {
+			z-index: 3;
+            display: flex;
+			flex-direction: column;
+			justify-content: center;
+			position: relative;
+			height: 100%;
+			
+        }
+
+		
+		a {
+			color: white;
+		}
+		
+		.fa {
+			font-size: 11vmin;
+			padding: 10px 50px;
+		}
+		
+		.fa:hover{
+			transform: scale(1.2);
+			transition: all .2s ease-out;
+		}
+		
+		.indicator {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 8vmin;
+			color: white;
+		}
+
+    </style>
+</head>
+
+<body>
+
+    <video id="hero-video" poster="assets/NYC-Traffic.jpg" autoplay loop muted>
+        <source src="assets/NYC-Traffic.mp4" type="video/mp4" /> You're device doesn't support video.
+    </video>
+
+    <div class="text-container"> 
+     
+        
+         	<div class="item">
+         		<a href="#"><i class="fa fa-circle fa-picture-o" title="Video ONE"></i></a>
+         	</div>
+            
+            <div class="item">
+         		<a href="#"><i class="fa fa-circle fa-picture-o" title="Video TWO"></i></a>
+         	</div>
+           <div class="item">
+         		<a href="#"><i class="fa fa-circle fa-picture-o" title="Video THREE"></i></a>
+         	</div>
+           <div class="item">
+         		<a href="#"><i class="fa fa-circle fa-picture-o" title="Video FOUR"></i></a>
+         	</div>
+           <div class="item">
+         		<a href="#"><i class="fa fa-circle fa-picture-o" title="Video FIVE"></i></a>
+         	</div>
+        
+    </div> 
+    
+    <div class="indicator">
+    </div>
+    
+    <script src="jquery-2.1.0.min.js"></script>
+    
+    <script>
+		
+		$(".fa").click(function(){
+			
+			var video = document.querySelector("video");
+			
+			video.pause();
+			video.currentTime = 0;
+			video.play();
+			
+			
+			var text = $(this).attr('title');
+
+			$(".indicator").html(text);
+			$(".indicator").fadeIn(200)
+				
+			
+			setTimeout(function(){
+				$(".indicator").fadeOut(1500);
+			}, 3000)
+		})
+	
+		
+	</script>
+   
+</body>
+</html>
