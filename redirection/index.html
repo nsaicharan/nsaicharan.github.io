@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Redirection Page</title>
+	<style>
+		p{
+			font-size: 3em;
+			margin-top: 100px;
+			text-align: center;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+	
+	<script>
+		if(document.referrer == 'http://eco.saicharan.com/samuel/'){
+			document.body.innerHTML = `<p>Hi Samuel! Since you came here from <strong>http://eco.saicharan.com/samuel/</strong>, you're being redirected to <strong>Google.com</strong>...`;
+
+			setTimeout(() => {
+
+				window.location = 'https://google.com';
+
+			}, 2000 );
+		} else {
+			document.body.innerHTML = `<p>Who are you?!</p>`;
+		}
+	</script>
+</body>
+</html>
