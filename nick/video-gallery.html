@@ -107,25 +107,25 @@
 
 		<div class="photo-container">
 			<div class="col">
-				<a href="https://www.youtube.com/watch?v=pRpeEdMmmQ0&autoplay=1" class="swipebox" title="Video ONE">
+				<a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ&controls=0" class="swipebox" title="Video ONE">
 					<i class="fa fa-play" title="Play"></i>
 				</a>
 			</div>
 
 			<div class="col">
-				<a href="https://www.youtube.com/watch?v=pRpeEdMmmQ0&autoplay=1" class="swipebox" title="Video TWO">
+				<a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ&controls=0" class="swipebox" title="Video TWO">
 					<i class="fa fa-play" title="Play"></i>
 				</a>
 			</div>
 			
 			<div class="col">
-				<a href="https://www.youtube.com/watch?v=pRpeEdMmmQ0&autoplay=1" class="swipebox" title="Video THREE">
+				<a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ&controls=0" class="swipebox" title="Video THREE">
 					<i class="fa fa-play" title="Play"></i>
 				</a>
 			</div>
 			
 			<div class="col">
-				<a href="https://www.youtube.com/watch?v=pRpeEdMmmQ0&autoplay=1" class="swipebox" title="Video FOUR">
+				<a href="https://www.youtube.com/watch?v=aqz-KE-bpKQ&controls=0" class="swipebox" title="Video FOUR">
 					<i class="fa fa-play" title="Play"></i>
 				</a>
 			</div>
@@ -136,7 +136,44 @@
 	<script src="jquery-2.1.0.min.js"></script>
 	<script src="jquery.swipebox.min.js"></script>
 	<script>
-		$( '.swipebox' ).swipebox({autoplayVideos: true});
+             
+    </script>
+	<script>                      
+        var autoplaySlide = function() {
+            var $slider = jQuery('#swipebox-slider');
+            var $slide = $slider.children('.slide.current');
+
+            var $iframe = $slide.find('iframe');
+            if ( $iframe.length > 0 ) {
+                if ( $iframe.attr('src').indexOf('youtu') >= 0 ) {
+                    if ( $iframe.attr('src').indexOf('autoplay=') >= 0 ) {
+                        $iframe.attr('src', function() { return jQuery(this).attr('src').replace('autoplay=0', 'autoplay=1'); });
+                    }else{
+                        $iframe.attr('src', function() { return jQuery(this).attr('src') + '&autoplay=1' });
+                    }
+                }
+            }
+
+            // Stop other slides
+            $slider.children('.slide').not('.current').each(function() {
+                var $iframe = jQuery(this).find('iframe');
+
+                if ( $iframe.length > 0 && $iframe.attr('src').indexOf('youtu') >= 0 ) {
+                    if ( $iframe.attr('src').indexOf('autoplay=') >= 0 ) {
+                        $iframe.attr('src', function() { return jQuery(this).attr('src').replace('autoplay=1', 'autoplay=0'); });
+                    }else{
+                        $iframe.attr('src', function() { return jQuery(this).attr('src') + '&autoplay=0' });
+                    }
+                }
+            });
+        };
+
+        $('.swipebox').swipebox({
+            autoplayVideos: false, 
+            nextSlide : autoplaySlide,
+            prevSlide : autoplaySlide,
+            afterOpen : autoplaySlide
+        });
 	</script>
 	
 </body>
