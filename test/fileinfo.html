@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>FileInfo</title>
+	<style>
+
+	 	body{
+	 		margin: 0;
+	 	}
+		.container{
+			max-width: 960px;
+			margin:0 auto;
+			padding: 10px;
+		}
+
+		hr{
+			margin: 50px 0;
+		}
+
+		h1,
+		p{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<h1>FileInfo</h1>
+		<p>Find the details of your files with JavaScript</p>
+
+		<h2>jQuery</h2>
+		<input type="file" multiple id="upload">
+		<ul id="list"></ul>
+
+		<hr>
+
+		<h2>Vanilla</h2>
+		<input type="file" multiple id="upload2">
+		<ul id="list2"></ul>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+	
+	<script>
+
+		console.log('Check console after choosing files');
+
+		/*jQuery*/
+		var upload = $("#upload");
+
+		upload.on('change', function(){
+
+			console.log("jQuery:", upload);
+			
+			$('#list').empty();
+			var length = upload[0].files.length;
+			var items = upload[0].files;
+
+
+			if(length > 0){
+
+				for(var i=0; i < length; i++){
+
+					var name = items[i].name;
+					var size = items[i].size;
+					var type = items[i].type;
+
+					$("#list").append(`<li>Name: <b>${name}</b> | Size: <b>${size} bytes</b> | Type: <b>${type}</b>`)
+
+				}
+			}
+
+		});
+
+		/*Vanilla*/
+		var upload2 = document.querySelector("#upload2");
+		var list2 = document.querySelector("#list2");
+
+		upload2.onchange = function(e){
+
+			list2.innerHTML = '';
+			var length = upload2.files.length;
+			var items = upload2.files;
+			console.log("Vanilla:", e);
+
+			if(length>0){
+				for (var i = 0; i < length; i++) {
+			 	
+				 	var name = items[i].name;
+				 	var size = items[i].size;
+				 	var type = items[i].type;
+
+				 	list2.innerHTML += `<li>Name: <b>${name}</b> | Size: <b>${size} bytes</b> | Type: <b>${type}</b>`;
+				}
+			}
+		}
+		
+	</script>
+</body>
+</html>
