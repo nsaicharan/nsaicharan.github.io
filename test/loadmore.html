@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Show more comments using JSON</title>
+
+	<style>
+		.container{
+			max-width: 95%;
+			margin: 40px auto;
+			display: flex;
+			flex-wrap: wrap;
+			text-align: center;
+
+		}
+
+		*{
+			box-sizing: border-box;
+		}
+		.col{
+			width: 50%;
+			padding: 10px;
+		}
+
+		img{
+			max-width: 100%;
+			
+		}
+
+		button{
+			border: none;
+			margin: 5px auto;
+			display: block;
+			cursor: pointer;
+			padding: 10px 20px;
+			background: #333;
+			color: white;
+			border-radius: 5px;
+			font-size: 1.5em;
+		}
+
+		.button2{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		
+	</div>
+	
+	<button class="button1" type="button">Load Images</button>
+	<button class="button2" type="button">Show Less</button>
+
+	<script>
+		var images = [
+		
+			"https://unsplash.it/601/400", 
+			"https://unsplash.it/602/400", 
+			"https://unsplash.it/603/400", 
+			"https://unsplash.it/604/400", 
+			"https://unsplash.it/605/400", 
+			"https://unsplash.it/606/400",
+			"https://unsplash.it/607/400", 
+			"https://unsplash.it/608/400", 
+			"https://unsplash.it/609/400"
+		];
+
+		var number = 0;
+
+		document.querySelector(".button1").addEventListener("click",  load);
+
+		function load() {
+
+			number += 2;
+
+			buttons();
+
+			if (number <= images.length) {
+
+				document.querySelector(".container").innerHTML = ""; 
+
+				for (var i=0; i<number; i++) {
+
+			    	document.querySelector(".container").innerHTML += ` 
+
+			    	<div class="col"> 
+						<img src="${images[i]}">
+			    	</div> `;
+				}
+
+			} else {
+
+				if ((number-1) == images.length) { 
+
+					document.querySelector(".container").innerHTML = ""; 
+
+					for (var i=0; i<number-1; i++) {
+
+				    	document.querySelector(".container").innerHTML += ` 
+
+				    	<div class="col"> 
+							<img src="${images[i]}">
+				    	</div> `;
+					}
+
+
+				} else {
+					alert("No more images!");
+				}
+			}
+		}
+
+		document.querySelector(".button2").addEventListener("click",  (e) => {
+
+			number -= 4;
+			load();
+			buttons()
+
+		});
+
+		function buttons(){
+			console.log(number);
+
+			if (number < 1){
+				document.querySelector(".button2").style.display = 'none';
+			} else {
+				document.querySelector(".button2").style.display = 'block';
+			}
+
+			if(number >= 2){
+				document.querySelector(".button1").innerText = "Load More";
+			} else {
+				document.querySelector(".button1").innerText = "Load Images";
+
+			}
+
+			if (number >=  images.length) {
+				document.querySelector(".button1").style.display = 'none';
+			} else {
+				document.querySelector(".button1").style.display = 'block';
+			}
+
+			if(!document.querySelector(".container").hasChildNodes()){
+				document.querySelector(".container").innerHTML += "<p> NO IMAGES</p>";
+			}
+		}
+
+	</script>
+</body>
+</html>
