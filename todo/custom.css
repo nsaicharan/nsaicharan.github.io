@@ -1,0 +1,230 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 16px;
+}
+
+.header-container {
+	max-width: 700px;
+	margin: 0 auto;
+}
+
+hr {
+	margin: 30px 0;
+}
+
+header {
+	background: #ffad2a;
+	padding: 30px 0;
+	text-align: center;
+}
+
+h1 {
+		font-family: 'Permanent Marker';
+		font-size: 8vmin;
+		margin-top:0;
+		color: #444;
+}
+
+input {
+	width: calc(100% - 150px);
+	border: none;
+	outline: none;
+	text-indent: 5px;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 20px;
+	font-family: 'Montserrat, sans-serif';
+	background: white;
+}
+
+.add {
+	border: none;
+	cursor: pointer;
+	background: #444;
+	color: white;
+	outline: none;
+	width: 100px;
+	padding: 10px;
+	border-radius: 5px;
+	font-size: 20px;
+	font-family: 'Montserrat, sans-serif';
+}
+
+.add:hover{
+	background: #555;
+	transition: .3s ease;
+}
+
+.list-container {
+	display: flex;
+	max-width: 1150px;
+	margin: 40px auto 5px;
+}
+
+ul {
+	flex: 1;
+	background: #fdfdfd;
+	margin: 30px 5px 0;
+	padding: 20px;
+	position: relative;
+}
+
+li {
+	margin: 5px 0;
+	padding: 8px 0 14px;
+	border-bottom: 1px solid #ccc;
+	list-style: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	align-items: baseline;
+}
+
+li:last-child {
+	border: none;
+}
+
+.text {
+	flex: 1;
+}
+
+.buttons button {
+	margin: 0 5px;
+}
+
+#list {
+	border: 2px solid #444;
+	
+}
+
+#list2 {
+	border: 2px solid #4cdd4c;
+	
+}
+
+.buttons button {
+	border: none;
+	padding: 5px;
+	color: white;
+	cursor: pointer;
+	font-family: 'Montserrat, sans-serif';
+}
+
+.buttons button:hover,
+.buttons button:focus{
+		opacity: .7;
+		transition: .3s ease;
+		outline: none;
+}
+
+.buttons button:first-child {
+	background: tomato;
+}
+
+#list .buttons button:nth-child(2) {
+	background: #4cdd4c;
+}
+
+#list2 .buttons button:nth-child(2) {
+	background: #444;
+}
+
+#list:before{
+	content: 'Todo';
+	position: absolute;
+	top: -24px;
+	left: 50%;
+	width: 100%;
+	font-family:  Satisfy, sans-serif;
+	font-size: 30px;
+	font-weight: bold;font-weight: bold;
+	color: #ffad2a;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+
+#list2:before{
+	content: 'Completed';
+	position: absolute;
+	top: -28px;
+	left: 50%;
+	width: 100%;
+	font-family:  Satisfy, sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+	color: #ffad2a;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+
+#list:empty,
+#list2:empty {
+	padding: 20px 0;
+}
+
+#list:empty:after {
+	content: "You have no tasks to do.";
+}
+
+#list2:empty:after {
+	content: "You haven't completed any  task.";
+}
+
+#list:empty:after,
+#list2:empty:after {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	text-align: center;
+	transform: translate(-50%, -50%);
+}
+
+@media (max-width:800px) {
+	.list-container {
+		display: block;
+	}
+	
+	ul {
+		margin-top: 65px;
+	}
+}
+
+@media (max-width:480px) {
+	
+	header {
+		padding: 10px;
+	}
+	
+	h1 {
+		margin-bottom: 10px;
+	}
+	
+	input {
+		display: block;
+		width:90%;
+		margin: 0 auto;
+	}
+	
+	.add {
+		display: block;
+		width: 96%;
+		margin: 8px auto 0;
+	}
+	
+	li {
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	.text {
+		margin-bottom: 10px;
+	}
+	
+	ul {
+		padding: 10px;
+	}
+}
