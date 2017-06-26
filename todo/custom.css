@@ -72,13 +72,12 @@ ul {
 
 li {
 	margin: 5px 0;
-	padding: 8px 0 14px;
+	padding: 8px 0 13px;
 	border-bottom: 1px solid #ccc;
 	list-style: none;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	align-items: baseline;
 }
 
 li:last-child {
@@ -213,7 +212,6 @@ li:last-child {
 	
 	li {
 		flex-direction: column;
-		align-items: center;
 	}
 	
 	.text {
