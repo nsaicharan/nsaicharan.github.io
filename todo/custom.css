@@ -31,7 +31,6 @@ h1 {
 input {
 	width: calc(100% - 150px);
 	border: none;
-	outline: none;
 	text-indent: 5px;
 	padding: 10px;
 	border-radius: 5px;
@@ -45,7 +44,6 @@ input {
 	cursor: pointer;
 	background: #444;
 	color: white;
-	outline: none;
 	width: 100px;
 	padding: 10px;
 	border-radius: 5px;
@@ -61,7 +59,7 @@ input {
 .list-container {
 	display: flex;
 	max-width: 1150px;
-	margin: 40px auto 5px;
+	margin: 40px auto 10px;
 }
 
 ul {
@@ -96,12 +94,12 @@ li:last-child {
 }
 
 #list {
-	border: 2px solid #444;
+	border: 2px solid #555;
 	
 }
 
 #list2 {
-	border: 2px solid #4cdd4c;
+	border: 2px solid yellowgreen;
 	
 }
 
@@ -113,11 +111,9 @@ li:last-child {
 	font-family: 'Montserrat, sans-serif';
 }
 
-.buttons button:hover,
-.buttons button:focus{
-		opacity: .7;
+.buttons button:hover{
+		opacity: .8;
 		transition: .3s ease;
-		outline: none;
 }
 
 .buttons button:first-child {
@@ -125,7 +121,7 @@ li:last-child {
 }
 
 #list .buttons button:nth-child(2) {
-	background: #4cdd4c;
+	background: yellowgreen;
 }
 
 #list2 .buttons button:nth-child(2) {
