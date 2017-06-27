@@ -1,0 +1,76 @@
+body {
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 1150px;
+	margin: 20px auto;
+	padding: 10px;
+}
+
+h1 {
+	
+	font-weight: normal;
+	padding-left: 10px;
+	margin: 0;
+}
+
+h1>span{
+	font-weight: bold;
+}
+
+.left span {
+	display: block;
+	font-size: 1.5em;
+}
+
+button {
+	background: yellowgreen;
+	padding: 10px;
+}
+
+.main {
+	display: flex;
+	height: 450px;
+	border-bottom: 1px solid grey;
+}
+
+.left {
+	background: url(Asset%201.png) no-repeat;
+	background-position: bottom right;
+	flex: 1;
+	padding: 10px;
+	color: yellowgreen;
+}
+
+.right {
+	flex: 1;
+	padding: 10px;
+	text-align: center;
+}
+
+form {
+ max-width: 300px;
+ margin: 0 auto;
+}
+
+input {
+	padding: 8px;
+	text-align: right;
+	width: 100%;
+	margin-bottom: 4px;
+}
+
+button {
+	width: 100%;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+footer{
+	text-align: center;
+}
