@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Monitor Screen</title>
+
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+		}
+		
+		iframe{
+			width:103%;
+			height: 100%;
+			border: 1px solid red;
+		}
+		
+		.top{
+			height: 100vh;
+			width: 100%;
+			overflow: hidden;
+		}
+		
+		.bottom{
+			height: 75vh;
+			display: flex;
+		}
+		
+		.left,
+		.right{
+			flex: 1;
+			overflow: hidden;
+		}
+	</style>
+</head>
+
+<body>
+	
+	<div class="top">
+		<iframe src="https://projects.saicharan.com/todo" frameborder="0"></iframe>
+	</div>
+	
+	<div class="bottom">
+	    <div class="left">
+	    	<iframe src="http://duckduckgo.com" frameborder="0"></iframe>
+
+	    </div>
+		
+		<div class="right">
+			<iframe src="https://necolas.github.io/normalize.css/" frameborder="0"></iframe>
+		</div>
+		
+	</div>
+	
+
+</body>
+
+</html>
