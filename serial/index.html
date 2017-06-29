@@ -24,11 +24,11 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            background: transparent;
             width: 100vw;
             height: 100%;
             z-index: -1;
             opacity: 0;
-            background: transparent;
             transition: .3s ease;
         }
 
@@ -50,9 +50,11 @@
             transform: translate(-50%, -50%);
             width: 600px;
             max-width: 90%;
+            max-height: 95vh;
+            overflow-y: auto;
             background: white;
-            padding: 10px 20px;
             color: #333;
+            padding: 10px 20px;
             border-radius: 5px;
             box-shadow: 0 0 6px 1px #ccc;
         }
@@ -63,9 +65,9 @@
 
         .box .close {
             position: absolute;
-            top: -10px;
+            top: -15px;
             right: 10px;
-            font-size: 50px;
+            font-size: 60px;
             cursor: pointer;
         }
 
