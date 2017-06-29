@@ -51,7 +51,7 @@
             opacity: 1;
         }
 
-        .box {
+        .popup{
             position: absolute;
             top: 50%;
             left: 50%;
@@ -77,11 +77,11 @@
             max-width: 100%;
         }
 
-        .box p {
+        .popup p {
             text-align: left;
         }
 
-        .box .close {
+        .popup .close {
             position: absolute;
             top: -15px;
             right: 10px;
@@ -89,8 +89,8 @@
             cursor: pointer;
         }
 
-        .box .close:hover,
-        .box .close:active {
+        .popup .close:hover,
+        .popup .close:active {
             color: orange;
             transition: .2s ease-in;
         }
@@ -110,7 +110,7 @@
     <button class="find-serial-btn">FIND SERIAL NUMBER</button>
     
     <div class="popup-container">
-        <div class="box">
+        <div class="popup">
             <span class="close">&times;</span>
 
             <h2>FIND SERIAL NUMBER</h2>
@@ -124,7 +124,7 @@
     <script>
         var serialButton = document.querySelector(".find-serial-btn");
         var container = document.querySelector(".popup-container");
-        var close = document.querySelector(".box .close");
+        var close = document.querySelector(".popup .close");
 
         serialButton.onclick = function(e){
             e.preventDefault();
