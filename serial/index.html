@@ -69,7 +69,8 @@
             cursor: pointer;
         }
 
-        .box .close:hover {
+        .box .close:hover,
+        .box .close:active {
             color: orange;
             transition: .2s ease-in;
         }
@@ -85,21 +86,25 @@
         }
 
         input {
-            padding: 11px;
+            padding: 10px;
+            font-size: 16px;
             border: 1px solid orange;
             width: calc(90% - 120px);
         }
 
-        button{
+        button {
             padding: 10px 5px;
             background: orange;
             border: 1px solid orange;
-            border:none;
             cursor: pointer;
             color:white;
             font-size: 16px;
             width: 120px;
 
+        }
+
+        button:hover {
+            background: darkorange;
         }
     </style>
 </head>
