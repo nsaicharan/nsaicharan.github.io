@@ -19,35 +19,21 @@
             box-sizing: border-box;
         }
 
-        form {
-            max-width: 500px;
-            padding: 10px;
-            margin: 100px auto 0;
-        }
-
-        input {
-            padding: 10px;
-            font-size: 16px;
-            border: 1px solid orange;
-            width: calc(90% - 120px);
-        }
-
-        button {
-            padding: 10px 5px;
+        .find-serial-btn {
+            padding: 20px;
             background: orange;
             border: 1px solid orange;
             cursor: pointer;
             color:white;
             font-size: 16px;
-            width: 120px;
-
+            font-family: 'Montserrat', sans-serif;
         }
 
-        button:hover {
+        .find-serial-btn:hover {
             background: darkorange;
         }
 
-        .container {
+        .popup-container {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -108,17 +94,22 @@
             color: orange;
             transition: .2s ease-in;
         }
+
+        /* Below CSS code should NOT be used on the actual site */
+        .find-serial-btn{
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
         
     </style>
 </head>
 <body>
     
-    <form>
-        <input type="text" placeholder="Enter Serial No.">
-        <button>How To Find?</button>
-    </form>
-
-    <div class="container">
+    <button class="find-serial-btn">FIND SERIAL NUMBER</button>
+    
+    <div class="popup-container">
         <div class="box">
             <span class="close">&times;</span>
 
@@ -131,11 +122,11 @@
     </div>
 
     <script>
-        var button = document.querySelector("button");
-        var container = document.querySelector(".container");
+        var serialButton = document.querySelector(".find-serial-btn");
+        var container = document.querySelector(".popup-container");
         var close = document.querySelector(".box .close");
 
-        button.onclick = function(e){
+        serialButton.onclick = function(e){
             e.preventDefault();
 
             container.classList.add("clicked");
