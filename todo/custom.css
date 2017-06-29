@@ -60,12 +60,13 @@ input {
 	display: flex;
 	max-width: 1150px;
 	margin: 40px auto 10px;
+	padding: 0 10px;
 }
 
 ul {
 	flex: 1;
 	background: #fdfdfd;
-	margin: 30px 10px 0;
+	margin: 30px 5px 0;
 	padding: 20px;
 	position: relative;
 }
