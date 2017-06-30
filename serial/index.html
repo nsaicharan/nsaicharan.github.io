@@ -14,7 +14,7 @@
             background: #fdfdfd;
             font-family: 'Montserrat', sans-serif;
         }
-        
+
         * {
             box-sizing: border-box;
         }
@@ -87,6 +87,7 @@
             right: 10px;
             font-size: 60px;
             cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .popup .close:hover {
@@ -102,13 +103,13 @@
             transform: translate(-50%, -50%);
             min-width: 225px;
         }
-        
+
     </style>
 </head>
 <body>
-    
+
     <button class="find-serial-btn">FIND SERIAL NUMBER</button>
-    
+
     <div class="popup-container">
         <div class="popup">
             <span class="close">&times;</span>
@@ -130,9 +131,9 @@
             e.preventDefault();
 
             container.classList.add("clicked");
-            
+
             document.onkeyup = function(e){
-                if (e.keyCode === 27) {   
+                if (e.keyCode === 27) {
                     container.classList.remove("clicked");
                 }
             }
@@ -140,7 +141,7 @@
 
         close.onclick = function(){
             container.classList.remove("clicked");
-        }   
+        }
     </script>
 
 </body>
