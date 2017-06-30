@@ -1,168 +1,161 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  <title>Find Serial Number</title>
-  <style>
-      body {
-          margin: 0;
-          padding:0;
-          text-align: center;
-          background: #fdfdfd;
-          font-family: 'Montserrat', sans-serif;
-      }
-
-      * {
-          box-sizing: border-box;
-      }
-
-      .find-serial-btn {
-          padding: 10px 20px;
-          background: orange;
-          border: 1px solid orange;
-          cursor: pointer;
-          color:white;
-          font-size: 16px;
-          font-family: 'Montserrat', sans-serif;
-      }
-
-      .find-serial-btn:hover {
-          background: darkorange;
-      }
-
-      .container {
-        width: 400px;
-        max-width: 95%;
-        margin: 85px auto 10px;
-        position: relative;
-      }
-
-      .popup {
-        background: white;
-        border: 1px solid orange;
-        margin-bottom: 10px;
-        padding: 30px 8px 8px;
-        text-align: left;
-        position: absolute;
-        top: 54px;
-        color: #333;
-        z-index: -4;
-        opacity: 0;
-
-      }
-
-      .clicked {
-          z-index: 4;
-          opacity: 1;
-          animation: .6s fadeInDown ease both;
-      }
-
-      @keyframes fadeInDown {
-         0% {
-            opacity: 0;
-            transform: translateY(-25px);
-         }
-         100% {
-            opacity: 1;
-            transform: translateY(0);
-         }
-      }
-
-      .triangle {
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 0 10px 10px 10px;
-        border-color: transparent transparent orange transparent;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0);
-        top: -11px;
-      }
-
-      .popup .close {
-        position: absolute;
-        right: 10px;
-        top: -10px;
-        font-size: 40px;
-        cursor: pointer;
-        color: #777;
-        -webkit-tap-highlight-color: transparent;
-      }
-
-      .popup .close:hover {
-        color: orange;
-        transition: .2s ease-in;
-      }
-
-      .popup img {
-        max-width: 100%;
-        margin: 0 auto;
-        display: block;
-      }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+	<title>Find Serial Number</title>
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			background: #fdfdfd;
+			font-family: 'Montserrat', sans-serif;
+		}
+		
+		* {
+			box-sizing: border-box;
+		}
+		
+		.find-serial-btn {
+			padding: 10px 20px;
+			background: orange;
+			border: 1px solid orange;
+			outline: none;
+			cursor: pointer;
+			color: white;
+			font-size: 16px;
+			font-family: 'Montserrat', sans-serif;
+		}
+		
+		.find-serial-btn:hover {
+			background: darkorange;
+		}
+		
+		.container {
+			width: 400px;
+			max-width: 95%;
+			margin: 85px auto 10px;
+			position: relative;
+		}
+		
+		.popup:after,
+		.popup:before {
+			bottom: 100%;
+			left: 50%;
+			border: solid transparent;
+			content: " ";
+			height: 0;
+			width: 0;
+			position: absolute;
+			pointer-events: none;
+		}
+		
+		.popup:after {
+			border-color: rgba(255, 255, 255, 0);
+			border-bottom-color: #fff;
+			border-width: 10px;
+			margin-left: -10px;
+		}
+		
+		.popup:before {
+			border-color: rgba(0, 0, 0, 0);
+			border-bottom-color: #ffa500;
+			border-width: 11px;
+			margin-left: -11px;
+		}
+		
+		.popup {
+			background: white;
+			border: 1px solid orange;
+			margin-bottom: 10px;
+			padding: 30px 8px 8px;
+			text-align: left;
+			position: absolute;
+			top: 55px;
+			color: #333;
+			z-index: -4;
+			opacity: 0;
+		}
+		
+		.clicked {
+			z-index: 4;
+			opacity: 1;
+			animation: .6s fadeInDown ease both;
+		}
+		
+		@keyframes fadeInDown {
+			0% {
+				opacity: 0;
+				transform: translateY(-25px);
+			}
+			100% {
+				opacity: 1;
+				transform: translateY(0);
+			}
+		}
+		
+		.popup .close {
+			position: absolute;
+			right: 10px;
+			top: -10px;
+			font-size: 40px;
+			cursor: pointer;
+			color: #777;
+			-webkit-tap-highlight-color: transparent;
+		}
+		
+		.popup .close:hover {
+			color: orange;
+			transition: .2s ease-in;
+		}
+		
+		.popup img {
+			max-width: 100%;
+			margin: 0 auto;
+			display: block;
+		}
+	</style>
 </head>
+
 <body>
 
-    <div class="container">
-      <button class="find-serial-btn">FIND SERIAL NUMBER</button>
-      <div class="popup">
-        <span class="triangle"></span>
-        <span class="close">&times;</span>
-        <img src="serial2.jpg" alt="">
-        <p>Lorem ipsum dolor sit amet elitiwewc convctasd adipisicing. Reiciendiefe sequi perfer consequr expedieff magni voluptate debitis officiiswer moles quaerat accu aperiam.</p>
-      </div>
-    </div>
+	<div class="container">
+		<button class="find-serial-btn">FIND SERIAL NUMBER</button>
+		<div class="popup">
+			<span class="triangle"></span>
+			<span class="close">&times;</span>
+			<img src="serial2.jpg" alt="">
+			<p>Lorem ipsum dolor sit amet elitiwewc convctasd adipisicing. Reiciendiefe sequi perfer consequr expedieff magni voluptate debitis officiiswer moles quaerat accu aperiam.</p>
+		</div>
+	</div>
 
-    <script>
-        var body = document.querySelector('body');
-        var serialButton = document.querySelector(".find-serial-btn");
-        var popup = document.querySelector(".popup");
-        var close = document.querySelector(".popup .close");
+	<script>
+		var body = document.querySelector('body');
+		var serialButton = document.querySelector(".find-serial-btn");
+		var popup = document.querySelector(".popup");
+		var close = document.querySelector(".popup .close");
 
-        serialButton.onclick = function(e){
-            e.preventDefault();
+		serialButton.onclick = function(e) {
+			e.preventDefault();
 
-            popup.classList.toggle("clicked");
+			popup.classList.toggle("clicked");
 
-            document.onkeyup = function(e){
-                if (e.keyCode === 27) {
-                    closePopup();
-                }
-            }
-        }
+			document.onkeyup = function(e) {
+				if (e.keyCode === 27) {
+					closePopup();
+				}
+			}
+		}
 
-        close.onclick = closePopup;
+		close.onclick = closePopup;
 
-        function closePopup(){
-            popup.classList.remove("clicked");
-        };
-
-    </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		function closePopup() {
+			popup.classList.remove("clicked");
+		}
+	</script>
 
 </body>
 </html>
