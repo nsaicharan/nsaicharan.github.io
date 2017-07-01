@@ -10,7 +10,6 @@
         body {
             margin: 0;
             padding:0;
-            text-align: center;
             background: #fdfdfd;
             font-family: 'Montserrat', sans-serif;
         }
@@ -20,7 +19,6 @@
         }
 		
 		small p{
-			text-align: left;
 			margin-left: 10px;
 		}
 
@@ -43,16 +41,16 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background: transparent;
-            width: 100vw;
+			width: 100vw;
             height: 100%;
-            z-index: -4;
+            background: transparent;
+            z-index: -100;
             opacity: 0;
             transition: .3s ease;
         }
 
         .clicked {
-            z-index: 4;
+            z-index: 100;
             opacity: 1;
         }
 
@@ -67,23 +65,22 @@
             overflow-y: auto;
             background: white;
             color: #333;
+			box-shadow: 0 0 6px 1px #ccc;
+			border-radius: 5px;
             padding: 10px 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 6px 1px #ccc;
         }
 
         h2 {
             font-size: 18px;
             font-weight: normal;
             color: orange;
+			text-align: center;
         }
 
         img {
             max-width: 100%;
-        }
-
-        .popup p {
-            text-align: left;
+			display: block;
+			margin: 0 auto;
         }
 
         .popup .close {
@@ -141,14 +138,17 @@
 
             document.onkeyup = function(e){
                 if (e.keyCode === 27) {
-                    container.classList.remove("clicked");
+                    closePopup();
                 }
             }
-        }
-
-        close.onclick = function(){
+		}
+		
+		container.onclick = closePopup;
+        close.onclick = closePopup;
+		
+		function closePopup(){
             container.classList.remove("clicked");
-        }
+		}
     </script>
 
 </body>

@@ -10,7 +10,6 @@
 		body {
 			margin: 0;
 			padding: 0;
-			text-align: center;
 			background: #fafafa;
 			font-family: 'Montserrat', sans-serif;
 		}
@@ -20,7 +19,6 @@
 		}
 		
 		small p{
-			text-align: left;
 			margin-left: 10px;
 		}
 		
@@ -43,6 +41,7 @@
 			width: 400px;
 			max-width: 95%;
 			margin: 60px auto 10px;
+			text-align: center;
 			position: relative;
 		}
 		
@@ -81,12 +80,12 @@
 			text-align: left;
 			position: absolute;
 			top: 55px;
-			z-index: -4;
+			z-index: -100;
 			opacity: 0;
 		}
 		
 		.clicked {
-			z-index: 4;
+			z-index: 100;
 			opacity: 1;
 			animation: .6s fadeInDown ease both;
 		}
