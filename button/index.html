@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <title>Find Serial Number</title>
+    <style>
+        body {
+            margin: 0;
+            padding:0;
+            background: #fdfdfd;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+		
+		small p{
+			margin-left: 10px;
+		}
+
+        .find-serial-btn {
+            padding: 20px;
+            background: orange;
+            border: 1px solid orange;
+            cursor: pointer;
+            color:white;
+            font-size: 20px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .find-serial-btn:hover {
+            background: darkorange;
+        }
+
+        .popup-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+			width: 100vw;
+            height: 100%;
+            background: transparent;
+            z-index: -100;
+            display: none;
+            transition: .3s ease;
+        }
+
+        .clicked {
+            z-index: 100;
+            display: block;
+        }
+
+        .popup{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 560px;
+            max-width: 95%;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: white;
+            color: #333;
+			box-shadow: 0 2px 10px rgba(0,0,0,.2);
+        }
+
+		iframe{
+			margin: 0 auto;
+       		display: block;
+			max-width:100%;
+			border: none;
+		}
+        .popup .close {
+            position: absolute;
+            top: 0;
+            right: 0;
+            border: 1px solid white;
+            background: rgba(0, 0, 0, 0.3);
+            height: 20px;
+            width: 20px;
+            line-height: 18px;
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .popup .close:hover {
+            background: rgba(0, 0, 0, 0.7);
+            transition: .2s ease-in;
+        }
+
+        /* Below CSS code should not be used on the actual site */
+        .find-serial-btn{
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 225px;
+        }
+
+    </style>
+</head>
+<body>
+
+	<div class="shortcuts">
+		<ul>
+			<li>Open - <strong>Ctrl+Shift+Y</strong></li>
+			<li>Close - <strong>X</strong> or <strong>Esc</strong></li>
+		</ul>
+	</div>
+
+    <button class="find-serial-btn">YouTube</button>
+
+    <div class="popup-container">
+
+        <div class="popup">
+			 <span class="close">&times;</span>
+            <iframe id="yt" width="560" height="315" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <script>
+        var serialButton = document.querySelector(".find-serial-btn"),
+            container = document.querySelector(".popup-container"),
+            close = document.querySelector(".popup .close"),
+            yt = document.querySelector("#yt");
+
+		document.addEventListener("keydown", function(event) {
+			console.log(event.which);
+
+			if(event.ctrlKey && event.shiftKey && event.which === 89){
+				yt.setAttribute('src', 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1');
+				container.classList.add("clicked");
+				
+			}
+
+			if(event.which === 88){
+				closePopup();
+			}
+		});
+			
+		
+        serialButton.onclick = function(e){
+            e.preventDefault();
+
+            
+            yt.setAttribute('src', 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1');
+            container.classList.add("clicked");
+
+            document.onkeyup = function(e){
+                if (e.keyCode === 27) {
+                    closePopup();
+                }
+            }
+		}
+		
+		// container.onclick = closePopup;
+           close.onclick = closePopup;
+		
+		function closePopup(){
+            container.classList.remove("clicked");
+            yt.removeAttribute('src');
+		}
+    </script>
+
+</body>
+</html>
