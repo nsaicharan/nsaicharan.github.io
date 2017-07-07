@@ -115,7 +115,7 @@
 		</ul>
 	</div>
 
-    <button class="find-serial-btn">YouTube</button>
+    <button class="find-serial-btn">YouTube Video</button>
 
     <div class="popup-container">
 
@@ -137,6 +137,12 @@
 			if(event.ctrlKey && event.shiftKey && event.which === 89){
 				yt.setAttribute('src', 'https://www.youtube.com/embed/aqz-KE-bpKQ?autoplay=1');
 				container.classList.add("clicked");
+
+                document.onkeyup = function(e){
+                    if (e.keyCode === 27) {
+                        closePopup();
+                    }
+                }
 				
 			}
 
