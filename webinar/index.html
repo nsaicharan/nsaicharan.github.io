@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <title>Webinar Popup Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding:0;
+            background: #fdfdfd;
+            font-family: 'Merriweather', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+		
+		small p{
+			margin-left: 10px;
+		}
+
+        .find-serial-btn {
+            padding: 20px;
+            background: orange;
+            border: 1px solid orange;
+            cursor: pointer;
+            color:white;
+            font-size: 16px;
+            font-family: 'Merriweather', sans-serif;
+        }
+
+        .find-serial-btn:hover {
+            background: darkorange;
+        }
+
+        .popup-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+			width: 100vw;
+            height: 100%;
+            background: transparent;
+            z-index: -100;
+            opacity: 0;
+            transition: .3s ease;
+        }
+
+        .clicked {
+            z-index: 100;
+            opacity: 1;
+        }
+
+        .popup{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 750px;
+            max-width: 95%;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: white;
+            color: #333;
+			box-shadow: 0 0 6px 1px #ccc;
+			border-radius: 5px;
+            padding: 10px 20px 25px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: normal;
+            color: orange;
+			text-align: center;
+        }
+
+        .popup img {
+            max-width: 100%;
+			display: block;
+			margin: 0 auto 10px;
+        }
+
+        .popup .close {
+            position: absolute;
+            top: -5px;
+            right: 10px;
+            font-size: 40px;
+			color: #555;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .popup .close:hover {
+            color: orange;
+            transition: .2s ease-in;
+        }
+
+        /* Below CSS code should not be used on the actual site */
+        .find-serial-btn{
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 225px;
+        }
+		
+		.content{
+			display: flex;
+		}
+		
+		
+		.details{
+			flex: 1;
+			padding: 10px 10px 10px 30px;
+		}
+		
+		.schedule {
+			padding: 10px 0 20px;
+			display: flex;
+			justify-content: space-between;
+			flex-direction: column;
+			flex: 1;
+		}
+		
+		.content h3{
+			color: orange;
+			text-transform: uppercase;
+			border-bottom: 1px solid #eee;
+			text-align: center;
+			padding: 0 30px 10px;
+			font-family: 'Lato', sans-serif;
+			letter-spacing: .5px;
+		}
+		
+		
+		.time{
+			color:#333;
+			font-size: 20px;
+			line-height: 2;
+			max-width: 80%;
+			margin: 50px auto;
+		}
+		
+		.content input {
+			width: 100%;
+			padding: 15px 10px 15px 35px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			outline:none;
+			color: #333;
+			font-size: 18px;
+			font-family: 'Merriweather', sans-serif;
+			position: relative;
+		}
+		
+		.content input:focus{
+			border: 1px solid orange;
+		}
+		
+		.name-wrapper:before {
+			font-family: 'FontAwesome';
+			color: #555;
+			position: relative;
+			left: 10px;
+			top: 38px;
+			font-size: 20px;
+			z-index: 2;
+			content: "\f2c0";
+		}
+		
+		.email-wrapper:before {
+			font-family: 'FontAwesome';
+			color: #555;
+			position: relative;
+			left: 10px;
+			top: 38px;
+			font-size: 20px;
+			z-index: 2;
+			content: "\f003";
+		}
+		
+		.content button {
+			background: orange;
+			border: none;
+			padding: 20px;
+			margin-top: 20px;
+			width: 100%;
+			color: white;
+			outline-color: darkorange;
+			font-size: 22px;
+			border-radius: 5px;
+			border-bottom: 3px solid darkorange;
+			cursor: pointer;
+			transition: .2s ease-in;
+			font-family: 'Merriweather', sans-serif;
+		}
+		
+		.content button:hover{
+			background: darkorange;
+		}
+		
+		.content button.processing{
+			opacity: .5;
+			cursor: default;
+		}
+		
+		.message{
+			font-size: 18px;
+			padding: 60px 10px;
+			display: none;
+			color: #444;
+			text-align: center;
+		}
+	
+
+    </style>
+</head>
+<body>
+
+    <button class="find-serial-btn">OPEN POPUP</button>
+
+    <div class="popup-container">
+        <div class="popup">
+            <span class="close">&times;</span>
+			
+          	<div class="message">
+          		
+          	</div>
+           
+            <div class="content">
+            	<div class="schedule">
+            		<h3>Webinar Schedule</h3>
+            		<div class="time">
+            			Thursday <br> 13 July 2017 <br> 01:00 PM (GMT -4)
+            		</div>
+            		
+            		<div class="powered">
+            			<img src="new-logo-for-update_light.png" alt="">
+            		</div>
+            	</div>
+            	
+            	
+            	
+            	<div class="details">
+            		<h3>Your Details</h3>
+            		
+            		<form id="mc-form" action="https://saicharan.us16.list-manage.com/subscribe/post-json?u=ccb73fd8f24e18c61eea201e6&amp;id=1adbc38cbf"  method="GET">
+            		
+            			<div class="name-wrapper">
+            				<input class="name" type="text" placeholder="Name" name="FNAME" required>
+            			</div>
+            			
+            			<div class="email-wrapper">
+            				<input class="email" type="email" placeholder="Email Address" name="EMAIL" required>
+            			</div>
+            			
+            			<button type="submit" class="register" name="subscribe">REGISTER NOW</button>
+            		</form>
+            	
+					<p class="disclaimer">Your details will be forwarded to the webinar organizer, who might communicate with you regarding this event or their services.</p>
+            		
+            	</div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        var serialButton = document.querySelector(".find-serial-btn");
+        var container = document.querySelector(".popup-container");
+        var close = document.querySelector(".popup .close");
+
+        serialButton.onclick = function(e){
+            e.preventDefault();
+
+            container.classList.add("clicked");
+
+            document.onkeyup = function(e){
+                if (e.keyCode === 27) {
+                    closePopup();
+                }
+            }
+		}
+		
+	    //container.onclick = closePopup;
+        close.onclick = closePopup;
+		
+		function closePopup(){
+            container.classList.remove("clicked");
+		}
+    </script>
+    
+    <!-- Test Mailchimp -->
+    <script src="jquery.js"></script>
+    
+    <script>
+	
+		$('#mc-form').submit(function(e) {
+		  e.preventDefault();
+		  $('.register').addClass('processing').text('Please wait..');
+			
+		  var $this = $(this);
+		  $.ajax({
+			  type: "GET", // GET & url for json slightly different
+			  url: "https://crossorigin.me/https://saicharan.us16.list-manage.com/subscribe/post-json?u=ccb73fd8f24e18c61eea201e6&amp;id=1adbc38cbf",
+			  data: $this.serialize(),
+			  dataType    : 'json',
+			  contentType: "application/json; charset=utf-8",
+			  error       : function(err) { 
+				 
+				  alert("Could not connect to the registration server.");
+				  $('.register').removeClass('processing').text('REGISTER NOW');
+				  
+				  console.log($this); 
+			  },
+			  success     : function(data) {
+				  if (data.result != "success") {
+					  // Something went wrong, parse data.msg string and display message
+					  var error = data.msg;
+					  alert(error);
+					  $('.register').removeClass('processing').text('REGISTER NOW');
+				  } else {
+					  // It worked, so hide form and display thank-you message.
+					  $('.content').hide()
+					  $('.message').show();
+					  $('.message').html("<p style='color: orange; font-size: 30px;'>Almost Done!</p><p>Please verify your email to complete the registration process.</p>")
+				  }
+			  }
+		  });
+		  return false;
+		});
+	
+	</script>
+
+</body>
+</html>
