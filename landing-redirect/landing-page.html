@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+	<title>Landing Page</title>
+	<style>
+		html {
+			margin: 0;
+			padding: 0;
+			background: url('bg.jpg') no-repeat center center;
+			background-size: cover;
+			height: 100%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			color: white;
+			text-align: center;
+		}
+		
+		p:not(#time) {
+			
+			font-size: 6vmin;
+			background: rgba(0,0,0,.3);
+			padding: 20px;
+			border-radius: 10px;
+			margin: 0;
+			font-family: 'Merriweather', serif;
+			text-transform: capitalize;
+			
+		}
+		
+		#time {
+			position: absolute;
+			top:5px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+	</style>
+</head>
+<body>
+	<p id="time"></p>
+
+	<p>landing page text!</p>
+	
+	<script>
+		window.onload = function() {
+
+			var i = 6;
+
+			setInterval(function() {
+
+				i--;
+
+				if (i > 0) {
+					document.querySelector('#time').innerHTML = i;
+				} else {
+					document.querySelector('#time').innerHTML = "You're being redirected to another page..";
+				}
+			}, 1000);
+
+			setTimeout(function() {
+				window.location = "https://google.com";
+			}, 5000);
+		}
+	</script>
+</body>
+</html>
