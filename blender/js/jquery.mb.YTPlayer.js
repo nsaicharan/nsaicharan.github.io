@@ -6,13 +6,13 @@
  *  Copyright (c) 2001-2013. Matteo Bicocchi (Pupunzi);
  *  Open lab srl, Firenze - Italy
  *  email: matteo@open-lab.com
- *  site: 	http://pupunzi.com
- *  blog:	http://pupunzi.open-lab.com
- * 	http://open-lab.com
+ *  site: 	https://pupunzi.com
+ *  blog:	https://pupunzi.open-lab.com
+ * 	https://open-lab.com
  *
  *  Licences: MIT, GPL
- *  http://www.opensource.org/licenses/mit-license.php
- *  http://www.gnu.org/licenses/gpl.html
+ *  https://www.opensource.org/licenses/mit-license.php
+ *  https://www.gnu.org/licenses/gpl.html
  *
  *  last modified: 30/08/13 23.31
  *  *****************************************************************************
@@ -31,8 +31,8 @@ jQuery.fn.CSSAnimate=function(a,b,k,l,f){return this.each(function(){var c=jQuer
  * Metadata - jQuery plugin for parsing metadata from elements
  * Copyright (c) 2006 John Resig, Yehuda Katz, Jörn Zaefferer, Paul McLanahan
  * Dual licensed under the MIT and GPL licenses:
- *   http://www.opensource.org/licenses/mit-license.php
- *   http://www.gnu.org/licenses/gpl.html
+ *   https://www.opensource.org/licenses/mit-license.php
+ *   https://www.gnu.org/licenses/gpl.html
  */
 
 (function(c){c.extend({metadata:{defaults:{type:"class",name:"metadata",cre:/({.*})/,single:"metadata"},setType:function(b,c){this.defaults.type=b;this.defaults.name=c},get:function(b,f){var d=c.extend({},this.defaults,f);d.single.length||(d.single="metadata");var a=c.data(b,d.single);if(a)return a;a="{}";if("class"==d.type){var e=d.cre.exec(b.className);e&&(a=e[1])}else if("elem"==d.type){if(!b.getElementsByTagName)return;e=b.getElementsByTagName(d.name);e.length&&(a=c.trim(e[0].innerHTML))}else void 0!= b.getAttribute&&(e=b.getAttribute(d.name))&&(a=e);0>a.indexOf("{")&&(a="{"+a+"}");a=eval("("+a+")");c.data(b,d.single,a);return a}}});c.fn.metadata=function(b){return c.metadata.get(this[0],b)}})(jQuery);
@@ -43,9 +43,9 @@ if(typeof ytp != "object")
 
 String.prototype.getVideoID=function(){
 	var movieURL;
-	if(this.substr(0,16)=="http://youtu.be/"){
-		movieURL= this.replace("http://youtu.be/","");
-	}else if(this.indexOf("http")>-1){
+	if(this.substr(0,16)=="https://youtu.be/"){
+		movieURL= this.replace("https://youtu.be/","");
+	}else if(this.indexOf("https")>-1){
 		movieURL = this.match(/[\\?&]v=([^&#]*)/)[1];
 	}else{
 		movieURL = this
@@ -235,7 +235,7 @@ function onYouTubePlayerAPIReady() {
 
 				if(!ytp.YTAPIReady){
 					var tag = document.createElement('script');
-					tag.src = "http://www.youtube.com/player_api";
+					tag.src = "https://www.youtube.com/player_api";
 					tag.id = "YTAPI";
 					var firstScriptTag = document.getElementsByTagName('script')[0];
 					firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
@@ -485,7 +485,7 @@ function onYouTubePlayerAPIReady() {
 			YTPlayer.videoID = videoID;
 			if (!jQuery.browser.msie) { //!(jQuery.browser.msie && jQuery.browser.version<9)
 
-				jQuery.getJSON('http://gdata.youtube.com/feeds/api/videos/' + videoID + '?v=2&alt=jsonc', function (data, status, xhr) {
+				jQuery.getJSON('https://gdata.youtube.com/feeds/api/videos/' + videoID + '?v=2&alt=jsonc', function (data, status, xhr) {
 
 					YTPlayer.dataReceived = true;
 
@@ -593,7 +593,7 @@ function onYouTubePlayerAPIReady() {
 
 			jQuery(YTPlayer).pauseYTP();
 			var timer = jQuery.browser.msie ? 1000 : 0;
-			jQuery(YTPlayer).getPlayer().cueVideoByUrl(encodeURI("http://www.youtube.com/v/" + YTPlayer.videoID) , 5 , YTPlayer.opt.quality);
+			jQuery(YTPlayer).getPlayer().cueVideoByUrl(encodeURI("https://www.youtube.com/v/" + YTPlayer.videoID) , 5 , YTPlayer.opt.quality);
 
 			setTimeout(function(){
 				jQuery(YTPlayer).playYTP();
@@ -862,8 +862,8 @@ function onYouTubePlayerAPIReady() {
 			var idx = jQuery("<span/>").addClass("mb_YTVPTime");
 
 			var vURL = data.videoURL;
-			if(vURL.indexOf("http") < 0)
-				vURL = "http://www.youtube.com/watch?v="+data.videoURL;
+			if(vURL.indexOf("https") < 0)
+				vURL = "https://www.youtube.com/watch?v="+data.videoURL;
 			var movieUrl = jQuery("<span/>").html(jQuery.mbYTPlayer.controls.ytLogo).addClass("mb_YTVPUrl ytpicon").attr("title", "view on YouTube").on("click", function () {window.open(vURL, "viewOnYT")});
 			var onlyVideo = jQuery("<span/>").html(jQuery.mbYTPlayer.controls.onlyYT).addClass("mb_OnlyYT ytpicon").on("click",function () {jQuery(YTPlayer).fullscreen(data.realfullscreen);});
 
