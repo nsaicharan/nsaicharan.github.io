@@ -528,6 +528,8 @@ input, textarea {
 	position: relative; 
 	width: 100%;
 	overflow:hidden;
+	background: url(../images/screenshot.png) no-repeat center center;
+	background-size: cover;
 }
 
 
