@@ -874,47 +874,6 @@
 	$(".player").mb_YTPlayer();
 </script>
 
-<script>
-	$(document).ready(function(){
-
-		try {
-			isTouchDevice = true;
-			document.createEvent('TouchEvent');
-		} catch (e) {
-			isTouchDevice = false;
-		}
-
-		if(!isTouchDevice){
-		//if(true){
-
-			//Load Video for mobile desktop
-			$(function() {
-				var BV = new $.BigVideo({useFlashForFirefox:false});
-				BV.init();
-				BV.show('vids/clouds.mp4', {altSource:''});
-			});
-
-			//Allow to open the site
-			siteStartOpen = true;
-
-		}else{
-
-			//Load image for mobile device
-
-				$(function() {
-				var BV = new $.BigVideo({useFlashForFirefox:false});
-				BV.init();
-				BV.show('images/bg_clouds.jpg', {altSource:''});
-			});
-
-			//Allow to open the site
-			siteStartOpen = true;
-
-
-		}
-
-	});
-</script>
 <script type="text/javascript" src="js/template.js"></script>
 <script type="text/javascript">
 
