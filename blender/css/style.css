@@ -163,17 +163,18 @@ a.big-background-btn {
     background-attachment:scroll;
     background-repeat:repeat-x;
     background-position:center center;
-    text-transform:uppercase
+    text-transform:uppercase;
 }
 
 
 p a{
 	color: #f1c40f;
+	text-decoration: none;
 	
 }
 
 p a:hover{
-	text-decoration: none;
+	text-decoration: underline;
 }
 a.about-section-btn {
     font-family:'Lato',sans-serif;
