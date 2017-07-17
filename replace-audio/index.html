@@ -252,9 +252,7 @@
 				e.preventDefault();
 
 				container.classList.add("clicked");
-				audio.currentTime = 0;
-				audio.play();
-
+			
 				document.onkeyup = function(e){
 					if (e.keyCode === 27) {
 						closePopup();
@@ -269,6 +267,7 @@
 		function closePopup(){
             container.classList.remove("clicked");
 			audio.pause();
+			audio.currentTime = 0;
 		}
     </script>
     
