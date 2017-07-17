@@ -144,6 +144,8 @@
 			display: block;
 			margin: 0;
 			width: 100%;
+			opacity:0;
+			visibility:none;
 		}
 		
 		@media (max-width:800px) {
@@ -250,7 +252,7 @@
 						<h3>Video Title</h3>
             		
 						<div class="video-wrapper">
-							<video id="videoInHTML" muted preload="none">
+							<video id="videoInHTML" muted controls>
 							  <source src="Inception_fixed.mp4" type="video/mp4" />
 							</video>
 
@@ -265,21 +267,21 @@
 					var video = document.getElementById("videoInHTML");
 					var audio = document.getElementById("audioInHTML");
 
-					audio.addEventListener('play', videoPausePlayHandler, false);
+					video.addEventListener('play', videoPausePlayHandler, false);
 
-					audio.addEventListener('pause', videoPausePlayHandler, false);
+					video.addEventListener('pause', videoPausePlayHandler, false);
 
-					audio.addEventListener('playing', changeHandler);
+					video.addEventListener('playing', changeHandler);
 
 
 					function videoPausePlayHandler(e) {
 					  if (e.type == 'play') {
 
-						 video.play();
+						 audio.play();
 
 					  } else if (e.type == 'pause') {
 
-						  video.pause();
+						  audio.pause();
 					  }
 
 					}
@@ -306,9 +308,9 @@
 		function closePopup(){
             container.classList.remove("clicked");
 			
-			var audio = document.getElementById("audioInHTML");
-			audio.pause();
-			audio.currentTime = 0;
+			var video = document.getElementById("videoInHTML");
+			video.pause();
+			video.currentTime = 0;
 			
 			setTimeout(function(){
 				videoSection.innerHTML = '';
