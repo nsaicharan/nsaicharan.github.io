@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--
+    <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+-->
+    
+    <title>Webinar Popup Demo</title>
+    <style>
+        body {
+            margin: 0;
+            padding:0;
+            background: #fdfdfd;
+            font-family: 'Merriweather', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+		
+		h2 {
+			text-align: center;
+		}
+		
+		.photo-container{
+			display: flex;
+			flex-wrap: wrap;
+			text-align: center;
+			max-width: 1150px;
+			margin: 0 auto;
+		}
+
+		.col{
+			width: 33.3333%;
+			padding: 10px;
+		}
+
+		img{
+			max-width: 100%;
+			cursor: pointer;
+		}
+		
+		@media (max-width: 800px){
+			.col {
+				width: 50%;
+			}
+		}
+		
+		@media (max-width: 480px){
+			.col {
+				width: 100%;
+			}
+		}
+		
+        .popup-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+			width: 100vw;
+            height: 100%;
+            background: transparent;
+            z-index: -100;
+            opacity: 0;
+        }
+
+        .clicked {
+            z-index: 100;
+            opacity: 1;
+        }
+
+        .popup{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 1100px;
+            max-width: 95%;
+            max-height: 80vh;
+            overflow-y: auto;
+            background: white;
+            color: #333;
+			box-shadow: 0 0 6px 1px #ccc;
+			border-radius: 5px;
+            padding: 5px 0 5px 10px;
+        }
+
+
+        .popup .close {
+            position: absolute;
+            top: -5px;
+            right: 10px;
+            font-size: 40px;
+			color: #555;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .popup .close:hover {
+            color: orange;
+            transition: .2s ease-in;
+        }
+
+		
+		.content{
+			display: flex;
+		}
+		
+		
+		.comments-section{
+			flex: 1;
+			padding: 10px 10px 10px 30px;
+		}
+		
+		.video-section {
+			padding: 10px 0 20px;
+			display: flex;
+			flex-direction: column;
+			flex: 1.5;
+		}
+		
+		.content h3{
+			color: orange;
+			text-transform: uppercase;
+			border-bottom: 1px solid #eee;
+			text-align: center;
+			padding: 0 30px 10px;
+			font-family: 'Lato', sans-serif;
+			letter-spacing: .5px;
+		}
+		
+		
+		video {
+			display: block;
+			margin: 0;
+			width: 100%;
+			height: 100%;
+		}
+		
+		audio {
+			display: block;
+			margin: 0;
+			width: 100%;
+		}
+		
+		@media (max-width:800px) {
+			
+			.popup {
+				padding: 5px;
+			}
+			
+			.content {
+				flex-direction: column;
+			}
+		}
+
+    </style>
+</head>
+<body>
+    
+    <h2>Videos</h2>
+    
+	<div class="photo-container">
+		<div class="col">
+			<img src="jennifer.jpg" alt="image">
+		</div>
+
+		<div class="col">
+			<img src="jennifer.jpg" alt="image">
+
+		</div>
+
+		<div class="col">
+			<img src="jennifer.jpg" alt="image">
+		</div>
+
+		<div class="col">
+			<img src="jennifer.jpg" alt="image">
+		</div>
+		
+		<div class="col">
+			<img src="jennifer.jpg" alt="image">
+		</div>
+		
+		<div class="col">
+			<img src="jennifer.jpg" alt="image">
+		</div>
+	</div>
+
+
+    <div class="popup-container">
+        <div class="popup">
+            <span class="close">&times;</span>
+			
+          	<div class="message">
+          		
+          	</div>
+           
+            <div class="content">
+            	<div class="video-section">
+            		<h3>Video Title</h3>
+					<div class="video-wrapper">
+						<video id="videoInHTML" muted>
+						  <source src="Inception_fixed.mp4" type="video/mp4" />
+						</video>
+
+						<audio id="audioInHTML" controls>     
+							 <source src="edc6fd92d83fa878d515ffbc6b627663.mp3" type="audio/mp3"/>
+						 </audio>
+
+					</div>
+
+            	</div>
+            	
+            	
+            	
+            	<div class="comments-section">
+            		<h3>Comments Section</h3>
+            		
+            		<p style="text-align:center">Dummy Comment</p>
+            		<p style="text-align:center">Dummy Comment</p>
+            		<p style="text-align:center">Dummy Comment</p>
+            		<p style="text-align:center">Dummy Comment</p>
+            		<p style="text-align:center">Dummy Comment</p>
+            		<p style="text-align:center">Dummy Comment</p>
+            		<p style="text-align:center">Dummy Comment</p>
+            		<p style="text-align:center">Dummy Comment</p>
+            		<p style="text-align:center">Dummy Comment</p>
+            		<p style="text-align:center">Dummy Comment</p>
+            		<p style="text-align:center">Dummy Comment</p>
+            		
+            		
+            	</div>
+            </div>
+            
+        </div>
+    </div>
+
+    <script>
+        var images = document.querySelectorAll("img");
+		
+        var container = document.querySelector(".popup-container");
+        var close = document.querySelector(".popup .close");
+
+        images.forEach(image => {
+				
+			image.addEventListener('click', function(e){
+				e.preventDefault();
+
+				container.classList.add("clicked");
+				audio.currentTime = 0;
+				audio.play();
+
+				document.onkeyup = function(e){
+					if (e.keyCode === 27) {
+						closePopup();
+					}
+				}
+			})
+		})
+		
+	    //container.onclick = closePopup;
+        close.onclick = closePopup;
+		
+		function closePopup(){
+            container.classList.remove("clicked");
+			audio.pause();
+		}
+    </script>
+    
+    <!-- Test -->
+   <script>
+		var video = document.getElementById("videoInHTML");
+		var audio = document.getElementById("audioInHTML");
+		
+		audio.addEventListener('play', videoPausePlayHandler, false);
+		
+		audio.addEventListener('pause', videoPausePlayHandler, false);
+		
+		audio.addEventListener('playing', changeHandler);
+		
+		
+		function videoPausePlayHandler(e) {
+		  if (e.type == 'play') {
+			
+			 video.play();
+			
+		  } else if (e.type == 'pause') {
+			
+			  video.pause();
+		  }
+
+		}
+		
+		function changeHandler(e){
+			console.log(e);
+			var time = audio.currentTime;
+			video.currentTime = time;
+		}
+	</script>
+	
+
+</body>
+</html>
