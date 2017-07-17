@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Basic Filter List</title>
+	<style>
+
+		.container {
+			max-width: 600px;
+			margin: 50px auto 2px;
+		}
+
+		input {
+			width: 90%;
+			padding: 10px;
+			display: block;
+			margin: 10px auto;
+			font-size: 1.5em;
+		}
+
+		h1{
+			text-align: center;
+		}
+
+		li {
+			font-size: 18px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Filter List Items</h1>
+		<p><input type="text" placeholder="Enter any letter here.."></p>
+		<ul>
+			<li>Alex</li>
+			<li>Alexa</li>
+			<li>Brad</li>
+			<li>Cersei</li>
+			<li>Donald</li>
+			<li>Frank</li>
+			<li>George</li>
+			<li>Heisenberg</li>
+			<li>Howard</li>
+			<li>Isabella</li>
+			<li>Jon</li>
+			<li>Kelly</li>
+			<li>Lynda</li>
+			<li>Monalisa</li>
+			<li>Penny</li>
+			<li>Quinton</li>
+			<li>Rose</li>
+			<li>Sheldon</li>
+			<li>Vicky</li>
+			<li>Zac</li>
+		</ul>
+
+	</div>
+
+	<script>
+		document.querySelector('input').addEventListener('keyup', handleKey);
+
+		function handleKey (e) {
+		 	const key = e.target.value.toUpperCase();
+
+		 	const lis = document.querySelectorAll('li');
+
+		 	//forEach
+		 	// lis.forEach(li => {
+		 	// 	 if (li.innerText.toUpperCase().includes(key)){
+		 	// 	 	li.style.display = "";
+		 	// 	 } else {
+		 	// 	 	li.style.display = "none";
+		 	// 	 }
+		 	// });
+
+		 	//for way
+		 	for (var i = 0; i < lis.length; i++) {
+		 		if (lis[i].innerText.toUpperCase().includes(key)){
+		 			lis[i].style.display = '';
+		 		} else {
+		 			lis[i].style.display = 'none';
+		 		}
+		 	}
+
+		}
+	</script>
+</body>
+</html>
