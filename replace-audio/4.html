@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="http://vjs.zencdn.net/4.12/video.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <video id="example_video_1" class="video-js vjs-default-skin" preload="auto" width="310" height="264">
+        <source src="http://www.w3schools.com/html/mov_bbb.mp4" type='video/mp4' />
+    </video>
+    
+    <br>
+    
+    <audio id="example_video_2" controls>
+        <source src="https://projects.saicharan.com/replace-audio/edc6fd92d83fa878d515ffbc6b627663.mp3" type="audio/mp3" />
+    </audio>
+
+    <script>
+        $(window).ready(function() {
+
+            var vid = document.getElementById("example_video_1");
+            vid.oncanplay = function() {
+                startplay(1);
+            };
+            var vid2 = document.getElementById("example_video_2");
+            vid2.oncanplay = function() {
+                startplay(1);
+            };
+        });
+
+
+        var loaded = 0;
+
+        function startplay(num) {
+            // alert(num);
+            loaded += 1;
+
+            if (loaded == 2) {
+
+                document.getElementById("example_video_1").play();
+                document.getElementById("example_video_2").play();
+
+
+            }
+        }
+    </script>
+</body>
+
+</html>
