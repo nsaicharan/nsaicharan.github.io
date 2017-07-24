@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Basic Slider Test</title>
+	<style>
+	
+		body{
+			margin:0;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			margin: 0 auto;	
+			height: 100%;
+			max-height: 240px;
+			object-fit: cover;
+			object-position: center;
+		}
+
+		input {
+			display: block;
+			margin: 20px auto;
+		}
+
+		.gallery {
+			height: 300px;
+			max-width: 95%;
+			width: 1150px;
+			border: 1px solid red;
+			margin: auto;
+			position: relative;
+		}
+
+		.gallery:after{
+			content: "You haven't completed any  task.";
+			position: absolute;
+			font-size: 5em;
+			top: 50%;
+			left: 50%;
+			width: 100%;
+			text-align: center;
+			transform: translate(-50%, -50%);
+		}
+
+	</style>
+</head>
+<body>
+
+	<input type="file" multiple>
+
+	<div class="gallery" name="gallery"></div>
+	
+	<script>
+		// const img = [
+		// 	'https://unsplash.it/700/500',
+		// 	'https://unsplash.it/700/501',
+		// 	'https://unsplash.it/700/502',
+		// 	'https://unsplash.it/700/503'
+		// ]
+
+		// const time = 2000;
+
+		// var i = 0;
+
+		// function changeImg(){
+
+		// 	console.log(img.length);
+
+		// 	if (i < img.length) {
+		// 		 i==i;
+		// 		} else {
+		// 			i = 0;
+		// 		}
+
+		// 	document.slider.src= img[i];
+
+		// 	i++
+
+		// }
+
+		// setInterval(changeImg, time);
+
+		const input = document.querySelector('input');
+		
+		input.addEventListener('change', function(e){
+
+				const files = e.target.files;
+				console.log(files);
+				
+				document.querySelector('.gallery').innerHTML='';
+
+				for(i=0; i<files.length; i++){
+					document.querySelector('.gallery').innerHTML += `<div class="item"><img src="img/${files[i].name}"></div> `;
+				}
+
+				const items = document.querySelectorAll('.item');
+
+				items.forEach(item => item.addEventListener('click', remove));
+
+				function remove(){
+					console.log(this);
+					let parent = this.parentNode;
+					parent.removeChild(this);
+				}
+
+		});
+
+		
+	</script>
+</body>
+</html>
