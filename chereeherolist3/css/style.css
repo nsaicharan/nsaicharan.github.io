@@ -710,7 +710,6 @@ nav .three a:hover{
 }
 
 .fadeInDown {
-    -webkit-animation: fadeInDown 2s both;
     animation: fadeInDown 2s both;
 }
 
