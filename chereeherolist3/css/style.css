@@ -182,10 +182,9 @@ picture img{
     padding-bottom: 5px;
 }
 
-
 /* ===== End Hero ===== */
 
-/* Start MENU Navigation */
+/* ===== Start MENU Navigation ===== */
 
 @media only screen and (max-width: 1023px) {
 
@@ -383,9 +382,9 @@ picture img{
     
 }
 
-/* End MENU Navigation */
+/* ===== End MENU Navigation ===== */
 
-/* Start Horizontal Navigation */
+/* ===== Start Horizontal Navigation ===== */
 
 .row2 .three,
 .row2 .nine {
@@ -409,7 +408,7 @@ nav {
 nav ul {
     margin: 0 15px 0 0;
     padding: 0;
-    float:right; /* This code moves the NAV LINKS all the way to the right.*/
+    float: right; /* This code moves the NAV LINKS all the way to the right.*/
 }
 
 nav ul li {
@@ -447,9 +446,9 @@ nav .three a:hover{
     cursor: pointer;
 }
 
-/* End Horizontal Navigation */
+/* ===== End Horizontal Navigation ===== */
 
-/* === Start Row3 === */
+/* ===== Start Row3 ===== */
 
 .row3 {
     background: white;
@@ -461,18 +460,18 @@ nav .three a:hover{
     color:black;
 }
 
-/* === End Row3 === */
+/* ===== End Row3 ===== */
 
-/* === Start Row4 === */
+/* ===== Start Row4 ===== */
 
 .row4 {
     background: #F9690E;
     padding: 30px 25px 40px;
 }
 
-/* === End Row4 === */
+/* ===== End Row4 ===== */
 
-/* === Start Row5 === */
+/* ===== Start Row5 ===== */
 
 .row5 .three{
     position: relative;
@@ -541,27 +540,27 @@ nav .three a:hover{
     }
 }
 
-/* === End Row5 === */
+/* ===== End Row5 ===== */
 
-/* === Start Row6 === */
+/* ===== Start Row6 ===== */
 
 .row6 {
     background: #F27935;
     padding: 30px 30px 40px;
 } 
 
-/* === End Row6 === */
+/* ===== End Row6 ===== */
 
-/* === Start Row7 === */
+/* ===== Start Row7 ===== */
 
 .row7 .six {
     position: relative;
     overflow: hidden;
 }
 
-/* === End Row7 === */
+/* ===== End Row7 ===== */
 
-/* === Start Row8 === */
+/* ===== Start Row8 ===== */
 
 .row8 .six{
     position: relative;
@@ -574,6 +573,7 @@ nav .three a:hover{
     height: 100%;
     width: 100%;
     background: rgba(19, 49, 103, 0.4);
+	transition: background .3s;
 }
 
 .color:hover{ background: rgba(19, 49, 103, 1); }
@@ -658,10 +658,10 @@ nav .three a:hover{
     
 }
 
-/* End Row8 */
+/* ===== End Row8 ===== */
 
 
-/* Start ParallaxRow (Row9) */
+/* ===== Start ParallaxRow (Row9) ===== */
 
 .parallax {
     position: relative;
@@ -796,10 +796,10 @@ nav .three a:hover{
     }
 }
 
-/* End Animated CTA Buttons */
-/* End ParallaxRow (Row9) */
+/*  End Animated CTA Buttons */
+/* ===== End ParallaxRow (Row9) ===== */
 
-/* === Start Row10 ==== */
+/* ===== Start Row10 ===== */
 
 .row10{
     background: #F27935;
@@ -829,6 +829,7 @@ img {
     text-align: center;
 }
 
+/* Button */
 .row10 .six:nth-child(2) a{
     background: #253d5b;
     padding: 10px;
@@ -852,9 +853,9 @@ img {
     }
 }
 
-/* === End Row10 === */
+/* ===== End Row10 ===== */
 
-/* === Start ROW 11 === */
+/* ===== Start ROW 11 ===== */
    
     .row11{
         background: #FF8F00;
@@ -866,9 +867,9 @@ img {
         margin: 0 auto;
     }
 
-/* === End ROW 11 === */
+/* ===== End ROW 11 ===== */
 
-/* Start Footer/Last Row */
+/* ===== Start Footer/Last Row ===== */
 
 
 footer {
@@ -883,7 +884,7 @@ footer {
     padding: 15px 10px 14px;
 }
 
-/* End Footer/Last Row */
+/* ===== End Footer/Last Row ===== */
 
 
 /* Back To Top button on every web page via jQuery  */
