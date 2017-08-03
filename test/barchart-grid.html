@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Grid Bar Chart</title>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Women Literacy Rate</h2>
+
+        <div class="chart">
+            <div class="bar" data-percent="78" name="India"></div>
+
+            <div class="bar" data-percent="50" name="China"></div>
+
+            <div class="bar" data-percent="100" name="USA"></div>
+
+            <div class="bar" data-percent="75" name="Brazil"></div>
+
+            <div class="bar" data-percent="60" name="Pakistan"></div>
+        </div>
+    </div>
+   	
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+			flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 35px;
+            font-family: Arial, sans-serif;
+			color: #555;
+			font-weight: bold;
+        }
+		
+		h2 {
+			border-bottom: 3px solid orangered;
+            margin-bottom: 40px;
+		}
+		
+        .chart {
+            display: grid;
+            grid-template-rows: repeat(100, 1fr);
+            grid-column-gap: 1vmin;
+            width: 380px; /* adjust this to change bar thickness */ 
+            max-width: 93vw;
+            height: 75vh;
+            max-height: 1000px;
+            border-bottom: 5px solid orange;
+			position: relative;
+        }
+
+        .bar {
+            background: #ffc600;
+            grid-row-end: 102;
+            border-radius: 5px 5px 0 0;
+        }
+
+        /* Percent */
+        .bar:before {
+            display: block; 
+            text-align: center;
+            position: relative;
+            top: -17px;
+        }
+		
+		/* Name */
+        .bar:after {
+			display: block;
+			position: absolute;
+			bottom: -22px;
+			margin-left: 2px;
+			text-align: right;
+			transform: rotate(-35deg);
+			transform-origin: right;
+        }
+
+
+    </style>
+
+    <script>
+        const chart = document.querySelector('.chart');
+        const bars = document.querySelectorAll('.bar');
+        let i = 1;
+        
+        bars.forEach(bar => {
+			//Bars height
+            bar.style.setProperty('grid-row-start', 101 - `${bar.dataset.percent}`);
+			
+			//Content of .bar:before and .bar:after
+            let percentText = `.bar:nth-child(${i}):before{content: "${bar.dataset.percent}%";} `;
+			let barName = `.bar:nth-child(${i}):after{content: "${bar.getAttribute('name')}"}`;
+			
+			document.querySelector('style').innerHTML += percentText + barName + '\n';
+
+            i++
+        });
+
+        //Automatically adjust grid columns depending on no. of bars
+        const totalBars = bars.length;
+        chart.style.setProperty('grid-template-columns', `repeat(${totalBars}, 1fr)`);
+        
+    </script>
+
+</body>
+</html>
