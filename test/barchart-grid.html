@@ -12,50 +12,72 @@
         <h2>Women Literacy Rate</h2>
 
         <div class="chart">
-            <div class="bar" data-percent="78" name="India"></div>
+            <div class="bar">
+                <div class="bar-percent">81%</div>
+                <div class="bar-name">India</div>
+            </div>
 
-            <div class="bar" data-percent="50" name="China"></div>
+            <div class="bar">
+                <div class="bar-percent">83%</div>
+                <div class="bar-name">China</div>
+            </div>
 
-            <div class="bar" data-percent="100" name="USA"></div>
+            <div class="bar">
+                <div class="bar-percent">98%</div>
+                <div class="bar-name">USA</div>
+            </div>
 
-            <div class="bar" data-percent="75" name="Brazil"></div>
+            <div class="bar">
+                <div class="bar-percent">70%</div>
+                <div class="bar-name">UAE</div>
+            </div>
 
-            <div class="bar" data-percent="60" name="Pakistan"></div>
-        </div>
-    </div>
+            <div class="bar">
+                <div class="bar-percent">60%</div>
+                <div class="bar-name">Pakistan</div>
+            </div>
+
+            <div class="bar">
+                <div class="bar-percent">10%</div>
+                <div class="bar-name">Afghanistan</div>
+            </div>
+
    	
     <style>
         * {
             box-sizing: border-box;
             margin: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
         }
 
         .container {
             height: 100vh;
             display: flex;
 			flex-direction: column;
-            justify-content: center;
+            justify-content: flex-start;
             align-items: center;
             margin-bottom: 35px;
-            font-family: Arial, sans-serif;
+            font-family: 'Dancing Script', 'Operator Mono', Arial, sans-serif;
+            font-style: italic;
 			color: #555;
 			font-weight: bold;
         }
 		
 		h2 {
 			border-bottom: 3px solid orangered;
-            margin-bottom: 40px;
+            margin: 2% 0 40px;
 		}
 		
         .chart {
             display: grid;
             grid-template-rows: repeat(100, 1fr);
-            grid-column-gap: 1vmin;
-            width: 380px; /* adjust this to change bar thickness */ 
-            max-width: 93vw;
+            grid-column-gap: 10px;
+            width: 410px; 
+            max-width: 96%;
             height: 75vh;
             max-height: 1000px;
-            border-bottom: 5px solid orange;
+            border-bottom: 5px solid #ffba00;
 			position: relative;
         }
 
@@ -63,50 +85,40 @@
             background: #ffc600;
             grid-row-end: 102;
             border-radius: 5px 5px 0 0;
-        }
-
-        /* Percent */
-        .bar:before {
-            display: block; 
-            text-align: center;
             position: relative;
-            top: -17px;
-        }
-		
-		/* Name */
-        .bar:after {
-			display: block;
-			position: absolute;
-			bottom: -22px;
-			margin-left: 2px;
-			text-align: right;
-			transform: rotate(-35deg);
-			transform-origin: right;
         }
 
+        .bar-percent {
+            position: relative;
+            top: -18px;
+            text-align: center;
+        }
 
+        .bar-name {
+            position: relative;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            bottom: -99%;
+            left: 25%;
+            padding-top: 20px;
+			text-align: center;
+        }
     </style>
 
     <script>
-        const chart = document.querySelector('.chart');
-        const bars = document.querySelectorAll('.bar');
-        let i = 1;
         
-        bars.forEach(bar => {
-			//Bars height
-            bar.style.setProperty('grid-row-start', 101 - `${bar.dataset.percent}`);
-			
-			//Content of .bar:before and .bar:after
-            let percentText = `.bar:nth-child(${i}):before{content: "${bar.dataset.percent}%";} `;
-			let barName = `.bar:nth-child(${i}):after{content: "${bar.getAttribute('name')}"}`;
-			
-			document.querySelector('style').innerHTML += percentText + barName + '\n';
+        const chart = document.querySelector('.chart');
+        const totalBars = document.querySelectorAll('.bar').length;
+        const percentDivs = document.querySelectorAll('.bar-percent');
 
-            i++
+        //Automatically adjust bar's height based on its percentage with 'grid-row-start' property
+        percentDivs.forEach(percentDiv => {
+			const barPercent = percentDiv.textContent.replace('%', '');
+            
+            percentDiv.parentNode.style.setProperty('grid-row-start', 101 - `${barPercent}`);
         });
 
-        //Automatically adjust grid columns depending on no. of bars
-        const totalBars = bars.length;
+        //Automatically set 'grid-template-columns' value depending on no. of bars
         chart.style.setProperty('grid-template-columns', `repeat(${totalBars}, 1fr)`);
         
     </script>
