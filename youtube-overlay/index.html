@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>YouTube Video Overlay</title>
+	<style>
+	
+		
+		.video-container {
+			max-width: 650px;
+			margin: 50px auto;
+			position: relative;
+			border: 1px solid #cd201f;
+		}
+		.video {
+			position: relative;
+			padding-bottom: 56.25%;
+			height: 0;
+			overflow: hidden;
+		}
+		
+		#ytplayer {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+		
+		.layer {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			opacity: 0;
+		}
+		
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+			text-align: center;
+			background: rgba(47, 2, 21, 0.86);
+   			transition: 0.5s ease all;
+			color: white;
+			font-size: 5vmin;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			opacity: 0;
+			z-index: -10;
+		}
+		
+		.show {
+			opacity: 1;
+			z-index: 10;
+			
+		}
+		
+		.overlay:hover  {
+		    background: rgba(47, 2, 21, 0.95);
+			cursor: pointer;
+		}
+		
+		.overlay p {
+			margin: 0;
+		}
+		
+		.overlay img {
+			transition: .5s ease;
+			display: block;
+			margin: 10px auto 8px;
+		}
+		
+		.overlay:hover img  {
+		    transform: scale(1.05);
+		}
+	</style>
+</head>
+
+<body>
+	<div class="video-container">
+		<div class="video">
+			<div id="ytplayer"></div>
+		</div>
+		
+		<div class="layer"></div>
+		
+		<div class="overlay">
+			<div class="overlay-content">
+				<p>Video is paused</p>
+				
+				<img src="http://www.datingadviceguru.com/vsl-stuff-yt/videoplay.png" alt="">
+				
+				<p>Click here to play</p>
+			</div>
+		</div>
+	</div>
+	
+	<script src="https://www.youtube.com/iframe_api"></script>
+
+	<script>
+		
+		var player;
+
+		function onYouTubeIframeAPIReady() {
+			player = new YT.Player('ytplayer', {
+
+			  videoId: 'aqz-KE-bpKQ',
+				
+			  playerVars: {
+				  autoplay: 1,
+				  loop: 1,
+				  rel: 0,
+				  showinfo: 0,
+				  controls: 0,
+				  autohide: 1,
+				  playsinline: 1,
+				  madestbranding: 1,
+				  enablejsapi: 1
+			  }
+
+			});
+		}
+
+
+
+		const overlay = document.querySelector('.overlay');
+		const layer = document.querySelector('.layer');
+
+		overlay.addEventListener('click', handlePlay);
+		layer.addEventListener('click', handlePause);
+
+
+		function handlePlay() {
+			console.log('playing');
+			overlay.classList.remove('show');
+			player.playVideo();
+		}
+
+		function handlePause() {
+			console.log('paused');
+			overlay.classList.add('show');
+			player.pauseVideo();
+		}
+		
+	</script>
+</body>
+
+</html>
