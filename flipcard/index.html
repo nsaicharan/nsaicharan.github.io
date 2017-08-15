@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flipping Card</title>
+    <style>
+
+        .card-container {
+            perspective: 1200px;
+			width: 250px;
+			margin: 0 auto;
+        }
+
+        .card {
+            height: 300px;
+            width: 250px;
+            margin: 50px auto 0;
+            background: #ffc600;
+            transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+            transform-style: preserve-3d;
+            text-align: center;
+            font-size: 1em;
+            position: relative;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+			
+        }
+
+       .card-container:hover .card{
+            transform: rotateY(-180deg);
+        }
+		
+		.rotate {
+			transform: rotateY(-180deg);
+		}
+
+        .front, .back{
+            position: absolute;
+            top:0;
+            left: 0;
+			height: 100%;
+			width: 100%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+			flex-direction: column;
+			color: white;
+			font-family: sans-serif;
+            backface-visibility: hidden;
+
+        }
+			
+		.front {
+			background: url('https://placekitten.com/250/300');
+			font-size: 2em;
+			transform: rotateY(0deg);
+		}
+		
+        .back {
+            transform: rotateY(180deg);
+			background: tomato;
+        }
+		
+		
+		.address-text {
+			border: 2px solid white;
+			padding: 10px;
+			margin-top: 5px;
+			width: 200px;
+			word-wrap: break-word;
+			border-radius: 10px;
+		}
+		
+		.address-text:hover {
+			cursor: pointer;
+		}
+		
+		.copied {
+			color: tomato;
+			background: #f6f6f6;
+			text-align: center;
+			border: none;
+		}
+		
+		.copied:hover {
+			cursor: not-allowed;
+		}
+		
+		.sold-out {
+			font-size: 1.5em;
+			border: 2px solid white;
+			padding: 5px 10px;
+			font-weight: bold;
+		}
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        
+        <div class="card">
+            <div class="front">
+                Card 1 <br>
+                Front Side
+            </div>
+
+            <div class="back">
+                 <div class="address">
+                 	<strong>Card Address:</strong> <div class="address-text" title="Click to copy">1209oxcfj1o2i3jxadfwelkjalsdasdfe3215e</div>
+                 </div>
+                 
+                 <div class="amount">
+                 	<strong>Amount Available:</strong>
+                 	<div>0 / 333</div>
+                 </div>
+                 
+                 <div class="sold-out">
+                 	SOLD OUT
+                 </div>
+            </div>
+        </div>
+        
+    </div>
+   
+    
+    <script>
+		const address = document.querySelector(".address-text");
+		const card = document.querySelector('.card');
+		
+
+		address.onclick = function(e) {
+			document.execCommand("copy");
+			e.stopPropagation();
+		}
+
+		address.addEventListener("copy", function(event) {
+		    event.preventDefault();
+			
+			if (event.clipboardData) {
+				event.clipboardData.setData("text/plain", address.textContent);
+
+				address.textContent = "Copied!";
+				address.classList.add("copied");
+				address.setAttribute("title", "Already Copied!");
+
+				console.log(event.clipboardData.getData("text"))
+			}
+		});
+		
+		//Mobile
+		function removeMobileOnclick() {
+			if(isMobile()) {
+				card.addEventListener('click', function(){
+					this.classList.toggle('rotate');
+				})
+			}
+		}
+
+		function isMobile() {
+			if (navigator.userAgent.match(/Android/i)
+					|| navigator.userAgent.match(/iPhone/i)
+					|| navigator.userAgent.match(/iPad/i)
+					|| navigator.userAgent.match(/iPod/i)
+					|| navigator.userAgent.match(/BlackBerry/i)
+					|| navigator.userAgent.match(/Windows Phone/i)
+					|| navigator.userAgent.match(/Opera Mini/i)
+					|| navigator.userAgent.match(/IEMobile/i)
+					) {
+				return true;
+			}
+		}
+		window.addEventListener('load', removeMobileOnclick);
+	</script>
+</body>
+</html>
