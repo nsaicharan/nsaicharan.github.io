@@ -27,9 +27,9 @@
 			
         }
 
-       .card-container:hover .card{
+      /* .card-container:hover .card{
             transform: rotateY(-180deg);
-        }
+        }*/
 		
 		.rotate {
 			transform: rotateY(-180deg);
@@ -128,6 +128,14 @@
 		const card = document.querySelector('.card');
 		const cardContainer = document.querySelector('.card-container');
 		
+
+		cardContainer.addEventListener('mouseenter', function(){
+				card.classList.add('rotate');
+			})
+
+			cardContainer.addEventListener('mouseleave', function(){
+				card.classList.remove('rotate');
+			})
 
 		address.onclick = function(e) {
 			document.execCommand("copy");
