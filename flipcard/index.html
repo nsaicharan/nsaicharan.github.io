@@ -27,9 +27,9 @@
 			
         }
 
-       .card-container:hover .card{
+       /*.card-container:hover .card{
             transform: rotateY(-180deg);
-        }
+        }*/
 		
 		.rotate {
 			transform: rotateY(-180deg);
@@ -126,6 +126,7 @@
     <script>
 		const address = document.querySelector(".address-text");
 		const card = document.querySelector('.card');
+		const cardContainer = document.querySelector('.card-container');
 		
 
 		address.onclick = function(e) {
@@ -162,9 +163,9 @@
 			}
 		}
 
-		if(isMobile()) {
-			card.addEventListener('click', function(){
-				this.classList.toggle('rotate');
+		if(!isMobile()) {
+			cardContainer.addEventListener('click', function(){
+				card.classList.toggle('rotate');
 			})
 		}
 	</script>
