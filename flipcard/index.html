@@ -148,14 +148,6 @@
 		});
 		
 		//Mobile
-		function removeMobileOnclick() {
-			if(isMobile()) {
-				card.addEventListener('click', function(){
-					this.classList.toggle('rotate');
-				})
-			}
-		}
-
 		function isMobile() {
 			if (navigator.userAgent.match(/Android/i)
 					|| navigator.userAgent.match(/iPhone/i)
@@ -169,7 +161,12 @@
 				return true;
 			}
 		}
-		window.addEventListener('load', removeMobileOnclick);
+
+		if(isMobile()) {
+			card.addEventListener('click', function(){
+				this.classList.toggle('rotate');
+			})
+		}
 	</script>
 </body>
 </html>
