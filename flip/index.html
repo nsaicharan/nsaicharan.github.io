@@ -8,7 +8,9 @@
     <style>
 
         .card-container {
-            perspective: 1000;
+            perspective: 1200px;
+			width: 250px;
+			margin: 0 auto;
         }
 
         .card {
@@ -16,17 +18,22 @@
             width: 250px;
             margin: 50px auto 0;
             background: #ffc600;
-            transition: 1s;
+            transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
             transform-style: preserve-3d;
             text-align: center;
             font-size: 1em;
             position: relative;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+			
         }
 
-        .card:hover {
-            transform: rotateY(180deg);
+       .card-container:hover .card{
+            transform: rotateY(-180deg);
         }
+		
+		.rotate {
+			transform: rotateY(-180deg);
+		}
 
         .front, .back{
             position: absolute;
@@ -47,6 +54,7 @@
 		.front {
 			background: url('https://placekitten.com/250/300');
 			font-size: 2em;
+			transform: rotateY(0deg);
 		}
 		
         .back {
@@ -112,7 +120,6 @@
             </div>
         </div>
         
-        <p style="text-align:center">Hover to flip</p>
     </div>
    
     
@@ -120,12 +127,10 @@
 		const address = document.querySelector(".address-text");
 		const card = document.querySelector('.card');
 		
-//		card.addEventListener('click', function(){
-//			this.classList.toggle('rotate');
-//		})
 
-		address.onclick = function() {
+		address.onclick = function(e) {
 			document.execCommand("copy");
+			e.stopPropagation();
 		}
 
 		address.addEventListener("copy", function(event) {
@@ -141,6 +146,30 @@
 				console.log(event.clipboardData.getData("text"))
 			}
 		});
+		
+		//Mobile
+		function removeMobileOnclick() {
+			if(isMobile()) {
+				card.addEventListener('click', function(){
+					this.classList.toggle('rotate');
+				})
+			}
+		}
+
+		function isMobile() {
+			if (navigator.userAgent.match(/Android/i)
+					|| navigator.userAgent.match(/iPhone/i)
+					|| navigator.userAgent.match(/iPad/i)
+					|| navigator.userAgent.match(/iPod/i)
+					|| navigator.userAgent.match(/BlackBerry/i)
+					|| navigator.userAgent.match(/Windows Phone/i)
+					|| navigator.userAgent.match(/Opera Mini/i)
+					|| navigator.userAgent.match(/IEMobile/i)
+					) {
+				return true;
+			}
+		}
+		window.addEventListener('load', removeMobileOnclick);
 	</script>
 </body>
 </html>
