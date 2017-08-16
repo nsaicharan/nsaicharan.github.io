@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<title>Animation Demo</title>
+	<style>
+		html{
+			background: radial-gradient(#e5b519, #e7bd10);
+			background-size: cover;
+			height: 100vh;
+			color: white;
+			font-family: sans-serif;
+		}
+		
+		* {
+			box-sizing: border-box;
+		}
+		
+		.container {
+			max-width: 1150px;
+			margin: 0 auto;
+			height: 100vh;
+			display: flex;
+		}
+		
+		.col-1 {
+			flex: 1.5;
+			display: flex;
+			align-items: center;
+			padding: 0 40px 0 10px;
+		}
+		
+		.col-2 {
+			flex: 1;
+			display: flex;
+			justify-content: center;
+			flex-direction: column;
+			
+		}
+		
+		h2 {
+			font-size: 25px;
+			padding-left: 15px;
+			position: relative;
+		}
+		
+		h2 span {
+			display: block;
+			font-size: 1.5em;
+			
+		}
+		
+		h2:before {
+			content: '';
+			position: absolute;
+			height: 90%;
+			width: 5px;
+			border-radius: 10px;
+			background: linear-gradient(#fff26e, #f4c94b);
+			z-index: 2;
+			left: -1px;
+			top: 50%;
+			transform: translateY(-50%);
+		}
+		
+		p {
+			font-size: 20px;
+		}
+		
+		
+		img {
+			max-width: 100%;
+		}
+		
+		.images > * {
+			width: 50%;
+			padding: 10px;
+			float: left;
+		}
+		
+		@keyframes slideInDown1 {
+		  from {
+			transform: translateY(-1000px);
+			visibility: visible;
+		  }
+
+		  to {
+			transform: translateY(0)
+		  }
+		}
+		
+		.slideInDown1 {
+			animation-name: slideInDown1;
+		}
+		
+		.house {
+			animation-delay: .2s;
+		}
+		
+		.custom,
+		p {
+			animation-delay: .4s;
+		}
+		
+		
+	</style>
+</head>
+<body>
+
+	<div class="container">
+		<div class="col-1">
+			<img src="tab.png" alt="" class="tab animated slideInLeft">
+		</div>
+		
+		<div class="col-2">
+			<h2 class="animated slideInDown1">GESTAO DE PONTOS <span>COMMERCIAIS</span></h2>
+			
+			<p class="animated fadeIn">Voce pode ainda gerenciar todos seus pontos de vendas!</p>
+			
+			<div class="images">
+				<img src="house.png" alt="" class="house animated fadeIn">
+			    <img src="custom.png" alt="" class="custom animated fadeIn">
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
