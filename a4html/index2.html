@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    
+    <style>
+       body {
+          background: rgb(204,204,204); 
+        }
+        
+        p , li {
+            font-size: 20px;
+        }
+        
+        page[size="A4"] {
+          background: white;
+          width: 21cm;
+          height: 29.7cm;
+          display: block;
+          margin: 0 auto;
+          margin-bottom: 0.5cm;
+          box-shadow: 0 0 0.5cm rgba(0,0,0,0.5);
+          border: 1.25cm solid #fff;
+          position: relative;
+          overflow: hidden;
+        }
+        
+        .logo {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+        img {
+           max-width: 100%;
+        }
+        
+        .center {
+            text-align: center;
+        }
+        
+        @media print {
+          body, page[size="A4"] {
+            margin: 0;
+            box-shadow: 0;
+          }
+        }
+    </style>
+</head>
+
+
+<body>
+    
+<page size="A4">
+   <h1>Page One</h1>
+   <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium molestias ullam aut quas. Aliquid accusantium voluptatibus quidem nulla accusamus architecto repellat mollitia officia. Maxime perferendis consequatur facere sequi, fuga voluptatibus. Maxime perferendis consequatur facere sequi, fuga voluptatibus.</p>
+   
+   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente cumque veritatis iure molestiae voluptatum, sequi, accusamus necessitatibus molestias reiciendis, mollitia eius at nulla. Adipisci maiores alias mollitia repellendus blanditiis vel.</p>
+    
+    <h2>4. Content creator: Create more appealing content</h2>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod temporibus non nisi quisquam aperiam quaerat optio ex obcaecati, eaque dolorum quibusdam ratione fugit quia ea, nesciunt praesentium. Officiis, illo, debitis. Quod temporibus non nisi quisquam aperiam quaerat optio ex obcaecati, eaque dolorum quibusdam ratione fugit quia ea, nesciunt praesentium. Officiis, illo, debitis.</p>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nobis hic dignissimos, pariatur labore reprehenderit, facere maxime aspernatur nesciunt maiores, mollitia. Cupiditate fugit, possimus nam repellendus dignissimos eligendi esse dolores. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo nobis hic dignissimos, pariatur labore reprehenderit, facere maxime aspernatur nesciunt maiores, mollitia. Cupiditate fugit, possimus nam repellendus dignissimos eligendi esse dolores.lorem</p>
+    
+    <p>Finally, think of answering the following questions.</p>
+    
+    <ul>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+    </ul>
+    
+    <h2>Tying it all together</h2>
+    
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, saepe voluptatum et, vel ipsum dolorum. Odit magnam iusto aperiam velit labore, mollitia culpa ipsam aspernatur est, recusandae assumenda eaque! Neque.</p>
+    
+    <p class="logo"><img src="logo.png" alt=""></p>
+</page>
+
+<page size="A4">
+    <h1>Page Two</h1>
+    
+    <p>They are:</p>
+    
+    <ol>
+        <li>
+            <strong>Persona Discovery:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, nostrum ipsum non soluta quae assumenda repellat reprehenderit provident vel delectus tenetur accusamus repudiandae ipsam maiores eos, quia doloribus odit minus!
+        </li>
+        
+        <li>
+            <strong>Brand Discovery:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, nostrum ipsum non soluta quae assumenda repellat reprehenderit provident vel delectus tenetur accusamus repudiandae ipsam maiores eos, quia doloribus odit minus!
+        </li>
+        <li>
+            <strong>Journey Mapping:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, nostrum ipsum non soluta quae assumenda repellat reprehenderit provident vel delectus tenetur accusamus repudiandae ipsam maiores eos, quia doloribus odit minus!
+        </li>
+        <li>
+            <strong>Channel and Offering Alignment:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, nostrum ipsum non soluta quae assumenda repellat reprehenderit provident vel delectus tenetur accusamus repudiandae ipsam maiores eos, quia doloribus odit minus!
+        </li>
+        <li>
+            <strong>Experimentation and Optimization:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, nostrum ipsum non soluta quae assumenda repellat reprehenderit provident vel delectus tenetur accusamus repudiandae ipsam maiores eos, quia doloribus odit minus!
+        </li>
+        <li>
+            <strong>Reporting and Feedback:</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, nostrum ipsum non soluta quae assumenda repellat reprehenderit provident vel delectus tenetur accusamus repudiandae ipsam maiores eos, quia doloribus odit minus!
+        </li>
+    </ol> 
+    
+    <p>Remember: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, asperiores, reprehenderit! Quos nihil perferendis maxime, nesciunt amet atque porro, ut assumenda labore consequuntur voluptate illo eum sapiente tempore ducimus tempora?</p>
+    
+    <p class="logo"><img src="logo.png" alt=""></p>
+</page>
+
+<page size="A4">
+    <h1>Page Three</h1>
+    
+    <h2 class="center">Summary of your personas</h2>
+    
+    <p class="center"><img src="summary.png" alt=""></p>
+    
+    <p class="logo"><img src="logo.png" alt=""></p>
+</page>
+
+<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+</body>
+</html>
