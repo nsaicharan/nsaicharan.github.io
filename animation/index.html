@@ -4,14 +4,21 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<title>Animation Demo</title>
 	<style>
 		html{
-			background: radial-gradient(#e5b519, #e7bd10);
+			background: url('bg.gif') no-repeat center;
+			background-attachment: fixed;
 			background-size: cover;
-			height: 100vh;
+			height: 100%;
 			color: white;
 			font-family: sans-serif;
+		}
+		
+		body {
+			margin: 0;
+			padding: 0 10px;
 		}
 		
 		* {
@@ -19,29 +26,18 @@
 		}
 		
 		.container {
-			max-width: 1150px;
-			margin: 0 auto;
-			height: 100vh;
-			display: flex;
+			display: block;
+			height: auto;
+			padding: 10px;
 		}
 		
-		.col-1 {
-			flex: 1.5;
-			display: flex;
-			align-items: center;
-			padding: 0 40px 0 10px;
-		}
-		
-		.col-2 {
-			flex: 1;
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			
+		.tab {
+			display: block;
+			padding: 20px;
 		}
 		
 		h2 {
-			font-size: 25px;
+			font-size: 5vmin;
 			padding-left: 15px;
 			position: relative;
 		}
@@ -56,7 +52,7 @@
 			content: '';
 			position: absolute;
 			height: 90%;
-			width: 5px;
+			width: 8px;
 			border-radius: 10px;
 			background: linear-gradient(#fff26e, #f4c94b);
 			z-index: 2;
@@ -74,9 +70,13 @@
 			max-width: 100%;
 		}
 		
+		.images {
+			overflow: hidden;
+		}
+		
 		.images > * {
 			width: 50%;
-			padding: 10px;
+			padding: 15px;
 			float: left;
 		}
 		
@@ -104,6 +104,59 @@
 			animation-delay: .4s;
 		}
 		
+		.chevrons-outer {
+			background: white;
+			height: 80px;
+			color: #0f5faa;
+			max-width: 340px;
+			margin: 0 auto;
+			padding: 10px;
+			border-radius: 50px;
+			margin-bottom: 20px;
+		}
+		
+		.chevrons-inner {
+			box-shadow: 0 0 5px rgba(0,0,0,.2);
+			height: 100%;
+			border-radius: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		
+		.fa {
+			font-size: 25px;
+			margin: 0 30px;
+			cursor: pointer;
+		}
+		
+		.fa:hover {
+			color: #333;
+		}
+		
+		@media (min-width: 767px) {
+			.container { 
+				max-width: 1150px;
+				margin: 0 auto;
+				height: calc(100vh - 100px);
+				display: flex;
+			}
+
+			.col-1 {
+				flex: 1.5;
+				display: flex;
+				align-items: center;
+				padding: 0 40px 0 10px;
+			}
+
+			.col-2 {
+				flex: 1;
+				display: flex;
+				justify-content: center;
+				flex-direction: column;
+
+			}
+		}
 		
 	</style>
 </head>
@@ -123,6 +176,13 @@
 				<img src="house.png" alt="" class="house animated fadeIn">
 			    <img src="custom.png" alt="" class="custom animated fadeIn">
 			</div>
+		</div>
+	</div>
+	
+	<div class="chevrons-outer">
+		<div class="chevrons-inner">
+			<i class="fa fa-chevron-up"></i>
+			<i class="fa fa-chevron-down"></i>
 		</div>
 	</div>
 	
