@@ -40,7 +40,7 @@
 
         .logo {
             position: absolute;
-            top: 20px;
+            top: 15px;
             right: 40px;
             z-index: 3;
             text-align: center;
@@ -54,7 +54,13 @@
 <body>
 
     <div class="hero-image">
-        <img src="bg2.jpg" alt="">
+        <picture>
+            <picture>
+                <source media="(orientation:landscape)" sizes="100vw" srcset="bg.jpg 1920w">
+
+                <img src="bg2.jpg" alt="Doctor">
+            </picture>
+        </picture>
     </div> 
 
     <video id="hero-video" autoplay loop>
