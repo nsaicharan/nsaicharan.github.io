@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hero Video</title>
+  
+    <style>
+
+        html,
+        body {
+            margin: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .hero-image img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /*Crop Image*/
+            object-fit: cover;
+            object-position: center top;
+        }
+
+        #hero-video {
+            position: fixed;  
+            top: 50%; 
+            left: 50%;
+            transform: translate(-50%, -50%);  
+            opacity: 0;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 2;       
+        }
+
+        .logo {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            z-index: 3;
+            text-align: center;
+            max-width: 100%;
+            width: 200px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="hero-image">
+
+       
+        <img src="bg.jpg" alt="">
+        
+
+    </div> 
+
+    <video id="hero-video" autoplay loop>
+        <source src="trailer2.mp4" type="video/mp4" />
+    </video>
+
+ 
+    <a href="http://www.hbo.com/game-of-thrones">
+        <img src="logo.png" alt="" class="logo">
+    </a>
+    
+
+
+    <script src="main.js"></script>
+   
+</body>
+</html>

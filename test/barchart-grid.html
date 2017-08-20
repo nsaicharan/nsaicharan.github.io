@@ -4,45 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Montserrat" rel="stylesheet">
     <title>CSS Grid Bar Chart</title>
+    
 </head>
 <body>
 
     <div class="container">
-        <h2>Women Literacy Rate</h2>
+        <h2>Internet Users Rate</h2>
 
         <div class="chart">
             <div class="bar">
-                <div class="bar-percent">81%</div>
-                <div class="bar-name">India</div>
+                <div class="bar-percent">33%</div>
+                <div class="bar-name">Egypt</div>
             </div>
 
             <div class="bar">
-                <div class="bar-percent">83%</div>
+                <div class="bar-percent">52.2%</div>
                 <div class="bar-name">China</div>
             </div>
 
             <div class="bar">
-                <div class="bar-percent">98%</div>
+                <div class="bar-percent">88.5%</div>
                 <div class="bar-name">USA</div>
             </div>
 
             <div class="bar">
-                <div class="bar-percent">70%</div>
-                <div class="bar-name">UAE</div>
+                <div class="bar-percent">71.3%</div>
+                <div class="bar-name">Russia</div>
             </div>
 
             <div class="bar">
-                <div class="bar-percent">60%</div>
-                <div class="bar-name">Pakistan</div>
-            </div>
-
-            <div class="bar">
-                <div class="bar-percent">10%</div>
+                <div class="bar-percent">6.8%</div>
                 <div class="bar-name">Afghanistan</div>
             </div>
 
-   	
+   			<div class="bar">
+                <div class="bar-percent">45%</div>
+                <div class="bar-name">Kenya</div>
+            </div>
+            
     <style>
         * {
             box-sizing: border-box;
@@ -58,8 +59,7 @@
             justify-content: flex-start;
             align-items: center;
             margin-bottom: 35px;
-            font-family: 'Dancing Script', 'Operator Mono', Arial, sans-serif;
-            font-style: italic;
+            font-family: Merriweather, serif;
 			color: #555;
 			font-weight: bold;
         }
@@ -71,7 +71,7 @@
 		
         .chart {
             display: grid;
-            grid-template-rows: repeat(100, 1fr);
+            grid-template-rows: repeat(1000, 1fr);
             grid-column-gap: 10px;
             width: 410px; 
             max-width: 96%;
@@ -83,14 +83,14 @@
 
         .bar {
             background: #ffc600;
-            grid-row-end: 102;
+            grid-row-end: -2;
             border-radius: 5px 5px 0 0;
             position: relative;
         }
 
         .bar-percent {
             position: relative;
-            top: -18px;
+            top: -20px;
             text-align: center;
         }
 
@@ -113,9 +113,9 @@
 
         //Automatically adjust bar's height based on its percentage with 'grid-row-start' property
         percentDivs.forEach(percentDiv => {
-			const barPercent = percentDiv.textContent.replace('%', '');
+			const barPercent = (percentDiv.textContent.replace('%', '') * 1000 ) / 100;
             
-            percentDiv.parentNode.style.setProperty('grid-row-start', 101 - `${barPercent}`);
+            percentDiv.parentNode.style.setProperty('grid-row-start', 1001 - `${barPercent}`);
         });
 
         //Automatically set 'grid-template-columns' value depending on no. of bars
