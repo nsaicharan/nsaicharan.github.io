@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo - Iframe Height</title>
+    <style>
+        iframe {width: 100%;}
+        .container {max-width: 1170px; margin: 0 auto;}
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Container Page</h1>
+        <h2>Some random text</h2>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Numquam, aut voluptatem perferendis optio inventore, nemo accusantium magni suscipit repudiandae temporibus asperiores quam nam ad! Dolores doloremque sapiente quas eligendi possimus.</p>
+
+        <br>
+
+        <div>
+            <p>IFRAME 1 (<a href="AlSample2/index.html">source</a>)</p>
+            <iframe src="AlSample2/index.html" id="myIframe"></iframe>
+        </div>
+
+         <div>
+            <p>IFRAME 2 (<a href="page2.html">source</a>)</p>
+            <iframe src="page2.html"></iframe>
+        </div>
+
+        <br>
+
+        <h2>Other content on container page</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum fugit voluptate natus distinctio illum possimus delectus voluptatem consequatur aperiam atque consequuntur, fuga sed qui sunt nobis animi, eveniet ipsam doloribus.Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum fugit voluptate natus distinctio illum possimus delectus voluptatem
+        consequatur aperiam atque consequuntur, fuga sed qui sunt nobis animi, eveniet ipsam doloribus.</p>
+        
+    </div>
+
+    <script src="iframeResizer.min.js"></script>
+    <script>
+        iFrameResize({ log: true }, 'iframe');
+    </script>
+</body>
+</html>
