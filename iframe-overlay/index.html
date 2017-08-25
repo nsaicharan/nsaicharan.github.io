@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>iframe overlay demo</title>
 </head>
 <body>
 
@@ -17,9 +17,13 @@
     
     .container {
         position: relative;
+        /* padding-bottom: 100%;
+        padding-top: 25px;
+        height: 100%; */
+
         height: 500px;
         max-width: 500px;
-        margin: 10px auto;
+        margin: 10px auto; 
     }
 
     .container iframe {
@@ -45,7 +49,7 @@
 <div class="container">
     <iframe src="https://duckduckgo.com"></iframe>
 
-    <div class="layer"onclick="alert('You have clicked div overlay on top of an iframe!');"></div>
+    <div class="layer"onclick="alert('You have clicked a div layer which is placed on top of the iframe!');"></div>
 </div>
     
 </body>
