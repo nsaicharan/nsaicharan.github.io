@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Material Design Bootstrap</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.0/css/font-awesome.min.css">
+   
+    <link rel="stylesheet" href="compiled.css">
+
+    <style>
+        .fa-bars { color: #555; position: relative; top: -3px;}
+        /* img { max-height: 50px; margin:0; } */
+    </style>
+</head>
+
+<body  class="fixed-sn white-skin">
+
+    <!--Double navigation-->
+    <header>
+        <!-- Sidebar navigation -->
+        <ul id="slide-out" class="side-nav fixed sn-bg-4 custom-scrollbar">
+            <!-- Logo -->
+            <li>
+                <div class="logo-wrapper waves-light">
+                    <a href="#"><img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" class="img-fluid flex-center"></a>
+                </div>
+            </li>
+
+            <hr>
+            <!--/. Logo -->
+            <!--Social-->
+            
+            <!--/Social-->
+            <!--Search Form-->
+           
+            <!--/.Search Form-->
+            <!-- Side navigation links -->
+            <li>
+                <ul class="collapsible collapsible-accordion">
+
+                    <li><a href="https://wikipedia.org/" class="collapsible-header waves-effect link">Wikipedia</a>
+                    </li>
+
+                    <li><a href="https://duckduckgo.com/" class="collapsible-header waves-effect link">DuckDuckGo</a>
+                    </li>
+
+                     <li><a class="collapsible-header waves-effect arrow-r"> Freelancer<i class="fa fa-angle-down rotate-icon"></i></a>
+                        <div class="collapsible-body">
+                            <ul>
+                                <li><a href="#" class="waves-effect">Sublink 1</a>
+                                </li>
+                                <li><a href="#" class="waves-effect">Sublink 2</a>
+                                </li>
+                                <li><a href="#" class="waves-effect">Sublink 3</a>
+                                </li>
+                                <li><a href="#" class="waves-effect">Sublink 4</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+
+                </ul>
+            </li>
+            <!--/. Side navigation links -->
+            <div class="sidenav-bg mask-strong"></div>
+        </ul>
+        <!--/. Sidebar navigation -->
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg scrolling-navbar double-nav" style="font-size: 18px; font-weight: normal;">
+            <!-- SideNav slide-out button -->
+            <div class="float-left">
+                <a href="#" data-activates="slide-out" class="button-collapse"><i class="fa fa-bars"></i></a>
+            </div>
+            <!-- Breadcrumb-->
+            <div class="breadcrumb-dn mr-auto">
+                <p><a href="#" style="color:#555; font-size: 18px;" class="title">DuckDuckGo</a></p>
+            </div>
+            <ul class="nav navbar-nav nav-flex-icons ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link logo">DuckDuckGo logo here</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.Navbar -->
+    </header>
+    <!--/.Double navigation-->
+
+    <div style="margin: 80px auto 0; width: 96vw;">
+        <iframe src="https://duckduckgo.com" style="height: calc(100vh - (95px)); width:100%; margin: 0 auto; box-shadow: 0 0 10px #ccc; border: none;"></iframe>
+    </div style="margin-top: 80px;">
+    
+
+    <!-- SCRIPTS -->
+    <script src="compiled.js"></script>
+
+    <script>    
+     // SideNav Initialization
+        $(".button-collapse").sideNav();
+
+        
+
+        $(".link").click(function(e) {
+
+            e.preventDefault();
+
+            
+            
+
+            let url = this.href;
+            let name = this.textContent;
+
+            $('iframe').attr("src", url);
+            $('.title').text(name);
+            $('.logo').text(name + " logo here");
+
+
+            
+            $(".button-collapse").sideNav('hide');
+            
+            var sidenavs = document.querySelectorAll('div[id^="sidenav-"');
+
+            sidenavs.forEach(sidenav => sidenav.remove());
+
+            $('.button-collapse').click(function() {
+                var sidenavs2 = $('div[id^="sidenav-"');
+
+                for(let i =0; i<sidenavs2.length-1; i++) {
+                    sidenavs2[i].remove();
+                }
+
+                console.log(sidenavs2.length);
+            })
+
+        })
+
+        
+
+        // new WOW().init();
+    </script>
+</body>
+
+</html>
