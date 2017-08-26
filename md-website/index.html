@@ -14,6 +14,18 @@
     <style>
         .fa-bars { color: #555; position: relative; top: -3px;}
         /* img { max-height: 50px; margin:0; } */
+
+        .iframe-container {
+            margin: 80px auto 0; 
+            width: 96vw;
+        }
+
+        @media (max-width: 599px) {
+            .iframe-container {
+                margin: 60px auto 0;
+            }
+        }
+    
     </style>
 </head>
 
@@ -92,7 +104,7 @@
     </header>
     <!--/.Double navigation-->
 
-    <div style="margin: 80px auto 0; width: 96vw;">
+    <div class="iframe-container">
         <iframe src="https://duckduckgo.com" style="height: calc(100vh - (95px)); width:100%; margin: 0 auto; box-shadow: 0 0 10px #ccc; border: none;"></iframe>
     </div style="margin-top: 80px;">
     
