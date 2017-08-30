@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Leads Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <style media="screen">
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            background: #2c3e50;
+        }
+
+        body {
+            text-align: center;
+            font-size: 18px;
+            max-width: 1150px;
+            margin: 0 auto;
+            color: white;
+            font-family: 'Open Sans';
+        }
+
+        h1 {
+            font-size: 7vmin;
+        }
+
+        input {
+            width: 300px;
+            max-width: 80%;
+        }
+
+        .appointments {
+            margin: 30px 10px 10px;
+         }
+
+         .monthly,
+         .yearly {
+             margin: 20px 10px;
+         }
+
+        .chart {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+            border-radius: 50%;
+            border: 3px solid white;
+            position: relative;
+            background: rgba(0,0,0,.2);
+            overflow: hidden;
+        }
+
+        .chart-inner {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              transform: translateY(-1px); /* account for the height of the  hands */
+            }
+
+        .hand {
+              width:51%;
+              height:2px;
+              background: white;
+              position: absolute;
+              top:50%;
+              transform-origin: 100%;
+              transform: rotate(90deg);
+              transition: all .2s linear;
+          }
+
+          .hand2 {
+                transform: rotate(90deg);
+                /*border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;*/
+          }
+
+          .current-leads {
+              position: relative;
+              top: -15px;
+              left: -7px;
+              font-weight: bold;
+          }
+
+          .value {
+              font-size: 7.5vmin;
+              border-bottom: 2px solid white;
+              display: inline-block;
+              margin-bottom: 5px;
+              font-weight: bold;
+          }
+
+
+        @media (min-width: 768px) {
+            .appointments {
+                margin: 30px 10px 10px;
+                display:flex;
+                justify-content: space-around;
+                 align-items: center;
+             }
+
+            .monthly {
+                flex: 1;
+            }
+
+            .chart {
+                order: 2;
+            }
+
+            .yearly {
+                flex: 1;
+                order: 3;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>How Many Leads Do You <br> Generate Every Month?</h1>
+
+    <p>0 <input type="range" min="0" max="750" value="147"> 750</p>
+    <p class="current-leads">147</p>
+
+    <div class="appointments">
+
+        <div class="chart">
+            <div class="chart-inner">
+                <div class="hand hand1"></div>
+                <div class="hand hand2"></div>
+            </div>
+        </div>
+
+        <div class="monthly">
+            <div class="value">9</div>
+            <div class="text">Apppointments <br> per Month</div>
+        </div>
+
+        <div class="yearly">
+            <div class="value">106</div>
+            <div class="text">Apppointments <br> per Year</div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        const slider = document.querySelector('input[type=range]');
+        const sliderMax = document.querySelector('input[type=range]').getAttribute('max');
+        const currrentLeads = document.querySelector('.current-leads');
+        const monthly = document.querySelector('.monthly .value');
+        const yearly = document.querySelector('.yearly .value');
+        const hand2 = document.querySelector('.hand2');
+
+        slider.addEventListener('input', handleChange);
+
+        function handleChange() {
+
+            let leads = this.value;
+
+            currrentLeads.textContent = leads;
+
+            const monthlyAppointments = Math.round( leads * .06 );
+            const yearlyAppointments = Math.round( (leads * .06) * 12 );
+            const maxMonthlyAppointments = Math.round(sliderMax * .06);
+
+            monthly.textContent = monthlyAppointments;
+            yearly.textContent = yearlyAppointments;
+
+            const degrees = 90 - ( ( monthlyAppointments/maxMonthlyAppointments) * 360 ) ;
+
+            hand2.style.transform = `rotate(${degrees}deg)`;
+
+            console.log(this.value, 'deg:', degrees);
+        }
+
+    </script>
+</body>
+</html>
