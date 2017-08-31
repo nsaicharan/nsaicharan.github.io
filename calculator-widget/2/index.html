@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Leads Calculator</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+    <style media="screen">
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            background-image: linear-gradient(rgba(8,95,194,.6), rgba(8,95,194,.6)), url('bg-image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        body {
+            text-align: center;
+            font-size: 18px;
+            max-width: 1150px;
+            margin: 0 auto;
+            color: white;
+            font-family: 'Open Sans';
+        }
+
+        h1 {
+            font-size: 7vmin;
+        }
+
+        
+        input[type=range] {
+          -webkit-appearance: none;
+          background:transparent;
+          width: 100%;
+          margin: 0;
+        }
+
+        input[type=range]:focus {
+          outline: none;
+        }
+
+        input[type=range]::-webkit-slider-runnable-track {
+          width: 100%;
+          height: 11px;
+          cursor: pointer;
+          background: transparent;
+        }
+
+        input[type=range]::-webkit-slider-thumb {
+          height: 30px;
+          width: 32px;
+          border-radius: 2px;
+          border: 1px solid white;
+          background: #0EC3CC;
+          cursor: pointer;
+          -webkit-appearance: none;
+          margin-top: -11px;
+          box-shadow:0 0 2px rgba(0,0,0,0.2);
+        }
+
+        
+
+        input[type=range]::-moz-range-track {
+          width: 100%;
+          height: 8.4px;
+          cursor: pointer;
+          box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+          background: #ffffff;
+          border-radius: 1.3px;
+          border: 0.2px solid rgba(1, 1, 1, 0);
+        }
+        input[type=range]::-moz-range-thumb {
+          box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+          height: 15px;
+          width: 15px;
+          border-radius: 50px;
+          background: #ffc600;
+          cursor: pointer;
+        }
+
+
+        .input-section { 
+          position: relative;
+          width: 650px; 
+          max-width: 80vw;
+          margin: 0 auto; 
+        }
+
+        .thin-line {
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          width: 100%;
+          height: 3px;
+          background: white;
+          border-radius: 1px;
+          z-index: -2;
+        }
+
+        .thick-line {
+          position: absolute;
+          height: 15px;
+          background: #0EC3CC;
+          border-radius: 1px;
+          border: 2px solid white;
+          width: 0;
+          opacity: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 0;
+          z-index: -1;
+        }
+        
+        .leads {
+          position: relative;
+          width: 650px;
+          max-width: 80vw;
+          margin: 10px auto 50px;
+          font-size: 5vmin;
+        }
+
+        .leads .min-leads {
+          position: absolute;
+          left: -12px;
+        }
+
+        .leads .current-leads {
+          font-weight: bold;
+          font-size: 1.2em;
+        }
+
+        .leads .max-leads {
+          position: absolute;
+          right: -30px;
+        }
+
+        .appointments {
+            margin: 30px 10px 10px;
+         }
+
+         .monthly,
+         .yearly {
+             margin: 20px 10px;
+         }
+
+        .chart {
+            width: 300px;
+            height: 300px;
+            margin: 0 auto;
+            border-radius: 50%;
+            border: 3px solid white;
+            position: relative;
+            background: rgba(255, 255, 255, .2);
+            overflow: hidden;
+        }
+
+        .chart-inner {
+              position: relative;
+              width: 100%;
+              height: 100%;
+              transform: translateY(-1.5px); /* account for the height of the  hands */
+            }
+
+        .hand {
+              width:51%;
+              height:3px;
+              background: white;
+              position: absolute;
+              top:50%;
+              transform-origin: 100%;
+              transform: rotate(90deg);
+              transition: all .2s linear;
+          }
+
+          .hand2 {
+                transform: rotate(90deg);
+                /*border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;*/
+          }
+
+          .value {
+              font-size: 9vmin;
+              line-height: 1.2;
+              border-bottom: 4px solid white;
+              display: inline-block;
+              margin-bottom: 5px;
+              font-weight: bold;
+          }
+
+
+        @media (min-width: 768px) {
+            .appointments {
+                margin: 30px 10px 10px;
+                display:flex;
+                justify-content: space-around;
+                 align-items: center;
+             }
+
+            .monthly {
+                flex: 1;
+            }
+
+            .chart {
+                order: 2;
+            }
+
+            .yearly {
+                flex: 1;
+                order: 3;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>How Many Leads Do You <br> Generate Every Month?</h1>
+
+    <div class="input-section">
+      
+      <input type="range" min="0" max="750" value="147">
+      
+      <div class="thin-line"></div>
+      <div class="thick-line"></div>
+
+    </div>
+
+    <div class="leads">
+      <span class="min-leads">0</span>
+      <span class="current-leads">147</span>
+      <span class="max-leads">750</span>
+    </div>
+    
+   
+    <div class="appointments">
+
+        <div class="chart">
+            <div class="chart-inner">
+                <div class="hand hand1"></div>
+                <div class="hand hand2"></div>
+            </div>
+        </div>
+
+        <div class="monthly">
+            <div class="value">9</div>
+            <div class="text">Apppointments <br> per Month</div>
+        </div>
+
+        <div class="yearly">
+            <div class="value">106</div>
+            <div class="text">Apppointments <br> per Year</div>
+        </div>
+
+    </div>
+
+    <script type="text/javascript">
+        const slider = document.querySelector('input[type=range]');
+        const sliderMax = document.querySelector('input[type=range]').getAttribute('max');
+        const currrentLeads = document.querySelector('.current-leads');
+        const monthly = document.querySelector('.monthly .value');
+        const yearly = document.querySelector('.yearly .value');
+        const hand2 = document.querySelector('.hand2');
+        const follower = document.querySelector('.thick-line');
+        
+        slider.addEventListener('input', handleChange);
+
+        function handleChange() {
+
+            const leads = this.value;
+
+            currrentLeads.textContent = leads;
+
+            const monthlyAppointments = Math.round( leads * .06 );
+            const yearlyAppointments = Math.round( (leads * .06) * 12 );
+            const maxMonthlyAppointments = Math.round(sliderMax * .06);
+
+            monthly.textContent = monthlyAppointments;
+            yearly.textContent = yearlyAppointments;
+
+            const degrees = 90 - ( ( monthlyAppointments/maxMonthlyAppointments) * 360 ) ;
+
+            hand2.style.transform = `rotate(${degrees}deg)`;
+
+            console.log(this.value, 'deg:', degrees);
+
+            const followerWidth = (leads/sliderMax) * 100;
+
+            console.log('width: ', followerWidth);
+
+            follower.style.opacity = 1;
+            follower.style.width = followerWidth + '%';
+
+
+        }
+
+    </script>
+</body>
+</html>
