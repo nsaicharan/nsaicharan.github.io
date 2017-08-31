@@ -1,20 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Calculator Widget</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
-    <style media="screen">
 
+    <title>Calculator Widget</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <style>
         * {
             box-sizing: border-box;
         }
-
+        
         html {
-            background: rgba(8,95,194,.55);
-            background-image: linear-gradient(rgba(8,95,194,.55), rgba(8,95,194,.55)), url('pexels-photo-416405.jpg');
+            background: rgba(8, 95, 194, .55);
+            background-image: linear-gradient(rgba(8, 95, 194, .55), rgba(8, 95, 194, .55)), url('pexels-photo-416405.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -24,9 +27,9 @@
         }
         
         body {
-          margin: 0;
+            margin: 0;
         }
-      
+        
         .widget-container {
             text-align: center;
             font-size: 18px;
@@ -35,154 +38,161 @@
             color: white;
             font-family: 'Open Sans';
         }
-
+        
         h1 {
             font-size: 7vmin;
         }
-
+        
+        .input-section {
+            position: relative;
+            width: 650px;
+            max-width: 80vw;
+            margin: 50px auto 0;
+        }
+        
+        .input-section .thin-fill {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: white;
+            border-radius: 1px;
+            z-index: -2;
+        }
+        
+        .input-section .thick-fill {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            background: #0EC3CC;
+            border-radius: 1px;
+            border: 2px solid white;
+            z-index: -1;
+            height: 15px;
+            width: 19.6%; /* When input value is 147 (default) */
+        }
         
         input[type=range] {
-          -webkit-appearance: none;
-          background:transparent;
-          width: 100%;
-          margin: 0;
+            -webkit-appearance: none;
+            background: transparent;
+            width: 100%;
+            margin: 0;
         }
-
+        
         input[type=range]:focus {
-          outline: none;
+            outline: none;
         }
-
+        
         input[type=range]::-webkit-slider-runnable-track {
-          width: 100%;
-          height: 11px;
-          cursor: pointer;
-          background: transparent;
+            width: 100%;
+            height: 11px;
+            cursor: pointer;
+            background: transparent;
         }
-
+        
         input[type=range]::-webkit-slider-thumb {
-          height: 30px;
-          width: 32px;
-          border-radius: 2px;
-          border: 1px solid white;
-          background: #0EC3CC;
-          cursor: pointer;
-          -webkit-appearance: none;
-          margin-top: -11px;
-          box-shadow:0 0 2px rgba(0,0,0,0.2);
+            height: 30px;
+            width: 32px;
+            border-radius: 2px;
+            border: 1px solid white;
+            background: #0EC3CC;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -11px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
         }
-
+        
         input[type=range]::-moz-range-track {
-          width: 100%;
-          height: 11px;
-          cursor: pointer;
-          background: transparent;
+            width: 100%;
+            height: 11px;
+            cursor: pointer;
+            background: transparent;
         }
-
+        
         input[type=range]::-moz-range-thumb {
-          height: 30px;
-          width: 32px;
-          border-radius: 2px;
-          border: 1px solid white;
-          background: #0EC3CC;
-          cursor: pointer;
-          -moz-appearance: none;
-          margin-top: -11px;
-          box-shadow:0 0 2px rgba(0,0,0,0.2);
+            height: 30px;
+            width: 32px;
+            border-radius: 2px;
+            border: 1px solid white;
+            background: #0EC3CC;
+            cursor: pointer;
+            -moz-appearance: none;
+            margin-top: -11px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
         }
-
+        
         input[type="range"]::-ms-track {
-          width: 100%;
-          height: 11px;
-          cursor: pointer;
-          background: transparent;
+            width: 100%;
+            height: 11px;
+            cursor: pointer;
+            background: transparent;
         }
-
+        
         input[type="range"]::-ms-thumb {
-          height: 30px;
-          width: 32px;
-          border-radius: 2px;
-          border: 1px solid white;
-          background: #0EC3CC;
-          cursor: pointer;
-          -ms-appearance: none;
-          margin-top: -11px;
-          box-shadow:0 0 2px rgba(0,0,0,0.2);
+            height: 30px;
+            width: 32px;
+            border-radius: 2px;
+            border: 1px solid white;
+            background: #0EC3CC;
+            cursor: pointer;
+            -ms-appearance: none;
+            margin-top: -11px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
         }
-
-         input[type="range"]::-ms-tooltip {
-          display: none;
-         }
-
-
-        .input-section { 
-          position: relative;
-          width: 650px; 
-          max-width: 80vw;
-          margin: 50px auto 0; 
-        }
-
-        .thin-line {
-          position: absolute;
-          top: 50%;
-          transform: translateY(-50%);
-          left: 0;
-          width: 100%;
-          height: 3px;
-          background: white;
-          border-radius: 1px;
-          z-index: -2;
-        }
-
-        .thick-line {
-          position: absolute;
-          height: 15px;
-          background: #0EC3CC;
-          border-radius: 1px;
-          border: 2px solid white;
-          width: 19.6%; /* When input value is 147 (default) */
-          top: 50%;
-          transform: translateY(-50%);
-          left: 0;
-          z-index: -1;
+        
+        input[type="range"]::-ms-tooltip {
+            display: none;
         }
         
         .leads {
-          position: relative;
-          width: 650px;
-          max-width: 80vw;
-          margin: 10px auto 50px;
-          font-size: 5vmin;
+            position: relative;
+            width: 650px;
+            max-width: 80vw;
+            margin: 10px auto 50px;
+            font-size: 5vmin;
         }
-
+        
         .leads .min-leads {
-          position: absolute;
-          left: -12px;
-          font-weight: 300;
+            position: absolute;
+            left: -12px;
+            font-weight: 300;
         }
-
+        
         .leads .current-leads {
-          font-weight: bold;
-          font-size: 1.2em;
-          position: relative;
-          top: -3px;
+            font-weight: bold;
+            font-size: 1.2em;
+            position: relative;
+            top: -3px;
         }
-
+        
         .leads .max-leads {
-          position: absolute;
-          right: -30px;
-          font-weight: 300;
+            position: absolute;
+            right: -30px;
+            font-weight: 300;
         }
-
+        
         .appointments {
-          margin: 30px 10px 20px;
-         }
-
-        .monthly,
-        .yearly {
-          margin: 20px 10px;
+            margin: 30px 10px 20px;
         }
-
-        .chart {
+        
+        .appointments .monthly,
+        .appointments .yearly {
+            margin: 20px 10px;
+        }
+        
+        .appointments .value {
+            font-size: 9vmin;
+            line-height: 1.3;
+            border-bottom: 4px solid white;
+            display: inline-block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .graph {
             width: 300px;
             height: 300px;
             margin: 0 auto;
@@ -192,120 +202,121 @@
             background: rgba(255, 255, 255, .2);
             overflow: hidden;
         }
-
-        .chart-inner {
-              position: relative;
-              width: 100%;
-              height: 100%;
-              transform: translateY(-1.5px); /* account for the height of the  hands */
-            }
-
-        .hand {
-              width:51%;
-              height:3px;
-              background: white;
-              position: absolute;
-              top:50%;
-              transform-origin: 100%;
-              transform: rotate(90deg);
-              transition: all .2s linear;
-          }
-
-          .hand2 {
-              transform: rotate(18deg); /* When input value is 147 (default) */
-                
-          }
-
-          .value {
-              font-size: 9vmin;
-              line-height: 1.3;
-              border-bottom: 4px solid white;
-              display: inline-block;
-              margin-bottom: 5px;
-              font-weight: bold;
-          }
-
-
+        
+        .graph-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-1.5px); /* account for the height of the  graph line */
+        }
+        
+        .graph .line {
+            width: 51%;
+            height: 3px;
+            background: white;
+            position: absolute;
+            top: 50%;
+            transform-origin: 100%;
+            transform: rotate(90deg);
+            transition: all .2s linear;
+        }
+        
+        .graph .line-spl {
+            transform: rotate(18deg); /* When input value is 147 (default) */
+        }
+        
         @media (min-width: 768px) {
-
-            .input-section { 
-              margin: 65px auto 0; 
+            .input-section {
+                margin: 65px auto 0;
             }
-
             .appointments {
-                display:flex;
+                display: flex;
                 justify-content: space-around;
                 align-items: center;
-             }
-
-            .monthly {
+            }
+            .appointments .monthly {
                 flex: 1;
             }
-
-            .chart {
+            .graph {
                 order: 2;
             }
-
-            .yearly {
+            .appointments .yearly {
                 flex: 1;
                 order: 3;
             }
         }
+        
+        @media (min-width: 2273px) {
+            h1 {
+                font-size: 90px;
+            }
+            .input-section {
+                margin: 150px auto 0;
+            }
+            .widget-container {
+                max-width: 1300px;
+            }
+        }
     </style>
 </head>
+
 <body>
 
     <div class="widget-container">
 
-      <h1>How Many Leads Do You <br> Generate Every Month?</h1>
+        <h1>How Many Leads Do You <br> Generate Every Month?</h1>
 
-      <div class="input-section">
-        
-        <input type="range" min="0" max="750" value="147">
-        
-        <div class="thin-line"></div>
-        <div class="thick-line"></div>
+        <div class="input-section">
 
-      </div>
+            <input type="range" min="0" max="750" value="147">
+            
+            <div class="thin-fill"></div>
+            <div class="thick-fill"></div>
 
-      <div class="leads">
-        <span class="min-leads">0</span>
-        <span class="current-leads">147</span>
-        <span class="max-leads">750</span>
-      </div>
-      
-      
-      <div class="appointments">
+        </div> <!-- end input-section -->
 
-          <div class="chart">
-              <div class="chart-inner">
-                  <div class="hand hand1"></div>
-                  <div class="hand hand2"></div>
+        <div class="leads">
+
+            <span class="min-leads">0</span>
+            <span class="current-leads">147</span>
+            <span class="max-leads">750</span>
+
+        </div> <!-- end leads -->
+
+
+        <div class="appointments">
+
+          <div class="graph">
+              <div class="graph-inner">
+                  <div class="line"></div>
+                  <div class="line line-spl"></div>
               </div>
-          </div>
+          </div> <!-- end graph -->
 
           <div class="monthly">
               <div class="value">9</div>
               <div class="text">Appointments <br> per Month</div>
-          </div>
+          </div> <!-- end monthly -->
 
           <div class="yearly">
               <div class="value">106</div>
               <div class="text">Appointments <br> per Year</div>
-          </div>
+          </div> <!-- end yearly -->
 
-      </div>
+        </div> <!-- end appointments -->
 
-    </div> <!-- widget container -->
+    </div> <!-- end widget container -->
 
     <script type="text/javascript">
+
         const slider = document.querySelector('input[type=range]');
         const sliderMax = document.querySelector('input[type=range]').getAttribute('max');
+        const sliderThickFill = document.querySelector('.thick-fill');
         const currrentLeads = document.querySelector('.current-leads');
         const monthly = document.querySelector('.monthly .value');
         const yearly = document.querySelector('.yearly .value');
-        const hand2 = document.querySelector('.hand2');
-        const follower = document.querySelector('.thick-line');
+        const graphLine = document.querySelector('.line-spl');
+        
         
         slider.addEventListener('input', handleChange);
 
@@ -315,25 +326,26 @@
 
             currrentLeads.textContent = leads;
 
-            const monthlyAppointments = Math.round( leads * .06 );
+            //Start Main Formula
+            const monthlyAppointments = Math.round(leads * .06);
             const yearlyAppointments = Math.round( (leads * .06) * 12 );
             const maxMonthlyAppointments = Math.round(sliderMax * .06);
+            //End Main Formula
 
             monthly.textContent = monthlyAppointments;
             yearly.textContent = yearlyAppointments;
 
             const degrees = 90 - ( ( monthlyAppointments/maxMonthlyAppointments) * 360 ) ;
 
-            hand2.style.transform = `rotate(${degrees}deg)`;
+            graphLine.style.transform = `rotate(${degrees}deg)`;
 
-            console.log(this.value, 'deg:', degrees);
+            console.log('Rotate deg:', degrees);
 
-            const followerWidth = (leads/sliderMax) * 100;
+            const sliderLineWidth = (leads/sliderMax) * 100;
 
-            console.log('width: ', followerWidth);
+            console.log('Width %: ', sliderLineWidth);
 
-            follower.style.width = followerWidth + '%';
-
+            sliderThickFill.style.width = sliderLineWidth + '%';
 
         }
 
