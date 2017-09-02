@@ -5,11 +5,11 @@ null==d?void 0:d))},attrHooks:{type:{set:function(a,b){if(!o.radioValue&&"radio"
 
 
 /* jQuery Code #2 - STICKY NAVIGATION bar. This code MUST go AFTER the JQuery Library Code - or my Sticky Nav WILL NOT WORK!!!!  */
-$(function(){$(window).scroll(function(){var a=$("header").height();$(this).scrollTop()>=a?$("nav").addClass("fixed"):$("nav").removeClass("fixed")})});
+$(window).scroll(function(){var d=$(".longnav nav");$(this).scrollTop()>=$("header").height()?($("body").css("padding-top",d.height()+"px"),d.addClass("fixed")):($("body").css("padding-top","0"),d.removeClass("fixed"))});
 
 /* jQuery Code #3 - BACK TO TOP button */
 /* In case circle background is used instead of square, ".back-to-top" has to be replaced with ".back-to-top2" */
 $(document).ready(function(){var a=$(".back-to-top");a.on("click",function(a){$("html, body").animate({scrollTop:0},500),a.preventDefault()}),$(window).on("scroll",function(){var b=$(this),c=b.height(),d=b.scrollTop();d>c?a.is(":visible")||a.show():a.hide()})});
 
-/*! jQuery Code #4 - Animation For CTA Buttons. */
+/* jQuery Code #4 - Animation For CTA Buttons. */
 $(document).ready(function(){$(window).scroll(function(){var y=$(this).scrollTop();var parallax_pos=$('.row9').position();var parallax_height=$('.row9').height();if(y>=(parallax_pos.top-parallax_height-100)){$(".btn").addClass("fadeInDown");}else{$(".btn").removeClass("fadeInDown");}})});

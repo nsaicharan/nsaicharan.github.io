@@ -823,6 +823,7 @@ img {
 .row10 .six:nth-child(2) a{
     background: #253d5b;
     padding: 10px;
+    border-radius: 2px;
     text-decoration: none;
     color: white;
     font-size: 16px;
