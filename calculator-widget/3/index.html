@@ -50,7 +50,9 @@
             position: relative;
             width: 650px;
             max-width: 80vw;
+            height: 40px;
             margin: 50px auto 0;
+            overflow: hidden;
         }
         
         .input-section .thin-fill {
@@ -85,6 +87,7 @@
             background: transparent;
             border: none;
             width: 100%;
+            height: 100%;
             margin: 0;
         }
         
@@ -94,7 +97,7 @@
         
         input[type=range]::-webkit-slider-runnable-track {
             width: 100%;
-            height: 11px;
+            height: 15px;
             cursor: pointer;
             background: transparent;
         }
@@ -107,7 +110,7 @@
             background: #0EC3CC;
             cursor: pointer;
             -webkit-appearance: none;
-            margin-top: -11px;
+            margin-top: -9px;
             box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
         }
         
@@ -145,7 +148,7 @@
             background: #0EC3CC;
             cursor: pointer;
             -ms-appearance: none;
-            margin-top: -11px;
+            margin-top: -1px;
             box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
         }
         
@@ -209,7 +212,7 @@
             position: relative;
             background: rgba(255, 255, 255, .3);
             overflow: hidden;
-			font-size: 18px;
+            font-size: 18px;
             color: white;
         }
         
@@ -235,61 +238,66 @@
             transform: rotate(60deg); /* 1/12 */
         }
         
-		.graph-monthly-value {
-			position: absolute;
-			top: 25px;
-			right: 156px;	
-		}
-		
-		.graph-yearly-value {
-			position: absolute;
-			top: 160px;
-			right: 67px;
-		}
-		
-		
-		
+        .graph-monthly-value {
+            position: absolute;
+            top: 25px;
+            right: 156px;   
+        }
+        
+        .graph-yearly-value {
+            position: absolute;
+            top: 160px;
+            right: 67px;
+        }
+        
+        
+        /* MEDIA QUERIES */
         @media (min-width: 768px) {
             .input-section {
                 margin: 65px auto 0;
             }
+
             .leads .max-leads { 
                 right: -30px;
             }
+
             .appointments {
                 display: flex;
                 justify-content: space-around;
                 align-items: center;
             }
+
             .appointments .monthly {
                 flex: 1;
             }
+
             .graph {
                 order: 2;
             }
+
             .appointments .yearly {
                 flex: 1;
                 order: 3;
             }
         }
-		
-		@media (min-width: 1024px) {
-			.graph {
-				width: 400px;
-				height: 400px;
-				font-size: 25px;
-			}
-			
-			.graph-monthly-value {
-				top: 25px;
-				right: 201px;	
-			}
+        
+        @media (min-width: 1024px) {
+            .graph {
+                width: 400px;
+                height: 400px;
+                font-size: 25px;
+            }
+            
+            .graph-monthly-value {
+                top: 25px;
+                right: 201px;   
+            }
 
-			.graph-yearly-value {
-				top: 200px;
-				right: 81px;
-			}
-		}
+            .graph-yearly-value {
+                top: 200px;
+                right: 81px;
+            }
+        }
         
         @media (min-width: 1920px) {
             .widget-container {
@@ -362,8 +370,8 @@
         const monthly = document.querySelector('.monthly .value');
         const yearly = document.querySelector('.yearly .value');
         const graphLine = document.querySelector('.line-spl');
-		const graphMonthly = document.querySelector('.graph-monthly-value span');
-		const graphYearly = document.querySelector('.graph-yearly-value span');
+        const graphMonthly = document.querySelector('.graph-monthly-value span');
+        const graphYearly = document.querySelector('.graph-yearly-value span');
         
         
         slider.addEventListener('input', handleChange);
