@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Calculator Widget</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        
+        html {
+            background: rgba(8, 95, 194, .55);
+            background-image: linear-gradient(rgba(8, 95, 194, .55), rgba(8, 95, 194, .55)), url('pexels-photo-416405.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            min-height: 100%;
+            width: 100%;
+        }
+        
+        body {
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 7vmin;
+            color: white;
+            text-align: center;
+            font-family: 'Open Sans';
+        }
+        
+        .widget-container {
+            text-align: center;
+            font-size: 18px;
+            max-width: 1150px;
+            margin: 0 auto;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        .input-section {
+            position: relative;
+            width: 650px;
+            max-width: 80vw;
+            height: 40px;
+            margin: 50px auto 0;
+            overflow: hidden;
+        }
+        
+        .input-section .thin-fill {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: white;
+            border-radius: 1px;
+            z-index: -2;
+        }
+        
+        .input-section .thick-fill {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            background: #0EC3CC;
+            border-radius: 1px;
+            border: 2px solid white;
+            z-index: -1;
+            height: 15px;
+            width: 19.6%; /* When input value is 147 (default) */
+        }
+        
+        input[type=range] {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            -ms-appearance: none;
+            background: transparent;
+            border: none;
+            width: 100%;
+            height: 100%;
+            margin: 0;
+        }
+        
+        input[type=range]:focus {
+            outline: none;
+        }
+        
+        input[type=range]::-webkit-slider-runnable-track {
+            width: 100%;
+            height: 15px;
+            cursor: pointer;
+            background: transparent;
+        }
+        
+        input[type=range]::-webkit-slider-thumb {
+            height: 30px;
+            width: 32px;
+            border-radius: 2px;
+            border: 1px solid white;
+            background: #0EC3CC;
+            cursor: pointer;
+            -webkit-appearance: none;
+            margin-top: -8px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        input[type=range]::-moz-range-track {
+            width: 100%;
+            height: 15px;
+            cursor: pointer;
+            background: transparent;
+        }
+        
+        input[type=range]::-moz-range-thumb {
+            height: 30px;
+            width: 32px;
+            border-radius: 2px;
+            border: 1px solid white;
+            background: #0EC3CC;
+            cursor: pointer;
+            -moz-appearance: none;
+            margin-top: -11px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        input[type="range"]::-ms-track {
+            width: 100%;
+            height: 15px;
+            cursor: pointer;
+            background: transparent;
+        }
+        
+        input[type="range"]::-ms-thumb {
+            height: 30px;
+            width: 32px;
+            border-radius: 2px;
+            border: 1px solid white;
+            background: #0EC3CC;
+            cursor: pointer;
+            -ms-appearance: none;
+            margin-top: -1px;
+            box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        input[type="range"]::-ms-tooltip {
+            display: none;
+        }
+
+        
+        .leads {
+            position: relative;
+            width: 650px;
+            max-width: 80vw;
+            margin: 10px auto 50px;
+            font-size: 5vmin;
+        }
+        
+        .leads .min-leads {
+            position: absolute;
+            left: -12px;
+            font-weight: 300;
+        }
+        
+        .leads .current-leads {
+            font-weight: bold;
+            font-size: 1.2em;
+            position: relative;
+            top: -3px;
+        }
+        
+        .leads .max-leads {
+            position: absolute;
+            right: -25px;
+            font-weight: 300;
+        }
+
+        
+        .appointments {
+            margin: 35px 0 20px;
+        }
+        
+        .appointments .monthly,
+        .appointments .yearly {
+            margin: 20px 10px;
+        }
+        
+        .appointments .value {
+            font-size: 9vmin;
+            line-height: 1.3;
+            border-bottom: 4px solid white;
+            display: inline-block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        
+        .graph {
+            width: 310px;
+            height: 310px;
+            margin: 0 auto;
+            border-radius: 50%;
+            border: 3px solid white;
+            position: relative;
+            background: rgba(255, 255, 255, .3);
+            overflow: hidden;
+            font-size: 18px;
+            color: white;
+        }
+        
+        .graph-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-1.5px); /* account for the height of the  graph line */
+        }
+        
+        .graph .line {
+            width: 50%;
+            height: 3px;
+            background: white;
+            position: absolute;
+            top: 50%;
+            transform-origin: 100%;
+            transform: rotate(90deg);
+            transition: all .2s linear;
+        }
+        
+        .graph .line-spl {
+            transform: rotate(60deg); /* 1/12 */
+        }
+        
+        .graph-monthly-value {
+            position: absolute;
+            top: 25px;
+            right: 156px;   
+        }
+        
+        .graph-yearly-value {
+            position: absolute;
+            top: 160px;
+            right: 67px;
+        }
+		
+		.layer {
+			-webkit-clip-path: polygon(40% 50%, 18% 12%, 40% 5%);
+			-ms-clip-path: polygon(40% 50%, 18% 12%, 40% 5%);
+			-moz-clip-path: polygon(40% 50%, 18% 12%, 40% 5%);
+			clip-path: polygon(40% 50%, 18% 12%, 40% 5%);
+			background: rgba(255, 255, 255, .5); /* .5 refers to darkness of the small pie*/
+			z-index: -10;
+			height: 350px;
+			width: 350px;
+			position: relative;
+			top: -25px;
+			left: 11px;
+		}
+        
+        
+        /* MEDIA QUERIES */
+        @media (min-width: 768px) {
+            .input-section {
+                margin: 65px auto 0;
+            }
+
+            .leads .max-leads { 
+                right: -30px;
+            }
+
+            .appointments {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+            }
+
+            .appointments .monthly {
+                flex: 1;
+            }
+
+            .graph {
+                order: 2;
+            }
+
+            .appointments .yearly {
+                flex: 1;
+                order: 3;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .graph {
+                width: 400px;
+                height: 400px;
+                font-size: 25px;
+            }
+			
+			.layer {
+				-webkit-clip-path: polygon(49% 55%, 25% 13%, 49% 8%);
+				-ms-clip-path: polygon(40% 50%, 18% 12%, 40% 5%);
+				-moz-clip-path: polygon(40% 50%, 18% 12%, 40% 5%);
+				clip-path: polygon(49% 55%, 25% 13%, 49% 8%);
+				height: 450px;
+				width: 457px;
+				left: -28px;
+				top: -53px;
+			}
+            
+            .graph-monthly-value {
+                top: 25px;
+                right: 201px;   
+            }
+
+            .graph-yearly-value {
+                top: 200px;
+                right: 81px;
+            }
+        }
+        
+        @media (min-width: 1920px) {
+            .widget-container {
+                max-width: 1300px;
+            }
+           
+            .input-section {
+                margin: 150px auto 0;
+            }    
+
+            .leads {
+                font-size: 45px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>How Many Leads Do You <br> Generate Every Month?</h1>
+
+    <div class="widget-container">
+
+        <div class="input-section">
+
+            <input type="range" min="0" max="750" value="147">
+            
+            <div class="thin-fill"></div>
+            <div class="thick-fill"></div>
+
+        </div> <!-- end input-section -->
+
+        <div class="leads">
+
+            <span class="min-leads">0</span>
+            <span class="current-leads">147</span>
+            <span class="max-leads">750</span>
+
+        </div> <!-- end leads -->
+
+
+        <div class="appointments">
+
+          <div class="graph">
+              <div class="graph-inner">
+                  <div class="line"></div>
+                  <div class="line line-spl"></div>
+                  <div class="layer"></div>
+                  
+                  <div class="graph-monthly-value"> <span>5</span>/mo</div>
+                  <div class="graph-yearly-value"> <span>62</span>/yr</div>
+              </div>
+          </div> <!-- end graph -->
+
+          <div class="monthly">
+              <div class="value">5</div>
+              <div class="text">Appointments <br> per Month</div>
+          </div> <!-- end monthly -->
+
+          <div class="yearly">
+              <div class="value">62</div>
+              <div class="text">Appointments <br> per Year</div>
+          </div> <!-- end yearly -->
+
+        </div> <!-- end appointments -->
+
+    </div> <!-- end widget container -->
+
+    <script type="text/javascript">
+
+        const slider = document.querySelector('input[type=range]');
+        const sliderMax = document.querySelector('input[type=range]').getAttribute('max');
+        const sliderThickFill = document.querySelector('.thick-fill');
+        const currrentLeads = document.querySelector('.current-leads');
+        const monthly = document.querySelector('.monthly .value');
+        const yearly = document.querySelector('.yearly .value');
+        const graphLine = document.querySelector('.line-spl');
+        const graphMonthly = document.querySelector('.graph-monthly-value span');
+        const graphYearly = document.querySelector('.graph-yearly-value span');
+        
+        
+        slider.addEventListener('input', handleChange);
+
+        function handleChange() {
+
+            const leads = this.value;
+
+            currrentLeads.textContent = leads;
+
+            //Start Main Formula
+            const monthlyAppointments = Math.round(leads * .035);
+            const yearlyAppointments = Math.round( (leads * .035) * 12 );
+            //End Main Formula
+
+            monthly.textContent = monthlyAppointments;
+            graphMonthly.textContent = monthlyAppointments;
+            yearly.textContent = yearlyAppointments;
+            graphYearly.textContent = yearlyAppointments;
+
+            const sliderLineWidth = (leads/sliderMax) * 100;
+
+            console.log('Width %: ', sliderLineWidth);
+
+            sliderThickFill.style.width = sliderLineWidth + '%';
+
+        }
+
+    </script>
+</body>
+</html>
