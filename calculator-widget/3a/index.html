@@ -214,7 +214,7 @@
             overflow: hidden;
             font-size: 18px;
             color: white;
-			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.18);
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
         }
         
         .graph-inner {
@@ -250,19 +250,21 @@
             top: 160px;
             right: 67px;
         }
+
+        @supports (-webkit-clip-path: polygon(40% 50%, 18% 12%, 40% 5%)) or (clip-path: polygon(40% 50%, 18% 12%, 40% 5%)) {
+
+        	.layer {
+				-webkit-clip-path: polygon(40% 50%, 18% 12%, 40% 5%);
+				clip-path: polygon(40% 50%, 18% 12%, 40% 5%);
+				background: rgba(255, 255, 255, .6); /* .6 refers to darkness of the small pie*/
+				z-index: -10;
+				height: 350px;
+				width: 350px;
+				position: relative;
+				top: -25px;
+				left: 11px;
+        	}
 		
-		.layer {
-			-webkit-clip-path: polygon(40% 50%, 18% 12%, 40% 5%);
-			-ms-clip-path: polygon(40% 50%, 18% 12%, 40% 5%);
-			-moz-clip-path: polygon(40% 50%, 18% 12%, 40% 5%);
-			clip-path: polygon(40% 50%, 18% 12%, 40% 5%);
-			background: rgba(255, 255, 255, .5); /* .6 refers to darkness of the small pie*/
-			z-index: -10;
-			height: 350px;
-			width: 350px;
-			position: relative;
-			top: -25px;
-			left: 11px;
 		}
         
         
@@ -302,17 +304,19 @@
                 height: 400px;
                 font-size: 25px;
             }
-			
-			.layer {
-				-webkit-clip-path: polygon(49% 55%, 25% 13%, 49% 8%);
-				-ms-clip-path: polygon(40% 50%, 18% 12%, 40% 5%);
-				-moz-clip-path: polygon(40% 50%, 18% 12%, 40% 5%);
-				clip-path: polygon(49% 55%, 25% 13%, 49% 8%);
-				height: 450px;
-				width: 458px;
-				left: -28px;
-				top: -53px;
-			}
+
+            @supports (-webkit-clip-path: polygon(49% 55%, 25% 13%, 49% 8%)) or (clip-path: polygon(49% 55%, 25% 13%, 49% 8%)) {
+
+				.layer {
+					-webkit-clip-path: polygon(49% 55%, 25% 13%, 49% 8%);
+					clip-path: polygon(49% 55%, 25% 13%, 49% 8%);
+					height: 450px;
+					width: 458px;
+					left: -28px;
+					top: -53px;
+				}
+				
+            }
             
             .graph-monthly-value {
                 top: 25px;
