@@ -20,9 +20,13 @@ body {
     overflow: hidden;
 }
 
+img {
+    max-width: 100%;
+}
+
 /* Typography */
 
-h1, h2, h3, h4, h5, h6 {margin-top: 0;}
+h1, h2, h3, h4, h5, h6 { margin-top: 0; }
 
 p {
     margin: 0 0 1em 0; 
@@ -70,10 +74,10 @@ h2 {
     
     /* For desktop: */
     
-    .three {width: 25%;}
-    .four {width: 33.33%;}
-    .six {width: 50%;}
-    .nine {width: 75%;}
+    .three { width: 25%; }
+    .four { width: 33.33%; }
+    .six { width: 50%; }
+    .nine { width: 75%; }
 }
 
 .three:first-child, 
@@ -90,7 +94,7 @@ header .hero-image {
     overflow: hidden;
 }
 
-picture img{
+picture img {
     max-width: 100%;
     vertical-align: middle;
     z-index: -1;
@@ -106,7 +110,7 @@ picture img{
     height: 100%;
 }
 
-.overlay-text{
+.overlay-text {
     color: white;
     font-size: 26px;
     width: 620px;
@@ -119,11 +123,13 @@ picture img{
     transform: translate(-50%, -50%); 
 }
 
-@media (max-width:736px){
-    .overlay-text{font-size: 20px;}
+@media (max-width:736px) {
+    .overlay-text {
+		font-size: 20px;
+	}
 }
 
-.overlay-text-a{
+.overlay-text-a {
     color: white;
     font-size: 26px;
     line-height: 1.2em;
@@ -134,7 +140,7 @@ picture img{
     transform: translate(-50%, -50%); 
 }
 
-.overlay-text-b{
+.overlay-text-b {
     color: white;
     font-size: 26px;
     line-height: 1.2em; 
@@ -145,31 +151,31 @@ picture img{
     transform: translate(-50%, -50%); 
 }
 
-.hero-list{
+.hero-list {
     padding: 0;
     list-style: none;
 }
 
-.hero-list li{
+.hero-list li {
     line-height: .9em;
 }
 
-.hero-list li:first-child{
+.hero-list li:first-child {
     line-height: 1.5em;
     letter-spacing: 2px;
 }
 
-.hero-list a{
+.hero-list a {
     font-size:20px;
     text-decoration: none;
     color:white;
 }
 
-.hero-list a:hover{
+.hero-list a:hover {
     color:#ffba49;            
 }
 
-.hero-list li:first-child a{
+.hero-list li:first-child a {
     color:#ffba49;
     font-size: 22px;
     font-weight: bold;
@@ -192,7 +198,9 @@ picture img{
         margin-left: 20px;
     }
     
-    .menunav .logo:hover {color: #ffba49;}
+    .menunav .logo:hover {
+		color: #ffba49;
+	}
     
     .menunav {
         background-color: #253d5b;
@@ -232,7 +240,7 @@ picture img{
         transition: all .2s ease-out;
     }
 
-    .menutext{
+    .menutext {
         font-size: 12px;
         position: absolute;
         top:0px;
@@ -309,12 +317,12 @@ picture img{
         top: 0;
     }  
     
-    header .row{
+    header .row {
         position: relative;
         top: 70px;
     }
     
-    .longnav{
+    .longnav {
         display: none;
     }
     
@@ -326,10 +334,11 @@ picture img{
 
 @media only screen and (min-width: 1024px) {
     
-    .menunav{
+    .menunav {
         display:none;
     }
-     header .row{
+	
+     header .row {
         position: relative;
     }
 
@@ -341,7 +350,7 @@ picture img{
         line-height: 58.5px;
     }
     
-    .menunav li:first-child{
+    .menunav li:first-child {
         margin-top: 24px;
     }
     
@@ -354,18 +363,18 @@ picture img{
       margin: 6px 15px 7px; 
     }
     
-    header .row{
+    header .row {
         top: 58px;
     }
     
-    .row3{
+    .row3 {
         margin-top: 58px;
     }
 }
 
 @media only screen and (max-width: 599px) and (orientation : landscape) {
     
-    .menunav li:first-child{
+    .menunav li:first-child {
         margin-top: 5px;
     }
     
@@ -427,7 +436,7 @@ nav ul li a:hover {
     background: #ffb45c;
 }
 
-nav .three a{
+nav .three a {
     line-height: 60px;
     padding: 0;
     margin-left: 15px;
@@ -435,7 +444,7 @@ nav .three a{
     font-size: 150%;
 }
 
-nav .three a:hover{
+nav .three a:hover {
     color: #ffba49;
     cursor: pointer;
 }
@@ -467,11 +476,11 @@ nav .three a:hover{
 
 /* ===== Start Row5 ===== */
 
-.row5 .three{
+.row5 .three {
     position: relative;
 }
 
-@media (min-width:1024px){
+@media (min-width:1024px) {
     
     .row5 .three{ 
         width: 25%;
@@ -479,7 +488,7 @@ nav .three a:hover{
     
 }
 
-@media (min-width:480px) and (max-width:1023px){
+@media (min-width:480px) and (max-width:1023px) {
     
     .row5 .three{
         width: 50%;
@@ -487,9 +496,9 @@ nav .three a:hover{
     
 }
 
-@media (max-width:479px){
+@media (max-width:479px) {
     
-    .row5 .three{ 
+    .row5 .three { 
         width: 100%;
     }
     
@@ -528,7 +537,7 @@ nav .three a:hover{
     color: white;
 }
 
-@media (min-width:1401px){
+@media (min-width:1401px) {
     .overlay-text4 a{
         line-height: 1.3em;
     }
@@ -556,11 +565,11 @@ nav .three a:hover{
 
 /* ===== Start Row8 ===== */
 
-.row8 .six{
+.row8 .six {
     position: relative;
 }
 
-.color{
+.color {
     position: absolute;
     top:0;
     bottom:0;
@@ -570,9 +579,11 @@ nav .three a:hover{
 	transition: background .3s;
 }
 
-.color:hover{ background: rgba(19, 49, 103, 1); }
+.color:hover { 
+	background: rgba(19, 49, 103, 1); 
+}
 
-.overlay-text2{
+.overlay-text2 {
     color: white;
     width: 620px;
     max-width: 90%;
@@ -586,27 +597,27 @@ nav .three a:hover{
 .overlay-text2 p{ font-size: 16px; }
 
 
-@media (max-width:735px){
+@media (max-width:735px) {
    
-    .overlay-text2 h2{
+    .overlay-text2 h2 {
         font-size: 18px;
         padding-top: 5px;
     }
-    .overlay-text2 p{
+    .overlay-text2 p {
         font-size: 15.5px;
         margin: 0 0 0.6em 0;
         line-height: 1.2em;
     }
 }
 
-@media (max-width:599px){
+@media (max-width:599px) {
     
-     .overlay-text2 h2{
+     .overlay-text2 h2 {
         padding-top: 2px;
         margin-bottom: 2px;
     }
     
-    .overlay-text2 p{
+    .overlay-text2 p {
         font-size: 15px;
         margin: 0 0 0.5em 0;
         line-height: 1.1em;
@@ -614,14 +625,14 @@ nav .three a:hover{
     
 }
 
-@media (max-width:480px){
+@media (max-width:480px) {
     
-    .overlay-text2 h2{
+    .overlay-text2 h2 {
         font-size: 20px;
         margin-bottom: 10px;
     }
     
-    .overlay-text2 p{
+    .overlay-text2 p {
         font-size: 16px;
         margin: 0 0 0.5em 0;
         line-height: 1.2em;
@@ -629,14 +640,14 @@ nav .three a:hover{
     
 }
 
-@media (max-width:374px){
+@media (max-width:374px) {
     
-    .overlay-text2 h2{
+    .overlay-text2 h2 {
         font-size: 20px;
         margin-bottom: 5px;
     }
     
-    .overlay-text2 p{
+    .overlay-text2 p {
         font-size: 16px;
         margin: 0 0 0.6em 0;
         line-height: 1.11em;
@@ -644,7 +655,7 @@ nav .three a:hover{
     
 }
 
-@media (max-width:350px){
+@media (max-width:350px) {
     
     .overlay-text2 h2{ margin-bottom: 2px; }
     
@@ -663,7 +674,7 @@ nav .three a:hover{
     overflow: hidden;
 }
 
-.parallax img{
+.parallax img {
     position: fixed;
     z-index: -1;
     top:0;
@@ -673,18 +684,18 @@ nav .three a:hover{
 
 /* Disable Parallax < 1025px */
 
-@media (max-width:1024px){
-    .parallax{
+@media (max-width:1024px) {
+    .parallax {
         height: auto;
     }
     
-    .parallax img{
+    .parallax img {
         position: static;
     }
 }
 
 /* Start Animated CTA Buttons */
-.overlay-text3{
+.overlay-text3 {
     font-size: 24px;
     width: 950px;
     line-height: 1.2em;
@@ -724,20 +735,20 @@ nav .three a:hover{
     letter-spacing: 3px;
 }
 
-.btn:hover{
+.btn:hover {
     color: white;
 }
 
-.btn:nth-child(2){
+.btn:nth-child(2) {
     animation-delay: .2s;
 }
 
-.btn:nth-child(3){
+.btn:nth-child(3) {
     animation-delay: .4s;
     margin: 0;
 }
 
-@media (max-width:1023px){
+@media (max-width:1023px) {
     .btn {
         float: none;
         margin: 0 auto 15px;
@@ -745,12 +756,12 @@ nav .three a:hover{
         font-size: 21px;
     }
     
-    .btn:nth-child(3){
+    .btn:nth-child(3) {
         margin: 0 auto;
     }
 }
 
-@media (max-width:736px){
+@media (max-width:736px) {
     .btn {
         width: 36%;
         font-size: 20px;
@@ -759,7 +770,7 @@ nav .three a:hover{
     
 }
 
-@media (max-width:666px){
+@media (max-width:666px) {
     .btn {
         padding: 5px 10px;
         width: 44%;
@@ -768,7 +779,7 @@ nav .three a:hover{
     
 }
 
-@media (max-width:567px){
+@media (max-width:567px) {
     .btn {
         margin: 0 auto 20px;
         padding: 8px 10px;
@@ -777,7 +788,7 @@ nav .three a:hover{
     }  
 }
 
-@media (max-width:374px){
+@media (max-width:374px) {
     .btn {
         margin: 0 auto 15px;
         padding: 5px 10px;
@@ -791,55 +802,63 @@ nav .three a:hover{
 
 /* ===== Start Row10 ===== */
 
-.row10{
-    background: #F27935;
+.row10 {
+    background: #c39d63;
     padding: 30px 20px 45px;
 }
 
-.row10 .six{
+.row10 .six {
     display: table;
 }
-.row10 .six div{
+.row10 .six div {
     display: table-cell;
     vertical-align: middle;
     padding: 0 5px;
 }
 
-.row10 .six div .content-wrap{
+.row10 .six div .content-wrap {
     max-width: 680px;
     margin: 0 auto;
     display: block;
 }
 
-img {
-    max-width: 100%;
-}
-
-.row10 .six:nth-child(2) p, .row10 .six:nth-child(2) h2{
+.row10 .six:nth-child(2) p, 
+.row10 .six:nth-child(2) h2 {
     text-align: center;
 }
 
+.row10 .six:nth-child(2) img {
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, .18);
+}
+
 /* Button */
-.row10 .six:nth-child(2) a{
-    background: #253d5b;
-    padding: 10px;
+.row10 .six:nth-child(2) a {
+    background: #2c3e50;
+    padding: 10px 20px;
     border-radius: 2px;
     text-decoration: none;
     color: white;
     font-size: 16px;
     display: block;
-    box-sizing: border-box;
-    margin: 0 auto;
+    margin: 2px auto 0;
     width: 333px;
     max-width: 100%;
+	
+	box-shadow: 0 4px 6px rgba(50,50,93,.11), 0 1px 3px rgba(0,0,0,.08);
+    transition: all .22s;
 }
 
-.row10 .six:nth-child(2) a:hover{
+.row10 .six:nth-child(2) a:hover {
     color: #ffb45c;
+	
+	/* Lift up effect */
+    box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+	transform: translateY(-2px);
+    filter: brightness(130%);
 }
 
-@media (max-width:380px){
-    .row10 .six:nth-child(2) a{
+@media (max-width:380px) {
+    .row10 .six:nth-child(2) a {
         width:auto;
     }
 }
@@ -848,11 +867,11 @@ img {
 
 /* ===== Start ROW 11 ===== */
    
-    .row11{
+    .row11 {
         background: #FF8F00;
     }
 
-    .row11-container{
+    .row11-container {
         max-width: 760px;
         padding: 30px 25px 40px;
         margin: 0 auto;
@@ -892,11 +911,11 @@ footer {
     border-radius: 2px;
 }
 
-.back-to-top:hover{
+.back-to-top:hover {
     background: #ffba49;
 }
 
-.back-to-top img{
+.back-to-top img {
     margin: 5.5px 0 1px 3.45px;
 }
 
