@@ -853,8 +853,9 @@ nav .three a:hover {
     color: #ffb45c;
 	filter: brightness(130%);
 	
-	/* This will move the button up */
+	 /* This is the code which is moving the button up */
 	transform: translateY(-2px);
+	
 	box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
 }
 
