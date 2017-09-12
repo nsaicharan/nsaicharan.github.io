@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Add to List</title>
+    <style>
+
+        button {
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #ffc600;
+            border: none;
+            font-size: 1.3em;
+        }
+
+        li {
+            margin: 10px 0;
+            font-size: 1.3em;
+            transition: .2s;
+        }
+        li:hover {
+            cursor: pointer;
+        }
+
+        .color {
+            color: coral;
+        }
+    </style>
+</head>
+<body>
+    <br><br>
+    <button>Add another item to the list</button>
+    <br>
+    <ul id="list">
+        <li>Apple</li>
+        <li>Google Search</li>
+        <li>Breaking Bad</li>
+        <li>GOT</li>
+    </ul>
+
+    <p>Note: Event delegation has been addressed. Click on list items after adding extra an item to the list.</p>
+
+    <script>
+        const btn = document.querySelector('button');
+        const list = document.querySelector('#list');
+
+        let i = 0;
+        btn.addEventListener('click', function (e) {
+            list.innerHTML += `<li>Item ${i} </li>`;
+            i++;
+        });
+
+        list.addEventListener('click', function(e) {
+
+            const items = Array.from(e.target.parentNode.children);
+
+            if (e.target.nodeName == 'LI') {
+
+                items.forEach(item => {
+                    item.classList.remove('color');
+                });
+        
+                console.log(e.target);
+
+                e.target.classList.add('color');
+            }
+        });
+    </script>
+</body>
+</html>
