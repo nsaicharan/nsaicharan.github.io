@@ -208,7 +208,7 @@ picture img {
     
     .menunav {
         background-color: #253d5b;
-        box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.2);
+        box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
         position: fixed;
 		top: 0;
 		left: 0;
