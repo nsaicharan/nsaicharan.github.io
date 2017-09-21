@@ -919,7 +919,7 @@ footer {
     width: 40px;
     height: 40px;
     display: none;
-    transition: .2s ease-in;
+    transition: .2s;
     border-radius: 2px;
 }
 
