@@ -862,9 +862,14 @@ nav .three a:hover {
 
 .btn-alt:hover {
     color: #ffb45c;
-	filter: brightness(130%);
-	transform: translateY(-2px); /* This is moving the button up */
+  	filter: brightness(130%);
+  	
+  	/* Not working well in firefox
+  
+	transform: translateY(-2px); 
 	box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
+  	
+  	*/
 }
 
 @media (max-width:380px) {
