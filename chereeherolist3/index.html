@@ -21,12 +21,13 @@
       	   --------------
            * Zoom effect to hero list items
            * Slightly improved sticky nav
-           * Roboto 700 font
+           * Added Roboto bold version
            
            Note to Self:
            ------------
            * How row8 text can be improved? - 'fitty'?
-      	   * Performance - responsivebreakpoints.com - picture elements - img resizing
+      	   * row10 .btn-alt:hover - any issues with 'filter' in firefox?
+      	   * Performance - responsivebreakpoints.com - pic elements - any better img size/format?
       	   * Why body{font-size:93%}? 
            * Add 'CSS Grid' rows?
       
@@ -97,14 +98,12 @@
            
             <div class="hero-image">
                 <picture>
-                   
                     <source media="(min-width: 768px) and (orientation:portrait)" sizes="100vw" srcset="images/hero/bx1080s.jpg 1080w">
                     
                     <source media="(min-width: 480px) and (orientation:landscape)" sizes="100vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w, images/hero/bx2272.jpg 2272w, images/hero/bx3840.jpg 3840w">
                     
                     <img src="images/hero/bx1280p.jpg" sizes="100vw" srcset="images/hero/bx1280p.jpg 1280w, images/hero/bx1536p.jpg 1536w" alt="Request More Info">
-                    
-                </picture>
+				</picture>
             </div>
             
             <div class="layer"></div>
