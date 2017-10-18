@@ -275,6 +275,14 @@
             }
         }
         
+		.sent p {
+			margin:  0;
+			font-size: 18px;
+			color: darkgreen;
+			font-weight: bold;
+			transition: 1s cubic-bezier(0.42, 0, 0.29, 2.7);
+			opacity: 0;
+		}
 
         </style>
 
@@ -288,17 +296,19 @@
 
            <h2>Website Coming Soon!</h2> 
 
-           <p class="lead1">Have any questions? Shoot me an e-mail! </p>
+           <p class="lead1">Signup to get notified.</p>
 
 
-            <form action="">
-                <input class="form-control" id="name_2" placeholder="Name" type="text" required> <br>
-                <input class="form-control" id="name_2" placeholder="Email Address" type="text" required> <br>
-                <textarea class="form-control" id="textarea_2" placeholder="Message"  rows="3" required></textarea> <br>
-                <input type="submit" id="btn" value="SUBMIT">
+            <form id="mc-form" action="https://saicharan.us17.list-manage.com/subscribe/post?u=49aa7971748411501356347cc&amp;id=8f5ac5a39d"  method="POST">
+                <input class="form-control" id="name_2" placeholder="Name" type="text" name="FNAME"  required> <br>
+                
+                <input class="form-control" id="name_2" placeholder="Email Address" type="text" name="EMAIL" required> <br>
+                
+                <input type="submit" id="btn" value="SIGNUP" name="subscribe">
                
             </form>
             
+<!--
             <ul class="social-icons icon-circle icon-rotate list-unstyled list-inline"> 
               <li><a href="#"><i class="fa fa-twitter"></i></a> </li> 
               <li><a href="#"><i class="fa fa-instagram"></i></a> 
@@ -307,13 +317,41 @@
               </li>
                 
             </ul>
+-->
+       		<div class="sent">
+       			<p>Success!</p>
+       		</div>
+       
         </div>
         
-	<script fa-stack-1xsrc="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
 
+<!--
 	<script>
+		const p = document.querySelector('.sent > p');
+		
+		$('#mc-form').submit(function(e) {
+		  e.preventDefault();
+			
+		  var $this = $(this);
+			
+		  $.ajax({
+			  type: "GET", // GET & url for json slightly different
+			  url: "https://saicharan.us17.list-manage.com/subscribe/post-json?u=49aa7971748411501356347cc&amp;id=8f5ac5a39d",
+			  data: $this.serialize(),
+			  dataType    : 'json',
+			  contentType: "application/json; charset=utf-8",
+			  success : function(data) {
+				  p.style.opacity = 1;
+			  }
+		  });
+		  return false;
+		});
 	</script>
+-->
 
 </body>
 
