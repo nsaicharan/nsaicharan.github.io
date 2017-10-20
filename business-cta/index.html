@@ -25,8 +25,20 @@
         </form>
       </div>
     </div>
-  
-    <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
-    <script src="js/app.js"></script>
+
+    <script>
+      const cta = document.querySelector('.cta');
+      const overlay = document.querySelector('.overlay');
+      const close = document.querySelector('.close-btn');
+
+      cta.addEventListener('click', function(e) {
+        e.preventDefault();
+        overlay.classList.add('is-open');
+      });
+
+      close.addEventListener('click', function() {
+        overlay.classList.remove('is-open');
+      })
+    </script>
   </body>
 </html>
