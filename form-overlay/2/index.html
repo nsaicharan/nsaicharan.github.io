@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.min.css'
+    />
+    <style>
+        form#multiphase {
+            padding: 24px;
+            width: 350px;
+            margin: 0 auto;
+        }
+
+        form#Bmultiphase {
+            padding: 24px;
+            width: 350px;
+            margin: 0 auto;
+        }
+
+        [id^=phase] {
+            transition: .2s ease-in;
+        }
+
+        .clicked {
+            z-index: 100;
+            opacity: 1;
+            animation: .6s zoomIn ease both;
+        }
+
+        @keyframes zoomIn {
+            from {
+                opacity: 0;
+                transform: scale3d(.3, .3, .3);
+            }
+
+            50% {
+                opacity: 1;
+            }
+        }
+
+        .zoomIn {
+            animation-name: zoomIn;
+        }
+
+        form#multiphase>#phase2,
+        #phase3,
+        #show_all_data {
+            display: none;
+        }
+
+        form#Bmultiphase>#Bphase2,
+        #Bphase3,
+        #Bshow_all_data {
+            display: none;
+        }
+    </style>
+    <script>
+        var fname, lname, gender, country;
+        let type;
+
+        function _(x) {
+            return document.getElementById(x);
+        }
+
+        function process() {
+            const personal = _("tax_type_1");
+            const business = _("tax_type_2");
+
+            if (personal.checked || business.checked) {
+
+                if (personal.checked) {
+                    _("type").style.display = "none";
+                    _("personal").style.display = "block";
+                    _("phase1").classList.add('clicked');
+                } else {
+                    _("type").style.display = "none";
+                    _("business").style.display = "block";
+                    _("phase1").classList.add('clicked');
+                }
+
+
+            } else {
+                alert("Please select an option");
+            }
+        }
+
+        function processPhase1() {
+            const q1a = _("q1a");
+            const q1b = _("q1b");
+            const q1c = _("q1c");
+
+
+            if (q1a.checked || q1b.checked || q1c.checked) {
+                _("phase1").style.display = "none";
+                _("phase2").style.display = "block";
+                _("phase2").classList.add('clicked');
+                _("progressBar").value = 33;
+                _("status").innerHTML = "Phase 2 of 3";
+            } else {
+                alert("Please select an option");
+            }
+        }
+
+        function processPhase2() {
+            const q2a = _("q2a");
+            const q2b = _("q2b");
+            const q2c = _("q2c");
+
+
+ if (q2a.checked || q2b.checked || q2c.checked) {
+                _("phase2").style.display = "none";
+                _("phase3").style.display = "block";
+                _("phase3").classList.add('clicked');
+                _("progressBar").value = 66;
+                _("status").innerHTML = "Phase 3 of 3";
+            } else {
+                alert("Please select an option");
+            }
+        }
+
+        function processPhase3() {
+            const q3a = _("q3a");
+            const q3b = _("q3b");
+            const q3c = _("q3c");
+
+ if (q3a.checked || q3b.checked || q3c.checked) {
+                _("phase3").style.display = "none";
+                _("progressBar").value = 100;
+                _("status").innerHTML = "Thanks!";
+            } else {
+                alert("Please select an option");
+            }
+        }
+
+        //Business process
+
+        function BprocessPhase1() {
+            const Bq1a = _("Bq1a");
+            const Bq1b = _("Bq1b");
+            const Bq1c = _("Bq1c");
+
+
+            if (Bq1a.checked || Bq1b.checked || Bq1c.checked) {
+                _("Bphase1").style.display = "none";
+                _("Bphase2").style.display = "block";
+                _("Bphase2").classList.add('clicked');
+                _("BprogressBar").value = 33;
+                _("Bstatus").innerHTML = "Phase 2 of 3";
+            } else {
+                alert("Please select an option");
+            }
+        }
+
+        function BprocessPhase2() {
+            const Bq2a = _("Bq2a");
+            const Bq2b = _("Bq2b");
+            const Bq2c = _("Bq2c");
+
+
+ if (Bq2a.checked || Bq2b.checked || Bq2c.checked) {
+                _("Bphase2").style.display = "none";
+                _("Bphase3").style.display = "block";
+                _("Bphase3").classList.add('clicked');
+                _("BprogressBar").value = 66;
+                _("Bstatus").innerHTML = "Phase 3 of 3";
+            } else {
+                alert("Please select an option");
+            }
+        }
+
+        function BprocessPhase3() {
+            const Bq3a = _("Bq3a");
+            const Bq3b = _("Bq3b");
+            const Bq3c = _("Bq3c");
+
+ if (Bq3a.checked || Bq3b.checked || Bq3c.checked) {
+                _("Bphase3").style.display = "none";
+                _("BprogressBar").value = 100;
+                _("Bstatus").innerHTML = "Thanks!";
+            } else {
+                alert("Please select an option");
+            }
+        }
+    </script>
+
+    <style>
+        .check-radio {
+            margin-bottom: 5px;
+        }
+
+        .check-radio-group label {
+            cursor: pointer;
+            display: block;
+            color: #fff;
+            font-weight: bold;
+            font-size: 18px;
+            background: orange;
+            padding: 10px 12px;
+            border-radius: 4px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+            text-align: center;
+        }
+
+        .btn {
+            cursor: pointer;
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+            height: 100%;
+        }
+
+        .check-radio-group input[type="radio"] {
+            opacity: 0;
+            z-index: 100;
+            position: absolute;
+        }
+
+        .check-radio-group input[type="radio"]:checked+label {
+            background: #084f8c;
+        }
+
+        .check-radio-group label:hover {
+            background: #ffb22c;
+        }
+
+        #form_submit_button,
+        #form_submit_processing {
+            margin: 25px auto 0 auto;
+            text-align: center;
+        }
+
+        .form1 {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="type">
+            <p class="lead font-weight-bold">What type of tax debt do you have? </p>
+
+            <div class="check-radio-group animated_check">
+                <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                    <input type="radio" name="tax_type" id="tax_type_1" value="Personal">
+                    <label for="tax_type_1">Personal</label>
+                </div>
+                <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                    <input type="radio" name="tax_type" id="tax_type_2" value="Business">
+                    <label for="tax_type_2">Business</label>
+                </div>
+            </div>
+
+            <button class="btn btn-outline-success btn-block" onclick="process()">Continue</button>
+        </div>
+    </div>
+
+    <div class="form1 container" id="personal">
+
+        <progress id="progressBar" value="0" max="100" style="width:250px;"></progress>
+        <h3 id="status">Phase 1 of 3</h3>
+        <form id="multiphase" onsubmit="return false">
+            <div id="phase1">
+                <p>
+                    <b>1st</b> question related to "personal"</p>
+
+                <div class="check-radio-group animated_check">
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="personal_type" id="q1a" value="Option One">
+                        <label for="q1a">Option One</label>
+                    </div>
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="personal_type" id="q1b" value="Option Two">
+                        <label for="q1b">Option Two</label>
+                    </div>
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="personal_type" id="q1c" value="Option Three">
+                        <label for="q1c">Option Three</label>
+                    </div>
+                </div>
+                <button class="btn btn-outline-success btn-block" onclick="processPhase1()">Continue</button>
+            </div>
+
+            <div id="phase2">
+                <p>
+                    <b>2nd</b> question related to "personal"</p>
+
+                <div class="check-radio-group animated_check">
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="personal_type" id="q2a" value="Option One">
+                        <label for="q2a">Option One</label>
+                    </div>
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="personal_type" id="q2b" value="Option Two">
+                        <label for="q2b">Option Two</label>
+                    </div>
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="personal_type" id="q2c" value="Option Three">
+                        <label for="q2c">Option Three</label>
+                    </div>
+                </div>
+                <button class="btn btn-outline-success btn-block" onclick="processPhase2()">Continue</button>
+            </div>
+            <div id="phase3">
+                <p>
+                    <b>3rd</b> question related to "personal"</p>
+
+                <div class="check-radio-group animated_check">
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="business_type" id="q3a" value="Option One">
+                        <label for="q3a">Option One</label>
+                    </div>
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="business_type" id="q3b" value="Option Two">
+                        <label for="q3b">Option Two</label>
+                    </div>
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="business_type" id="q3c" value="Option Three">
+                        <label for="q3c">Option Three</label>
+                    </div>
+                </div>
+                <button class="btn btn-outline-success btn-block" onclick="processPhase3()">Continue</button>
+            </div>
+            <div id="show_all_data">
+                First Name:
+                <span id="display_fname"></span>
+                <br> Last Name:
+                <span id="display_lname"></span>
+                <br> Gender:
+                <span id="display_gender"></span>
+                <br> Country:
+                <span id="display_country"></span>
+                <br>
+                <button onclick="submitForm()">Submit Data</button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Business -->
+    <div class="form1 container" id="business">
+
+        <progress id="BprogressBar" value="0" max="100" style="width:250px;"></progress>
+        <h3 id="Bstatus">Phase 1 of 3</h3>
+        <form id="Bmultiphase" onsubmit="return false">
+            <div id="Bphase1">
+                <p>
+                    <b>1st</b> question related to "business"</p>
+
+                <div class="check-radio-group animated_check">
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="personal_type" id="Bq1a" value="Option One">
+                        <label for="Bq1a">Option One</label>
+                    </div>
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="personal_type" id="Bq1b" value="Option Two">
+                        <label for="Bq1b">Option Two</label>
+                    </div>
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="personal_type" id="Bq1c" value="Option Three">
+                        <label for="Bq1c">Option Three</label>
+                    </div>
+                </div>
+                <button class="btn btn-outline-success btn-block" onclick="BprocessPhase1()">Continue</button>
+            </div>
+
+            <div id="Bphase2">
+                <p>
+                    <b>2nd</b> question related to "business"</p>
+
+                <div class="check-radio-group animated_check">
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="personal_type" id="Bq2a" value="Option One">
+                        <label for="Bq2a">Option One</label>
+                    </div>
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="personal_type" id="Bq2b" value="Option Two">
+                        <label for="Bq2b">Option Two</label>
+                    </div>
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="personal_type" id="Bq2c" value="Option Three">
+                        <label for="Bq2c">Option Three</label>
+                    </div>
+                </div>
+                <button class="btn btn-outline-success btn-block" onclick="BprocessPhase2()">Continue</button>
+            </div>
+            <div id="Bphase3">
+                <p>
+                    <b>3rd</b> question related to "business"</p>
+
+                <div class="check-radio-group animated_check">
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="business_type" id="Bq3a" value="Option One">
+                        <label for="Bq3a">Option One</label>
+                    </div>
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="business_type" id="Bq3b" value="Option Two">
+                        <label for="Bq3b">Option Two</label>
+                    </div>
+                    <div class="check-radio" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+                        <input type="radio" name="business_type" id="Bq3c" value="Option Three">
+                        <label for="Bq3c">Option Three</label>
+                    </div>
+                </div>
+                <button class="btn btn-outline-success btn-block" onclick="BprocessPhase3()">Continue</button>
+            </div>
+            <div id="Bshow_all_data">
+                First Name:
+                <span id="display_fname"></span>
+                <br> Last Name:
+                <span id="display_lname"></span>
+                <br> Gender:
+                <span id="display_gender"></span>
+                <br> Country:
+                <span id="display_country"></span>
+                <br>
+                <button onclick="submitForm()">Submit Data</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>
