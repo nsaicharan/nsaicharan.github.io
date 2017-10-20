@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <title>Find Serial Number</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #fdfdfd;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        small p {
+            margin-left: 10px;
+        }
+
+        .find-serial-btn {
+            padding: 10px 20px;
+            background: orange;
+            border: 1px solid orange;
+            cursor: pointer;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .find-serial-btn:hover {
+            background: darkorange;
+        }
+
+        .popup-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100vw;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: -100;
+            opacity: 0;
+            transition: .3s ease;
+        }
+
+        .clicked {
+            z-index: 100;
+            opacity: 1;
+        }
+
+        .popup {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            max-width: 95%;
+            overflow-y: auto;
+            background: white;
+            color: #333;
+            border-radius: 5px;
+            padding: 50px 20px;
+        }
+
+        h2 {
+            font-size: 18px;
+            font-weight: normal;
+            color: orange;
+            text-align: center;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+            margin: 0 auto;
+        }
+
+        .popup .close {
+            position: absolute;
+            top: -10px;
+            right: 10px;
+            font-size: 45px;
+            color: #333;
+            cursor: pointer;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .popup .close:hover {
+            color: orange;
+            transition: .2s ease-in;
+        }
+
+        iframe {
+            height: 95%;
+            width: 100%;
+            border: none;
+            overflow: hidden;
+        }
+
+        /* Below CSS code should not be used on the actual site */
+
+        #mini {
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 300px;
+            font-weight: bold;
+            border: 2px dashed orange;
+            padding: 10px;
+        }
+        legend {
+            text-align: center;
+            font-size: 1.5em;
+            padding: 3px;
+            border-bottom: 2px solid orange;
+        }
+        input {
+            padding: 10px 20px;
+            margin-bottom: 10px;
+            border: 1px solid rgb(179, 172, 172);
+        }
+        input, button {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="mini">
+        <legend>Mini Form</legend>
+        <br><br>
+        <label for="q1">Question 1:</label>
+        <input type="text" id="q1">
+        <br>
+
+        <label for="q2">Question 2:</label>
+        <input type="text" id="q2">
+
+        <br>
+
+        <button type="submit" class="find-serial-btn">Get Free Quote</button>
+    </form>
+
+
+    <div class="popup-container">
+        <div class="popup">
+            <span class="close">&times;</span>
+
+            <form id="pop-form" action="thankyou.html"></form>
+        </div>
+    </div>
+
+    <script>
+        const serialButton = document.querySelector(".find-serial-btn");
+        const container = document.querySelector(".popup-container");
+        const popup = document.querySelector('.popup');
+        const close = document.querySelector(".popup .close");
+        const iframe = document.querySelector('iframe');
+        const miniform = document.querySelector('#mini');
+        const popform = popup.querySelector('#pop-form');
+        const input1 = document.querySelector('#q1');
+        const input2 = document.querySelector('#q2');
+
+        miniform.addEventListener('submit', function (e) {
+                e.preventDefault();
+
+                console.log(input1.value);
+
+                if (input1.value == "" || input2.value == "") {
+
+                    container.classList.add("clicked");
+
+                    let html = '';
+
+                    if(input1.value == "" && input2.value == "") {
+                        html += `
+                            <legend>Please enter the following info:</legend>
+                            <br><br>
+
+                            <label for="q1">Question 1:</label>
+                            <input type="text" id="q1" required>
+                            <br>
+
+                            <label for="q2">Question 2:</label>
+                            <input type="text" id="q2" required>
+
+                            <br>
+
+                            <button type="submit" class="find-serial-btn">SUBMIT</button>
+                        `;
+                    } else if (input1.value == "") {
+
+                        html += `
+                            <legend>Please enter the following info: </legend>
+                            <br><br>
+
+                            <label for="q1-new">Question 1:</label>
+                            <input type="text" id="q1-new" required>
+
+                            <br>
+
+                            <button type="submit" class="find-serial-btn">SUBMIT</button>
+                        `;
+                    } else {
+                        html += `
+                            <legend>Please enter the following info:</legend>
+                            <br><br>
+
+                            <label for="q2">Question 2:</label>
+                            <input type="text" id="q2" required>
+
+                            <br>
+
+                            <button type="submit" class="find-serial-btn">SUBMIT</button>
+                        `;
+                    }
+
+                    popform.innerHTML += html;
+
+                    document.onkeyup = function (e) {
+                        if (e.keyCode === 27) {
+                            closePopup();
+                        }
+                    }
+
+                } else {
+                    window.location.href = 'thankyou.html';
+                }
+
+            });
+
+        // container.onclick = closePopup;
+        close.onclick = closePopup;
+
+        function closePopup() {
+            container.classList.remove("clicked");
+            popform.innerHTML = '';
+        }
+    </script>
+
+</body>
+
+</html>
