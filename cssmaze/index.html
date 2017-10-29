@@ -1,168 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <title>Solving Maze Puzzle</title>
-  
+	<meta charset="UTF-8">
+	<title>Solving Maze Puzzle</title>
+
 	<link href='https://fonts.googleapis.com/css?family=Italianno' rel='stylesheet' type='text/css'>
-   
-	<style type="text/css">
-        
-        body{
-            margin:0;
-            padding: 0;
-            height: 100%;
-            background: radial-gradient(#009acc, #363795);
-            background-color: #221e05;
-            background-position:center;
-	        color:white;
-            font-family:'Georgia','serif';
-        }
-			
-      
-        
-        header{
-            width: 600px;
-            margin:0 auto;
-        }
-        
-        h1{
-            margin-top:50px;
-            text-align: center;
-            margin-top: 40px;
-            font-size: 52px;
-            line-height: 24px;
-        }
-            
-        
-        h3{
-            
-            text-align: right;
-            font-family: 'Italianno','brush script std','sans-serif';
-            font-size: 30px;
-	        padding-right: 32px;
-            line-height: 10px;
-            color:#f2af1a;
-        }
-     
-	p{
-            text-align:center;
-            font-size: 14px;
-	}
-   
-        .puzzle{
-            width: 800px;
-            height: 457px;
-            margin:60px auto 0;
-            background-image: url('MazePuzzle.gif');
-            position: relative;
-            
-        }
-        
-        .ball{
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background-color: #f2af1a;
-            border-radius: 100%;
-            top:150px;
-            left:45px;
-            animation: movement 20s ease 3s infinite;
-			-webkit-animation: movement 20s ease 3s infinite;
-			-moz-animation: movement 20s ease 3s infinite;
-			-o-animation: movement 20s ease 3s infinite;
-        }
 
-        
-        @keyframes movement{
-            0%{top:200px; left:45px;}
-            5%{top: 273px; left: 45px;}
-            10%{top:273px ; left:136px;}
-            20%{top:162px; left:136px;}
-            30%{top:162px; left:360px;}
-            40%{top:105px; left:360px;}
-            50%{top:105px; left:417px;}
-            60%{top:332px; left:417px;}
-            70%{top:332px; left:473px;}
-            75%{top:220px;left:473px;}
-            80%{top:220px; left:587px;}
-            85%{top:110px; left:587px;}
-            90%{top:110px; left:645px;}
-            95%{top:257px; left:645px;}
-            100%{top:257px; left:732px;}
-        }
-		
-		@-webkit-keyframes movement{
-            0%{top:200px; left:45px;}
-            5%{top: 273px; left: 45px;}
-            10%{top:273px ; left:136px;}
-            20%{top:162px; left:136px;}
-            30%{top:162px; left:360px;}
-            40%{top:105px; left:360px;}
-            50%{top:105px; left:417px;}
-            60%{top:332px; left:417px;}
-            70%{top:332px; left:473px;}
-            75%{top:220px;left:473px;}
-            80%{top:220px; left:587px;}
-            85%{top:110px; left:587px;}
-            90%{top:110px; left:645px;}
-            95%{top:257px; left:645px;}
-            100%{top:257px; left:732px;}
-        }
-		
-		@-moz-keyframes movement{
-            0%{top:200px; left:45px;}
-            5%{top: 273px; left: 45px;}
-            10%{top:273px ; left:136px;}
-            20%{top:162px; left:136px;}
-            30%{top:162px; left:360px;}
-            40%{top:105px; left:360px;}
-            50%{top:105px; left:417px;}
-            60%{top:332px; left:417px;}
-            70%{top:332px; left:473px;}
-            75%{top:220px;left:473px;}
-            80%{top:220px; left:587px;}
-            85%{top:110px; left:587px;}
-            90%{top:110px; left:645px;}
-            95%{top:257px; left:645px;}
-            100%{top:257px; left:732px;}
-        }
-		
-		@-o-keyframes movement{
-            0%{top:200px; left:45px;}
-            5%{top: 273px; left: 45px;}
-            10%{top:273px ; left:136px;}
-            20%{top:162px; left:136px;}
-            30%{top:162px; left:360px;}
-            40%{top:105px; left:360px;}
-            50%{top:105px; left:417px;}
-            60%{top:332px; left:417px;}
-            70%{top:332px; left:473px;}
-            75%{top:220px;left:473px;}
-            80%{top:220px; left:587px;}
-            85%{top:110px; left:587px;}
-            90%{top:110px; left:645px;}
-            95%{top:257px; left:645px;}
-            100%{top:257px; left:732px;}
-        }
-        
-      
-    </style>
+	<link href="https://fonts.googleapis.com/css?family=Cookie|Sacramento|Satisfy|Yesteryear" rel="stylesheet">
 
-    
+	<style>
+		body {
+			margin: 0;
+			padding: 0;
+			height: 100%;
+			background: radial-gradient(#009acc, #363795) center;
+			color: white;
+			font-family: Georgia, serif;
+		}
+		
+		header {
+			width: 600px;
+			margin: 0 auto;
+		}
+		
+		h1 {
+			margin-top: 50px;
+			text-align: center;
+			font-size: 52px;
+			line-height: 24px;
+		}
+		
+		h3 {
+			text-align: right;
+			font-family: Italianno, cursive;
+			font-size: 35px;
+			padding-right: 32px;
+			line-height: 10px;
+			color: orange;
+		}
+		
+		.puzzle {
+			width: 800px;
+			height: 457px;
+			margin: 60px auto 0;
+			background-image: url('maze-puzzle.gif');
+			position: relative;
+		}
+		
+		.ball {
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			background-color: orange;
+			border-radius: 100%;
+			top: 273px;
+			left: 45px;
+			animation: pulse 3s 1s, movement 18s 2.5s infinite;
+		}
+		
+		@keyframes pulse {
+			0% {
+				box-shadow: 0 0 0 0 rgba(255, 140, 0, 0.4);
+			}
+			70% {
+				box-shadow: 0 0 10px 50px rgba(255, 140, 0, 0);
+			}
+			100% {
+				box-shadow: 0 0 0 0 rgba(255, 140, 0, 0);
+			}
+		}
+		
+		@keyframes movement {
+			0% {
+				top: 273px;
+				left: 45px;
+			}
+			10% {
+				top: 273px;
+				left: 136px;
+			}
+			20% {
+				top: 162px;
+				left: 136px;
+			}
+			30% {
+				top: 162px;
+				left: 360px;
+			}
+			35% {
+				top: 105px;
+				left: 360px;
+			}
+			40% {
+				top: 105px;
+				left: 417px;
+			}
+			50% {
+				top: 332px;
+				left: 417px;
+			}
+			60% {
+				top: 332px;
+				left: 473px;
+			}
+			70% {
+				top: 220px;
+				left: 473px;
+			}
+			75% {
+				top: 220px;
+				left: 587px;
+			}
+			80% {
+				top: 110px;
+				left: 587px;
+			}
+			85% {
+				top: 110px;
+				left: 645px;
+			}
+			90% {
+				top: 257px;
+				left: 645px;
+			}
+			95% {
+				top: 257px;
+				left: 732px;
+			}
+			100% {
+				top: 257px;
+				left: 732px;
+			}
+		}
+	</style>
+
+
 </head>
+
 <body>
-    
-    <header>
-        <h1>Solving Maze Puzzle</h1>
-        <h3>..Using CSS Animation</h3>
-    </header>
-        
-    <div class="puzzle">
-        <div class="ball"></div>
-    </div>
-	
-	
-    
+
+	<header>
+		<h1>Solving Maze Puzzle</h1>
+		<h3>..Using CSS Animation</h3>
+	</header>
+
+	<div class="puzzle">
+		<div class="ball"></div>
+	</div>
+
+
+
 </body>
+
 </html>
