@@ -46,10 +46,32 @@
 
 <script src="https://player.vimeo.com/api/player.js"></script>
 <script>
-    const iframe = document.querySelector('iframe');
-    const player = new Vimeo.Player(iframe);
-	  const span = document.querySelector('span');
+    var iframe = document.querySelector('iframe');
+    var player = new Vimeo.Player(iframe);
+	  var span = document.querySelector('span');
 
+		
+    window.onload = function() {
+			  
+			if (localStorage.getItem('prevTime')) {
+					
+					var prevTime = localStorage.getItem('prevTime');
+				
+					console.log(prevTime);
+			
+					player.on('play', function() {
+						player.setCurrentTime(prevTime).then(function(seconds) {
+
+							console.log(seconds);
+							
+							span.innerHTML = `Welcome Back! Player started at where you left off (${seconds} seconds) last time.`;
+
+						})
+					})
+			}
+				
+		}
+	
 		window.addEventListener("beforeunload", function (e) {
 				e.preventDefault();
 			
@@ -58,17 +80,6 @@
 				});
 		});
 	
-    player.on('play', function(time) {
-			
-				var time = localStorage.getItem('prevTime') || 0;
-			
-				player.setCurrentTime(time).then(function(seconds) {
-						
-						span.innerHTML = `Player started at ${seconds} seconds`;
-					
-						console.log('Player startedd at ' + seconds + ' secs');
-				})
-    });
 
 	
 	</script>
