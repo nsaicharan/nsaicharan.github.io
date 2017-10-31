@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Vimeo API Demo</title>
+
+	<style>
+		
+		body {
+			text-align: center;
+			padding-top: 50px;
+		}
+		span {
+			display: block;
+			font-size: 18px;
+			margin-top: 20px;
+		}
+/*
+		.container {
+			max-width: 600px;
+			position: relative;
+			padding-bottom: 56.25%;
+			height: 0;
+			overflow: hidden;
+			margin: 20px auto 10px;
+		}
+		
+		iframe {
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+*/
+	</style>
+</head>
+<body>
+	
+	<div class="container">
+		<iframe src="https://player.vimeo.com/video/76979871"  frameborder="0"  width="640" height="360" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+		
+		<span></span>
+	</div>
+
+<script src="https://player.vimeo.com/api/player.js"></script>
+<script>
+    const iframe = document.querySelector('iframe');
+    const player = new Vimeo.Player(iframe);
+	  const span = document.querySelector('span');
+
+		window.addEventListener("beforeunload", function (e) {
+				e.preventDefault();
+			
+  			player.getCurrentTime().then(function(time) {
+						localStorage.setItem('prevTime', time);
+				});
+		});
+	
+    player.on('play', function(time) {
+			
+				var time = localStorage.getItem('prevTime') || 0;
+			
+				player.setCurrentTime(time).then(function(seconds) {
+						
+						span.innerHTML = `Player started at ${seconds} seconds`;
+					
+						console.log('Player startedd at ' + seconds + ' secs');
+				})
+    });
+
+	
+	</script>
+</body>
+</html>
