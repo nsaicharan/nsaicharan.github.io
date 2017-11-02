@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Google Map</title>
+  <style>
+
+	h1 {
+		text-align: center;
+	}
+
+    .container {
+      max-width: 650px;
+      margin: 0 auto;
+      position: relative;
+       height:400px;
+    }
+
+    .layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40%;
+      height: 100%;
+      z-index: 2;
+      background: rgba(255, 255, 255, .7);
+      color: #222;
+      font-family: Arial, Helvetica, sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .wrapper {
+      margin-top: 30px;
+      padding: 10px;
+    }
+
+    h3 {
+      margin-bottom: 8px;
+    }
+
+    p {
+      margin: 5px 0;
+      font-size: 17px;
+    }
+
+    #map{
+     height: 100%;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <h1>Google Maps Custom Embed</h1>
+  <div class="container">
+    <div id="map"></div>
+    <div class="layer">
+      <div class="wrapper">
+        <h3>Head Office</h3>
+        <p>314 Athlone Avenue </p>
+        <p>Ottawa, Ontario </p>
+        <p>K1Z 5M4</p>
+        <p> Canada</p>
+      </div>
+    </div>
+  </div>
+
+  <script async defer
+ src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC5yG8BJZvh_QO0Hv-M5BYJ63RzFNDZWeo&callback=initMap">
+    </script>
+
+    <script>
+    function initMap(){
+      // Map options
+      var options = {
+        zoom: 5,
+        center:{lat:45.421530 - 2, lng:(-75.697193 - 6)},
+        mapTypeControl: !1,
+        panControl: !1,
+        zoomControl: !0,
+        scaleControl: !1,
+        streetViewControl: !1,
+        scrollwheel: !1
+      }
+
+      // New map
+      var map = new google.maps.Map(document.getElementById('map'), options);
+
+      // Listen for click on map
+      google.maps.event.addListener(map, 'click', function(event){
+        // Add marker
+        addMarker({coords:event.latLng});
+      });
+
+
+      // Add marker
+      var marker = new google.maps.Marker({
+        position:{lat:45.395719, lng:-75.752446},
+        map:map
+      });
+
+      var infoWindow = new google.maps.InfoWindow({
+ content:'<p>314 Athlone Avenue, Ottawa, Ontario, K1Z 5M4, Canada </p>'
+      });
+
+      marker.addListener('click', function(){
+        infoWindow.open(map, marker);
+      });
+
+
+
+    }
+  </script>
+</body>
+</html>
