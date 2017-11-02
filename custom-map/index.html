@@ -15,7 +15,12 @@
       max-width: 650px;
       margin: 0 auto;
       position: relative;
-       height:400px;
+      height:400px;
+    }
+
+    #map{
+     height: 100%;
+      width: 100%;
     }
 
     .layer {
@@ -47,16 +52,16 @@
       font-size: 17px;
     }
 
-    #map{
-     height: 100%;
-      width: 100%;
-    }
   </style>
 </head>
 <body>
+
   <h1>Google Maps Custom Embed</h1>
+
   <div class="container">
+
     <div id="map"></div>
+
     <div class="layer">
       <div class="wrapper">
         <h3>Head Office</h3>
@@ -66,6 +71,7 @@
         <p> Canada</p>
       </div>
     </div>
+
   </div>
 
   <script async defer
@@ -74,6 +80,7 @@
 
     <script>
     function initMap(){
+
       // Map options
       var options = {
         zoom: 5,
@@ -95,22 +102,18 @@
         addMarker({coords:event.latLng});
       });
 
-
-      // Add marker
       var marker = new google.maps.Marker({
         position:{lat:45.395719, lng:-75.752446},
         map:map
       });
 
       var infoWindow = new google.maps.InfoWindow({
- content:'<p>314 Athlone Avenue, Ottawa, Ontario, K1Z 5M4, Canada </p>'
+ 		content:'<p>314 Athlone Avenue, Ottawa, Ontario, K1Z 5M4, Canada </p>'
       });
 
       marker.addListener('click', function(){
         infoWindow.open(map, marker);
       });
-
-
 
     }
   </script>
