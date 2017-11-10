@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Form Demo</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        input:not([type=checkbox]), select {
+            width: 90%;
+            padding: 5px;
+            font-size: 1.2em;
+            transition: .2s;
+        }
+
+        input[type=checkbox] {
+            vertical-align: bottom;
+        }
+
+        .special {
+            display: none;
+        }
+
+        button {
+            padding: 5px 10px;
+            cursor: pointer;
+        }
+
+        #result {
+            text-align: center;
+            font-size: 1.2em;
+            color: yellowgreen;
+            margin: 10px;
+            font-weight: bold;
+            display: none;
+        }
+
+        .invalid {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Sample Web Form</h1>
+
+    <form id="form">
+        <input type="text" placeholder="First Name" id="first" name="first">
+        <br><br>
+        <input type="text" placeholder="Last Name" id="last" name="last">
+        <br><br>
+        <input type="email" placeholder="Email Address" name="email">
+        <br><br>
+        <label>
+            <input type="checkbox" name="" id="checkbox">
+            Check the box to see more options
+        </label>
+        <br>
+        <div class="special">
+            <br>
+            <input type="text" placeholder="Text input">
+            <br><br>
+            <select name="gender" id="select1">
+                <option value="" disabled selected>Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <br><br>
+            <select name="location" id="select2">
+                <option value="" disabled selected>Location</option>
+                <option value="UK">UK</option>
+                <option value="USA">USA</option>
+                <option value="Japan">Japan</option>
+            </select>
+        </div>
+
+        <br>
+
+        <button type="submit" id="submit">Submit</button>
+        <button id="draft">Save as Draft</button>
+    </form>
+
+    <div id="result"></div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
+
+    <script>
+        $("#checkbox").change(function(){
+            if (this.checked) {
+                $(".special").fadeIn();
+            } else {
+                $(".special").hide();
+            }
+        })
+
+        $('#form').validate({
+            errorClass: 'invalid',
+            errorPlacement: function(error, element) { },
+            rules: {
+                first: {
+                    required: true
+                },
+                last: {
+                    required: true
+                },
+                email: {
+                    required: true,
+                    email: true
+                },
+                gender: {
+                    required: true
+                },
+                location: {
+                    required: true
+                }
+            },
+            submitHandler: function() {
+               $('#result').html('Form Submitted!').hide().fadeIn('slow');
+               $('form')[0].reset();
+            }
+        })
+
+        $("#draft").click(function(e){
+            e.preventDefault();
+
+            $("input").removeClass('invalid');
+            $("select").removeClass('invalid');
+            $("#result").hide();
+
+            if ($('#first').val() && $('#last').val()) {
+
+                $("#result").html('Success! Saved as a draft.').fadeIn('slow');
+
+            } else {
+                if ( $('#first').val() == '' && $('#last').val() == '') {
+                       $("#first").addClass('invalid');
+                       $("#last").addClass('invalid');
+                } else {
+                    if ($("#first").val() == '') {
+                        $("#first").addClass('invalid');
+                    } else {
+                        $("#last").addClass('invalid');
+                    }
+                }
+            }
+        })
+
+
+    </script>
+</body>
+</html>
