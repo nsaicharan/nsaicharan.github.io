@@ -8,74 +8,74 @@
     <meta name="keywords" content="naked grid">
     <meta name="author" content="Cheree Dohmann">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <title>Naked Grid</title>
-    
+
     <link rel="stylesheet" href="css/style.css">
-    
+
     <style>
-        
+
         /* =================================
-      
+
            Recent Changes:
       	   --------------
            * Zoom effect to hero list items
-           * Slightly improved sticky nav
+           * Slightly smooth sticky nav
            * Added Roboto bold version
-           
+
            Note to Self:
            ------------
            * How row8 text can be improved? - 'fitty'?
       	   * row10 .btn-alt:hover - any issues with 'filter' in firefox?
       	   * Performance - responsivebreakpoints.com - pic elements - any better img size/format?
-      	   * Why body{font-size:93%}? 
+      	   * Why body{font-size:93%}?
            * Add 'CSS Grid' rows?
-      
+
            ================================= */
-        
+
         /* ========== Flexbox Rows ========= */
-        
+
         .row12 {
             background: #333;
         }
-        
+
         .row13 {
             background: #555;
         }
-        
+
         .row14 {
             background: #777;
         }
-        
+
         .flex-row {
             display: flex;
             color: white;
             padding: 25px 25px 40px;
         }
-        
+
         .flex-col {
             flex: 1; /* 1X Width */
         }
-        
+
         .flex-col-2x {
-            flex: 2; /* 2X Width - Useful for creating 3-6-3 type of columns */ 
+            flex: 2; /* 2X Width - Useful for creating 3-6-3 type of columns */
         }
-        
+
         @media (max-width:1023px) {
-            
+
             .flex-row{
                 display: block;
             }
-            
+
         }
-        
+
     </style>
-  
+
 </head>
 
 <body>
     <header>
-       
+
         <div class="menunav">
 
             <a class="logo" href="#">Biz Logo Here</a>
@@ -93,25 +93,25 @@
             </ul>
 
         </div><!--closing menunav-->
-       
+
         <div class="row parallax">
-           
+
             <div class="hero-image">
                 <picture>
                     <source media="(min-width: 768px) and (orientation:portrait)" sizes="100vw" srcset="images/hero/bx1080s.jpg 1080w">
-                    
+
                     <source media="(min-width: 480px) and (orientation:landscape)" sizes="100vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w, images/hero/bx2272.jpg 2272w, images/hero/bx3840.jpg 3840w">
-                    
+
                     <img src="images/hero/bx1280p.jpg" sizes="100vw" srcset="images/hero/bx1280p.jpg 1280w, images/hero/bx1536p.jpg 1536w" alt="Request More Info">
 				</picture>
             </div>
-            
+
             <div class="layer"></div>
-            
+
             <div class="overlay-text-a">
-                
+
                 <ul class="hero-list">
-                   
+
                     <li><a href="#">WOMEN </a></li>
                     <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
@@ -122,13 +122,13 @@
                     <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
-            
+
                 </ul>
-                
+
             </div><!-- closing overlay-text-a -->
-            
+
             <div class="overlay-text-b">
-            
+
                 <ul class="hero-list">
                     <li><a href="#">MEN </a></li>
                     <li><a href="#">Link</a></li>
@@ -140,15 +140,15 @@
                     <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
                     <li><a href="#">Link</a></li>
-                   
+
                 </ul>
-            
+
             </div><!-- closing overlay-text-b -->
-            
+
         </div><!--closing row-->
-        
+
     </header>
-    
+
     <div class="row row2 longnav">
         <nav>
             <div class="container">
@@ -170,7 +170,7 @@
             </div><!--closing container-->
         </nav><!--closing nav-->
     </div><!--closing row2-->
-        
+
     <div class="row row3">
         <div class="container">
 
@@ -200,7 +200,7 @@
 
         </div><!--closing container-->
     </div><!--closing row3-->
-        
+
     <div class="row row4">
         <div class="container">
 
@@ -235,14 +235,14 @@
 
         </div><!--closing container-->
     </div><!--closing row4-->
-        
-        
+
+
     <div class="row row5">
-        
+
             <div class="three">
 
                <div class="layer"> </div>
-               
+
                <div class="overlay-text4">
 
                    <h2>H2 Headings</h2> <br>
@@ -256,13 +256,13 @@
 
                 <picture>
                     <source sizes="25vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w, images/hero/bx2272.jpg 2272w"  media="(min-width: 1401px)">
-                    
+
                     <source sizes="25vw" srcset="images/hero/bx1080s.jpg 1080w" media="(min-width: 1024px)">
-                    
+
                     <source sizes="50vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w" media="(min-width: 736px)">
-                    
+
                     <source sizes="50vw" srcset="images/hero/bx1080s.jpg 1080w" media="(min-width: 480px)">
-                    
+
                     <img src="images/hero/bx1080s.jpg"  sizes="100vw" srcset="images/hero/bx1080s.jpg 1080w" alt="">
                 </picture>
 
@@ -285,13 +285,13 @@
 
                 <picture>
                     <source sizes="25vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w, images/hero/bx2272.jpg 2272w"  media="(min-width: 1401px)">
-                    
+
                     <source sizes="25vw" srcset="images/hero/bx1080s.jpg 1080w" media="(min-width: 1024px)">
-                    
+
                     <source sizes="50vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w" media="(min-width: 736px)">
-                    
+
                     <source sizes="50vw" srcset="images/hero/bx1080s.jpg 1080w" media="(min-width: 480px)">
-                    
+
                     <img src="images/hero/bx1080s.jpg"  sizes="100vw" srcset="images/hero/bx1080s.jpg 1080w" alt="">
                 </picture>
 
@@ -312,13 +312,13 @@
 
                 <picture>
                     <source sizes="25vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w, images/hero/bx2272.jpg 2272w"  media="(min-width: 1401px)">
-                    
+
                     <source sizes="25vw" srcset="images/hero/bx1080s.jpg 1080w" media="(min-width: 1024px)">
-                    
+
                     <source sizes="50vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w" media="(min-width: 736px)">
-                    
+
                     <source sizes="50vw" srcset="images/hero/bx1080s.jpg 1080w" media="(min-width: 480px)">
-                    
+
                     <img src="images/hero/bx1080s.jpg"  sizes="100vw" srcset="images/hero/bx1080s.jpg 1080w" alt="">
                 </picture>
             </div><!--closing column 3-->
@@ -340,27 +340,27 @@
 
                 <picture>
                     <source sizes="25vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w, images/hero/bx2272.jpg 2272w"  media="(min-width: 1401px)">
-                    
+
                     <source sizes="25vw" srcset="images/hero/bx1080s.jpg 1080w" media="(min-width: 1024px)">
-                    
+
                     <source sizes="50vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w" media="(min-width: 736px)">
-                    
+
                     <source sizes="50vw" srcset="images/hero/bx1080s.jpg 1080w" media="(min-width: 480px)">
-                    
+
                     <img src="images/hero/bx1080s.jpg"  sizes="100vw" srcset="images/hero/bx1080s.jpg 1080w" alt="">
                 </picture>
 
             </div><!--closing column 3-->
-        
+
     </div><!--closing row5-->
-        
+
     <div class="row row6">
        <div class="container">
 
             <div class="six">
 
                 <h2>H2 Heading</h2>
-                
+
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
 
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique cupiditate deserunt obcaecati sed voluptates minima placeat in asperiores dolore expedita ullam enim autem minus dolores, nesciunt perspiciatis voluptatem deleniti neque!</p>
@@ -372,9 +372,9 @@
             <div class="three">
 
                 <h2>H2 Heading</h2>
-                
+
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                
+
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero reprehenderit dolore quod, ducimus.</p>
 
             </div><!--closing column 3-->
@@ -382,9 +382,9 @@
             <div class="three">
 
                 <h2>H2 Heading</h2>
-                
+
                 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.</p>
-                
+
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero reprehenderit dolore quod, ducimus.</p>
 
             </div><!--closing column 3-->
@@ -401,8 +401,8 @@
 
             <picture>
                 <source sizes="50vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w, images/hero/bx2272.jpg 2272w, images/hero/bx3840.jpg 3840w" media="(min-width: 1024px)">
-                
-                <img src="images/hero/bx512.jpg" sizes="100vw" srcset="images/hero/bx512.jpg 512w, images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w, images/hero/bx2272.jpg 2272w" alt=""> 
+
+                <img src="images/hero/bx512.jpg" sizes="100vw" srcset="images/hero/bx512.jpg 512w, images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w, images/hero/bx2272.jpg 2272w" alt="">
                 <!-- bx512 isn't compulsory. Just added to get better performance report. -->
             </picture>
 
@@ -415,8 +415,8 @@
 
             <picture>
                 <source sizes="50vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w, images/hero/bx2272.jpg 2272w, images/hero/bx3840.jpg 3840w" media="(min-width: 1024px)">
-                
-                <img src="images/hero/bx512.jpg" sizes="100vw" srcset="images/hero/bx512.jpg 512w, images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w, images/hero/bx2272.jpg 2272w" alt=""> 
+
+                <img src="images/hero/bx512.jpg" sizes="100vw" srcset="images/hero/bx512.jpg 512w, images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w, images/hero/bx2272.jpg 2272w" alt="">
                 <!-- bx512 isn't compulsory. Just added to get better performance report. -->
             </picture>
 
@@ -425,7 +425,7 @@
     </div><!--closing row7-->
 
     <div class="row row8">
-        
+
         <div class="six">
 
             <div class="color">
@@ -444,13 +444,13 @@
 
             <picture>
                 <source sizes="50vw" srcset="images/hero/bx1920.jpg 1920w, images/hero/bx2272.jpg 2272w, images/hero/bx3840.jpg 3840w" media="(min-width: 1451px)">
-                
+
                 <source sizes="50vw" srcset="images/hero/bx1390.jpg 1390w" media="(min-width: 1160px)">
-                
+
                 <source sizes="50vw" srcset="images/hero/bx1080s.jpg 1080w" media="(min-width: 1024px)">
-                
+
                 <source sizes="100vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w, images/hero/bx2272.jpg 2272w" media="(min-width: 551px)">
-                
+
                 <img src="images/hero/bx1280p.jpg" sizes="100vw" srcset="images/hero/bx1280p.jpg 1280w, images/hero/bx1536p.jpg 1536w"  alt="">
             </picture>
 
@@ -474,13 +474,13 @@
 
             <picture>
                 <source sizes="50vw" srcset="images/hero/bx1920.jpg 1920w, images/hero/bx2272.jpg 2272w, images/hero/bx3840.jpg 3840w" media="(min-width: 1451px)">
-                
+
                 <source sizes="50vw" srcset="images/hero/bx1390.jpg 1390w" media="(min-width: 1160px)">
-                
+
                 <source sizes="50vw" srcset="images/hero/bx1080s.jpg 1080w" media="(min-width: 1024px)">
-                
+
                 <source sizes="100vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w, images/hero/bx2272.jpg 2272w" media="(min-width: 551px)">
-                
+
                 <img src="images/hero/bx1280p.jpg" sizes="100vw" srcset="images/hero/bx1280p.jpg 1280w, images/hero/bx1536p.jpg 1536w"  alt="">
             </picture>
 
@@ -501,9 +501,9 @@
 
         <picture>
             <source sizes="100vw" srcset="images/hero/bx1280p.jpg 1280w, images/hero/bx1536p.jpg 1536w" media="(min-width: 1025px)">
-            
+
             <source sizes="100vw" srcset="images/hero/bx1136.jpg 1136w, images/hero/bx1920.jpg 1920w, images/hero/bx2272.jpg 2272w " media="(min-width: 550px)">
-            
+
             <img src="images/hero/bx1080s.jpg" sizes="100vw" srcset="images/hero/bx1080s.jpg 1080w" alt="">
         </picture>
 
@@ -511,18 +511,18 @@
 
     <div class="row row10">
         <div class="container">
-                
+
                 <div class="six">
                     <div>
 
                         <div class="content-wrap">
-                           
+
                             <h2>H2 Heading</h2>
-                            
+
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy     text.</p>
-                            
+
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum ducimus necessitatibus labore, ipsa molestias facere, error,     perferendis aspernatur obcaecati consequuntur eum, blanditiis quam incidunt reiciendis. Quam quae adipisci cumque repellendus.</p>
-                            
+
                             <p>Lorem ipsum dolor sit amet.Lorem ipsum dolor sit.</p>
                         </div>
 
@@ -530,143 +530,143 @@
                 </div><!--closing column 6-->
 
                 <div class="six">
-                    
+
                     <div>
 
                         <h2>H2 Heading</h2>
                         <p><img src="images/330filler.jpg" alt="filler"></p>
-                        <p><a href="#" class="btn-alt">Sample Button Text</a></p> 
+                        <p><a href="#" class="btn-alt">Sample Button Text</a></p>
 
                     </div>
-                    
+
                 </div><!--closing column 6-->
-                
+
             </div><!-- container -->
         </div><!--closing row10-->
 
     <div class="row row11">
-        
+
             <div class="row11-container">
 
 
                 <h2>Meet Dr. Raghu Elluru</h2>
-                
+
                 <p>
                 Thank you for visiting my website, and for checking out my training and experience! As a board-certified plastic surgeon, and co-founder and partner at the former Great Lakes Plastic and Hand Surgery practice, I’ve been blessed to have met thousands of men and women in Southwest Michigan who are seeking state-of-the-art plastic surgery and non-surgical enhancements. I’m privileged to be part of an excellent medical community, and proud to use my extensive training to help you enhance the way you look and feel about yourself. I understand that the decision to have cosmetic surgery is an important one and cannot be taken lightly. I balance understanding, open, honest communication, and precise surgical techniques to offer individualized solutions tailored to each of my patients’ needs. With each patient, I aim to provide the highest level of patient satisfaction by achieving as natural and harmonious a result as possible.
                 </p>
 
             </div><!--closing container-->
-        
+
     </div><!--closing row11-->
-    
+
     <div class="row12">
         <div class="container">
-            
+
             <div class="flex-row">
-                
+
                 <div class="flex-col">
-                   
+
                     <h2>Flex Column</h2>
-                   
+
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere in delectus est a voluptatum blanditiis, eos explicabo veritatis, error alias ratione, placeat harum distinctio dicta sit sunt expedita eligendi non!</p>
-                    
+
                 </div>
-                
+
                 <div class="flex-col">
-                   
-                    <h2>Flex Column</h2>   
-                   
+
+                    <h2>Flex Column</h2>
+
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!</p>
-                    
+
                 </div>
-                
+
             </div> <!-- Closing flex row -->
-            
+
         </div> <!-- Closing container -->
     </div> <!-- Closing row12 -->
-    
+
     <div class="row13">
         <div class="container">
-            
+
             <div class="flex-row">
 
                 <div class="flex-col">
-                   
+
                     <h2>Flex Column</h2>
-                   
+
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere in delectus est a voluptatum blanditiis, eos explicabo veritatis, error alias ratione, placeat harum distinctio dicta sit sunt expedita eligendi non!</p>
-                    
+
                 </div>
-                
+
                 <div class="flex-col">
-                   
-                    <h2>Flex Column</h2>   
-                   
+
+                    <h2>Flex Column</h2>
+
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!</p>
-                    
+
                 </div>
-            
+
                 <div class="flex-col">
-                   
-                    <h2>Flex Column</h2>   
-                   
+
+                    <h2>Flex Column</h2>
+
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!</p>
-                    
+
                 </div>
-            
+
             </div> <!-- Closing flex row -->
-            
+
         </div> <!-- Closing container -->
     </div> <!-- Closing row13 -->
-    
+
     <div class="row14">
         <div class="container">
-            
+
             <div class="flex-row">
 
                 <div class="flex-col">
-                   
+
                     <h2>Flex Column 1X Width</h2>
-                   
+
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere in delectus est a voluptatum blanditiis, eos explicabo veritatis, error alias ratione, placeat harum distinctio dicta sit sunt expedita eligendi non!</p>
-                    
+
                 </div>
-                
+
                 <div class="flex-col-2x">
-                   
-                    <h2>Flex Column 2X Width</h2>   
+
+                    <h2>Flex Column 2X Width</h2>
 
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!</p>
-                    
+
                 </div>
-            
+
                 <div class="flex-col">
-                   
-                    <h2>Flex Column 1X Width</h2>   
-                   
+
+                    <h2>Flex Column 1X Width</h2>
+
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi tempore quidem fuga similique, molestiae deserunt, labore vel repellendus tenetur quod nulla eum, quia voluptatem. Quibusdam iste fugit nam iusto unde!</p>
-                    
+
                 </div>
-            
+
             </div> <!--closing flex row-->
-            
+
         </div> <!--closing container-->
     </div> <!--closing row14-->
-   
+
     <footer class="row">
         <div class="container">
 
-            <div class="four"> 
+            <div class="four">
                 <h2>H2 Heading</h2>
                 <p>Sample Text</p>
             </div> <!--closing column 6-->
 
-            <div class="four"> 
+            <div class="four">
                 <h2>H2 Heading</h2>
                 <p>Sample Text</p>
             </div> <!--closing column 3-->
 
-            <div class="four"> 
+            <div class="four">
                 <h2>H2 Heading</h2>
                 <p>Sample Text</p>
             </div> <!--closing column 3-->
@@ -676,24 +676,24 @@
 
     <div class="row last">
         <div class="container">
-           
+
             &copy; 2017 Lorem. All Rights Reserved.
-            
+
         </div><!--closing container-->
     </div><!--closing last row-->
-    
+
     <!-- "Back To Top" button on every web page that runs on JQuery -->
-    
+
     <a href="#" class="back-to-top"><img src="images/up.png" alt=""></a>
-    
-    <!-- Back to top(circle background) 
-    
-    <a href="#" class="back-to-top2"><img src="images/up.png" alt=""></a> 
-    
+
+    <!-- Back to top(circle background)
+
+    <a href="#" class="back-to-top2"><img src="images/up.png" alt=""></a>
+
     -->
-    
+
     <!--Scripts-->
     <script src="js/master.js"></script>
-    
+
 </body>
 </html>
