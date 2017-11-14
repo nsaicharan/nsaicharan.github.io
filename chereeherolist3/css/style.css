@@ -29,9 +29,9 @@ img {
 h1, h2, h3, h4, h5, h6 { margin-top: 0; }
 
 p {
-    margin: 0 0 1em 0; 
-    color: white; 
-    padding:0 15px; 
+    margin: 0 0 1em 0;
+    color: white;
+    padding:0 15px;
     text-align: left;
 }
 
@@ -60,9 +60,9 @@ h2 {
 
 /* CSS ARRANGED FOR MOBILE FIRST - For mobile phones: */
 
-.three, 
-.four, 
-.six, 
+.three,
+.four,
+.six,
 .nine {
     width: 100%;
     float: left;  /*This command is needed to keep the DIV boxes on the SAME line. If you remove this tag, each DIV  will stacked ontop each other, one at a time.*/
@@ -71,19 +71,19 @@ h2 {
 /* CSS ARRANGED FOR MOBILE FIRST - ONLY USE MEDIA QUERIES for ALL other devices*/
 
 @media only screen and (min-width: 1024px) {
-    
+
     /* For desktop: */
-    
+
     .three { width: 25%; }
     .four { width: 33.33%; }
     .six { width: 50%; }
     .nine { width: 75%; }
 }
 
-.three:first-child, 
-.four:first-child, 
-.six:first-child, 
-.nine:first-child { 
+.three:first-child,
+.four:first-child,
+.six:first-child,
+.nine:first-child {
 	margin-left: 0; /* This line of code makes the left-most column align to the left of the screen */
 }
 
@@ -120,7 +120,7 @@ picture img {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
 }
 
 @media (max-width:736px) {
@@ -136,7 +136,7 @@ picture img {
     position: absolute;
     top: 50%;
     left: 25%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
 }
 
 .overlay-text-b {
@@ -146,7 +146,7 @@ picture img {
     position: absolute;
     top: 50%;
     left: 75%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%);
 }
 
 .hero-list {
@@ -182,8 +182,7 @@ picture img {
 }
 
 .hero-list li:not(:first-child) a:hover {
-    color: #ffba49;  
-	transform: scale(1.6); /* Zoom hero list item */
+    color: #ffba49;
 }
 
 /* ===== End Hero ===== */
@@ -202,11 +201,11 @@ picture img {
         float: left;
         margin-left: 20px;
     }
-    
+
     .menunav .logo:hover {
 		color: #ffba49;
 	}
-    
+
     .menunav {
         background-color: #253d5b;
         box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.2);
@@ -224,7 +223,7 @@ picture img {
         overflow: hidden;
         background-color: #253d5b;
     }
-    
+
     .menunav li:first-child{
         margin-top: 62px;
     }
@@ -257,16 +256,15 @@ picture img {
 
     .menunav .menu-icon {
         cursor: pointer;
-        display: inline-block;
         float: right;
         padding: 28px 12px 15px;
         position: relative;
-        -webkit-user-select: none;  
-        -moz-user-select: none;     
-        -ms-user-select: none; 
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
         user-select: none;
         background: #fff;
-        margin: 12px 15px; 
+        margin: 12px 15px;
     }
 
     .menunav .menu-icon .navicon {
@@ -322,17 +320,17 @@ picture img {
     .menunav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:before,
     .menunav .menu-btn:checked ~ .menu-icon:not(.steps) .navicon:after {
         top: 0;
-    }  
-    
+    }
+
     header .row {
         position: relative;
         top: 70px;
     }
-    
+
     .longnav {
         display: none;
     }
-    
+
     .row3{
         margin-top: 69px;
     }
@@ -340,11 +338,11 @@ picture img {
 }
 
 @media only screen and (min-width: 1024px) {
-    
+
     .menunav {
         display:none;
     }
-	
+
      header .row {
         position: relative;
     }
@@ -352,44 +350,44 @@ picture img {
 }
 
 @media only screen and (max-width: 736px) and (orientation : landscape) {
-    
+
     .menunav .logo {
         line-height: 58.5px;
     }
-    
+
     .menunav li:first-child {
         margin-top: 24px;
     }
-    
+
     .menunav li a {
         padding: 10px 20px;
         font-size: 22px;
     }
-    
+
     .menunav .menu-icon {
-      margin: 6px 15px 7px; 
+      margin: 6px 15px 7px;
     }
-    
+
     header .row {
         top: 58px;
     }
-    
+
     .row3 {
         margin-top: 58px;
     }
 }
 
 @media only screen and (max-width: 599px) and (orientation : landscape) {
-    
+
     .menunav li:first-child {
         margin-top: 5px;
     }
-    
+
     .menunav li a {
         padding: 8px 20px;
         font-size: 18px;
     }
-    
+
 }
 
 /* ===== End MENU Navigation ===== */
@@ -429,7 +427,7 @@ nav ul li {
     font-size: 18px;
 }
 
-nav .three a, 
+nav .three a,
 nav ul li a:link,
 nav ul li a:visited {
     display: block;
@@ -437,7 +435,7 @@ nav ul li a:visited {
     padding: 0 20px;
     transition:  all .2s ease-in;
     font-weight: bold;
-    color: #fff; 
+    color: #fff;
 }
 
 nav ul li a:hover {
@@ -465,7 +463,7 @@ nav .three a:hover {
 .row3 {
     background: white;
     padding: 30px 25px 40px;
-} 
+}
 
 .row3 h2,
 .row3 p {
@@ -490,27 +488,27 @@ nav .three a:hover {
 }
 
 @media (min-width:1024px) {
-    
-    .row5 .three{ 
+
+    .row5 .three{
         width: 25%;
     }
-    
+
 }
 
 @media (min-width:480px) and (max-width:1023px) {
-    
+
     .row5 .three{
         width: 50%;
     }
-    
+
 }
 
 @media (max-width:479px) {
-    
-    .row5 .three { 
+
+    .row5 .three {
         width: 100%;
     }
-    
+
 }
 
 .overlay-text4 {
@@ -533,7 +531,7 @@ nav .three a:hover {
     padding: 0;
 }
 
-.overlay-text4 a, 
+.overlay-text4 a,
 .overlay-text4 a:visited {
     text-decoration: none;
     color: #ffb45c;
@@ -561,7 +559,7 @@ nav .three a:hover {
 .row6 {
     background: #F27935;
     padding: 30px 30px 40px;
-} 
+}
 
 /* ===== End Row6 ===== */
 
@@ -592,8 +590,8 @@ nav .three a:hover {
 	transition: background .3s;
 }
 
-.color:hover { 
-	background: rgba(19, 49, 103, 1); 
+.color:hover {
+	background: rgba(19, 49, 103, 1);
 }
 
 .overlay-text2 {
@@ -611,7 +609,7 @@ nav .three a:hover {
 
 
 @media (max-width:735px) {
-   
+
     .overlay-text2 h2 {
         font-size: 18px;
         padding-top: 5px;
@@ -624,56 +622,56 @@ nav .three a:hover {
 }
 
 @media (max-width:599px) {
-    
+
      .overlay-text2 h2 {
         padding-top: 2px;
         margin-bottom: 2px;
     }
-    
+
     .overlay-text2 p {
         font-size: 15px;
         margin: 0 0 0.5em 0;
         line-height: 1.1em;
     }
-    
+
 }
 
 @media (max-width:480px) {
-    
+
     .overlay-text2 h2 {
         font-size: 20px;
         margin-bottom: 10px;
     }
-    
+
     .overlay-text2 p {
         font-size: 16px;
         margin: 0 0 0.5em 0;
         line-height: 1.2em;
     }
-    
+
 }
 
 @media (max-width:374px) {
-    
+
     .overlay-text2 h2 {
         font-size: 20px;
         margin-bottom: 5px;
     }
-    
+
     .overlay-text2 p {
         font-size: 16px;
         margin: 0 0 0.6em 0;
         line-height: 1.11em;
     }
-    
+
 }
 
 @media (max-width:350px) {
-    
+
     .overlay-text2 h2{ margin-bottom: 2px; }
-    
+
     .overlay-text2 p{ font-size: 14.4px; }
-    
+
 }
 
 /* ===== End Row8 ===== */
@@ -700,7 +698,7 @@ nav .three a:hover {
     .parallax {
         height: auto;
     }
-    
+
     .parallax img {
         position: static;
     }
@@ -767,7 +765,7 @@ nav .three a:hover {
         width: 35%;
         font-size: 21px;
     }
-    
+
     .btn:nth-child(3) {
         margin: 0 auto;
     }
@@ -779,7 +777,7 @@ nav .three a:hover {
         font-size: 20px;
         padding: 5px 10px;
     }
-    
+
 }
 
 @media (max-width:666px) {
@@ -788,7 +786,7 @@ nav .three a:hover {
         width: 44%;
         font-size: 20px;
     }
-    
+
 }
 
 @media (max-width:567px) {
@@ -797,7 +795,7 @@ nav .three a:hover {
         padding: 8px 10px;
         font-size: 18px;
         width: 61%;
-    }  
+    }
 }
 
 @media (max-width:374px) {
@@ -836,13 +834,9 @@ nav .three a:hover {
     display: block;
 }
 
-.row10 .six:nth-child(2) p, 
+.row10 .six:nth-child(2) p,
 .row10 .six:nth-child(2) h2 {
     text-align: center;
-}
-
-.row10 .six:nth-child(2) img {
-	box-shadow: 0px 1px 6px rgba(0, 0, 0, .2);
 }
 
 .btn-alt {
@@ -856,20 +850,11 @@ nav .three a:hover {
     margin: 2px auto 0;
     width: 333px;
     max-width: 100%;
-	box-shadow: 0px 1px 6px rgba(0, 0, 0, .2);
     transition: all .22s;
 }
 
 .btn-alt:hover {
     color: #ffb45c;
-  	filter: brightness(130%);
-  	
-  	/* Not working well in firefox
-  
-	transform: translateY(-2px); 
-	box-shadow: 0 7px 14px rgba(50,50,93,.1), 0 3px 6px rgba(0,0,0,.08);
-  	
-  	*/
 }
 
 @media (max-width:380px) {
@@ -882,7 +867,7 @@ nav .three a:hover {
 
 
 /* ===== Start ROW 11 ===== */
-   
+
     .row11 {
         background: #FF8F00;
     }
@@ -936,7 +921,7 @@ footer {
     margin: 5.5px 0 1px 3.45px;
 }
 
-/* 
+/*
 
 Circle(border-radius:50%) background for back-to-top image.
 
