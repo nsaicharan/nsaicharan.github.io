@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/css/bootstrap.min.css'/>
+    <title>Document</title>
+
+    <style>
+
+        body {
+            margin-top:60px;
+            overflow-x: hidden;
+        }
+
+        .grey,
+        .blue,
+        .yellow,
+        .red,
+        .green {
+            padding: 20px 20px 20px 35px;
+        }
+
+        .grey {
+            position: fixed;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 60px;
+            background: grey;
+            z-index: 1;
+        }
+
+        .blue {
+            background: blue;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            width: 58.333333%;
+            height: 150px;
+            z-index: 1;
+        }
+
+        .yellow {
+            background: yellow;
+            position: relative;
+            margin-top: 150px; /* Blue height */
+            width: 100%;
+        }
+
+        .red {
+            background: tomato;
+            position: fixed;
+            top: 60px;
+            height: calc(100% - 60px);
+            width: 41.66667%;
+            left: 58.333333%;
+        }
+
+        .red--scrolled {
+            background: tomato;
+            position : static;
+            width : 100%;
+            height: 100%;
+        }
+
+        .green {
+            background: green;
+            height: 300px;
+            z-index: 3;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="grey"></div>
+
+    <div class="row">
+        <div class="col-sm-7 p-0">
+
+            <div class="blue"></div>
+
+            <div class="yellow">
+               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex iusto unde reprehenderit molestiae nulla deleniti obcaecati rerum id! Temporibus eius nesciunt tempora voluptates velit asperiores officia suscipit doloremque reprehenderit reiciendis.</p>
+               <p>Sunt consectetur ipsum vel fuga tempora laborum a corrupti exercitationem numquam error obcaecati laboriosam reprehenderit illo rem culpa minima, aut nobis repellat ipsam perspiciatis sint beatae necessitatibus laudantium? Ullam, fugit.</p>
+               <p>Nisi nostrum odio provident accusamus molestiae facere cumque dolorem, eos soluta tenetur quam harum! Delectus harum, pariatur iste aperiam facere quis non labore earum tempora asperiores temporibus optio dignissimos molestiae.</p>
+               <p>Quia itaque iure expedita assumenda atque culpa earum dicta vero minima perspiciatis perferendis consequuntur, libero impedit autem voluptas ab totam quisquam aspernatur ex alias numquam quasi neque dolorem recusandae! Natus.</p>
+               <p>Explicabo minima, vero iure dolores quasi enim qui aperiam nobis, aliquam reiciendis nesciunt magni, ipsum debitis eligendi ad nemo fugit maiores. Et ipsum cumque quidem? Ut animi atque libero ratione!</p>
+               <p>Voluptates assumenda asperiores nisi eius labore, consectetur accusantium sapiente commodi nemo consequatur eligendi repudiandae ut itaque suscipit numquam facilis, incidunt magni molestiae velit officia? Amet sequi itaque molestias quos ut?</p>
+               <p>Autem nulla modi similique consequatur tempora nobis deleniti, rerum eveniet non totam repudiandae laborum adipisci placeat in, deserunt vero quam provident accusamus? Nostrum eligendi, earum ipsam temporibus quia quod aperiam!</p>
+               <p>In, eligendi impedit? Quod similique corporis beatae labore officiis error tempora autem dignissimos iste esse, voluptatum asperiores numquam voluptatibus nesciunt saepe, eos necessitatibus id eius voluptates repellendus ipsum minus soluta.</p>
+               <p>Id fugit facere ipsa. Impedit, ipsum tempore culpa quis debitis voluptate veniam in asperiores facere. Omnis facere porro voluptates quasi dolore in facilis, impedit cumque eos libero alias, cum ratione?</p>
+               <p>At culpa, magni, aliquam ullam sunt nam tenetur repellendus maxime deleniti a accusantium. Atque quia quasi magnam eveniet minima, esse, unde corporis ex nulla qui tempora blanditiis ut. A, eaque.</p>
+               <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex iusto unde reprehenderit molestiae nulla deleniti obcaecati rerum id! Temporibus eius nesciunt tempora voluptates velit asperiores officia suscipit doloremque reprehenderit reiciendis.</p>
+               <p>Sunt consectetur ipsum vel fuga tempora laborum a corrupti exercitationem numquam error obcaecati laboriosam reprehenderit illo rem culpa minima, aut nobis repellat ipsam perspiciatis sint beatae necessitatibus laudantium? Ullam, fugit.</p>
+               <p>Nisi nostrum odio provident accusamus molestiae facere cumque dolorem, eos soluta tenetur quam harum! Delectus harum, pariatur iste aperiam facere quis non labore earum tempora asperiores temporibus optio dignissimos molestiae.</p>
+               <p>Quia itaque iure expedita assumenda atque culpa earum dicta vero minima perspiciatis perferendis consequuntur, libero impedit autem voluptas ab totam quisquam aspernatur ex alias numquam quasi neque dolorem recusandae! Natus.</p>
+               <p>Explicabo minima, vero iure dolores quasi enim qui aperiam nobis, aliquam reiciendis nesciunt magni, ipsum debitis eligendi ad nemo fugit maiores. Et ipsum cumque quidem? Ut animi atque libero ratione!</p>
+               <p>Voluptates assumenda asperiores nisi eius labore, consectetur accusantium sapiente commodi nemo consequatur eligendi repudiandae ut itaque suscipit numquam facilis, incidunt magni molestiae velit officia? Amet sequi itaque molestias quos ut?</p>
+               <p>Autem nulla modi similique consequatur tempora nobis deleniti, rerum eveniet non totam repudiandae laborum adipisci placeat in, deserunt vero quam provident accusamus? Nostrum eligendi, earum ipsam temporibus quia quod aperiam!</p>
+               <p>In, eligendi impedit? Quod similique corporis beatae labore officiis error tempora autem dignissimos iste esse, voluptatum asperiores numquam voluptatibus nesciunt saepe, eos necessitatibus id eius voluptates repellendus ipsum minus soluta.</p>
+               <p>Id fugit facere ipsa. Impedit, ipsum tempore culpa quis debitis voluptate veniam in asperiores facere. Omnis facere porro voluptates quasi dolore in facilis, impedit cumque eos libero alias, cum ratione?</p>
+               <p>At culpa, magni, aliquam ullam sunt nam tenetur repellendus maxime deleniti a accusantium. Atque quia quasi magnam eveniet minima, esse, unde corporis ex nulla qui tempora blanditiis ut. A, eaque.</p>
+               <p>Id fugit facere ipsa. Impedit, ipsum tempore culpa quis debitis voluptate veniam in asperiores facere. Omnis facere porro voluptates quasi dolore in facilis, impedit cumque eos libero alias, cum ratione?</p>
+               <p>At culpa, magni, aliquam ullam sunt nam tenetur repellendus maxime deleniti a accusantium. Atque quia quasi magnam eveniet minima, esse, unde corporis ex nulla qui tempora blanditiis ut. A, eaque.</p>
+               <p>Id fugit facere ipsa. Impedit, ipsum tempore culpa quis debitis voluptate veniam in asperiores facere. Omnis facere porro voluptates quasi dolore in facilis, impedit cumque eos libero alias, cum ratione?</p>
+               <p>At culpa, magni, aliquam ullam sunt nam tenetur repellendus maxime deleniti a accusantium. Atque quia quasi magnam eveniet minima, esse, unde corporis ex nulla qui tempora blanditiis ut. A, eaque.</p><p>Id fugit facere ipsa. Impedit, ipsum tempore culpa quis debitis voluptate veniam in asperiores facere. Omnis facere porro voluptates quasi dolore in facilis, impedit cumque eos libero alias, cum ratione?</p>
+               <p>At culpa, magni, aliquam ullam sunt nam tenetur repellendus maxime deleniti a accusantium. Atque quia quasi magnam eveniet minima, esse, unde corporis ex nulla qui tempora blanditiis ut. A, eaque.</p><p>Id fugit facere ipsa. Impedit, ipsum tempore culpa quis debitis voluptate veniam in asperiores facere. Omnis facere porro voluptates quasi dolore in facilis, impedit cumque eos libero alias, cum ratione?</p>
+               <p>At culpa, magni, aliquam ullam sunt nam tenetur repellendus maxime deleniti a accusantium. Atque quia quasi magnam eveniet minima, esse, unde corporis ex nulla qui tempora blanditiis ut. A, eaque.</p><p>Id fugit facere ipsa. Impedit, ipsum tempore culpa quis debitis voluptate veniam in asperiores facere. Omnis facere porro voluptates quasi dolore in facilis, impedit cumque eos libero alias, cum ratione?</p>
+               <p>At culpa, magni, aliquam ullam sunt nam tenetur repellendus maxime deleniti a accusantium. Atque quia quasi magnam eveniet minima, esse, unde corporis ex nulla qui tempora blanditiis ut. A, eaque.</p>
+               <p>Id fugit facere ipsa. Impedit, ipsum tempore culpa quis debitis voluptate veniam in asperiores facere. Omnis facere porro voluptates quasi dolore in facilis, impedit cumque eos libero alias, cum ratione?</p>
+               <p>At culpa, magni, aliquam ullam sunt nam tenetur repellendus maxime deleniti a accusantium. Atque quia quasi magnam eveniet minima, esse, unde corporis ex nulla qui tempora blanditiis ut. A, eaque.</p>
+               <p>Id fugit facere ipsa. Impedit, ipsum tempore culpa quis debitis voluptate veniam in asperiores facere. Omnis facere porro voluptates quasi dolore in facilis, impedit cumque eos libero alias, cum ratione?</p>
+               <p>At culpa, magni, aliquam ullam sunt nam tenetur repellendus maxime deleniti a accusantium. Atque quia quasi magnam eveniet minima, esse, unde corporis ex nulla qui tempora blanditiis ut. A, eaque.</p>
+               <p>Id fugit facere ipsa. Impedit, ipsum tempore culpa quis debitis voluptate veniam in asperiores facere. Omnis facere porro voluptates quasi dolore in facilis, impedit cumque eos libero alias, cum ratione?</p>
+               <p>At culpa, magni, aliquam ullam sunt nam tenetur repellendus maxime deleniti a accusantium. Atque quia quasi magnam eveniet minima, esse, unde corporis ex nulla qui tempora blanditiis ut. A, eaque.</p>
+               <p>Id fugit facere ipsa. Impedit, ipsum tempore culpa quis debitis voluptate veniam in asperiores facere. Omnis facere porro voluptates quasi dolore in facilis, impedit cumque eos libero alias, cum ratione?</p>
+               <p>At culpa, magni, aliquam ullam sunt nam tenetur repellendus maxime deleniti a accusantium. Atque quia quasi magnam eveniet minima, esse, unde corporis ex nulla qui tempora blanditiis ut. A, eaque.</p>
+            </div>
+        </div>
+
+        <div class="col-sm-5 p-0">
+            <div class="red"></div>
+        </div>
+
+    </div>
+
+    <div class="green"></div>
+
+    <script>
+        const green = document.querySelector('.green');
+        const red = document.querySelector('.red');
+        const blue = document.querySelector('.blue');
+
+        window.addEventListener('scroll', function() {
+            const greenTop = green.getBoundingClientRect().top;
+
+            if (greenTop < this.innerHeight) {
+                red.className = 'red--scrolled';
+
+                blue.style.width = "calc(58.333333% + 2px)"
+            } else {
+                red.className = 'red';
+
+                blue.style.width = "58.333333%"
+            }
+        })
+    </script>
+
+</body>
+</html>
