@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<style>
+		body {
+		  font-size: 18px;
+		  line-height: 1.3;
+		  font-family: sans-serif;
+		  max-width: 960px;
+		  margin: 50px auto;
+		  padding: 20px;
+		}
+
+		.social-info {
+		  display: flex;
+		  min-height: 40px;
+		}
+
+		.social-text {
+		  flex: 1;
+		  margin: 0;
+		}
+		
+		.social-icons {
+			display: flex;
+		}
+
+		.social-icon {
+		  max-width: 100%;
+		  height: 40px;
+		  margin: 0 10px;
+		  cursor: pointer;
+		}
+
+		@media (max-width: 800px) {
+		  .social-info {
+			display: block;
+		  }
+			
+		  .social-icons {
+			  justify-content: center;
+			}
+
+		  .social-icon {
+			margin: 20px 15px;
+			height: 60px;
+			max-width: 45%;
+		  }
+		}
+	</style>
+</head>
+<body>
+
+	<h1>Hi there.</h1>
+
+	<div class="social-info">
+		<p class="social-text">For the latest updates on lorem lorem lorem lorem lorem lorem lorem follow our lorem social channels!</p>
+
+		<div class="social-icons">
+			<img class="social-icon"src="https://cdn.worldvectorlogo.com/logos/like-button-facebook.svg" alt="">
+
+	    	<img class="social-icon" src="http://www.helpinghands-uk.org/images/follow_us_on_twitter.svg" alt="">
+		</div>
+
+	</div>
+	
+</body>
+</html>
