@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<style>
+		.social-info {
+			display: flex;
+			min-height: 40px;
+		}
+		
+		.social-text {
+			flex: 1;
+			font-weight: bold;
+			margin: 0;
+			padding: 0 15px;
+		}
+		
+		.social-icon-container {
+			display: flex;
+		}
+		
+		.social-icon {
+			max-width: 100%;
+			height: 40px;
+			margin: 0 5px;
+			cursor: pointer;
+		}
+		
+		@media (max-width: 800px) {
+			.social-info {
+				display: block;
+			}
+			.social-icon-container {
+				margin-top: 20px;
+				justify-content: center;
+			}
+			.social-icon {
+				margin: 0 10px;
+				height: 60px;
+				max-width: 45%;
+			}
+		}
+		
+		/* below code shouldn't be used on actual website */
+		body {
+			margin: 50px auto;
+			max-width: 1000px;
+			
+			font-family: sans-serif;
+		}
+		/* above code shouldn't be used on actual website */
+	</style>
+</head>
+
+<body>
+	<div class="social-info">
+		
+		<p class="social-text">For the latest updates on lorem lorem lorem lorem lorem lorem lorem follow our lorem social channels!</p>
+
+		<div class="social-icon-container">
+			<div class="social-icon">
+				<iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Fplaybillarts%2F&amp;width=63&amp;layout=button&amp;action=like&amp;size=large&amp;show_faces=false&amp;share=false&amp;height=65&amp;appId" width="63" height="40" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true"></iframe>
+
+			</div>
+
+			<div class="social-icon">
+				<a href="https://twitter.com/playbillarts?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-size="large" data-show-count="false">Follow @playbillarts</a>
+			</div>
+		</div>
+
+	</div>
+
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</body>
+
+</html>
