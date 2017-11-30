@@ -38,7 +38,14 @@
 			margin: 25px auto;
 			padding: 20px 10px;
 			border-radius: 10px;
-			display: none;
+			opacity: 0;
+			transform: scale(.3);
+			transition: all .8s;
+		}
+		
+		.container--visible {
+			opacity: 1;
+			transform: scale(1);
 		}
 		
 		h1 {
@@ -112,21 +119,6 @@
 			border: 0;
 		}
 		
-		/* Animation */
-		@keyframes zoomIn {
-			from {
-				opacity: 0;
-				transform: scale3d(.3, .3, .3);
-			}
-			50% {
-				opacity: 1;
-			}
-		}
-		
-		.zoomIn {
-			animation: zoomIn 1s;
-		}
-		
 		/* Media Queries */
 		@media (min-width: 480px) {
 			h1 {
@@ -147,7 +139,7 @@
 
 <body>
 
-	<div class="container zoomIn">
+	<div class="container">
 		<h1>Sayma's Photography</h1>
 
 		<h2>Website Coming Soon!</h2>
@@ -170,8 +162,8 @@
 
 		window.addEventListener('load', () => {
 			setTimeout(() => {
-				container.style.display = 'block';
-			}, 1000);
+				container.classList.add('container--visible');
+			}, 600);
 		});
 	</script>
 </body>
