@@ -38,6 +38,7 @@
 			margin: 25px auto;
 			padding: 20px 10px;
 			border-radius: 10px;
+			display: none;
 		}
 		
 		h1 {
@@ -147,7 +148,7 @@
 
 <body>
 
-	<div class="container">
+	<div class="container zoomIn">
 		<h1>Sayma's Photography</h1>
 
 		<h2>Website Coming Soon!</h2>
@@ -169,7 +170,7 @@
 		const container = document.querySelector('.container');
 
 		window.addEventListener('load', () => {
-			container.classList.add('zoomIn');
+			container.style.display = 'block';
 		});
 	</script>
 </body>
