@@ -1,151 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Sayma's Photography</title>
-    <style>
-
-        /* Google Fonts */
-        @font-face{font-family:'Dancing Script';font-style:normal;font-weight:400;src:local('Dancing Script Regular'),local('DancingScript-Regular'),url(https://fonts.gstatic.com/s/dancingscript/v9/DK0eTGXiZjN6yA8zAEyM2fRMc6C39aem-aUPzsV2c2w.woff2) format('woff2');unicode-range:U+0102-0103,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Dancing Script';font-style:normal;font-weight:400;src:local('Dancing Script Regular'),local('DancingScript-Regular'),url(https://fonts.gstatic.com/s/dancingscript/v9/DK0eTGXiZjN6yA8zAEyM2e87R-l0-Xx_7cYc0ZX1ifE.woff2) format('woff2');unicode-range:U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Dancing Script';font-style:normal;font-weight:400;src:local('Dancing Script Regular'),local('DancingScript-Regular'),url(https://fonts.gstatic.com/s/dancingscript/v9/DK0eTGXiZjN6yA8zAEyM2Ud0sm1ffa_JvZxsF_BEwQk.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}@font-face{font-family:'Mate SC';font-style:normal;font-weight:400;src:local('Mate SC Regular'),local('MateSC-Regular'),url(https://fonts.gstatic.com/s/matesc/v6/hIIBlsrjcPqew75YPwo73w.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'),local('OpenSans-Regular'),url(https://fonts.gstatic.com/s/opensans/v15/K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');unicode-range:U+0460-052F,U+20B4,U+2DE0-2DFF,U+A640-A69F}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'),local('OpenSans-Regular'),url(https://fonts.gstatic.com/s/opensans/v15/RjgO7rYTmqiVp7vzi-Q5URJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'),local('OpenSans-Regular'),url(https://fonts.gstatic.com/s/opensans/v15/LWCjsQkB6EMdfHrEVqA1KRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'),local('OpenSans-Regular'),url(https://fonts.gstatic.com/s/opensans/v15/xozscpT2726on7jbcb_pAhJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'),local('OpenSans-Regular'),url(https://fonts.gstatic.com/s/opensans/v15/59ZRklaO5bWGqF5A9baEERJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');unicode-range:U+0102-0103,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'),local('OpenSans-Regular'),url(https://fonts.gstatic.com/s/opensans/v15/u-WUoqrET9fUeobQW7jkRRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');unicode-range:U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'),local('OpenSans-Regular'),url(https://fonts.gstatic.com/s/opensans/v15/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}
-        
-        :root{
-            --primary-color: #ff005b;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            background: url('bg.jpg') no-repeat left top fixed;
-            background-size: cover;
-            min-height: 100vh;
-            display: flex;
-            flex: 1;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            font: 18px 'Open Sans', sans-serif;
-        }
-
-        .container {
-            background: rgba(255, 228, 225, .5);
-            width: 500px;
-            max-width: 95vw;
-            margin: 25px auto;
-            padding: 20px 10px;
-            border-radius: 10px;
-        }
-
-        h1 {
-            margin-top: 0;
-            font: bold 42px 'Dancing Script', sans-serif;
-            color: var(--primary-color);
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            font: bold 28px 'Mate SC', serif;
-            color: #333;
-        }
-
-        p {
-            font-size: 18px;
-            color: #222;
-        }
-
-        input {
-            display: block;
-            width: 90%;
-            padding: 10px;
-            margin: 0 auto 15px;
-            font-size: 18px;
-            border: none;
-            box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
-            transition: .2s ease-in-out;
-
-        }
-
-        input:focus {
-            outline: none;
-            box-shadow: 0 0 0 3px var(--primary-color);
-        }
-
-        .sr-only {
-            position: absolute;
-            width: 1px;
-            height: 1px;
-            padding: 0;
-            margin: -1px;
-            overflow: hidden;
-            clip: rect(0,0,0,0);
-            border: 0;
-        }
-
-        button {
-            display: block;
-            width: 90%;
-            margin: 0 auto;
-            padding: 10px;
-            font-size: 18px;
-            background: var(--primary-color);
-            border: none;
-            box-shadow: 0 0 0 2px var(--primary-color);
-            color: white;
-            transition: .2s ease-in-out;
-        }
-
-        button:hover {
-            cursor: pointer;
-        }
-
-        button:focus {
-            outline: 1px dotted rgba(255,255,255,0.8);
-            outline-offset: -4px;
-        }
-
-        /* Removes the border that appears when the button is focused */
-        *::-moz-focus-inner {
-            border: 0;
-        }
-
-        @media (min-width: 480px) {
-            h1 {
-                font-size: 55px;
-            }
-        }
-
-        @media (min-width: 1024px) and (orientation: landscape) {
-            .container {
-                margin-left: 50%;
-            }
-
-            h1 {
-                font-size: 60px;
-            }
-        }
-    </style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Sayma's Photography</title>
+	<style>
+		
+		/* Google Fonts */
+		@font-face{font-family:'Dancing Script';font-style:normal;font-weight:400;src:local('Dancing Script Regular'),local('DancingScript-Regular'),url(https://fonts.gstatic.com/s/dancingscript/v9/DK0eTGXiZjN6yA8zAEyM2fRMc6C39aem-aUPzsV2c2w.woff2) format('woff2');unicode-range:U+0102-0103,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Dancing Script';font-style:normal;font-weight:400;src:local('Dancing Script Regular'),local('DancingScript-Regular'),url(https://fonts.gstatic.com/s/dancingscript/v9/DK0eTGXiZjN6yA8zAEyM2e87R-l0-Xx_7cYc0ZX1ifE.woff2) format('woff2');unicode-range:U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Dancing Script';font-style:normal;font-weight:400;src:local('Dancing Script Regular'),local('DancingScript-Regular'),url(https://fonts.gstatic.com/s/dancingscript/v9/DK0eTGXiZjN6yA8zAEyM2Ud0sm1ffa_JvZxsF_BEwQk.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}@font-face{font-family:'Mate SC';font-style:normal;font-weight:400;src:local('Mate SC Regular'),local('MateSC-Regular'),url(https://fonts.gstatic.com/s/matesc/v6/hIIBlsrjcPqew75YPwo73w.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'),local('OpenSans-Regular'),url(https://fonts.gstatic.com/s/opensans/v15/K88pR3goAWT7BTt32Z01mxJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');unicode-range:U+0460-052F,U+20B4,U+2DE0-2DFF,U+A640-A69F}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'),local('OpenSans-Regular'),url(https://fonts.gstatic.com/s/opensans/v15/RjgO7rYTmqiVp7vzi-Q5URJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');unicode-range:U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'),local('OpenSans-Regular'),url(https://fonts.gstatic.com/s/opensans/v15/LWCjsQkB6EMdfHrEVqA1KRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');unicode-range:U+1F00-1FFF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'),local('OpenSans-Regular'),url(https://fonts.gstatic.com/s/opensans/v15/xozscpT2726on7jbcb_pAhJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');unicode-range:U+0370-03FF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'),local('OpenSans-Regular'),url(https://fonts.gstatic.com/s/opensans/v15/59ZRklaO5bWGqF5A9baEERJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');unicode-range:U+0102-0103,U+1EA0-1EF9,U+20AB}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'),local('OpenSans-Regular'),url(https://fonts.gstatic.com/s/opensans/v15/u-WUoqrET9fUeobQW7jkRRJtnKITppOI_IvcXXDNrsc.woff2) format('woff2');unicode-range:U+0100-024F,U+1E00-1EFF,U+20A0-20AB,U+20AD-20CF,U+2C60-2C7F,U+A720-A7FF}@font-face{font-family:'Open Sans';font-style:normal;font-weight:400;src:local('Open Sans Regular'),local('OpenSans-Regular'),url(https://fonts.gstatic.com/s/opensans/v15/cJZKeOuBrn4kERxqtaUH3VtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02C6,U+02DA,U+02DC,U+2000-206F,U+2074,U+20AC,U+2212,U+2215}
+		
+		 :root {
+			--primary-color: #ff005b;
+		}
+		
+		* {
+			box-sizing: border-box;
+		}
+		
+		html {
+			background: url('bg.jpg') no-repeat left top fixed;
+			background-size: cover;
+			min-height: 100vh;
+			display: flex;
+			flex: 1;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+			font: 18px 'Open Sans', sans-serif;
+		}
+		
+		.container {
+			background: rgba(255, 228, 225, .5);
+			width: 500px;
+			max-width: 95vw;
+			margin: 25px auto;
+			padding: 20px 10px;
+			border-radius: 10px;
+		}
+		
+		h1 {
+			margin-top: 0;
+			font: bold 42px 'Dancing Script', sans-serif;
+			color: var(--primary-color);
+			text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+		}
+		
+		h2 {
+			font: bold 28px 'Mate SC', serif;
+			color: #333;
+		}
+		
+		p {
+			font-size: 18px;
+			color: #222;
+		}
+		
+		input {
+			display: block;
+			width: 90%;
+			padding: 10px;
+			margin: 0 auto 15px;
+			font-size: 18px;
+			border: none;
+			box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+			transition: .2s ease-in-out;
+		}
+		
+		input:focus {
+			outline: none;
+			box-shadow: 0 0 0 3px var(--primary-color);
+		}
+		
+		.sr-only {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			padding: 0;
+			margin: -1px;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+			border: 0;
+		}
+		
+		button {
+			display: block;
+			width: 90%;
+			margin: 0 auto;
+			padding: 10px;
+			font-size: 18px;
+			background: var(--primary-color);
+			border: none;
+			box-shadow: 0 0 0 2px var(--primary-color);
+			color: white;
+			transition: .2s ease-in-out;
+		}
+		
+		button:hover {
+			cursor: pointer;
+		}
+		
+		button:focus {
+			outline: 1px dotted rgba(255, 255, 255, 0.8);
+			outline-offset: -4px;
+		}
+		
+		/* Removes the border that appears when the button is focused */
+		*::-moz-focus-inner {
+			border: 0;
+		}
+		
+		/* Animation */
+		@keyframes zoomIn {
+			from {
+				opacity: 0;
+				transform: scale3d(.3, .3, .3);
+			}
+			50% {
+				opacity: 1;
+			}
+		}
+		
+		.zoomIn {
+			animation-name: zoomIn;
+			animation-duration: 1s;
+		}
+		
+		/* Media Queries */
+		@media (min-width: 480px) {
+			h1 {
+				font-size: 55px;
+			}
+		}
+		
+		@media (min-width: 1024px) and (orientation: landscape) {
+			.container {
+				margin-left: 50%;
+			}
+			h1 {
+				font-size: 60px;
+			}
+		}
+	</style>
 </head>
+
 <body>
 
-    <div class="container">
-        <h1>Sayma's Photography</h1>
+	<div class="container">
+		<h1>Sayma's Photography</h1>
 
-        <h2>Website Coming Soon!</h2>
+		<h2>Website Coming Soon!</h2>
 
-        <p class="lead">Subscribe to get a notification when it's ready.</p>
+		<p class="lead">Subscribe to get a notification when it's ready.</p>
 
-        <form>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
-            <label class="sr-only" for="name">Enter your name</label>
+		<form>
+			<input type="text" id="name" name="name" placeholder="Enter your name" required>
+			<label class="sr-only" for="name">Enter your name</label>
 
-            <input type="email" id="email" name="email" placeholder="What's your email?" required>
-            <label class="sr-only" for="email">What's your email?</label>
+			<input type="email" id="email" name="email" placeholder="What's your email?" required>
+			<label class="sr-only" for="email">What's your email?</label>
 
-            <button>Tell me when it's ready!</button>
-        </form>
-    </div>
+			<button>Tell me when it's ready!</button>
+		</form>
+	</div>
+
+	<script>
+		const container = document.querySelector('.container');
+
+		window.addEventListener('load', () => {
+			container.classList.add('zoomIn');
+		});
+	</script>
 </body>
+
 </html>
