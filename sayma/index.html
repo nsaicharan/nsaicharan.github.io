@@ -124,8 +124,7 @@
 		}
 		
 		.zoomIn {
-			animation-name: zoomIn;
-			animation-duration: 1s;
+			animation: zoomIn 1s;
 		}
 		
 		/* Media Queries */
@@ -170,7 +169,9 @@
 		const container = document.querySelector('.container');
 
 		window.addEventListener('load', () => {
-			container.style.display = 'block';
+			setTimeout(() => {
+				container.style.display = 'block';
+			}, 1000);
 		});
 	</script>
 </body>
