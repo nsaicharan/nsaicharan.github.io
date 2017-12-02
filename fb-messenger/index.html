@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Facebook link and popup</title>
+	<style>
+		a {
+			background: skyblue;
+		}
+	</style>
+</head>
+<body>
+	 <a href="https://m.me/100009463990114">
+		Message us on Facebook
+	 </a>
+	 
+	 <div class="fb-customerchat" page_id="115903599110248"></div>
+
+    <script>
+
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId            : '1350336311758625',
+          autoLogAppEvents : true,
+          xfbml            : true,
+          version          : 'v2.11'
+        });
+      };
+
+      (function(d, s, id){
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) {return;}
+        js = d.createElement(s); js.id = id;
+        js.src = "https://connect.facebook.net/en_US/sdk.js";
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+      
+    </script>
+</body>
+</html>
