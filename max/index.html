@@ -22,7 +22,7 @@
 		</header>
 		
 		<div class="steps-container text-center">
-			<h2>Just 3 quick steps to get the <wbr>LOWEST CAR INSURANCE</h2>
+			<h2 class="subtitle ">Just 3 quick steps to get the <wbr>LOWEST CAR INSURANCE</h2>
 			
 			<div class="steps">
 				<a href="#">VEHICLES</a>
@@ -140,5 +140,15 @@
 			<button>Continue</button>
 		</div>
 	</div>
+	
+	<script>
+		const subtitle = document.querySelector('.subtitle');
+		window.onload = function() {
+			subtitle.classList.add('lightSpeedIn');
+			setTimeout(function() {
+				subtitle.style.opacity = 1;
+			}, 1600)
+		}
+	</script>
 </body>
 </html>
