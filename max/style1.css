@@ -1,6 +1,7 @@
 body {
+    height: 100vh;
 	margin: 0;
-	background-image: linear-gradient(rgba(0,0,0,.7), rgba(0,0,0,.7)), url('1.jpeg') ;
+	background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6)), url('car1.jpeg') ;
 	background-size: cover;
 	background-position: center;
 	background-attachment: fixed;
@@ -259,5 +260,5 @@ button:focus {
   animation-name: lightSpeedIn;
   animation-timing-function: ease-out;
   animation-duration: 1s;
-  animation-delay: .7s;
+  animation-delay: .8s;
 }
