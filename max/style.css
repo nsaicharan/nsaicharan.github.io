@@ -144,7 +144,6 @@ nav a:hover {
 .questions {
 	box-shadow: 0, 0 0 0 4px rgba(255,255,255,.3), 0;
 	border: 1px solid yellowgreen;
-	border-top: 0;
 	margin-bottom: 40px;
 }
 
@@ -260,5 +259,5 @@ button:focus {
   animation-name: lightSpeedIn;
   animation-timing-function: ease-out;
   animation-duration: 1s;
-  animation-delay: .8s;
+  animation-delay: 1s;
 }
