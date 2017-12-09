@@ -258,6 +258,6 @@ button:focus {
 .lightSpeedIn {
   animation-name: lightSpeedIn;
   animation-timing-function: ease-out;
-  animation-duration: 1s;
+  animation-duration: 1.2s;
   animation-delay: 1s;
 }
