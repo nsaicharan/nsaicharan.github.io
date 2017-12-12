@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Mate+SC|Satisfy" rel="stylesheet">
+</head>
+<body>
+	
+	<header>
+		<div class="wrapper wrapper--nav">
+			<div class="logo">
+				<a href="#">Logo Here</a>
+			</div>
+			<nav>
+				<a href="#">Home</a>
+				<a href="#">About Us</a>
+				<a href="#">FAQ</a>
+				<a href="#">Contact</a>
+			</nav>
+		</div>
+	</header>
+	
+	<div class="btns">
+		<div class="btns-container">
+			<a href="#" class="btn">I'm just curious</a>
+			<a href="#" class="btn">I'm semi interested</a>
+			<a href="#" class="btn">I'm ready to buy</a>
+		</div>
+	</div>
+	
+	<div class="wrapper">
+		<form action="index.html" id="curiousForm" class="zoomIn">
+		
+		<div class="form-header">
+			<h2>Quick Contact</h2>
+			<p>Contact us today and get reply within 24 hours!</p>
+		</div>
+		
+		<div class="form-content">
+		
+			<div class="field-group two">
+				<label for="firstName">First Name</label>
+
+				<input type="text" id="firstName" required>
+			</div>
+
+			<div class="field-group two">
+				<label for="lastName">Last Name</label>
+				<input type="text" id="lastName" required>
+			</div>
+
+			<div class="field-group two">
+				<label for="email">Email</label>
+				<input type="email" id="email" required>
+			</div>
+
+			<div class="field-group two">
+				<label for="phone">Phone Number</label>
+				<input type="tel" required>
+			</div>
+
+			<div class="field-group two">
+				<label for="insurance">Insurance Co.</label>
+				<input type="text" id="insurance">
+			</div>
+		
+		</div>
+		
+		<div class="text-center">
+			<button type="submit" class="curiousSubmit">Submit</button>
+		</div>
+	</form>
+	</div>
+	
+	
+	<script>
+		const buttons = document.querySelectorAll('.btn');
+		const buttonsContainer = document.querySelector('.btns-container');
+		window.onload = () => {
+			setTimeout(function() {
+				buttons.forEach(button => button.classList.add('fadeInDown'));
+			}, 1000);
+			
+		}
+		
+		const curiousBtn = document.querySelector('.btn');
+		const curiousForm = document.querySelector('#curiousForm');
+		
+		curiousBtn.addEventListener('click', function() {
+			buttonsContainer.style.display = 'none';
+			
+			curiousForm.style.display = "block";
+			
+			setTimeout(function() {
+				curiousForm.style.opacity = 1;
+			}, 1000);
+			
+		})
+	</script>
+</body>
+</html>
