@@ -152,7 +152,7 @@ nav a:hover {
 }
 
 .btn:hover {
-/*	filter: brightness(118%);*/
+	filter: brightness(118%);
 }
 
 .btn:nth-child(1) {
