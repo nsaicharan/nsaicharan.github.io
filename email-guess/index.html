@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+        crossorigin="anonymous">
+
+    <style>
+        .box-400 {
+            max-width: 400px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <form action="" class="box-400 my-5">
+        <div class="input-field">
+            <label for="first">First Name:</label>
+            <input type="text" class="form-control mb-3" placeholder="john" required id="first">
+        </div>
+        <div class="input-field">
+            <label for="last">Last Name:</label>
+            <input type="text" class="form-control mb-3" placeholder="doe" required id="last">
+        </div>
+        <div class="input-field">
+            <label for="domain">Domain:</label>
+            <input type="text" class="form-control mb-3" placeholder="gmail.com" required id="domain">
+        </div>
+
+        <div class="text-center mt-4">
+            <button class="btn btn-primary btn-lg">GUESS EMAIL</button>
+        </div>
+    </form>
+
+    <div class="box-400">
+        <ol>
+        </ol>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+
+    <script>
+        $('form').submit(function (e) {
+            e.preventDefault();
+
+            const first = $("#first").val();
+            const last = $("#last").val();
+            const domain = $("#domain").val();
+
+            const list =
+                `
+                <li>${first}@${domain}</li>
+                <li>${last}@${domain}</li>
+                <li>${first}${last}@${domain}</li>
+                <li>${first}.${last}@${domain}</li>
+            `;
+
+            $("ol").html(list)
+        })
+    </script>
+</body>
+
+</html>
