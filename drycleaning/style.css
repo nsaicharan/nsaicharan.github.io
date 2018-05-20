@@ -27,9 +27,12 @@ nav {
     max-height: 75px;
 }
 
+.nav-item {
+    text-align: center;
+}
+
 .nav-link {
     color: var(--blue);
-    text-align: center;
 }
 
 .nav-link:not(.btn-link):hover {
@@ -117,9 +120,11 @@ option {
 }
 
 @media (min-width: 992px) {
+    .nav-item {
+        text-align: left;
+    }
     .nav-link {
         margin-left: 20px;
-        text-align: left;
     }
 }
 
