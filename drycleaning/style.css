@@ -1,0 +1,155 @@
+/* Brand Colors */
+
+:root {
+    --blue: #1B4165;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* Normal */
+
+/* @font-face {
+    font-family: 'PingFang';
+    src: url('fonts/PingFang Regular.ttf');
+    font-style: normal;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+} */
+
+/* Italic */
+
+/* @font-face {
+    font-family: 'PingFang';
+    src: url('fonts/PingFang-Italic.eot');
+    src: url('fonts/PingFang-Italic.eot?#iefix') format('embedded-opentype'), url('fonts/PingFang-Italic.woff') format('woff'), url('fonts/Lato-Italic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: normal;
+    text-rendering: optimizeLegibility;
+} */
+
+/* Bold */
+
+/* @font-face {
+    font-family: 'Lato';
+    src: url('fonts/Lato-Bold.eot');
+    src: url('fonts/Lato-Bold.eot?#iefix') format('embedded-opentype'), url('fonts/Lato-Bold.woff') format('woff'), url('fonts/Lato-Bold.ttf') format('truetype');
+    font-style: normal;
+    font-weight: bold;
+    text-rendering: optimizeLegibility;
+} */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.logo {
+    max-height: 75px;
+}
+
+.nav-link {
+    color: var(--blue);
+    text-align: center;
+}
+
+.nav-link:not(.btn-link):hover {
+    color: #132d46;
+    text-decoration: underline;
+}
+
+.btn-link {
+    background-color: var(--blue);
+    color: white;
+    /* padding: 10px 15px;
+    border-radius: 4px; */
+}
+
+.nav-links a.btn-link:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #132d46;
+}
+
+.navbar-toggler img {
+    max-height: 30px;
+}
+
+.hero {
+    background: url('/images/Landing-Page-Hero.jpg') no-repeat;
+    background-position: center top;
+    background-size: cover;
+}
+
+.hero-text {
+    width: 100%;
+    max-width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+    /* text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2); */
+}
+
+.hero h1 {
+    font-size: 1.7rem;
+    font-weight: 400;
+}
+
+.hero p {
+    display: none;
+}
+
+.box-300 {
+    width: 300px;
+    max-width: 100%;
+}
+
+label {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+select {
+    text-align: center;
+    text-align-last: center;
+    border: 2px solid #333;
+    color: #000;
+    /* webkit*/
+}
+
+option {
+    text-align: left;
+    /* reset to left*/
+    background: #fff;
+}
+
+/* 
+option:not(:checked) {
+    background-color: white;
+} */
+
+@media (min-width: 768px) {
+    .hero-text {
+        width: 420px;
+        text-align: left;
+        padding: 130px 22px;
+        min-height: calc(100vh - 150px);
+    }
+    .hero h1 {
+        font-size: 2rem;
+    }
+    .hero p {
+        display: block;
+    }
+}
+
+@media (min-width: 992px) {
+    .nav-link {
+        margin-left: 20px;
+        text-align: left;
+    }
+}
