@@ -24,12 +24,16 @@
     <!-- Theme CSS -->
     <link href="css/agency.min.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <style>
+        .typing-container {
+            font-size: 3rem;
+            margin-bottom: 50px;
+        }
+
+        @media (max-width: 767px) {
+            font-size: 2rem;
+        }
+    </style>
 
 </head>
 
@@ -79,8 +83,7 @@
             <div class="intro-text">
                 
                 <div class="intro-heading">Al Fashion Fix </div>
-                <div class="intro-lead-in">Repairing fashion accersories was never so easy!</div>
-                <p class="lead description">Al Fashion Fix is a team comprising of  fashion engineers who specialize in fixing all kinds of fashion accessories. It doesn't matter whether you've an antique watch or modern glasses - we've fixes for all your accessories!  </p>
+                <div class="typing-container">We Repair <span class="typing"></span></div>
                 <a href="#services" class="page-scroll btn btn-xl">Tell Me More</a>
             </div>
         </div>
@@ -203,6 +206,8 @@
 
     <!-- Plugin JavaScript -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="typed.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/1.0.0/typewriter.min.js"></script>
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
@@ -210,6 +215,24 @@
 
     <!-- Theme JavaScript -->
     <script src="js/agency.min.js"></script>
+
+    <script>
+        var app = document.querySelector('.typing');
+
+        var typewriter = new Typewriter(app, {
+            loop: true
+        });
+
+        typewriter.typeString('Clothes.')
+            .pauseFor(2000)
+            .deleteAll()
+            .typeString('Mobiles.')
+            .pauseFor(2000)
+            .deleteAll()
+            .typeString('Spectacles.')
+            .pauseFor(2000)
+            .start();
+    </script>
 
 </body>
 
