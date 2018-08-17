@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bloom Learning Technologies</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+
+    <style>
+        td,
+        th {
+            vertical-align: middle !important;
+            padding: 6px 12px !important;
+        }
+
+        .container-narrow {
+            max-width: 800px;
+        }
+
+        .table-heading {
+            background: #2991d6;
+            text-align: center;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        .table-footer {
+            font-style: italic;
+            font-weight: 500;
+            background: #f3f3f3;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <div class="container container-narrow my-5">
+        <form action="#" id="ROI" name="ROI" class="table-responsive">
+            <table class="table table-sm table-bordered">
+                <tr>
+                    <th colspan="2" class="table-heading">Instructor-led training expenses</th>
+                </tr>
+                <tr>
+                    <td>Number of people that attend traditional instructor-led training each year
+                    </td>
+                    <td>
+                        <input type="number" name="i1" class="form-control form-control-sm" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Average number of training days that each participant attends in a year
+                    </td>
+                    <td>
+                        <input type="number" name="i2" class="form-control form-control-sm" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Average length of one session (in days)
+                    </td>
+                    <td>
+                        <input type="number" name="i3" class="form-control form-control-sm" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Average number of attendees per session
+                    </td>
+                    <td>
+                        <input type="number" name="i4" class="form-control form-control-sm" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Estimate the one-day facility cost for a classroom
+                    </td>
+                    <td>
+                        <span class="d-flex align-items-center">
+                            <span class="mr-2">$</span>
+                            <input type="number" name="i5" class="form-control form-control-sm" required>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Estimate the one-day instructor labor cost for a class
+                    </td>
+                    <td>
+                        <span class="d-flex align-items-center">
+                            <span class="mr-2">$</span>
+                            <input type="number" name="i6" class="form-control form-control-sm" required>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Average travel and expense cost per participant/day
+                    </td>
+                    <td>
+                        <span class="d-flex align-items-center">
+                            <span class="mr-2">$</span>
+                            <input type="number" name="i7" class="form-control form-control-sm" required>
+                        </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Percentage of participants who travel to each session
+                        <td>
+                            <span class="d-flex align-items-center">
+                                <input type="number" name="i8" class="form-control form-control-sm" required>
+                                <span class="ml-2">%</span>
+                            </span>
+                        </td>
+                </tr>
+
+                <tr>
+                    <td class="table-footer">Current instructor-led training expenses
+                    </td>
+
+                    <td>
+                        <input type="number" name="i9" class="form-control form-control-sm" disabled>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" class="text-right">
+                        <button class="btn btn-primary" id="calculate">Calculate</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <script>
+        const form = document.querySelector("#ROI");
+
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const i1 = parseInt(document.ROI.i1.value);
+            const i2 = parseInt(document.ROI.i2.value);
+            const i3 = parseInt(document.ROI.i3.value);
+            const i4 = parseInt(document.ROI.i4.value);
+            const i5 = parseInt(document.ROI.i5.value);
+            const i6 = parseInt(document.ROI.i6.value);
+            const i7 = parseInt(document.ROI.i7.value);
+            const i8 = parseInt(document.ROI.i8.value) / 100;
+            const class_days = Math.round(((i1) * (i2)) / (i4));
+            const student_days = Math.round(((i1) * (i2)));
+            const facility = Math.round(((class_days) * (i5)));
+            const instructor = Math.round(((class_days) * (i6)));
+            const travel = Math.round(((student_days) * (i7)) * (i8));
+            document.ROI.i9.value = (facility) + (travel) + (instructor);
+        })
+    </script>
+</body>
+
+</html>
