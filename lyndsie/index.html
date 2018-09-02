@@ -32,26 +32,31 @@
         transition: 1s ease-out;
     }
 
-    .leapfrogger.active::after,
-    .leapfrogger:hover::after {
+    .leapfrogger.active::after {
       opacity: 1;
     }
 
+    @media (min-width: 769px) {
+        .leapfrogger:hover::after {
+          opacity: 1;
+        }
+    }
+
     .amanda-hearst {
-        background-image: url('http://leapfroghacks.com/img/amanda-hearst.jpg');
+        background-image: url('https://leapfroghacks.com/img/amanda-hearst.jpg');
     }
 
     .amanda-hearst::after {
-      background-image: url('http://leapfroghacks.com/img/amanda-hearst-quote.png');
+      background-image: url('https://leapfroghacks.com/img/amanda-hearst-quote.png');
     }
 
 
     .arlan-hamilton {
-        background-image: url('http://leapfroghacks.com/img/arlan-hamilton.png');
+        background-image: url('https://leapfroghacks.com/img/arlan-hamilton.png');
     }
 
     .arlan-hamilton::after {
-      background-image: url('http://leapfroghacks.com/img/arlan-hamilton-quote.png');
+      background-image: url('https://leapfroghacks.com/img/arlan-hamilton-quote.png');
     }
   </style>
 </head>
@@ -71,10 +76,8 @@
     
     <script>
         $(function() { 
-            const $window = jQuery(window);
-            if ($window.width() < 768) {
-
-                $(".leapfrogger").click(function() {  //use a class, since your ID gets mangled
+            if ($(window).width() <= 768) {
+                $(".leapfrogger").tap(function() {  //use a class, since your ID gets mangled
                     if($(this).hasClass('active')){
                        $(this).removeClass('active');
                     } else{
