@@ -72,19 +72,23 @@
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     
     <script>
         $(function() { 
             if ($(window).width() <= 768) {
-                $(".leapfrogger").tap(function() {  //use a class, since your ID gets mangled
+                
+                function fadeQuote() { 
                     if($(this).hasClass('active')){
-                       $(this).removeClass('active');
+                        $(this).removeClass('active');
                     } else{
                         $(".leapfrogger").removeClass('active');
                         $(this).addClass('active');
                     }
-                });
+                }
+
+                $(".leapfrogger").on('click', fadeQuote);
+
             };
         });
     </script>
