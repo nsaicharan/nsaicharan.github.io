@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="video-wrapper">
+      <div class="video-player-wrapper">
+        <div id="video-player"></div>
+      </div>
+
+      <div class="video-img"></div>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script>
+      let player;
+      let play = false;
+      const videoImg = document.querySelector(".video-img");
+
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player("video-player", {
+          videoId: "yPF94QiI2qk",
+          playerVars: {
+            autoplay: 0,
+            controls: 0,
+            rel: 0,
+            modestbranding: 1
+          },
+
+          events: {
+            onReady: onPlayerReady
+          }
+        });
+      }
+
+      function onPlayerReady(event) {
+        console.log("Video Ready!");
+
+        videoImg.addEventListener("click", function() {
+          this.classList.toggle("hide");
+          play = !play;
+          play ? player.playVideo() : player.pauseVideo();
+        });
+      }
+    </script>
+  </body>
+</html>
