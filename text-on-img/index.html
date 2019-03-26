@@ -10,21 +10,23 @@
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
     />
     <style>
-      canvas {
+      .canvas-wrapper {
+        max-width: 100%;
+        overflow: hidden;
+      }
+
+      .canvas-wrapper canvas {
         display: block;
         border: 1px solid red;
       }
 
-      .canvas-wrapper {
-        margin: 20px auto;
-        max-width: 100%;
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-      }
-
       .download-wrapper {
         display: none;
+      }
+
+      .jscolor:focus {
+        border-color: #ced4da;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
       }
     </style>
   </head>
@@ -43,85 +45,44 @@
           id="text"
           class="form-control"
           placeholder="Enter Text"
+          value="credit: john doe"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="placement">Text Color:</label>
+        <input
+          type="text"
+          id="color"
+          class="form-control jscolor"
+          value="#ffc600"
         />
       </div>
 
       <div class="form-group">
         <label for="placement">Text Placement:</label>
         <select id="placement" class="form-control custom-select">
+          <option value="t">Top</option>
           <option value="tl">Top Left</option>
           <option value="tr">Top Right</option>
+          <option value="b">Bottom</option>
+          <option value="bl">Bottom Left</option>
+          <option value="br">Bottom Right</option>
         </select>
       </div>
     </form>
 
-    <div class="text-center mt-4 download-wrapper">
-      <a href="#" class="btn btn-success" id="pngBtn" download>
+    <div class="text-center my-4 download-wrapper">
+      <a href="#" class="btn btn-success" id="pngBtn">
         Download as PNG
       </a>
     </div>
 
-    <div class="canvas-wrapper">
+    <div class="canvas-wrapper d-flex justify-content-center mb-2">
       <canvas class="canvas"></canvas>
     </div>
 
-    <script>
-      const file = document.querySelector("#file");
-      const text = document.querySelector("#text");
-      const placement = document.querySelector("#placement");
-      const canvas = document.querySelector("canvas");
-      const canvasWrapper = document.querySelector(".canvas-wrapper");
-      const ctx = canvas.getContext("2d");
-      const downloadWrapper = document.querySelector(".download-wrapper");
-      const pngBtn = document.querySelector("#pngBtn");
-
-      function fillText() {
-        ctx.fillStyle = "red";
-        ctx.textBaseline = "middle";
-        ctx.font = "35px 'Arial'";
-
-        if (placement.value == "tl") {
-          ctx.fillText(text.value, 30, 35);
-        } else {
-          ctx.textAlign = "right";
-          ctx.fillText(text.value, canvas.width - 30, 35);
-        }
-      }
-
-      function createDownloadLinks() {
-        downloadWrapper.style.display = "block";
-        const dataURL = canvas.toDataURL("image/png");
-        pngBtn.href = dataURL;
-      }
-
-      function drawImage() {
-        window.URL = window.URL || window.webkitURL;
-        let path = window.URL.createObjectURL(file.files[0]);
-
-        let img = new Image();
-        img.src = path;
-
-        img.onload = function() {
-          console.log("screenWidth:", window.innerWidth);
-          console.log("imgWidth:", img.width);
-
-          const scale = (window.innerWidth * 0.9) / img.width;
-
-          canvas.style.transform = `scale(${scale})`;
-          canvas.width = img.width;
-          canvas.height = img.height;
-
-          ctx.drawImage(img, 0, 0);
-
-          fillText();
-          createDownloadLinks();
-        };
-      }
-
-      file.addEventListener("change", drawImage);
-      placement.addEventListener("change", drawImage);
-      text.addEventListener("input", drawImage);
-      window.addEventListener("resize", drawImage);
-    </script>
+    <script src="jscolor.js"></script>
+    <script src="main.js"></script>
   </body>
 </html>
