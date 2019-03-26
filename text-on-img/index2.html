@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <style>
+      .output-wrapper {
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+      }
+
+      .output {
+        position: relative;
+        display: inline-block;
+      }
+
+      .text-wrapper {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        font-size: 28px;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        color: orange;
+        font-weight: bold;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+      }
+
+      .download-wrapper {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form class="mx-auto col-lg-5 mt-4" action="#">
+      <div class="form-group">
+        <input type="file" id="file" class="form-control-file" />
+      </div>
+
+      <div class="form-group">
+        <label for="text">Overlay Text:</label>
+        <input
+          type="text"
+          id="text"
+          class="form-control"
+          placeholder="Enter Text"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="placement">Text Placement:</label>
+        <select id="placement" class="form-control custom-select">
+          <option value="tl">Top Left</option>
+          <option value="tr">Top Right</option>
+        </select>
+      </div>
+    </form>
+
+    <div class="output-wrapper">
+      <div class="output">
+        <div class="img-wrapper"></div>
+        <div class="text-wrapper"></div>
+      </div>
+    </div>
+
+    <div class="download-wrapper text-center mb-5">
+      <button class="btn btn-success download-btn">Download Image</button>
+      <a href="#" class="download-link" hidden download>TEst</a>
+    </div>
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script>
+      const file = document.querySelector("#file");
+      const text = document.querySelector("#text");
+      const placement = document.querySelector("#placement");
+      const output = document.querySelector(".output");
+      const outputWrapper = document.querySelector(".output-wrapper");
+      const imgWrapper = document.querySelector(".img-wrapper");
+      const textWrapper = document.querySelector(".text-wrapper");
+      const downloadWrapper = document.querySelector(".download-wrapper");
+      const downloadBtn = document.querySelector(".download-btn");
+      const downloadLink = document.querySelector(".download-link");
+
+      file.addEventListener("change", function(e) {
+        const path = URL.createObjectURL(e.target.files[0]);
+
+        const img = new Image();
+        img.src = path;
+
+        img.onload = () => {
+          imgWrapper.append(img);
+          downloadWrapper.style.display = "block";
+
+          const scale = (window.innerWidth * 0.9) / output.clientWidth;
+          output.style.transform = `scale(${scale})`;
+        };
+      });
+
+      placement.addEventListener("change", function(e) {
+        if (this.value == "tr") {
+          textWrapper.style.right = "20px";
+          textWrapper.style.left = "initial";
+        } else {
+          textWrapper.style.left = "20px";
+          textWrapper.style.right = "initial";
+        }
+      });
+
+      text.addEventListener("keyup", function() {
+        textWrapper.innerText = this.value;
+      });
+
+      downloadBtn.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        html2canvas(document.querySelector(".output")).then(canvas => {
+          const dataURL = canvas.toDataURL("image/png");
+          console.log("dataURL:", dataURL);
+
+          downloadLink.href = dataURL;
+          downloadLink.click();
+        });
+      });
+    </script>
+  </body>
+</html>

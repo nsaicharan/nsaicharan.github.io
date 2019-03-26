@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Text On Image</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <style>
+      canvas {
+        display: block;
+        border: 1px solid red;
+      }
+
+      .canvas-wrapper {
+        margin: 20px auto;
+        max-width: 100%;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+      }
+
+      .download-wrapper {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="text-center h2 mt-3">Text On Image</h1>
+
+    <form class="mx-auto col-lg-5 mt-5" action="#">
+      <div class="form-group">
+        <input type="file" id="file" class="form-control-file" />
+      </div>
+
+      <div class="form-group">
+        <label for="text">Overlay Text:</label>
+        <input
+          type="text"
+          id="text"
+          class="form-control"
+          placeholder="Enter Text"
+        />
+      </div>
+
+      <div class="form-group">
+        <label for="placement">Text Placement:</label>
+        <select id="placement" class="form-control custom-select">
+          <option value="tl">Top Left</option>
+          <option value="tr">Top Right</option>
+        </select>
+      </div>
+    </form>
+
+    <div class="text-center mt-4 download-wrapper">
+      <a href="#" class="btn btn-success" id="pngBtn" download>
+        Download as PNG
+      </a>
+    </div>
+
+    <div class="canvas-wrapper">
+      <canvas class="canvas"></canvas>
+    </div>
+
+    <script>
+      const file = document.querySelector("#file");
+      const text = document.querySelector("#text");
+      const placement = document.querySelector("#placement");
+      const canvas = document.querySelector("canvas");
+      const canvasWrapper = document.querySelector(".canvas-wrapper");
+      const ctx = canvas.getContext("2d");
+      const downloadWrapper = document.querySelector(".download-wrapper");
+      const pngBtn = document.querySelector("#pngBtn");
+
+      function fillText() {
+        ctx.fillStyle = "red";
+        ctx.textBaseline = "middle";
+        ctx.font = "40px 'Arial'";
+
+        if (placement.value == "tl") {
+          ctx.fillText(text.value, 30, 35);
+        } else {
+          ctx.textAlign = "right";
+          ctx.fillText(text.value, canvas.width - 30, 35);
+        }
+      }
+
+      function createDownloadLinks() {
+        downloadWrapper.style.display = "block";
+        const dataURL = canvas.toDataURL("image/png");
+        pngBtn.href = dataURL;
+      }
+
+      function drawImage() {
+        window.URL = window.URL || window.webkitURL;
+        let path = window.URL.createObjectURL(file.files[0]);
+
+        let img = new Image();
+        img.src = path;
+
+        img.onload = function() {
+          console.log("screenWidth:", window.innerWidth);
+          console.log("imgWidth:", img.width);
+
+          const scale = (window.innerWidth * 0.9) / img.width;
+
+          canvas.style.transform = `scale(${scale})`;
+          canvas.width = img.width;
+          canvas.height = img.height;
+
+          ctx.drawImage(img, 0, 0);
+
+          fillText();
+          createDownloadLinks();
+        };
+      }
+
+      file.addEventListener("change", drawImage);
+      placement.addEventListener("change", drawImage);
+      text.addEventListener("input", drawImage);
+      window.addEventListener("resize", drawImage);
+    </script>
+  </body>
+</html>
