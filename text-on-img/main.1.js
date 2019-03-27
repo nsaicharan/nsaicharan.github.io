@@ -47,14 +47,17 @@ function fillText() {
 
 function createDownloadLinks() {
   downloadWrapper.style.display = "block";
+
+  const dataURL = canvas.toDataURL("image/png");
+  pngBtn.href = dataURL;
 }
 
 function drawImage() {
   window.URL = window.URL || window.webkitURL;
-  const imgPath = window.URL.createObjectURL(file.files[0]);
+  const path = window.URL.createObjectURL(file.files[0]);
 
   const img = new Image();
-  img.src = imgPath;
+  img.src = path;
 
   img.onload = function() {
     console.log("screenWidth:", window.innerWidth);
@@ -77,12 +80,12 @@ function drawImage() {
   };
 }
 
-function saveImage(e) {
-  e.preventDefault();
-
-  canvas.toBlob(function(blob) {
-    saveAs(blob, "pretty image.png");
-  });
+function checkIfIE(e) {
+  if (canvas.msToBlob) {
+    e.preventDefault();
+    var blob = canvas.msToBlob();
+    window.navigator.msSaveBlob(blob, "text-on-img.png");
+  }
 }
 
 file.addEventListener("change", drawImage);
@@ -90,4 +93,4 @@ text.addEventListener("input", drawImage);
 placement.addEventListener("change", drawImage);
 color.addEventListener("change", drawImage);
 window.addEventListener("resize", drawImage);
-pngBtn.addEventListener("click", saveImage);
+pngBtn.addEventListener("click", checkIfIE);
