@@ -60,8 +60,7 @@ function drawImage() {
     if (img.width > window.innerWidth * 0.94) {
       var scale = (window.innerWidth * 0.94) / img.width;
 
-      canvas.style.transform = "scale(" + scale + ")";
-      canvas.style.transformOrigin = "top";
+      canvas.style.transform = "translateX(-50%) scale(" + scale + ")";
     }
 
     canvas.width = img.width;

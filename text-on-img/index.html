@@ -17,7 +17,11 @@
 
       .canvas-wrapper canvas {
         display: block;
-        border: 1px solid red;
+        position: relative;
+        border: 1px solid;
+        left: 50%;
+        transform: translateX(-50%);
+        transform-origin: center top;
       }
 
       .download-wrapper {
@@ -83,7 +87,7 @@
       </a>
     </div>
 
-    <div class="canvas-wrapper d-flex justify-content-center mb-2">
+    <div class="canvas-wrapper mb-2">
       <canvas class="canvas"></canvas>
     </div>
 
