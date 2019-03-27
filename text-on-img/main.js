@@ -7,6 +7,7 @@ var canvas = canvasWrapper.querySelector("canvas");
 var ctx = canvas.getContext("2d");
 var downloadWrapper = document.querySelector(".download-wrapper");
 var pngBtn = document.querySelector("#pngBtn");
+var note = document.querySelector("#note");
 
 function fillText() {
   ctx.fillStyle = "#" + color.value;
@@ -45,8 +46,17 @@ function fillText() {
   }
 }
 
+function checkOS() {
+  var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+  if (iOS) {
+    note.style.display = "block";
+  }
+}
+
 function createDownloadLinks() {
   downloadWrapper.style.display = "block";
+  checkOS();
 }
 
 function drawImage() {

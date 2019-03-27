@@ -28,6 +28,14 @@
         display: none;
       }
 
+      #note {
+        font-size: 12px;
+        color: #444;
+        text-align: center;
+        margin-top: 6px;
+        display: none;
+      }
+
       .jscolor:focus {
         border-color: #ced4da;
         box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0);
@@ -81,10 +89,15 @@
       </div>
     </form>
 
-    <div class="text-center my-4 download-wrapper">
+    <div class="text-center mt-4 mb-5 download-wrapper">
       <a href="#" class="btn btn-success" id="pngBtn">
         Download as PNG
       </a>
+
+      <p id="note">
+        (Note: In case if the downloadable image is opened in a new tab, you've
+        to long press the image and manually save it.)
+      </p>
     </div>
 
     <div class="canvas-wrapper mb-2">
