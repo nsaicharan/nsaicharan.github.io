@@ -1,12 +1,12 @@
-const file = document.querySelector("#file");
-const text = document.querySelector("#text");
-const color = document.querySelector("#color");
-const placement = document.querySelector("#placement");
-const canvasWrapper = document.querySelector(".canvas-wrapper");
-const canvas = canvasWrapper.querySelector("canvas");
-const ctx = canvas.getContext("2d");
-const downloadWrapper = document.querySelector(".download-wrapper");
-const pngBtn = document.querySelector("#pngBtn");
+var file = document.querySelector("#file");
+var text = document.querySelector("#text");
+var color = document.querySelector("#color");
+var placement = document.querySelector("#placement");
+var canvasWrapper = document.querySelector(".canvas-wrapper");
+var canvas = canvasWrapper.querySelector("canvas");
+var ctx = canvas.getContext("2d");
+var downloadWrapper = document.querySelector(".download-wrapper");
+var pngBtn = document.querySelector("#pngBtn");
 
 function fillText() {
   ctx.fillStyle = "#" + color.value;
@@ -51,19 +51,16 @@ function createDownloadLinks() {
 
 function drawImage() {
   window.URL = window.URL || window.webkitURL;
-  const imgPath = window.URL.createObjectURL(file.files[0]);
+  var imgPath = window.URL.createObjectURL(file.files[0]);
 
-  const img = new Image();
+  var img = new Image();
   img.src = imgPath;
 
   img.onload = function() {
-    console.log("screenWidth:", window.innerWidth);
-    console.log("imgWidth:", img.width);
-
     if (img.width > window.innerWidth * 0.94) {
-      const scale = (window.innerWidth * 0.94) / img.width;
+      var scale = (window.innerWidth * 0.94) / img.width;
 
-      canvas.style.transform = `scale(${scale})`;
+      canvas.style.transform = "scale(" + scale + ")";
       canvas.style.transformOrigin = "top";
     }
 
@@ -81,7 +78,7 @@ function saveImage(e) {
   e.preventDefault();
 
   canvas.toBlob(function(blob) {
-    saveAs(blob, "pretty image.png");
+    saveAs(blob, "text-on-img.png");
   });
 }
 
