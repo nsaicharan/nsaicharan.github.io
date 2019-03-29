@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Document</title>
+    <title>Text On Img V2</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
@@ -14,6 +14,7 @@
         display: flex;
         justify-content: center;
         overflow: hidden;
+        position: relative;
       }
 
       .output {
@@ -24,10 +25,9 @@
       .text-wrapper {
         position: absolute;
         top: 20px;
-        left: 20px;
-        font-size: 28px;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-          Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+        left: 25px;
+        font-size: 30px;
+        font-family: Arial, sans-serif;
         color: orange;
         font-weight: bold;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -40,7 +40,11 @@
   </head>
 
   <body>
+   
+
     <form class="mx-auto col-lg-5 mt-4" action="#">
+      <p>Links - <a href="index.html">Version 1</a> |  <a href="index2.html">Version 2</a> (this)</p>
+      
       <div class="form-group">
         <input type="file" id="file" class="form-control-file" />
       </div>
@@ -51,7 +55,7 @@
           type="text"
           id="text"
           class="form-control"
-          placeholder="Enter Text"
+          value="credit: john"
         />
       </div>
 
@@ -64,43 +68,51 @@
       </div>
     </form>
 
-    <div class="output-wrapper">
+    <div class="download-wrapper text-center mb-4">
+      <button class="btn btn-success download-btn">Download as PNG</button>
+    </div>
+
+    <div class="output-wrapper mb-3">
       <div class="output">
         <div class="img-wrapper"></div>
         <div class="text-wrapper"></div>
       </div>
     </div>
-
-    <div class="download-wrapper text-center mb-5">
-      <button class="btn btn-success download-btn">Download Image</button>
-      <a href="#" class="download-link" hidden download>TEst</a>
-    </div>
-
+  
+   
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="Blob.js"></script>
+    <script src="canvas-toBlob.js"></script>
+    <script src="FileSaver.min.js"></script>
     <script>
-      const file = document.querySelector("#file");
-      const text = document.querySelector("#text");
-      const placement = document.querySelector("#placement");
-      const output = document.querySelector(".output");
-      const outputWrapper = document.querySelector(".output-wrapper");
-      const imgWrapper = document.querySelector(".img-wrapper");
-      const textWrapper = document.querySelector(".text-wrapper");
-      const downloadWrapper = document.querySelector(".download-wrapper");
-      const downloadBtn = document.querySelector(".download-btn");
-      const downloadLink = document.querySelector(".download-link");
+      var file = document.querySelector("#file");
+      var text = document.querySelector("#text");
+      var placement = document.querySelector("#placement");
+      var output = document.querySelector(".output");
+      var outputWrapper = document.querySelector(".output-wrapper");
+      var imgWrapper = document.querySelector(".img-wrapper");
+      var textWrapper = document.querySelector(".text-wrapper");
+      var downloadWrapper = document.querySelector(".download-wrapper");
+      var downloadBtn = document.querySelector(".download-btn");
+      var downloadLink = document.querySelector(".download-link");
 
       file.addEventListener("change", function(e) {
-        const path = URL.createObjectURL(e.target.files[0]);
+        var path = URL.createObjectURL(e.target.files[0]);
 
-        const img = new Image();
+        var img = new Image();
         img.src = path;
 
         img.onload = () => {
+          imgWrapper.innerHTML = "";
           imgWrapper.append(img);
+          textWrapper.innerText = text.value;
           downloadWrapper.style.display = "block";
 
-          const scale = (window.innerWidth * 0.9) / output.clientWidth;
-          output.style.transform = `scale(${scale})`;
+          if (img.width > window.innerWidth * 0.94) {
+            var scale = (window.innerWidth * 0.94) / output.clientWidth;
+            output.style.transform = "scale(" + scale + ")";
+            output.style.transformOrigin = "center top";
+          }
         };
       });
 
@@ -122,11 +134,9 @@
         e.preventDefault();
 
         html2canvas(document.querySelector(".output")).then(canvas => {
-          const dataURL = canvas.toDataURL("image/png");
-          console.log("dataURL:", dataURL);
-
-          downloadLink.href = dataURL;
-          downloadLink.click();
+          canvas.toBlob(function(blob) {
+            saveAs(blob, "v2.png");
+          });
         });
       });
     </script>
