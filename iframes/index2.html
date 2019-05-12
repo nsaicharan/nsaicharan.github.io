@@ -1,95 +1,104 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Monitor Screen</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Monitor Screen</title>
+    <style>
+        :root {
+            --scrollbar: 17px; /* Default value */
+        }
 
-	<style>
-		* {
-			padding: 0;
-			margin: 0;
-			box-sizing: border-box;
-		}
-		
-		iframe {
-			width:102%;
-			height: 100%;
-			border: 1px solid red;
-		}
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
 
-		.container {
-			display: flex;
-			height: 100vh;
-			width: 100%;
-		}
-		
-		.left-column,
-		.right-column {
-			flex: 1;
-			overflow: hidden;
-		}
-		
-		.left-column {
-			display: flex;
-			flex-direction: column;
-		}
-		
-		.left-top,
-		.left-bottom {
-			height: 50vh;
-		}
-		
-		.right-column,
-		.right {
-			height: 100vh;
-		}
-		
-		@media (max-width: 1900px){
-			iframe {
-				width: 103%;
-			}
-		}
-		
-		@media (max-width: 1100px) {
-			iframe {
-				width: 105%;
-			}
-		}
-		
-		@media (max-width: 767px) {
-			iframe {
-				width: 110%;
-			}
-		}
-		
-	</style>
+        .container {
+            display: flex;
+            height: 100vh;
+            width: 100%;
+        }
+
+        .left-column {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            border-right: 1.5px solid red;
+        }
+
+        .left-column-top {
+            border-bottom: 1.5px solid red;
+        }
+
+        .left-column-top,
+        .left-column-bottom {
+            height: 50vh;
+            overflow: hidden;
+        }
+
+        .right-column {
+            flex: 1;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        iframe {
+            width: calc(100% + var(--scrollbar) + 1px);
+            height: 100%;
+            border: none;
+        }
+    </style>
 </head>
 
 <body>
 
-	<div class="container">
-		<div class="left-column">
+    <div class="container">
 
-			<div class="left-top">
-				<iframe src="https://necolas.github.io/normalize.css/"></iframe>	
-			</div>
+        <div class="left-column">
+            <div class="left-column-top">
+                <iframe src="https://bulma.io"></iframe>
+            </div>
 
-			<div class="left-bottom">
-				<iframe src="https://projects.saicharan.com/todo/"></iframe>
-			</div>
+            <div class="left-column-bottom">
+                <iframe src="https://ant.design/"></iframe>
+            </div>
+        </div>
+        <!-- End left-column -->
 
-		</div>
+        <div class="right-column">
+            <iframe src="https://semantic-ui.com/"></iframe>  
+        </div>
+        <!-- End right-column -->
 
-		<div class="right-column">
+    </div>
+    <!-- End container -->
 
-			<div class="right">
-				<iframe src="https://duckduckgo.com/"></iframe>
-			</div>
+    <script>
+        function getScrollbarWidth() {
+            const div = document.createElement('div');
+            document.body.appendChild(div);
 
-		</div>
-	</div>
+            // Force scrollbar on the div
+            div.style.overflow = 'scroll';
+
+            const innerDiv = document.createElement('div');
+            div.appendChild(innerDiv);
+
+            // Calculate the width based on the div width minus its child width
+            const width = div.offsetWidth - innerDiv.offsetWidth;
+
+            document.body.removeChild(div);
+
+            return width;
+        };
+
+        const scrollbarWidth = getScrollbarWidth();
+
+        // Set the value of CSS variable 
+        document.documentElement.style.setProperty('--scrollbar', `${scrollbarWidth}px`);
+    </script>
 
 </body>
 </html>
